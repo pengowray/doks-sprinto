@@ -1,0 +1,5 @@
+PATH=$PATH;C:\Program Files\nodejs
+npm install
+npm audit fix
+
+npm run start

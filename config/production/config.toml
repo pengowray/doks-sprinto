@@ -1,1 +1,22 @@
+# https://getdoks.org/docs/how-to/setup/project-configuration/
+
+# baseurl = "/"
 canonifyURLs = false
+# disableAliases = true
+# disableHugoGeneratorInject = true
+# enableEmoji = true
+# enableGitInfo = false
+# enableRobotsTXT = true
+languageCode = "en-US"
+# paginate = 7
+# rssLimit = 10
+
+## Open Graph + Twitter Cards
+# images = ["doks.png"]
+twitterSite = "SprintoBot"
+twitterCreator = "PengoWray"
+# facebookAuthor = "verlinde.henk"
+# facebookPublisher = "verlinde.henk"
+ogLocale = "en_US"
+
+
