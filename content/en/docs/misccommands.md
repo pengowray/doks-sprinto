@@ -1,6 +1,12 @@
-# Miscellaneous commands
+---
+title : "Miscellaneous commands"
+description: 
+lead: 
+---
 
-Less useful commands. You don't need any of these commands, but they're documented all the same.
+## Less used commands
+
+You don't need any of these commands, but they're documented all the same.
 
 | Command | Description |
 | --- | --- |
@@ -18,7 +24,7 @@ See [[Home]] for Sprinto's main commands.
 | --- | --- |
 | `/final` or `@sprinto final` or `/words final` | Finalize your word count, so Sprinto won't wait for you to update it later (or will stop waiting if the sprint is over).  |
 | `/final` count: `1200` | Finalize your word count with 1200 total words. Same as `/words` count: `1200 final` |
-| `@sprinto who` | Lists active sprinters in the channel. Sprinters who have voted to `_cancel` are marked with "❌" |
+| `@sprinto who` | Lists active sprinters in the channel. Sprinters who have voted to `/cancel` are marked with "❌" |
 | `@sprinto starting 1000`| aka `@sprinto tare`. Change your starting word count without changing your current word count. I'm not sure why you'd want to do this. Typically instead of using this, you'd just `/join` again with a different starting word count, and then set your new word count with `/words`. |
 | `@sprinto rejoin` | Rejoin a sprint you left with `/leave`, restoring your previous word count. |
 | `@sprinto status` | Check your word count, time remaining and number of active sprinters. Will give your `/pings-status` if no sprint is running |

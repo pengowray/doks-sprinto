@@ -1,4 +1,8 @@
-# Sprinto! 
+---
+title : "Sprinto overview"
+description: 
+lead: 
+---
 
 Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can! [[Setup]] is easy.
 

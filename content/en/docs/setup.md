@@ -1,3 +1,8 @@
+---
+title : "Setting up Sprinto"
+description: 
+lead: 
+---
 ## Setting up Sprinto (Server owners/managers)
 
 **Steps:**

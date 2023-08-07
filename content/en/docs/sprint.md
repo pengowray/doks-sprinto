@@ -1,4 +1,10 @@
-# Sprint Command in detail
+---
+title : "Sprint"
+description: The sprint command and all its options
+lead: 
+---
+
+## The Sprint Command in detail
 
 `/sprint <duration> <when> <preset> <other>`
 

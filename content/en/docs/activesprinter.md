@@ -1,3 +1,8 @@
+---
+title : "Active Sprinter role"
+description: "Setting up an active sprinter role for sprints to be more visible on Discord"
+lead: 
+---
 ## What is the 'Active Sprinter' role?
 
 In brief:

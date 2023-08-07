@@ -1,4 +1,10 @@
-## Scheduling Sprints: Sprinto x Carl-bot
+---
+title : "Carl-bot x Sprinto"
+description: "How to schedule sprints with the help of Carl-bot"
+lead: 
+---
+
+## Scheduling Sprints
 
 NOTE: Carl-bot is not associated with Sprinto. I've provided this info to help you schedule sprints, to extend Sprinto's functionality beyond what it was originally designed for.
 

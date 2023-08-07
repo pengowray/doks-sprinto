@@ -1,4 +1,10 @@
-## Pingme
+---
+title : "Ping me"
+description: "Commands to get mentioned or not at the start of sprints"
+lead: 
+---
+
+## /pingme and /forgetme
 
 After a sprint, participants will be tagged (@mentioned) at the start future sprints. 
 
@@ -16,7 +22,7 @@ Use `/pingme` to be mentioned when the next sprint starts even if you haven't sp
 | `/pings-never` | Never ping you at the start of the sprints, even after you've done one. |
 | `/pings-status` or `@sprinto pingstatus` | Check your ping status |
 
-## Sprint MC only commands
+## SprintMC-only commands
 
 | Command | Description |
 | --- | --- |
