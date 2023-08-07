@@ -1,10 +1,22 @@
-The `@Active Sprinter` role is an extra thing admins can set up, but is not necessary for the running of Sprinto. It gives sprinters currently participating in a sprint (in any channel) the role `@Active Sprinter`. You can use this to make sprinters pop up to the top of the server's members list under the "Active Sprinters" role banner, which lets others on the server know a sprint is happening. Having the role can give sprinters a special color username while they're participating in a sprint, as well as a special badge next to their name (requires a Discord boosted servers). 
+## What is the 'Active Sprinter'?
 
-If the `@Active Sprinter` role is mentionable, it can also be used to mention (ping) active sprinters, however Sprinto itself does not use the role for this purpose. Sprinto doesn't use it because the same `@Active Sprinter` role is used for every sprint channel, so it might ping the wrong people if there are two sprints running at the same time in different channels. Instead, Sprinto tags the individual sprinters who have joined the sprint.
+In brief:
+* Makes members who are sprinting more visible in the discord members list.
+* It's just an optional nice thing to make it more obvious when a sprint is running on your server.
 
-The `@Active Sprinter` role color, badge icon and position in the members list, and mentionability are all standard Discord features that an admin can set up in the server's role settings.
+The `@Active Sprinter` role is an extra thing admins can set up, but is not necessary for the running of Sprinto. It gives sprinters currently participating in a sprint (in any channel) the role `@Active Sprinter`. You can use this to make sprinters pop up to the top of the server's members list under the "Active Sprinters" role banner, which lets others on the server know a sprint is happening. Having the role can give sprinters a special color username while they're participating in a sprint, as well as a special badge next to their name. Badges require a Discord boosted servers.
 
-These commands are available to guild administrators and members with "Manage Roles" or "Manage Server" permissions:
+## Customizing the active sprinter role
+
+* Role attributes: The `@Active Sprinter` role color, badge icon and position in the members list, and mentionability are all standard Discord features that an admin can set up in the server's role settings.
+
+* Make it mentionable? If the `@Active Sprinter` role is mentionable, it can also be used to mention (ping) active sprinters, however Sprinto itself does not use the role for this purpose. Sprinto doesn't use it because the same `@Active Sprinter` role is used for every sprint channel, so it might ping the wrong people if there are two sprints running at the same time in different channels. Instead, Sprinto tags the individual sprinters who have joined the sprint.
+
+## Active sprinter related commands
+
+There are various commands to help set up the `@Active Sprinter` role and check that Sprinto can use it. However you can also create and setup the role manually in Discord.
+
+These commands are available to server administrators and members with "Manage Roles" or "Manage Server" permissions:
 
 | Command | Description |
 | --- | --- |
@@ -18,9 +30,11 @@ If you no longer wish to use this feature, just delete the `@Active Sprinter` ro
 
 `@sprinto create_active_role` will give you help or advice if there's problems with the role's set up or Sprinto's permissions for using the role.
 
-## Customizing
+## Customizing the Active Sprinter role
 
 Under **Server Settings > Roles** you can customize the Active Sprinter role.
+
+Role attributes: The `@Active Sprinter` role color, badge icon and position in the members list, and mentionability are all standard Discord features that an admin can set up in the server's role settings.
 
 1. (optionally) Change the color — if you want sprinters to have a different color when sprinting, feel free to change the color of the role.
 
@@ -28,7 +42,9 @@ Under **Server Settings > Roles** you can customize the Active Sprinter role.
 
 3. (optionally) Change the position of "Active Sprinters" on the members list: Under **Server Settings > Roles**, drag Sprinto's role at the top (or as high as you're comfortable) and drag the Active Sprinter role just under it. This way everyone on your server will more easily see a sprint is running.
 
-Notes: The command `@sprinto create_active_role` will already place the role as high as Sprinto is allowed. Bots cannot control roles that are higher than their own highest role, so if you want to move ActiveSprinter higher (to be more visible), drag one of Sprinto's roles to a higher position first and place ActiveSprinter just below that role. If Sprinto doesn't have any roles, then he probably doesn't have Manage Role permissions which he needs for this feature, so invite him to your server again (there's a link at the bottom of the page) or set up a role for him. Note you don't need to display Sprinto on the members list at the position of his highest role: you can turn off "heisting" from Sprinto's top role (uncheck "Display role members separately from online members"). After changing role positions around, you can use `@sprinto create_active_role` or `@sprinto refresh_active_role` to check everything is OK. This all sounds needlessly complicated and I feel there should be a better way to explain it all but there it is.
+4. (optionally) Make it mentionable? If the `@Active Sprinter` role is mentionable, it can also be used to mention (ping) active sprinters, however Sprinto itself does not use the role for this purpose. Sprinto doesn't use it because the same `@Active Sprinter` role is used for every sprint channel, so it might ping the wrong people if there are two sprints running at the same time in different channels. Instead, Sprinto tags the individual sprinters who have joined the sprint.
+
+Notes: The command `@sprinto create_active_role` will already place the role as high as Sprinto is allowed. Bots cannot control roles that are higher than their own highest role, so if you want to move `@ActiveSprinter`` higher (to be more visible), drag one of Sprinto's roles to a higher position first and place `@ActiveSprinter`` just below that role. If Sprinto doesn't have any roles, then he probably doesn't have Manage Role permissions which he needs for this feature, so invite him to your server again (there's a link at the bottom of the page) or set up a role for him. Note you don't need to display Sprinto on the members list at the position of his highest role: you can turn off "heisting" from Sprinto's top role (uncheck "Display role members separately from online members"). After changing role positions around, you can use `@sprinto create_active_role` or `@sprinto refresh_active_role` to check everything is OK. This all sounds needlessly complicated and I feel there should be a better way to explain it all but there it is.
 
 4. (optionally) Note you can create a role from scratch named "Active Sprinters" and it will still be used by Sprinto, but using `@sprinto create_active_role` is recommended because it tells you if there's an issue. (You also also use it after creating the role manually)
 
