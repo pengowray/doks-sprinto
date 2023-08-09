@@ -10,9 +10,10 @@ description = "Sprinto brings creators together."
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+# images = ["doks.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
+# domainTLD = "doks.netlify.app"
+domainTLD = "sprinto.live"
 titleHome = "Sprinto bot"
 
 ## Twitter Cards
@@ -66,7 +67,11 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+#footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+#footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+#footer = "[Invite Sprinto](https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576) ⸻ [Join Support Server](https://discord.gg/7ZSuEgM) ⸻ [top.gg](https://top.gg/bot/421646775749967872) ⸻ [Sprinto on Patreon](https://www.patreon.com/pengowray)** ⸻ [Buy me a coffee](https://ko-fi.com/pengowray) (Ko-fi)"
+#footer = "<a href=\"https://discord.gg/7ZSuEgM\">Sprinto Support Server</a> ⸻ <a href=\"https://www.patreon.com/pengowray\">Sprinto on Patreon</a> ⸻ <a href=\"https://ko-fi.com/pengowray\">Buy me a coffee</a> (Ko-fi) <br> Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "<a class=\"text-muted\" href=\"https://discord.gg/7ZSuEgM\">Join Sprinto's Support Server</a>"
 
 # Feed
 copyRight = "Copyright (c) 2023 Pengo Wray"
@@ -90,7 +95,8 @@ editPage = false
 lastMod = false
 
 [sections]
-  sectionNav = ["docs", "guides"]
+  # sectionNav = ["docs", "guides"]
+  sectionNav = ["docs", "blog"]
 
 [options]
   lazySizes = true
@@ -114,4 +120,4 @@ lastMod = false
 [menu]
   [menu.section]
     auto = true
-    collapsibleSidebar = true
+    collapsibleSidebar = false

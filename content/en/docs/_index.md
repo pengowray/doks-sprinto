@@ -4,4 +4,5 @@ description: "Help for Sprinto, the Discord bot for writers."
 lead: ""
 draft: false
 images: []
+#type: docs
 ---

@@ -1,21 +1,27 @@
 # [[docs]], [[main]], [[tutorial]]
 
-# [[docs]]
-#   name = "Prologue"
-#   weight = 10
-#   identifier = "prologue"
-#   url = "/docs/prologue/"
-
 [[docs]]
   name = "Help"
   weight = 10
-  identifier = "help"
+  identifier = "docshelp"
   url = "/docs/"
+
+# [[docs]]
+#   name = "Pages"
+#   weight = 20
+#   identifier = "pages"
+#   parent = "docshelp"
 
 [[main]]
   name = "Blog"
   url = "/blog/"
   weight = 20
+
+[[main]]
+  name = "Docs"
+  url = "/docs/"
+  identifier = "mainhelp"
+  weight = 30
 
 [[main]]
   name = "Get Started"
@@ -78,7 +84,7 @@
   url = "https://ko-fi.com/pengowray"
   weight = 9
 
-# [[footer]]
-#   name = "Privacy"
-#   url = "/privacy-policy/"
-#   weight = 10
+[[footer]]
+  name = "Privacy"
+  url = "/privacy-policy/"
+  weight = 10

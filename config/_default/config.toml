@@ -1,4 +1,5 @@
-baseurl = "https://morse.games/sprinto"
+baseurl = "https://morse.games/"
+# baseurl = "https://morse.games/sprinto"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -64,6 +65,7 @@ rel  = "sitemap"
 [permalinks]
   blog = "/blog/:title/"
 # docs = "/docs/1.0/:sections[1:]/:title/"
+  docs = "/docs/:title/"
 
 [minify.tdewolff.html]
   keepWhitespace = false

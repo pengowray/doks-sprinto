@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  Doks
+  Doks (README.md)
 </h1>
 
 <h3 align="center">

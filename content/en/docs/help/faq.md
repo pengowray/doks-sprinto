@@ -1,13 +1,25 @@
 ---
 title : "FAQ"
+identifier: "faq"
 description: 
-lead: 
+lead: Answers to frequently asked questions about Sprinto
+menu:
+  docs:
+    parent: "docshelp"
+    weight: 630
+    #identifier: "faq"
+    #title: "FAQ"
+    #url: "/docs/faq/"
+#  main:
+#    parent: "mainhelp"
+  
+toc: true
 ---
 ## Sprinto isn't responding to my commands
 
 Discord's slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a discord UI/UX issue, or something else. I've written up a trouble shooting guide here that attempts to cover most of them:
 
-https://www.patreon.com/posts/71439355
+> [https://www.patreon.com/posts/71439355](https://www.patreon.com/posts/71439355)
 
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 
