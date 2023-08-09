@@ -1,10 +1,10 @@
 ---
-title : "Sprinto overview"
+title : "Popular commands"
 description: 
-lead: 
+lead: Popular sprinting commands
 ---
 
-Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can! [[Setup]] is easy.
+Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
 
 ## Popular and fun ways to start a sprint
 
@@ -74,21 +74,3 @@ Join once a sprint is started.
 | Command | Description |
 | --- | --- |
 | `@sprinto dare` | Get a writing dare (via now deleted [nanowrimo.org](https://nanowrimo.org/word_sprints) word_sprints page) |
-
-## Admin commands
-
-→ [[SprintAdmin]] — Admin commands
-
-→ [[Setup]] — Inviting and setup
-
-→ [[ActiveSprinter]] — `/create_active_role`
-
-
-## More info:
-
-→ [[Sprint]] — full options for `/sprint` command
-
-→ [[pingme]] — `/pingme` `/forgetme` `/always` `/never` `/pingstatus`
-
-→ [[FAQ]]
-

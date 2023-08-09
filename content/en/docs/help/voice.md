@@ -1,9 +1,9 @@
 ---
-title : "Sprinto Voice"
+title : "Voice"
 description: Using Sprinto in a voice channel
 lead: 
 ---
-## Sprinto Voice
+Sprinto Talks
 
 Sprinto can join a voice channel during a sprint and make sounds at the start and when time's up. It's not consistently reliable and difficult to debug (I'm yet to work out a way to tell if it's been working or randomly stopped for someone or everyone). 
 

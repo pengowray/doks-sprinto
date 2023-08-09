@@ -1,9 +1,10 @@
 ---
-title : "Miscellaneous commands"
+title : "Misc commands"
 description: 
-lead: 
+lead: Miscellaneous commands
+identifier: "misc"
+url: "docs/misc"
 ---
-
 ## Less used commands
 
 You don't need any of these commands, but they're documented all the same.

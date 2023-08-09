@@ -2,6 +2,7 @@
 title : "Carl-bot x Sprinto"
 description: "How to schedule sprints with the help of Carl-bot"
 lead: 
+identifier: "carlbot"
 ---
 
 ## Scheduling Sprints
