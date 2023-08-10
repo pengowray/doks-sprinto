@@ -10,6 +10,9 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 → see also: _[[Sprint command explained|Sprint]]_ (with full list of sprint options and presets)
 
+{{< slash name="sprint" key0="options" val0="for 15 in 1" >}}
+
+
 | Command | Longer alternative | Description |
 | --- | --- |  --- |
 | `/sprint` | `/sprint for 15 in 1` | Start a sprint for the default duration (15 minutes, starting in 1 minute) |
@@ -24,9 +27,10 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 ## Oops?
 
-| Command | Description |
-| --- | --- |
-| `/cancel` | If Sprinto didn't understand your `/sprint` command you can cancel it and start over. Note that if others have joined your sprint, you might need them to `/cancel` too. |
+{{< slash name="cancel" >}}
+<br>
+
+If Sprinto didn't understand your {{< slashembed name="sprint" >}} command you can cancel it and start over. Note that if others have joined your sprint, you might need them to {{< slashembed name="cancel" >}} too.
 
 ## Join a sprint
 Join once a sprint is started. 

@@ -1,0 +1,12 @@
+<span class="gg">
+    <span class="gg-icon-outer">
+        <img alt="" title="" class="gg-icon" style="width: 24px; height: 24px;" src="https://cdn.discordapp.com/avatars/421646775749967872/b9f6b309631dd6f15f9dc51c4f7cd0ab.webp?size=40" >
+    </span>
+    <b>/{{ .Get "name" }}</b> 
+    {{ if or (.Get "key0") (.Get "val0") }}
+    <span class="gg-options">
+        <span class="gg-options-key">{{ .Get "key0" }}:</span>
+        <span class="gg-options-val">{{ .Get "val0" }}</span>
+    </span>
+    {{ end }}
+</span>

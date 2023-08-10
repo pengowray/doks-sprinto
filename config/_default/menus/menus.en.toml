@@ -15,17 +15,17 @@
 [[main]]
   name = "Blog"
   url = "/blog/"
-  weight = 20
+  weight = 40
 
 [[main]]
   name = "Docs"
   url = "/docs/"
   identifier = "mainhelp"
-  weight = 30
+  weight = 20
 
 [[main]]
   name = "Get Started"
-  weight = 30
+  weight = 10
   identifier = "get-started"
   url = "/docs/home/"
 

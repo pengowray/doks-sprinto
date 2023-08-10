@@ -1,1 +1,61 @@
 /** Custom styles */
+.gg { 
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 50vh;
+    border-radius: 8px;
+    vertical-align: baseline;
+}
+
+
+.gg-icon-outer {
+    outline-style: none;
+    padding: 10px 16px;
+}
+
+.gg-icon {
+    border-radius: 50%;
+}
+
+[data-dark-mode] .gg-options {
+    background-color: rgb(17, 18, 20);
+}
+.gg-options {
+    border-color: rgb(0, 120, 215);
+    border-width: 0.733333px;
+    background-color: rgb(237, 239, 232);
+    border-radius: 4px;
+    border-style: solid;
+    line-height: 22px;
+    margin-top: 6px;
+    max-width: calc(100% - 30px);
+    padding: 4px;
+}
+
+[data-dark-mode] .gg-options-key {
+    background-color: rgb(17, 18, 20);
+}
+.gg-options-key {
+    background-color: rgb(237, 239, 232);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    border-radius: 0px;
+    border-width: 0px;
+}
+
+[data-dark-mode] .gg-options-val {
+    background-color: rgb(56, 59, 66);
+}
+.gg-options-val {
+    background-color: rgb(255, 255, 255);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 0px;
+    border-width: 0px;
+}

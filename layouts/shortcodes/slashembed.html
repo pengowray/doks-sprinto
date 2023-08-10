@@ -1,0 +1,10 @@
+<!-- this is just if you use a slash command within text -->
+<span class="gg">
+    <b>/{{ .Get "name" }}</b> 
+    {{ if or (.Get "key0") (.Get "val0") }}
+    <span class="gg-options">
+        <span class="gg-options-key">{{ .Get "key0" }}:</span>
+        <span class="gg-options-val">{{ .Get "val0" }}</span>
+    </span>
+    {{ end }}
+</span>
