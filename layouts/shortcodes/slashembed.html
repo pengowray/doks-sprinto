@@ -4,7 +4,13 @@
     {{ if or (.Get "key0") (.Get "val0") }}
     <span class="gg-options">
         <span class="gg-options-key">{{ .Get "key0" }}:</span>
-        <span class="gg-options-val">{{ .Get "val0" }}</span>
+        <span class="gg-options-val">{{ .Get "val0" | markdownify }}</span>
+    </span>
+    {{ end }}
+    {{ if or (.Get "key1") (.Get "val1") }}
+    <span class="gg-options">
+        <span class="gg-options-key">{{ .Get "key1" }}:</span>
+        <span class="gg-options-val">{{ .Get "val1" | markdownify }}</span>
     </span>
     {{ end }}
 </span>

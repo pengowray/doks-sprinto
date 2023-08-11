@@ -13,23 +13,42 @@ Your emoji pet will keep you company on sprints and stop you from ever coming la
 
 ## Interacting
 
-| Command | Description |
-| --- | --- |
-| `@sprinto pet info` | Show info about your pet. |
-| `@sprinto pet pet` | Pet your pet (will also show if your pet is sleeping) |
-| `@sprinto pet wake` | Wake up you pet so they'll run with you in sprints |
-| `@sprinto pet sleep` | Hide your pet so they won't run in sprints |
+### pet info
+{{< atsprinto "pet info" >}}
+Show info about your pet.
+
+### pet pet
+{{< atsprinto "pet pet" >}}
+Pet your pet (will also show if your pet is sleeping)
+
+### pet wake
+{{< atsprinto "pet wake" >}}
+Wake up you pet so they'll run with you in sprints.
+
+### pet sleep
+{{< atsprinto "pet sleep" >}}
+Hide your pet so they won't run in sprints
 
 ## Change your Emoji Pet 
 
-| Command | Description |
-| --- | --- |
-| `@sprinto pet random` | Assigns you a new pet with a random name and emoji |
-| `@sprinto pet random name` | Gives your pet a new, random name |
-| `@sprinto pet random emoji` | Gives your pet a new, random appearance |
-| `@sprinto pet name <name>` | Set your pet's name to `<name>` |
+### pet random
+{{< atsprinto "pet random" >}}
+Assigns you a new pet with a random name and emoji
 
-If you want to choose a specific emoji just let me (Pengo Wray) know.
+### pet random name
+{{< atsprinto "pet random name" >}}
+Gives your pet a new, random name
+
+### pet random emoji
+{{< atsprinto "pet random emoji" >}}
+Gives your pet a new, random appearance. If you want to choose a specific emoji just let me (Pengo Wray) know.
+
+### pet name
+{{< atsprinto "pet name _name_" >}}
+Set your pet's name to _name_
+
+For example:
+{{< atsprinto "pet name Zeffy" >}}
 
 ## Emoji Pet Support
 

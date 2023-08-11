@@ -54,7 +54,7 @@
 }
 
 [data-dark-mode] .gg-options-val {
-    background-color: rgb(56, 59, 66);
+    background-color: #232428;
 }
 .gg-options-val {
     background-color: rgb(255, 255, 255);
@@ -75,6 +75,15 @@
     background: #d5d9ef;
 }
 
-.hidden{
-    font-size: 0;
-  }
+.hidden {
+font-size: 0;
+}
+
+[data-dark-mode] .gg-role {
+    color: #f1c40f;
+    background: #4b483b;
+}
+.gg-role {
+    color: #9e8007; // darker than actual for added visiblity 
+    background: #fcf2d4;
+}

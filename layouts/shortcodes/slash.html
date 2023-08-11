@@ -1,12 +1,19 @@
 <div class="gg">
     <span class="gg-icon-outer">
-        <img alt="" title="" class="gg-icon" style="width: 24px; height: 24px;" src="https://cdn.discordapp.com/avatars/421646775749967872/b9f6b309631dd6f15f9dc51c4f7cd0ab.webp?size=40" >
+        <img alt="" title="" class="gg-icon" style="width: 24px; height: 24px;" 
+        src="{{ with .Get "carl" }}https://cdn.discordapp.com/avatars/235148962103951360/ed3dac3b6e7a851df781632a4295fcb9.webp?size=56{{ else }}https://cdn.discordapp.com/avatars/421646775749967872/b9f6b309631dd6f15f9dc51c4f7cd0ab.webp?size=56{{ end }}" >
     </span>
     <b>/{{ .Get "name" }}</b> 
     {{ if or (.Get "key0") (.Get "val0") }}
     <span class="gg-options">
         <span class="gg-options-key">{{ .Get "key0" }}:</span>
-        <span class="gg-options-val">{{ .Get "val0" }}</span>
+        <span class="gg-options-val">{{ .Get "val0" | markdownify }}</span>
+    </span>
+    {{ end }}
+    {{ if or (.Get "key1") (.Get "val1") }}
+    <span class="gg-options">
+        <span class="gg-options-key">{{ .Get "key1" }}:</span>
+        <span class="gg-options-val">{{ .Get "val1" | markdownify }}</span>
     </span>
     {{ end }}
 </div>

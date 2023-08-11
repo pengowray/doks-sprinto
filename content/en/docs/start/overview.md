@@ -20,7 +20,7 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 ## Admin commands
 
-→ [Admin commands]({{< relref "sprintadmin" >}})
+→ [Admin commands]({{< relref "admin" >}})
 
 → [Inviting Sprinto]({{< relref "invite" >}})
 

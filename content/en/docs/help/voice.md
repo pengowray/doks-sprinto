@@ -11,7 +11,7 @@ Because of possible reliability issues Sprinto Voice is in perpetual beta. These
 
 ## How it works
 
-Sprinto will automatically join the first voice channel it finds with "sprint" in the name (e.g. "🔊 Sprinting talk"). You can set it manually with `@sprinto set_voice_home_here`, or disable Sprinto using voice with `@sprinto voice_home_off`. If Sprinto's previous voice channel is removed you may have to use `@sprinto reset_voice_home` to have Sprinto find another one.
+Sprinto will automatically join the first voice channel it finds with "sprint" in the name (e.g. "🔊 Sprinting talk"). You can set it manually with {{< atsprintoembed "set_voice_home_here">}}  or disable Sprinto using voice with {{< atsprintoembed "voice_home_off">}} . 
 
 ## Commands
 
@@ -19,9 +19,28 @@ The only setup required is creating a Discord voice channel with a name starting
 
 Note again, this feature isn't enabled unless your server has been added to a list of enabled servers. Request beta voice access on the Sprinto Planet discord.
 
-| Command | Description |
-| --- | --- |
-| `@sprinto set_voice_home_here` | (A) Join a voice channel first, then enter `@sprinto set_voice_home_here`. This sets Sprinto's voice channel (server-wide setting) |
-| `@sprinto reset_voice_home` | (A) Set Sprint's voice channel to the default (i.e. any voice channel with "sprint" in the name) |
-| `@sprinto voice_home_on` | (MC) Allow Sprinto to join voice channels on your Discord server (defaults to on) | 
-| `@sprinto voice_home_off` | (MC) Stop Sprinto joining voice channels |
+### set_voice_home_here
+{{< atsprinto "set_voice_home_here">}} 
+(A) Join a voice channel first, then use this command. This sets Sprinto's voice channel. It's a server-wide setting.
+
+### clear_voice_home 
+{{< atsprinto "clear_voice_home ">}} 
+{{<alts>}}
+{{< atsprinto "reset_voice_home ">}} 
+{{</alts>}}
+
+(A) Reset Sprint's voice channel to the default (i.e. any voice channel with "sprint" in the name)
+
+If Sprinto's previous voice channel is removed you may have to use this command to have Sprinto find another.
+
+<!-- was: reset_voice_home -->
+
+### voice_home_on
+{{< atsprinto "voice_home_on">}} 
+
+(MC) Allow Sprinto to join voice channels on your Discord server (defaults to on)
+
+### voice_home_off
+{{< atsprinto "voice_home_off">}} 
+
+(MC) Stop Sprinto joining voice channels 

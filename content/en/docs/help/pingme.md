@@ -56,10 +56,10 @@ Check Sprinto's round-trip latency to Discord's server. This is nothing to do wi
 
 ### forget user (by id)
 
-{{< slash name="admin-forget-user" key0="user_id" val0="123456789" >}} 
-{{< atsprinto "forgetuser 123456789" >}} 
+{{< slash name="admin-forget-user" key0="user_id" val0="_123456789_" >}} 
+{{< atsprinto "forgetuser _123456789_" >}} 
 
-Replace 123456789 with the Discord ID of the user.
+Replace _123456789_ with the Discord ID of the user.
 
 Stops a user getting pinged at the start of sprints, as if they had typed {{< slashembed name="forgetuser" >}} themselves.
 
@@ -67,8 +67,8 @@ If you can't see their user id, you might have to turn on "Developer Mode" in Di
 
 ### forget user (by name)
 
-{{< slash name="admin-forget-user-by-name" key0="user" val0="username-to-forget" >}} 
-{{< atsprinto "forgetuser username-to-forget" >}} 
+{{< slash name="admin-forget-user-by-name" key0="user" val0="_username-to-forget_" >}} 
+{{< atsprinto "forgetuser _username-to-forget_" >}} 
 
 Replace _username-to-forget_ with the username of the user. 
 
@@ -76,20 +76,23 @@ When using {{< atsprintoembed "forgetuser" >}}, there's no need to add an @ at t
 
 ### pinguser
 
-{{< atsprinto "pinguser user number" >}} 
+{{< atsprinto "pinguser _user_ _number_" >}} 
 
 Replace _user_ with the user's name.
 
 Replace _number_ with the number of sprints. Default is 3. For "never ping" use 0. For always ping, use 1000.
 
-Turn pings on for a user, like if they'd typed {{< slashembed name="pingme" >}} . 
+Example:
+{{< atsprinto "pinguser Pengo 3" >}} 
+
+Turns pings on for Pengo, as if he'd typed {{< slashembed name="pingme" >}} himself.
 
 ### pingroles-set
 
-{{< slash name="setup-pingroles-set" key0="role" val0="@rolename" >}} 
-{{< atsprinto "always_ping_role rolename" >}} 
+{{< slash name="setup-pingroles-set" key0="role" val0="_@rolename_" >}} 
+{{< atsprinto "always_ping_role _rolename_" >}} 
 
-See: [SprintAdmin: Always ping a role at sprint start]({{< relref "SprintAdmin#always-ping-a-role-at-sprint-start" >}}) 
+With this command you can set a role to always get a mention at the start of sprints (in the channel the command is used). See the help page on [Ping Roles]({{< relref "ping-roles" >}}) for more on this and related commands.
 
 <!--
 ## Todo

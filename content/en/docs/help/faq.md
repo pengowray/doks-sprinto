@@ -74,6 +74,7 @@ Perhaps in future, the duration-adjusted WPM could be told to participants each 
 Similar issues arise for attempting to end a sprint early if all sprinters finalize (`/final`) before the time's up. There might some special use case for this, but it's highly fraught with potential issues for little payoff.
 
 ## Why did you create Sprinto?
+![Image](/images/programmers-credo.png)
 
 https://twitter.com/pinboard/status/761656824202276864
 
@@ -88,3 +89,8 @@ While Sprinto is a non-sentient robot and currently has no personal feelings on 
 ## Where can I ask more questions?
 
 Come to Sprinto Planet—Sprinto's support server—and ask away, or use the `/feedback` command.
+
+Examples:
+{{< slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
+{{< atsprinto "feedback Where can I give to help Sprinto's development?" >}}
+
