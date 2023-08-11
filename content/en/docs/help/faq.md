@@ -71,7 +71,7 @@ It also would make the scoreboard less intuitive to look at if it had more compl
 
 Perhaps in future, the duration-adjusted WPM could be told to participants each time they give a word count, and they could do this multiple times during the sprint. This could happen while leaving the full-sprint WPM on the scoreboard. This still seems to add more complication than it's worth though, but let me know if you'd really like to see this feature added.
 
-Similar issues arise for attempting to end a sprint early if all sprinters finalize (`_final`) before the time's up. There might some special use case for this, but it's highly fraught with potential issues for little payoff.
+Similar issues arise for attempting to end a sprint early if all sprinters finalize (`/final`) before the time's up. There might some special use case for this, but it's highly fraught with potential issues for little payoff.
 
 ## Why did you create Sprinto?
 

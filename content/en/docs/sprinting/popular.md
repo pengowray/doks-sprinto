@@ -10,13 +10,37 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 → see also: _[[Sprint command explained|Sprint]]_ (with full list of sprint options and presets)
 
-{{< slash name="sprint" key0="options" val0="for 15 in 1" >}}
+### Standard 15 minute sprint
 
+Start a sprint for the default duration (15 minutes, starting in 1 minute) 
+
+{{< slash name="sprint" >}}
+{{< alts "Synonyms" >}}
+These do the same thing:
+    {{< slash name="sprint" key0="options" val0="for 15 mins in 1 minute" >}}
+    {{< slash name="sprint" key0="options" val0="for 15 in 1" >}}
+    {{< slash name="sprint" key0="options" val0="15 in 1" >}}
+{{</ alts >}}
+
+### Shorter or longer
+
+Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes) 
+
+{{< slash name="sprint" key0="options" val0="5" >}}
+{{< slash name="sprint" key0="options" val0="30" >}}
+{{< slash name="sprint" key0="options" val0="60" >}}
+{{< alts "Synonyms" >}}
+Other ways to start a 30 minute sprint in 1 minute:
+    {{< slash name="sprint" key0="options" val0="for 30 minutes in 1 minute" >}}
+    {{< slash name="sprint" key0="options" val0="for 30" >}}
+    {{< slash name="sprint" key0="options" val0="30 in 1" >}}
+    {{< slash name="sprint" key0="options" val0="30 1" >}}
+Alternatives:
+    {{< slash name="sprint" key0="options" val0="for 30 mins very soon" >}}
+{{</ alts >}}
 
 | Command | Longer alternative | Description |
 | --- | --- |  --- |
-| `/sprint` | `/sprint for 15 in 1` | Start a sprint for the default duration (15 minutes, starting in 1 minute) |
-| `/sprint 10` | `/sprint for 10` | Start a 10 minute sprint (can change it to up to 60 minutes) |
 | `/sprint in 5` | `/sprint for 15 in 5` | Start a sprint in 5 minutes time. |
 | `/sprint 20 5` | `/sprint for 20 in 5` | |
 | `/sprint :45 ` | `/sprint for 15 at :45` | It's easier for sprinters to keep track if the start and end times line up with clock time. |

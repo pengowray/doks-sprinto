@@ -83,6 +83,6 @@ All settings can be set to `on`, `off` or `default`
 | `/setup-set-show-walltime` or `@sprinto setShowWallTime off` / `on` / `sometimes` | (A) Show or hide display of the ending "wall time" when sprint starts. e.g. "(Runs until ⏰ :30)". With `sometimes` (the default) it will only be shown if the sprint ends near an exact minute. With `on` it will be always shown (at least for sprints longer than 2 minutes). Wall time also shown with the `_time` command for both `on` and `sometimes`. |
 
 ## See also
-* [Setup](../setup) (setting up Sprinto)
-* [ActiveSprinter](../activesprinter) (another role used by Sprinto)
-* [Voice](../voice)
+* [Setup]({{< relref "setup" >}}) (setting up Sprinto)
+* [ActiveSprinter]({{< relref "activesprinter" >}}) (another role used by Sprinto)
+* [Voice]({{< relref "voice" >}})

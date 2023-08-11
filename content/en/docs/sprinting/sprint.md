@@ -81,13 +81,13 @@ Please send feedback if you have suggestions for other presets or shortcuts.
 | `endtime <minutes>` or `fin <minutes>` | How long sprinters have to give their final word count. If you don't set this, the default ranges from 2 to 7.5 minutes depending on the length of your sprint. (calculated as: 1:30 min + 30s per 5 minutes of sprint) Use `/status` to check the endtime length for a running sprint. |
 | `noff` | "no fast finish" — Always wait the full ending time for final word counts before showing the final results (instead of speeding it up if everyone's given their word counts). |
 | `please` | ask Sprinto to do things he wouldn't normally, such as running a sprint up to 2 hours. |
-| `lock` | Lock the sprint, meaning only a SprintMC can cancel it. (see: [[SprintAdmin]]) |
+| `lock` | Lock the sprint, meaning only a SprintMC can cancel it. (see: [SprintAdmin]]({{< relref "SprintAdmin" >}}) |
 <!-- | `delay <minutes>` | (removed) Delay the opening of the sprint by this many minutes. I've effectively removed this feature as it didn't seem useful. I can enable it on your server if you really want but you'll have to let me know why you want it). If your start time is too far into the future, part of the time will be converted into a delay. | -->
 <!-- | `help` | Gives you a link to this wiki page | -->
 
 ## `<minutes>`
 
-Anywhere you see `<minutes>` you can also use seconds, e.g. `/sprint for 1000 seconds` or whatever you like really, e.g. `/sprint for .01 day` or `/sprint in 10m30s`. Sprinto uses [TimeSpanParser](https://github.com/quole/TimeSpanParser), which was developed for Sprinto.
+Anywhere you see `<minutes>` you can also use seconds, e.g. `/sprint for 1000 seconds` or whatever you like really, e.g. `/sprint for .01 day` or `/sprint in 10m30s`. Sprinto uses [TimeSpanParser](https://github.com/pengowray/TimeSpanParser), which was developed for Sprinto.
 
 ## `:<MM>`
 

@@ -26,9 +26,9 @@ Use `/pingme` to be mentioned when the next sprint starts even if you haven't sp
 
 | Command | Description |
 | --- | --- |
-| `/forgetuser 123456789` | Stops a user getting pinged at the start of sprints, as if they had typed `_forgetme` themselves. Replace `123456789` with the ID of the Discord user. If you can't see their user id, you might have to turn on "Developer Mode" in Discord settings, then "Copy ID" will appear when you right click the user. You can also use their user name (with no `@`), if they haven't left the server, but the ID is more reliable. |
+| `/forgetuser 123456789` | Stops a user getting pinged at the start of sprints, as if they had typed `/forgetme` themselves. Replace `123456789` with the ID of the Discord user. If you can't see their user id, you might have to turn on "Developer Mode" in Discord settings, then "Copy ID" will appear when you right click the user. You can also use their user name (with no `@`), if they haven't left the server, but the ID is more reliable. |
 | `@sprinto pinguser <user> <number>` | Turn pings on for a user, like if they typed `/pingme`. Replace `<number>` with the number of sprints. Default is 3. For "never" use 0. For always, use 1000. |
-| `/setup-pingroles-set <role>` or `@sprinto always_ping_role <role>` | See: [SprintMC: Always ping a role at sprint start](SprintMC#always-ping-a-role-at-sprint-start) |
+| `/setup-pingroles-set <role>` or `@sprinto always_ping_role <role>` | See: [SprintAdmin: Always ping a role at sprint start]({{< relref "SprintAdmin#always-ping-a-role-at-sprint-start" >}}) |
 
 ## Ping
 

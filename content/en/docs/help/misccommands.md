@@ -11,15 +11,15 @@ You don't need any of these commands, but they're documented all the same.
 
 | Command | Description |
 | --- | --- |
-| `@sprinto parse [time]` | Test Sprinto's time parser. e.g. `@sprinto parse 1 day 3,000,000 seconds` — see [TimeSpanParser](https://github.com/quole/TimeSpanParser) for more. |
+| `@sprinto parse [time]` | Test Sprinto's time parser. e.g. `@sprinto parse 1 day 3,000,000 seconds` — see [TimeSpanParser](https://github.com/pengowray/TimeSpanParser) for more. |
 | `@sprinto invite` | Create an invite link to take Sprinto to another server. Also gives a link to the support server. (Both links are in the footer of this wiki) |
-| `@sprinto sprintmc` | Just tells you about the [[SprintMC]] role, and provides help to set it up. |
-| `/admin-refresh-active-role` or `@sprinto refresh_active_role` | Moves people in and out of the `@Active Sprinter` role, in case some people are stuck in the wrong place. Can be used by anyone. For more info: [[ActiveSprinter]] |
+| `@sprinto sprintmc` | Just tells you about the `@SprintMC`` role, and provides help to set it up. |
+| `/admin-refresh-active-role` or `@sprinto refresh_active_role` | Moves people in and out of the `@Active Sprinter` role, in case some people are stuck in the wrong place. Can be used by anyone. For more info: [ActiveSprinter]({{< relref "ActiveSprinter" >}}) |
 | `@sprinto prefix` | Show Sprinto's prefix on your server, which is now always `/`. Unfortunately, this can no longer be changed. |
 
 ## Sprint-related
 
-See [[Home]] for Sprinto's main commands.
+See [Popular commands]({{< relref "popular" >}}) for Sprinto's main commands, and [Sprint]({{< relref "sprint" >}}) for the full list.
 
 | Command | Description |
 | --- | --- |

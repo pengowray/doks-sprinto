@@ -4,7 +4,7 @@ description: Links to all the help pages
 lead: 
 ---
 
-Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can! [[Setup]] is easy.
+Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can! [inviting]({{< relref "invite" >}}) and [setting up Sprinto]({{< relref "setup" >}}) is easy.
 
 ## Popular and fun ways to start a sprint
 
@@ -20,18 +20,20 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 ## Admin commands
 
-→ [[SprintAdmin]] — Admin commands
+→ [Admin commands]({{< relref "sprintadmin" >}})
 
-→ [[Setup]] — Inviting and setup
+→ [Inviting Sprinto]({{< relref "invite" >}})
 
-→ [[ActiveSprinter]] — `/create_active_role`
+→ [Setting up Sprinto]({{< relref "setup" >}}) 
+
+→ [activesprinter]({{< relref "ActiveSprinter" >}})  — `/create_active_role`
 
 
 ## More info:
 
-→ [[Sprint]] — full options for `/sprint` command
+→ [Sprint]({{< relref "sprint" >}})  — full options for `/sprint` command
 
-→ [[pingme]] — `/pingme` `/forgetme` `/always` `/never` `/pingstatus`
+→ [pingme]({{< relref "pingme" >}})  — `/pingme` `/forgetme` `/always` `/never` `/pingstatus`
 
-→ [[FAQ]]
+→ [FAQ]({{< relref "faq" >}}) 
 
