@@ -1,4 +1,9 @@
 /** Custom styles */
+
+[data-dark-mode] .gg { 
+    background-color: #383a40;
+}
+
 .gg { 
     font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
     font-size: 16px;
@@ -7,6 +12,8 @@
     border-radius: 8px;
     vertical-align: baseline;
     margin: 14px;
+    padding: 14px;
+    background-color: #ebedef;
 }
 
 .gg-icon-outer {
@@ -58,3 +65,16 @@
     border-radius: 0px;
     border-width: 0px;
 }
+
+[data-dark-mode] .atsprinto {
+    color: #d5d9ef;
+    background: #424676;
+}
+.atsprinto {
+    color: #424676;
+    background: #d5d9ef;
+}
+
+.hidden{
+    font-size: 0;
+  }

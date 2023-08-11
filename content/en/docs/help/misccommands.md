@@ -9,6 +9,8 @@ url: "docs/misc"
 
 You don't need any of these commands, but they're documented all the same.
 
+{{< atsprinto "parse [time]" >}}
+
 | Command | Description |
 | --- | --- |
 | `@sprinto parse [time]` | Test Sprinto's time parser. e.g. `@sprinto parse 1 day 3,000,000 seconds` — see [TimeSpanParser](https://github.com/pengowray/TimeSpanParser) for more. |
