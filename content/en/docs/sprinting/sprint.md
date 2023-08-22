@@ -15,12 +15,12 @@ You can include one `duration`, one `when`, one `preset`, and any number of `oth
 How long to sprint for?
 
 {{< slash name="sprint" key0="options" val0="for 20" >}}
+{{< atsprinto "sprint for 20" >}}
 {{< alts "Synonyms" >}}
 {{< slash name="sprint" key0="options" val0="20" >}}
 {{< slash name="sprint" key0="options" val0="for 20 minutes" >}}
 {{< slash name="sprint" key0="options" val0="for 1200 seconds" >}}
 {{< atsprinto "sprint 20" >}}
-{{< atsprinto "sprint for 20" >}}
 {{< atsprinto "sprint for twenty" >}}
 {{< atsprinto "/sprint 20" >}}
 {{< atsprinto "_sprint 20" >}}
@@ -35,16 +35,14 @@ Example 1:
 {{< alts "Synonyms" >}}
 {{< atsprinto "sprint until :00" >}}
 {{</alts>}}
-Run a sprint until the end of the hour.
+Run a sprint until the end of the hour, starting in one minute.
 
 Example 2:
-{{< slash name="sprint" key0="options" val0="until :45" >}}
+{{< slash name="sprint" key0="options" val0="until :45 now" >}}
 {{< alts "Synonyms" >}}
-{{< atsprinto "sprint until :45" >}}
+{{< atsprinto "sprint until :45 now" >}}
 {{</alts>}}
-Run a sprint from the start time until quarter-to.
-
-By default, there's also one minute to join.
+Run a sprint from the start time until quarter-to, starting immediately.
 
 Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere else with a half-hour difference from everyone else, you'll have to adjust.
 
@@ -52,15 +50,125 @@ Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere
 
 Undecided? You can choose a random length for your sprints.
 
-| Wheel (long name) | Short Example | min – max | How long will the sprint be? |
+### Burst sprint
+{{<slash name="sprint" key0="options" val0="burst" >}}
+{{<atsprinto "sprint burst" >}}
+
+A very quick sprint with a randomly chosen length from 35 to 150 seconds.
+{{<alts "Details">}}
+Possible durations, each an equal wheel slice (seconds): 35 45 45 60 60 75 75 90 90 100 105 120 135 150
+{{</alts>}}
+
+### Micro sprint
+{{< slash name="sprint" key0="options" val0="micro" >}}
+{{< alts "Synonyms" >}}
+{{< atsprinto "sprint micro" >}}
+{{< atsprinto "sprint μ-sprint" >}}
+{{< slash name="sprint" key0="options" val0="μ" >}}
+{{</alts>}}
+
+μ-sprint for a random duration between 1 to 6 minutes.
+
+### Flash sprint
+{{< slash name="sprint" key0="options" val0="flash" >}}
+{{< alts "Synonyms" >}}
+{{< atsprinto "sprint flash" >}}
+{{</alts>}}
+
+Sprint for a random duration between 2.5 to 10.5 minutes
+
+### Not a long sprint
+{{< slash name="sprint" key0="options" val0="not long" >}}
+{{< alts "Synonyms" >}}
+{{< slash name="sprint" key0="options" val0="nl" >}}
+{{< atsprinto "sprint nl" >}}
+{{< atsprinto "sprint not long" >}}
+{{< atsprinto "sprint for not long" >}}
+{{</alts>}}
+
+Start a sprint for between 5 and 12 minutes (randomly decided)
+
+### But not for _too_ long
+{{< slash name="sprint" key0="options" val0="not too long" >}}
+{{< slash name="sprint" key0="options" val0="ntl" >}}
+{{< alts "More synonyms" >}}
+{{< atsprinto "sprint ntl" >}}
+{{< atsprinto "sprint but not for too long" >}}
+{{</alts>}}
+
+Spin the wheel and start a sprint that's between 5 and 20 minutes.
+
+### However long
+{{<slash name="sprint" key0="options" val0="for however long" >}}
+{{<slash name="sprint" key0="options" val0="hel" >}}
+{{<alts "More synonyms" >}}
+{{<slash name="sprint" key0="options" val0="surprise me" >}}
+{{<atsprinto "sprint hel" >}}
+{{<atsprinto "sprint whatever" >}}
+Other synonyms "random", "rng" and "the wheel" may get used for other options else in future.
+{{</alts>}}
+
+The original random sprint. Spin the wheel and start a sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes
+{{<alts "Details">}}
+All 'however long' possibilities (minutes): 
+<ul>
+<li>10m30s, 13m20s, 17, 19, 21, 25. </li>
+<li>Rare sprints (3% chance to pick one of these): 40, 5, 5m30s </li>
+</ul>
+{{</alts>}}
+
+### I don't know how long
+{{< slash name="sprint" key0="options" val0="i don't know how long" >}}
+{{< slash name="sprint" key0="options" val0="idk" >}}
+{{< alts "More synonyms" >}}
+{{< atsprinto "sprint idk" >}}
+{{< atsprinto "sprint i don't care" >}}
+{{</alts>}}
+
+Sprint between 1 and 60 minutes. There's a 60× higher chance of a one-minute sprint than a 60 minute sprint. 
+
+{{<alts "Details">}}
+How it's calculated: There's 60/1830 (=3%) chance of a 1-minute sprint; 59/1830 chance of a two-minute sprint, 58/1830 chance of a three-minute sprint, etc. Another way to think of it, there's 1830 mables in a pot. One is selected. Here's the numbers on each marble:</p>
+<ul>
+<li>1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 55, 55, 55, 55, 55, 55, 56, 56, 56, 56, 56, 57, 57, 57, 57, 58, 58, 58, 59, 59, 60</li>
+</ul>
+<p>The idea is that if hour-long sprints had the same frequency as one-minute sprints then you'd end up spending much more time doing hour long sprints than one-minute sprints. This distribution attempts to balance it better so you're as likely to be doing any length sprint between 1 and 60 minutes. Anyway it seemed like a good idea at the time. I'm no mathematician though so you have a better idea about this kind of thing then please leave feedback using the feedback command, for example:
+</p>
+{{<slash name="feedback" key0="your-feedback" val0="I'm a mathematics professor at Brown University and I have an idea for improving and generalizing the sprint duration distrubtions of the IDK sprint wheel using a formula which takes account of... " >}}
+{{</alts>}}
+
+### Not too short
+{{< slash name="sprint" key0="options" val0="not too short" >}}
+{{< slash name="sprint" key0="options" val0="nts" >}}
+{{< alts "More synonyms" >}}
+{{< atsprinto "sprint nts" >}}
+{{< atsprinto "sprintnot short" >}}
+{{</alts>}}
+
+Sprint for between 20 and 60 minutes.
+
+{{<alts "Details">}}
+not too short (NTS) values: (wheel of 67 items)
+<ul>
+<li>00:20:00, 00:20:00, 00:20:00, 00:20:30, 00:21:00, 00:21:00, 00:21:00, 00:21:00, 00:22:00, 00:22:15, 00:23:00, 00:23:00, 00:23:30, 00:24:00, 00:24:10, 00:24:40, 00:25:00, 00:25:00, 00:25:00, 00:25:00, 00:25:45, 00:26:00, 00:26:35, 00:26:35, 00:27:00, 00:27:00, 00:27:00, 00:27:30, 00:27:30, 00:27:30, 00:28:00, 00:28:00, 00:28:00, 00:29:00, 00:29:00, 00:29:10, 00:30:00, 00:30:00, 00:30:00, 00:32:00, 00:32:45, 00:34:50, 00:35:00, 00:35:00, 00:35:40, 00:37:00, 00:38:00, 00:39:10, 00:39:35, 00:40:00, 00:41:00, 00:42:00, 00:43:10, 00:43:30, 00:43:30, 00:45:00, 00:46:00, 00:46:20, 00:47:00, 00:50:00, 00:50:00, 00:51:00, 00:53:30, 00:55:00, 00:55:00, 00:57:30, 01:00:00</li>
+</ul>
+Note: This might not be updated and could be using an old list of durations.
+{{</alts>}}
+
+
+### Summary of random sprint wheels
+
+
+| Long name | Short name | min – max | How long will the sprint be? |
 | --- | --- | --- | --- |
-| `micro` | `/sprint micro` | 1 – 6m |  μ-sprint for between 1 to 6 minutes |
-| `flash` | `/sprint flash` | 2.5 – 10.5m |  Sprint for 2.5 to 10.5 minutes | 
-| `not long` | `/sprint nl` | 5 – 12m |  Start a sprint for between 5 and 12 minutes |
-| `not too long` | `/sprint ntl` | 5 – 20m |  Start a sprint that's randomly between 5 and 20 minutes |
-| `however long` | `/sprint hel` | 5 – 40m | The original random sprint. Spin the wheel and start a sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes |
-| `i don't know how long` | `/sprint idk` | 1 – 60m |  Sprint between 1 and 60 minutes, but with a 60× higher chance of a 1 minute sprint than a 60 minute sprint. How it's calculated: There's 60/1830 (=3%) chance of a 1-minute sprint; 59/1830 chance of a two-minute sprint, 58/1830 chance of a three-minute sprint, etc. |
-| `not too short` | `/sprint nts` | 20 – 60m |  Sprint for between 20 and 60 minutes. |
+| burst | `burst` | 35s – 150s  | Randomly up to 2.5 minutes |
+| micro | `μ` | 1 – 6 | Randomly  between 1 to 6 minutes |
+| flash | `flash` | 2.5 – 10.5 | Randomly between 2.5 to 10.5 minutes | 
+| not long | `nl` | 5 – 12 |  Randomly between 5 and 12 minutes |
+| not too long | `ntl` | 5 – 20 |  Randomly between 5 and 20 minutes |
+| however long | `hel` | 5 – 40 | Usually between 10 and 25 minutes, but a tiny chance of approximately 5 or 40 minutes. |
+| i don't know how long | `idk` | 1 – 60 | Randomly between 1 and 60 minutes, with better odds of a shorter sprint. |
+| not too short | `nts` | 20 – 60 | Randomly  between 20 and 60 minutes. |
 
 ## When?
 

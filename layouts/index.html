@@ -1,13 +1,19 @@
 {{ define "main" }}
+{{ $invitelink := relref . "invite"  }}
+{{ $setuplink := relref . "setup"  }}
+{{ $startlink := relref . "start"  }}
+
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
       <h1 class="mt-0">{{ .Title }}</h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/setup/" role="button">Invite Sprinto</a>
-      <p class="meta">Add to your Discord server free.</p>
+      <p class="lead">{{ .Params.lead | safeHTML }}
+        Run writing sprints. Spend time together writing your own thing. Sprinto is a bot by Pengo Wray.
+      </p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{$invitelink | safeURL}}" role="button">Invite Sprinto</a>
+      <p class="meta">Add to your Discord server. It's free.</p>
   </div>
 </section>
 {{ end }}
@@ -17,30 +23,31 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Security aware</h2>
-        <p>(index.html) Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks-child-theme.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
+        <h2 class="h4">Get focused. Get in the flow.</h2>
+        <p>Start a sprint. Stay focused for 15 minutes (or an hour). Repeat.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Fast by default ⚡️</h2>
-        <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=59aafe464a68f8bc30b8e9a636d5b053">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
+        <h2 class="h4">Bring Writers Together</h2>
+        <p>Whether your Discord community has professional authors, fanfiction writers, students, or a nanowrimo group, Sprinto gives you a reason to work on your own thing, together.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">SEO-ready</h2>
-        <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
+        <h2 class="h4">Used by 31,520 Discord servers</h2>
+        <p>With about that many monthly users in November (during nanowrimo). Sprinting on Discord since 2018.</p>
       </div>
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Full text search</h2>
-        <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
+        <h2 class="h4">Easy for everyone to use</h2>
+        <p>Sprinting is easy to start</p>
+        <p>Just /sprint to start a sprint and follow the directions.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Page layouts</h2>
-        <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
+        <h2 class="h4">Flexible usage, features</h2>
+        <p>Random sprints, sprint at, sprint until, </p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Dark mode</h2>
-        <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+        <h2 class="h4">Community supported</h2>
+        <p>Keeps running and improving thanks to people like you. Support Sprinto's developer on {{ .RenderString "[Patreon](https://patreon.com/pengowray) or [Ko-fi](https://ko-fi.com/pengowray)" }}</p>
       </div>
     </div>
   </div>
@@ -49,7 +56,7 @@
 
 {{ define "sidebar-footer" }}
 <section class="section section-sm container-fluid">
-  <div class="row justify-content-center text-center">
+  <div class="row justify-content-center">
     <div class="col-lg-9">
       {{- .Content -}}
     </div>
