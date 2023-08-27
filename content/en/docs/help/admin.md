@@ -7,13 +7,13 @@ Commands available to guild owners, administrators and people with a role named 
 
 ## Sprint Admin intro
 
-A _Sprint Admin_ (A) is someone with extra privileges on a server. A server's owner, its administrators, and anyone with a role named `Sprint Admin`. For simplicity, they'll all be called _SprintAdmin_ here. Sprint Admins can configure Sprinto, for example, they can set which channels sprints run in, or remove all users from the ping list.
+A _Sprint Admin_  [{{<tag-admin>}}] is someone with extra privileges on a server. A server's owner, its administrators, and anyone with a role named `Sprint Admin`. For simplicity, they'll all be called _SprintAdmin_ here. Sprint Admins can configure Sprinto, for example, they can set which channels sprints run in, or remove all users from the ping list.
 
 Sprinto considers anyone who has a role named {{<role "@Sprint Admin">}} or {{<role "@Sprint Admins">}} or {{<role "@sprintadmin">}} (space optional, any capitalization) to be a _Sprint Admin_.
 
 ## Sprint MC intro
 
-A _Sprint MC_ (MC) is a less powerful role (which Sprint Admins also automatically have). Sprint MCs can cancel sprints, or remove a single user from the the ping list, or run "locked" sprints which ordinary users cannot cancel.
+A _Sprint MC_ [{{<tag-mc>}}]  is a less powerful role (which Sprint Admins also automatically have). Sprint MCs can cancel sprints, or remove a single user from the the ping list, or run "locked" sprints which ordinary users cannot cancel.
 
 Sprinto considers anyone who has a role named {{<role "@Sprint MC">}} or {{<role "@Sprint MCs">}} or {{<role "@Sprinto MC">}} or {{<role "@sprintmcs">}} (space optional, any capitalization, and will also accept Sprinto MC) to be a _Sprint MC_. Additionally anyone with Sprint Admin powers also has Sprint MC powers.
 

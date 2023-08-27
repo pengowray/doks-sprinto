@@ -20,27 +20,35 @@ The only setup required is creating a Discord voice channel with a name starting
 Note again, this feature isn't enabled unless your server has been added to a list of enabled servers. Request beta voice access on the Sprinto Planet discord.
 
 ### set_voice_home_here
+{{<tag-admin>}}
+
 {{< atsprinto "set_voice_home_here">}} 
-(A) Join a voice channel first, then use this command. This sets Sprinto's voice channel. It's a server-wide setting.
+Join a voice channel first, then use this command. This sets Sprinto's voice channel. It's a server-wide setting.
 
 ### clear_voice_home 
+{{<tag-admin>}}
+
 {{< atsprinto "clear_voice_home ">}} 
 {{<alts>}}
 {{< atsprinto "reset_voice_home ">}} 
 {{</alts>}}
 
-(A) Reset Sprint's voice channel to the default (i.e. any voice channel with "sprint" in the name)
+Reset Sprint's voice channel to the default (i.e. any voice channel with "sprint" in the name)
 
 If Sprinto's previous voice channel is removed you may have to use this command to have Sprinto find another.
 
 <!-- was: reset_voice_home -->
 
 ### voice_home_on
+{{<tag-mc>}}
+
 {{< atsprinto "voice_home_on">}} 
 
-(MC) Allow Sprinto to join voice channels on your Discord server (defaults to on)
+Allow Sprinto to join voice channels on your Discord server (defaults to on)
 
 ### voice_home_off
+{{<tag-mc>}}
+
 {{< atsprinto "voice_home_off">}} 
 
-(MC) Stop Sprinto joining voice channels 
+Stop Sprinto joining voice channels 

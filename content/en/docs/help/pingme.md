@@ -55,6 +55,7 @@ Check Sprinto's round-trip latency to Discord's server. This is nothing to do wi
 ## SprintMC-only commands
 
 ### forget user (by id)
+{{<tag-mc>}}
 
 {{< slash name="admin-forget-user" key0="user_id" val0="_123456789_" >}} 
 {{< atsprinto "forgetuser _123456789_" >}} 
@@ -66,6 +67,7 @@ Stops a user getting pinged at the start of sprints, as if they had typed {{< sl
 If you can't see their user id, you might have to turn on "Developer Mode" in Discord settings, then "Copy ID" will appear when you right click the user.
 
 ### forget user (by name)
+{{<tag-mc>}}
 
 {{< slash name="admin-forget-user-by-name" key0="user" val0="_username-to-forget_" >}} 
 {{< atsprinto "forgetuser _username-to-forget_" >}} 
@@ -75,6 +77,7 @@ Replace _username-to-forget_ with the username of the user.
 When using {{< atsprintoembed "forgetuser" >}}, there's no need to add an @ at the start of the username. Note this version of the command can take either an id or username.
 
 ### pinguser
+{{<tag-mc>}}
 
 {{< atsprinto "pinguser _user_ _number_" >}} 
 
@@ -88,6 +91,7 @@ Example:
 Turns pings on for Pengo, as if he'd typed {{< slashembed name="pingme" >}} himself.
 
 ### pingroles-set
+{{<tag-admin>}}
 
 {{< slash name="setup-pingroles-set" key0="role" val0="_@rolename_" >}} 
 {{< atsprinto "always_ping_role _rolename_" >}} 

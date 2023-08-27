@@ -25,6 +25,7 @@ There are various commands to help set up the {{<role "@Active Sprinters">}} rol
 These commands are available to server administrators and members with "Manage Roles" or "Manage Server" permissions:
 
 ### Creative Active Role
+{{<tag-admin>}}
 
 {{< atsprinto "create_active_role" >}} 
 
@@ -42,6 +43,7 @@ Note you can create an {{<role "@Active Sprinters">}} role manually in Discord a
 You can also use {{< atsprintoembed "create_active_role" >}} _after_ the role is already create to check for issues.
 
 ### repair_active_role
+{{<tag-admin>}}
 
 {{< atsprinto "repair_active_role" >}} 
 

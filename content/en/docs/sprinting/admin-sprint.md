@@ -10,9 +10,11 @@ SprintAdmin (A) and SprintMC (MC) commands
 ## Commands
 
 ### sprint lock
+{{<tag-mc>}}
+
 {{< slash name="sprint" key0="options" val0="lock" >}} 
 
-(MC) Begins a sprint which cannot be cancelled except by a Sprint MC. 
+Begins a sprint which cannot be cancelled except by a Sprint MC. 
 
 Example:
 {{< slash name="sprint" key0="options" val0="for 30 in 5 endtime 10 lock" >}} 
@@ -23,7 +25,7 @@ See [Sprint] for the other parameters you can add to a `/sprint`
 
 ### sprint please
 
-(MC) SprintMCs who add "please" to a sprint command can set it to run for longer, or have slightly increased "ready" time before it starts than would normally be allowed.
+SprintMCs who add "please" to a sprint command can set it to run for longer, or have slightly increased "ready" time before it starts than would normally be allowed.
 
 Note: This isn't to force anyone to be polite. It's an added check so you don't accidentally run long sprints.
 
@@ -36,6 +38,7 @@ Example:
 {{</alts>}}
 
 ### cancel please
+{{<tag-mc>}}
 
 {{< slash name="admin-force-cancel" >}} 
 {{< atsprinto "cancel pls" >}} 
@@ -46,9 +49,10 @@ Example:
 {{< atsprinto "cancel pleeeeeeeease" >}} 
 {{</alts>}}
 
-(MC) Forces a running sprint to end, regardless of how many sprinters have joined.
+Forces a running sprint to end, regardless of how many sprinters have joined.
 
 ### nudge please
+{{<tag-mc>}}
 
 {{< slash name="admin-force-nudge" >}} 
 {{< atsprinto "nudge pls" >}} 
@@ -56,9 +60,9 @@ Example:
 {{< slash name="sprint" key0="options" val0="nudge pls" >}} 
 {{</alts>}}
 
-(MC) Moves a running sprint on to the next stage immediately, typically only used for testing or debugging purposes.
+Moves a running sprint on to the next stage immediately, typically only used for testing or debugging purposes.
 
-If a bug occurs and the sprint becomes stuck, {{< atsprintoembed "nudge" >}} can also be used by anyone, without the "please", to nudge the sprint along. That's if Sprinto can successfully detect that the sprint is stuck.
+If a bug occurs and the sprint becomes stuck, {{< atsprintoembed "nudge" >}} (without the "please") can also be used by anyone to nudge the sprint along. That's if Sprinto can successfully detect that the sprint is stuck.
 
 
 <!--
