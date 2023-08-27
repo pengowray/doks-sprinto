@@ -5,7 +5,7 @@ lead: "Always ping a role at sprint start"
 ---
 You can set roles to always mention at the start of sprints in a channel.
 
-If members of your Discord server can self assign roles (for example using another bot), then you may have a role named {{<role "@Sprinters">}} and want Sprinto to always mention (ping) those users when a new Sprint starts. You can do that with setup-pingroles-set.
+If members of your Discord server can self assign roles (for example using another bot), then you may have a role named {{<role "@Sprinters">}} and want Sprinto to always mention (ping) those users when a new Sprint starts. You can do that with {{<slashembed name="setup-pingroles-set">}}.
 
 ## Commands for changing the ping roles list
 
