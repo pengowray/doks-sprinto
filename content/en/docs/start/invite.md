@@ -3,25 +3,40 @@ title : "Invite Sprinto"
 description: 
 lead: 
 ---
-## Setting up Sprinto (Server owners/managers)
+## Inviting Sprinto! 
 
-**Steps:**
-1. If you can see Sprinto already:
+## Method 1
 
-![image](https://user-images.githubusercontent.com/800133/186021910-5f43df64-c614-42f2-982a-d956ca28cc0d.png)
+![Image](/images/add-to-server-combined.png)
 
-Or via the web:
+If you can see Sprinto on another server, you can click Sprinto or "view profile" and invite him directly from his info.
 
-1. **[Invite Sprinto](https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576)** — Bring Sprinto to your Discord server. 
+## Method 2
 
-![Screenshot](https://i.imgur.com/baDQffR.png)
+Open Sprinto's invite link in Discord.
+```
+https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576
+```
 
-2. That's it. You're ready to Sprint! Type `/sprint` in a channel to start a sprint.
+1. Copy the above invite link
+2. Paste it into message on Discord
+3. Click it the link in the message
+4. Choose the server and click Continue (see below)
 
+![Image](/images/sprinto-invite-dialog.png)
+
+Alternatively you can open the link in a web browser, but make sure you're logged into [discord.com/login](https://discord.com/login) on that browser first.
+
+If you don't have permission to add bots, pass the link on to the server owner or someone who has permission to add bots, or link them here.
+
+## Sprinto joined. Now what?
+
+Once Sprinto joins, you're ready to Sprint! Use {{<slashembed name="sprint">}} in a channel to start a sprint. More on the basics of starting a sprinting are at [Popular Commands]({{< relref "popular" >}}), and full details of the Sprint command are at [Sprint]({{< relref "sprint" >}}).
+
+You can further customize Sprinto and set designated sprinting channels, see: [Setting up Sprinto]({{< relref "setup" >}}) 
+
+<!-- 
+#TODO: check if need any special permissions for slash commands?
 ## Troubleshooting and notes 
-
 * All requested permissions are optional: If you're worried about a robot uprising, you can uncheck them all and still run sprints just fine. But they are recommended for extra features (current and future).
-
-* Make sure you're logged in at [discord.com](https://discord.com/) and try to invite Sprinto again.
-
-* If you don't have permission, pass on the invite link to the server owner or someone who has permission to add bots: https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576 or give the link to this page. <!-- or use Sprinto's `/setup invite` command... which sends you here now. -->
+-->

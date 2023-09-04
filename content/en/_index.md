@@ -5,6 +5,7 @@ lead: ""
 draft: false
 images: []
 ---
+## Example usage
 Create a 15 minute sprint:
 {{< slash name="sprint" >}}
 You and other participants can join:
@@ -19,7 +20,7 @@ Enter your word count at the end:
 
 Sprinto will congratulate all the sprinters and show a scoreboard.
 
-Congratulations! You've written some words!
+Congratulations! You've written some words! Start again and write some more!
 
 {{< alts "Without slash commands">}}
 You can also @Sprinto:
@@ -34,7 +35,7 @@ Sprinto accepts fairly flexible input, so try commands you think ought to work, 
 
 Other ways to create a sprint:
 {{< slash name="sprint" key0="options" val0="at :30 for 45" >}}
-The above will create a 45 minute sprint which starts at the half hour. For example, if it's 2:26pm in your time zone, then it will start at 2:30pm. However, just write ":30" as Sprinto doesn't know your time zone.
+The above will create a 45 minute sprint which starts at the half hour. For example, if it's 2:26pm in your time zone, then it will start at 2:30pm. Don't write the whole time, just write ":30" as Sprinto doesn't know your time zone.
 
 {{< slash name="sprint" key0="options" val0="until :00 now" >}}
 The above creates a sprint which starts immediately and runs until the end of the hour.
@@ -52,7 +53,7 @@ Join the sprint with a starting count of 1000 words. These words will be deducte
 Join with sprint with however many words you had last time.
 
 {{< slash name="words" key0="count" val0="1442 final" >}}
-Give your final word count early (before the sprint ends) so Sprinto (and other participants) won't wait for your count after the sprint ends. You can use this if you need to rush off.
+Give your final word count early (before the sprint ends) so Sprinto (and other participants) won't wait for your count after the sprint ends. You can use this if you need to rush off in the middle of a sprint.
 
 {{< slash name="words" key0="count" val0="+102" >}}
 Adding a plus sign means you don't rememeber how many words you said you joined with, but you've written 102 more.

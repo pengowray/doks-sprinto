@@ -32,15 +32,31 @@
 [[main]]
   name = "Invite Sprinto"
   weight = 40
-  identifier = "tutorial"
-  url = "docs/setup/"
+  url = "docs/invite-sprinto/"
+  parent = "get-started"
+
+[[main]]
+  name = "Setting up Sprinto"
+  weight = 50
+  url = "docs/setting-up-sprinto/"
   parent = "get-started"
 
 [[main]]
   name = "How to Sprint"
-  weight = 50
-  identifier = "quick-start"
-  url = "/docs/home/"
+  weight = 60
+  url = "/docs/popular-commands/"
+  parent = "get-started"
+
+[[main]]
+  name = "Help overview"
+  weight = 70
+  url = "/docs/overview-of-help/"
+  parent = "get-started"
+
+[[main]]
+  name = "All sprint options"
+  weight = 70
+  url = "/docs/sprint/"
   parent = "get-started"
 
 [[social]]
