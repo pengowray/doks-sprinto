@@ -13,15 +13,15 @@ Want to scheduling sprints more than an hour in advance, or set up multiple spri
 
 ## Setup:
 
-0. [Invite Sprinto]({{< relref "setup" >}}) to your server
+0. [Invite Sprinto]({{< relref "invite" >}}) to your server
 
 1. Invite Carl-bot to your Discord server by clicking "+ Invite" at [carl.gg](https://carl.gg/)
 
-  Tip: Be sure you're logged in at discord.com on your browser for ther invite link to work. Alternatively, you can copy the invite link and paste it into Discord and then click on the message.
+  Tip: Be sure you're logged in at discord.com on your browser for the invite link to work. Alternatively, you can copy the invite link and paste it into a message in Discord and then click on the message.
 
   Tip: Carl-bot does not require any special permissions to interact with Sprinto. So, if you're not using Carl-bot for other purposes, you can remove almost all his permissions.
 
-2. By default Sprinto ignores messages from other bots, so tell Sprinto it's OK to listen to Carl-bot in each sprinting channel, using one of these commands:
+2. By default Sprinto ignores messages from other bots, so tell Sprinto it's OK to listen to Carl-bot, in each sprinting channel, using one of these commands:
 
 {{< slash name="setup-set-listen-to-carl" key0="setting" val0="On">}} 
 {{< atsprinto "setListenToCarl on">}} 

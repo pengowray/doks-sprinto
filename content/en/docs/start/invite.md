@@ -31,12 +31,20 @@ If you don't have permission to add bots, pass the link on to the server owner o
 
 ## Sprinto joined. Now what?
 
-Once Sprinto joins, you're ready to Sprint! Use {{<slashembed name="sprint">}} in a channel to start a sprint. More on the basics of starting a sprinting are at [Popular Commands]({{< relref "popular" >}}), and full details of the Sprint command are at [Sprint]({{< relref "sprint" >}}).
+Once Sprinto joins, you're ready to Sprint! Use {{<slashembed name="sprint">}} in a channel to start a sprint.
 
-You can further customize Sprinto and set designated sprinting channels, see: [Setting up Sprinto]({{< relref "setup" >}}) 
+However, you can further customize Sprinto and set designated sprinting channels, see: [Setting up Sprinto]({{< relref "setup" >}}) 
+
+More on the basics of starting a sprinting are at [Popular Commands]({{< relref "popular" >}}), and full details of the Sprint command are at [Sprint]({{< relref "sprint" >}}).
+
 
 <!-- 
 #TODO: check if need any special permissions for slash commands?
+#TODO: write up a new guide to permissions including what user permissions are required
+
 ## Troubleshooting and notes 
 * All requested permissions are optional: If you're worried about a robot uprising, you can uncheck them all and still run sprints just fine. But they are recommended for extra features (current and future).
--->
+
+What about **Sprinto's permissions**? Sprinto currently needs no more than the default permissions which @everyone else has also has by default: to "Read Messages" and "Send Messages". Sprinto will also need "Manage Roles" for the @Active Sprinter (above).
+
+So then why did Sprinto ask for **more permissions** when I invited Sprinto? So far, these are mostly for future features (except Manage Roles). Until recently Sprinto asked for no permissions, so use the "invite" link at the top of the page to re-invite him to add these new permissions. Sprinto will need the following for current and planned features: manage roles (for active sprinter), send TTS messages (to allow announcements; future planned feature), priority speaker (to allow pings in a voice channel; in future), and manage messages (to clean up word count commands; in future). Regardless, he'll continue to work with only the default read & send messages permissions. -->
