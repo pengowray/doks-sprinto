@@ -5,4 +5,4 @@ draft: true
 images: []
 ---
 
-{{< email user="pengowray" domain="morse.games" >}}
+{{< email user="pengowray" domain="sprintobot.com" >}}
