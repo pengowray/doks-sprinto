@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sprinting on</title><link>https://sprinto.bot/docs/sprinting/</link><description>Recent content in Sprinting on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprinto.bot/docs/sprinting/index.xml" rel="self" type="application/rss+xml"/><item><title>Popular commands</title><link>https://sprinto.bot/docs/popular-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/popular-commands/</guid><description>Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sprinting on</title><link>https://sprintobot.com/docs/sprinting/</link><description>Recent content in Sprinting on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprintobot.com/docs/sprinting/index.xml" rel="self" type="application/rss+xml"/><item><title>Popular commands</title><link>https://sprintobot.com/docs/popular-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/popular-commands/</guid><description>Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
 Popular and fun ways to start a sprint #
 → see also: [[Sprint command explained|Sprint]] (with full list of sprint options and presets)
 Standard 15 minute sprint #
@@ -11,7 +11,7 @@ for 15 in 1
 /sprint options:
 15 in 1
 Shorter or longer #
-Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)</description></item><item><title>Sprint</title><link>https://sprinto.bot/docs/sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/sprint/</guid><description>The Sprint Command in detail #
+Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)</description></item><item><title>Sprint</title><link>https://sprintobot.com/docs/sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint/</guid><description>The Sprint Command in detail #
 /sprint options:
 duration when
 You can optinally include a &amp;ldquo;duration&amp;rdquo; and a &amp;ldquo;when&amp;rdquo; parameter, for example:
@@ -24,7 +24,7 @@ for 25 at :15
 /sprint options:
 for however long in a bit
 The parameters are all optional and can be in any order.
-/sprint Without any options, the default sprint is for 15 minutes in 1 minute.</description></item><item><title>Sprint (admin)</title><link>https://sprinto.bot/docs/sprint-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/sprint-admin/</guid><description>SprintAdmin (A) and SprintMC (MC) commands
+/sprint Without any options, the default sprint is for 15 minutes in 1 minute.</description></item><item><title>Sprint (admin)</title><link>https://sprintobot.com/docs/sprint-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint-admin/</guid><description>SprintAdmin (A) and SprintMC (MC) commands
 Commands #
 sprint lock #
 MC
