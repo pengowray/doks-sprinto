@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Help on</title><link>https://morse.games/docs/help/</link><description>Recent content in Help on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://morse.games/docs/help/index.xml" rel="self" type="application/rss+xml"/><item><title>Active Sprinter role</title><link>https://morse.games/docs/active-sprinter-role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/active-sprinter-role/</guid><description>What is the &amp;lsquo;Active Sprinter&amp;rsquo; role? #
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Help on</title><link>https://sprinto.bot/docs/help/</link><description>Recent content in Help on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprinto.bot/docs/help/index.xml" rel="self" type="application/rss+xml"/><item><title>Active Sprinter role</title><link>https://sprinto.bot/docs/active-sprinter-role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/active-sprinter-role/</guid><description>What is the &amp;lsquo;Active Sprinter&amp;rsquo; role? #
 In brief:
-Makes members who are currently in a sprint with Sprinto more visible in the discord members list. It&amp;rsquo;s just an optional nice thing to make it more obvious when a sprint is running on your server. I&amp;rsquo;m not sure why this documentation got so long for a simple feature. The @Active Sprinters role is an extra thing admins can set up, but is not necessary for the running of Sprinto.</description></item><item><title>Admin commands</title><link>https://morse.games/docs/admin-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/admin-commands/</guid><description>Commands available to guild owners, administrators and people with a role named SprintAdmin. Some commands are also available to people with a SprintMC role.
+Makes members who are currently in a sprint with Sprinto more visible in the discord members list. It&amp;rsquo;s just an optional nice thing to make it more obvious when a sprint is running on your server. I&amp;rsquo;m not sure why this documentation got so long for a simple feature. The @Active Sprinters role is an extra thing admins can set up, but is not necessary for the running of Sprinto.</description></item><item><title>Admin commands</title><link>https://sprinto.bot/docs/admin-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/admin-commands/</guid><description>Commands available to guild owners, administrators and people with a role named SprintAdmin. Some commands are also available to people with a SprintMC role.
 Sprint Admin intro #
 A Sprint Admin [
 Admin
 To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.
-] is someone with extra privileges on a server. A server&amp;rsquo;s owner, its administrators, and anyone with a role named Sprint Admin.</description></item><item><title>Allowed channels (admin)</title><link>https://morse.games/docs/allowed-channels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/allowed-channels/</guid><description>Sprinting channel whitelist (Sprinto Setup) #
+] is someone with extra privileges on a server. A server&amp;rsquo;s owner, its administrators, and anyone with a role named Sprint Admin.</description></item><item><title>Allowed channels (admin)</title><link>https://sprinto.bot/docs/allowed-channels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/allowed-channels/</guid><description>Sprinting channel whitelist (Sprinto Setup) #
 If a whitelist is setup, sprints will be disallowed in channels which have not been &amp;lsquo;whitelisted&amp;rsquo; and users will be pointed to the allowed (whitelisted) channels.
 Note: Sprinto does not have a concept of secret or hidden channels. Sprinto will attempt to point Discord users to a sprint room even if the user does not have permission to see or use that channel.
 All these commands require a @Sprint Admin [
 Admin
-To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.</description></item><item><title>Carl-bot x Sprinto</title><link>https://morse.games/docs/carl-bot-x-sprinto/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/carl-bot-x-sprinto/</guid><description>Scheduling Sprints #
+To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.</description></item><item><title>Carl-bot x Sprinto</title><link>https://sprinto.bot/docs/carl-bot-x-sprinto/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/carl-bot-x-sprinto/</guid><description>Scheduling Sprints #
 NOTE: Carl-bot is not associated with Sprinto. I&amp;rsquo;ve provided this info to help you schedule sprints, to extend Sprinto&amp;rsquo;s functionality beyond what it was originally designed for.
-Want to scheduling sprints more than an hour in advance, or set up multiple sprints in a row? You can use Carl-bot for this purpose. Sprinto may get a built-in way in future, but for now there&amp;rsquo;s Carl-bot, a popular Discord bot which is developed completely independently of Sprinto (I have nothing to do with it!</description></item><item><title>Curious commands</title><link>https://morse.games/docs/curious-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/curious-commands/</guid><description>These commands are documented here mostly for curiousity&amp;rsquo;s sake. You don&amp;rsquo;t need any of them, and they&amp;rsquo;re largely not useful, but they&amp;rsquo;re documented here all the same.
+Want to scheduling sprints more than an hour in advance, or set up multiple sprints in a row? You can use Carl-bot for this purpose. Sprinto may get a built-in way in future, but for now there&amp;rsquo;s Carl-bot, a popular Discord bot which is developed completely independently of Sprinto (I have nothing to do with it!</description></item><item><title>Curious commands</title><link>https://sprinto.bot/docs/curious-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/curious-commands/</guid><description>These commands are documented here mostly for curiousity&amp;rsquo;s sake. You don&amp;rsquo;t need any of them, and they&amp;rsquo;re largely not useful, but they&amp;rsquo;re documented here all the same.
 parse #
 @Sprinto#2517 parse time
 Try parsing time with Sprinto&amp;rsquo;s time span parser.
@@ -20,7 +20,7 @@ Example: @Sprinto#2517 parse 3,000,000 seconds
 Sprinto parses this as 34:17:20:00 or 34 days, 17 hours, 20 minutes
 more examples
 @Sprinto#2517 parse 1 day 3,000,000 seconds
-Sprinto parses this as `35:17:20:00` or 35 days, 17 hours, 20 minutes See pengowray/TimeSpanParser on github for more about the open source TimeSpanParser library created by Pengo Wray for Sprinto.</description></item><item><title>Emoji Pets</title><link>https://morse.games/docs/emoji-pets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/emoji-pets/</guid><description>Emoji Pet #
+Sprinto parses this as `35:17:20:00` or 35 days, 17 hours, 20 minutes See pengowray/TimeSpanParser on github for more about the open source TimeSpanParser library created by Pengo Wray for Sprinto.</description></item><item><title>Emoji Pets</title><link>https://sprinto.bot/docs/emoji-pets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/emoji-pets/</guid><description>Emoji Pet #
 Your very own emoji pet is available as a reward to &amp;ldquo;Emoji Pet&amp;rdquo; tier Sprinto Patreons.
 Your emoji pet will keep you company on sprints and stop you from ever coming last :)
 Interacting #
@@ -32,11 +32,11 @@ pet pet #
 Pet your pet (will also show if your pet is sleeping)
 pet wake #
 @Sprinto#2517 pet wake
-Wake up you pet so they&amp;rsquo;ll run with you in sprints.</description></item><item><title>FAQ</title><link>https://morse.games/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/faq/</guid><description>Sprinto isn&amp;rsquo;t responding to my commands #
+Wake up you pet so they&amp;rsquo;ll run with you in sprints.</description></item><item><title>FAQ</title><link>https://sprinto.bot/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/faq/</guid><description>Sprinto isn&amp;rsquo;t responding to my commands #
 Discord&amp;rsquo;s slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a discord UI/UX issue, or something else. I&amp;rsquo;ve written up a trouble shooting guide here that attempts to cover most of them:
 https://www.patreon.com/posts/71439355
 Why do I need to join my own sprint? Shouldn&amp;rsquo;t I join automatically? #
-Sprinto doesn&amp;rsquo;t know your starting word count and doesn&amp;rsquo;t want to guess.</description></item><item><title>Less used sprint commands</title><link>https://morse.games/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/misc-sprint/</guid><description>See Popular commands for Sprinto&amp;rsquo;s main commands, and Sprint for the full list of sprint commands.
+Sprinto doesn&amp;rsquo;t know your starting word count and doesn&amp;rsquo;t want to guess.</description></item><item><title>Less used sprint commands</title><link>https://sprinto.bot/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/misc-sprint/</guid><description>See Popular commands for Sprinto&amp;rsquo;s main commands, and Sprint for the full list of sprint commands.
 Final #
 /final Synonyms
 @Sprinto#2517 final
@@ -47,14 +47,14 @@ Finalize your word count so Sprinto won&amp;rsquo;t wait for you to update it la
 Final count #
 /final count:
 count
-Finalize your word count with count words.</description></item><item><title>Ping me</title><link>https://morse.games/docs/ping-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/ping-me/</guid><description>Overview #
+Finalize your word count with count words.</description></item><item><title>Ping me</title><link>https://sprinto.bot/docs/ping-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/ping-me/</guid><description>Overview #
 If you miss three sprints or use /forgetme or /sneak-away the pings will stop.
 Use /pingme to be mentioned when the next sprint starts even if you haven&amp;rsquo;t sprinted recently (or to change your mind after /forgetme or /pings-never .
 You can also choose to never or always receive pings at the start of sprints with /pings-never and /pings-always .
 Commands #
 forgetme #
 /forgetme @Sprinto#2517 forget me
-Sprinto wont ping you at the start of sprints until after you join another one.</description></item><item><title>Ping roles</title><link>https://morse.games/docs/ping-roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://morse.games/docs/ping-roles/</guid><description>You can set roles to always mention at the start of sprints in a channel.
+Sprinto wont ping you at the start of sprints until after you join another one.</description></item><item><title>Ping roles</title><link>https://sprinto.bot/docs/ping-roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprinto.bot/docs/ping-roles/</guid><description>You can set roles to always mention at the start of sprints in a channel.
 If members of your Discord server can self assign roles (for example using another bot), then you may have a role named @Sprinters and want Sprinto to always mention (ping) those users when a new Sprint starts. You can do that with /setup-pingroles-set .
 Commands for changing the ping roles list #
 pingroles-set #

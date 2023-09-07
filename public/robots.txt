@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://morse.games/sitemap.xml
+Sitemap: https://sprinto.bot/sitemap.xml
