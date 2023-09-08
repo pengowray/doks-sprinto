@@ -1,17 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sprinting on</title><link>https://sprintobot.com/docs/sprinting/</link><description>Recent content in Sprinting on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprintobot.com/docs/sprinting/index.xml" rel="self" type="application/rss+xml"/><item><title>Popular commands</title><link>https://sprintobot.com/docs/popular-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/popular-commands/</guid><description>Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sprinting on</title><link>https://sprintobot.com/docs/sprinting/</link><description>Recent content in Sprinting on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprintobot.com/docs/sprinting/index.xml" rel="self" type="application/rss+xml"/><item><title>During sprint</title><link>https://sprintobot.com/docs/during-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/during-sprint/</guid><description>Cancel #
+Oops! Made a mistake? You can cancel a sprint with:
+/cancel If Sprinto didn&amp;rsquo;t understand your /sprint command you can cancel it and start over. Note that if others have joined your sprint, you might need them to /cancel too.
+Force cancel #
+MC
+To use this command you must have the @SprintMC role, @SprintAdmin role, be an administrator on the server, or be the server owner.
+/admin-force-cancel Synonyms
+@Sprinto#2517 cancel pls
+/cancel please:
+True
+/sprint options:
+cancel pls
+@Sprinto#2517 cancel ffs
+@Sprinto#2517 cancel pleeeeeeeease
+Forces a running sprint to end, regardless of how many sprinters have joined.</description></item><item><title>Overview of help</title><link>https://sprintobot.com/docs/overview-of-help/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/overview-of-help/</guid><description>Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can! inviting and setting up Sprinto is easy.
 Popular and fun ways to start a sprint #
 → see also: [[Sprint command explained|Sprint]] (with full list of sprint options and presets)
-Standard 15 minute sprint #
-Start a sprint for the default duration (15 minutes, starting in 1 minute)
-/sprint Synonyms
-These do the same thing: /sprint options:
-for 15 mins in 1 minute
-/sprint options:
-for 15 in 1
-/sprint options:
-15 in 1
-Shorter or longer #
-Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)</description></item><item><title>Sprint</title><link>https://sprintobot.com/docs/sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint/</guid><description>The Sprint Command in detail #
+Fun / misc commands #
+→ See also: [[More miscellaneous commands|MiscCommands]] (nothing very useful or exciting)</description></item><item><title>Sprint</title><link>https://sprintobot.com/docs/sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint/</guid><description>The Sprint Command in detail #
 /sprint options:
 duration when
 You can optinally include a &amp;ldquo;duration&amp;rdquo; and a &amp;ldquo;when&amp;rdquo; parameter, for example:
@@ -35,4 +40,17 @@ Begins a sprint which cannot be cancelled except by a Sprint MC.
 Example: /sprint options:
 for 30 in 5 endtime 10 lock
 @Sprinto#2517 sprint for 30 in 5 endtime 10 lock
-Begins a 30 minute locked sprint with 5 minutes to join and 10 minutes to give a word count.</description></item></channel></rss>
+Begins a 30 minute locked sprint with 5 minutes to join and 10 minutes to give a word count.</description></item><item><title>Sprint basics</title><link>https://sprintobot.com/docs/sprint-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint-basics/</guid><description>Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
+Popular and fun ways to start a sprint #
+→ see also: [[Sprint command explained|Sprint]] (with full list of sprint options and presets)
+Standard 15 minute sprint #
+Start a sprint for the default duration (15 minutes, starting in 1 minute)
+/sprint Synonyms
+These do the same thing: /sprint options:
+for 15 mins in 1 minute
+/sprint options:
+for 15 in 1
+/sprint options:
+15 in 1
+Shorter or longer #
+Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)</description></item></channel></rss>

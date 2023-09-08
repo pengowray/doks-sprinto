@@ -36,7 +36,7 @@ Wake up you pet so they&amp;rsquo;ll run with you in sprints.</description></ite
 Discord&amp;rsquo;s slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a discord UI/UX issue, or something else. I&amp;rsquo;ve written up a trouble shooting guide here that attempts to cover most of them:
 https://www.patreon.com/posts/71439355
 Why do I need to join my own sprint? Shouldn&amp;rsquo;t I join automatically? #
-Sprinto doesn&amp;rsquo;t know your starting word count and doesn&amp;rsquo;t want to guess.</description></item><item><title>Less used sprint commands</title><link>https://sprintobot.com/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/misc-sprint/</guid><description>See Popular commands for Sprinto&amp;rsquo;s main commands, and Sprint for the full list of sprint commands.
+Sprinto doesn&amp;rsquo;t know your starting word count and doesn&amp;rsquo;t want to guess.</description></item><item><title>Less used sprint commands</title><link>https://sprintobot.com/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/misc-sprint/</guid><description>See also: Starting a sprint, and full list of Sprint commands.
 Final #
 /final Synonyms
 @Sprinto#2517 final
@@ -47,7 +47,8 @@ Finalize your word count so Sprinto won&amp;rsquo;t wait for you to update it la
 Final count #
 /final count:
 count
-Finalize your word count with count words.</description></item><item><title>Ping me</title><link>https://sprintobot.com/docs/ping-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/ping-me/</guid><description>Overview #
+Finalize your word count with count words.
+For example, to finalize with 1200 total words:</description></item><item><title>Ping me</title><link>https://sprintobot.com/docs/ping-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/ping-me/</guid><description>Overview #
 If you miss three sprints or use /forgetme or /sneak-away the pings will stop.
 Use /pingme to be mentioned when the next sprint starts even if you haven&amp;rsquo;t sprinted recently (or to change your mind after /forgetme or /pings-never .
 You can also choose to never or always receive pings at the start of sprints with /pings-never and /pings-always .
