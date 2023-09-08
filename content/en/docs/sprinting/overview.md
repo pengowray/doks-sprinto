@@ -14,10 +14,6 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 → _See also: [[More miscellaneous commands|MiscCommands]] (nothing very useful or exciting)_
 
-| Command | Description |
-| --- | --- |
-| `@sprinto dare` | Get a writing dare (via now deleted [nanowrimo.org](https://nanowrimo.org/word_sprints) word_sprints page) |
-
 ## Admin commands
 
 → [Admin commands]({{< relref "admin" >}})

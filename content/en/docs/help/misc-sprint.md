@@ -6,7 +6,7 @@ identifier: "misc-sprint"
 url: "docs/misc-sprint"
 ---
 
-See [Popular commands]({{< relref "popular" >}}) for Sprinto's main commands, and [Sprint]({{< relref "sprint" >}}) for the full list of sprint commands.
+See also: [Starting a sprint]({{< relref "basics" >}}), and [full list of Sprint commands]({{< relref "sprint" >}}).
 
 ### Final
 

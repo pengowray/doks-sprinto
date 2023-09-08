@@ -25,6 +25,12 @@ Sprinto parses this as `35:17:20:00` or 35 days, 17 hours, 20 minutes
 
 See [pengowray/TimeSpanParser](https://github.com/pengowray/TimeSpanParser) on github for more about the open source TimeSpanParser library created by Pengo Wray for Sprinto.
 
+### dare 
+
+{{< atsprinto "dare" >}}
+
+Get a writing dare (via the now deleted nanowrimo.org [word_sprints](https://nanowrimo.org/word_sprints) page)
+
 ### invite
 
 {{< atsprinto "invite" >}}
@@ -52,5 +58,5 @@ In the old days, Sprinto would respond to messages in chat which started with an
 
 ## See also
 
-* [Popular commands]({{< relref "popular" >}}) 
+* [Starting a sprint]({{< relref "basics" >}})
 * [Miscellaneous sprint commands]({{< relref "misc-sprint" >}}) 
