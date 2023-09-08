@@ -35,7 +35,7 @@ Once Sprinto joins, you're ready to Sprint! Use {{<slashembed name="sprint">}} i
 
 However, you can further customize Sprinto and set designated sprinting channels, see: [Setting up Sprinto]({{< relref "setup" >}}) 
 
-More on the basics of starting a sprinting are at [Popular Commands]({{< relref "popular" >}}), and full details of the Sprint command are at [Sprint]({{< relref "sprint" >}}).
+More on the basics of [Starting a sprint]({{< relref "basics" >}}), and full details of the Sprint command are at [Sprint]({{< relref "sprint" >}}).
 
 
 <!-- 

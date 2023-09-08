@@ -42,9 +42,9 @@
   parent = "get-started"
 
 [[main]]
-  name = "How to Sprint"
+  name = "Start a sprint"
   weight = 60
-  url = "/docs/popular-commands/"
+  url = "/docs/basics/"
   parent = "get-started"
 
 [[main]]
