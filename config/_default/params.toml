@@ -13,7 +13,7 @@ description = "Sprinto brings creators together."
 # images = ["doks.png"]
 ogLocale = "en_US"
 # domainTLD = "doks.netlify.app"
-domainTLD = "sprinto.live"
+domainTLD = "sprintobot.com"
 titleHome = "Sprinto bot"
 
 ## Twitter Cards
@@ -40,6 +40,8 @@ schemaTwitter = "https://twitter.com/sprintobot"
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/pengowray/sprinto"
 schemaSection = "blog"
+
+googleAnalytics = 'G-KJELGBPRHT'
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
@@ -71,7 +73,17 @@ fillImage = "1270x740 Center" # normalize image size
 #footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
 #footer = "[Invite Sprinto](https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576) ⸻ [Join Support Server](https://discord.gg/7ZSuEgM) ⸻ [top.gg](https://top.gg/bot/421646775749967872) ⸻ [Sprinto on Patreon](https://www.patreon.com/pengowray)** ⸻ [Buy me a coffee](https://ko-fi.com/pengowray) (Ko-fi)"
 #footer = "<a href=\"https://discord.gg/7ZSuEgM\">Sprinto Support Server</a> ⸻ <a href=\"https://www.patreon.com/pengowray\">Sprinto on Patreon</a> ⸻ <a href=\"https://ko-fi.com/pengowray\">Buy me a coffee</a> (Ko-fi) <br> Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
-footer = "<a class=\"text-muted\" href=\"https://discord.gg/7ZSuEgM\">Join Sprinto's Support Server</a>"
+footer = """<a class=\"text-muted\" href=\"https://discord.gg/7ZSuEgM\">Join Sprinto's Support Server</a>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJELGBPRHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KJELGBPRHT');
+</script>
+"""
 
 # Feed
 copyRight = "Copyright (c) 2023 Pengo Wray"
@@ -87,7 +99,7 @@ alertText = "Introducing Sprinto!"
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/pengowray/sprinto"
+docsRepo = "https://github.com/pengowray/doks-sprinto"
 docsRepoBranch = "master"
 # docsRepoSubPath = ""
 docsRepoSubPath = "docs"
