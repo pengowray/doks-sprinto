@@ -5,7 +5,7 @@ url: "/docs/sprint-admin"
 lead: 
 ---
 
-SprintAdmin (A) and SprintMC (MC) commands
+Special sprint-related commands which are available only to an {{<tag-admin>}} or {{<tag-mc>}}.
 
 ## Commands
 
@@ -63,7 +63,6 @@ Forces a running sprint to end, regardless of how many sprinters have joined.
 Moves a running sprint on to the next stage immediately, typically only used for testing or debugging purposes.
 
 If a bug occurs and the sprint becomes stuck, {{< atsprintoembed "nudge" >}} (without the "please") can also be used by anyone to nudge the sprint along. That's if Sprinto can successfully detect that the sprint is stuck.
-
 
 <!--
 

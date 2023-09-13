@@ -1,7 +1,8 @@
 ---
-title : "Sprint"
+title : "Sprint (all options)"
 description: The sprint command and all its options
 lead: 
+weight: 20
 ---
 ## The Sprint Command in detail
 {{<slash name="sprint" key0="options" val0="_duration_ _when_ " >}}

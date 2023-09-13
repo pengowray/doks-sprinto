@@ -2,13 +2,12 @@
 title : "Sprint basics"
 description: 
 lead: "Sprint basics"
+weight: 10
 ---
 
 Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
 
 ## Popular and fun ways to start a sprint
-
-→ see also: _[[Sprint command explained|Sprint]]_ (with full list of sprint options and presets)
 
 ### Standard 15 minute sprint
 
@@ -116,3 +115,8 @@ You can also combine this, for example:
 {{</alts>}}
 
 Sprint a marathon: after a bit (in 7.5 to 12.5 minutes), sprint for 1 hour, then 10 minutes for final word counts.
+
+## See also
+
+- [Sprint (all options)]({{< relref "sprint" >}})
+- [During sprint]({{< relref "words" >}}) — join, leave, cancel, and setting your word count

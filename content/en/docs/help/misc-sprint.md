@@ -1,11 +1,10 @@
 ---
-title : "Less used sprint commands"
+title : "Less used"
 description: 
-lead: "Miscellaneous commands."
+lead: "Less used sprint commands (Miscellaneous commands)"
 identifier: "misc-sprint"
 url: "docs/misc-sprint"
 ---
-
 See also: [Starting a sprint]({{< relref "basics" >}}), and [full list of Sprint commands]({{< relref "sprint" >}}).
 
 ### Final

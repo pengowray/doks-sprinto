@@ -1,5 +1,5 @@
 ---
-title : "Ping roles"
+title : "Ping roles (admin)"
 description: always ping role commands
 lead: "Always ping a role at sprint start"
 ---
