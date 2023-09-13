@@ -23,7 +23,7 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 - [Overview of Help]({{< relref "overview" >}}) — this page
 - [Active Sprinter role]({{< relref "ActiveSprinter" >}})  — Setting up a role on your server named {{<role "@Active Sprinters">}}
-- [Admin commands]({{< relref "admin" >}}) — about the [{{<tag-admin>}}] and [{{<tag-mc>}}]  roles and commands
+- [Admin commands]({{< relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
 - [Allowed channels (admin)]({{< relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
 - [Carl-bot x Sprinto]({{< relref "admin" >}}) — using carl-bot to schedule sprints.
 - [Curious commands]({{< relref "curious" >}}) — commands you don't need.
@@ -37,7 +37,8 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 ## More info:
 
-→ [Main page]({{< relref "/" >}}) — currently has examples of how to sprint
+- [Main page]({{< relref "/" >}}) — has examples of how to sprint
+- [Docs Index]({{< relref "/docs/" >}}) — generated list of all docs
 
 
 
