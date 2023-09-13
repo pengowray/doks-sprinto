@@ -1,13 +1,11 @@
-Docs for Sprinto docs 
+Repo for Sprinto's website source
 
-## Documentation
+## View the Sprinto website:
 
-- [Netlify](https://docs.netlify.com/)
-- [Hugo](https://gohugo.io/documentation/)
-- [Doks](https://getdoks.org/) | [commands](https://getdoks.org/docs/prologue/commands/)
+- [SprintoBot.com](https://sprintobot.com/)
 
-## Communities
+## Meta-Documentation
 
-- [Netlify Community](https://community.netlify.com/)
-- [Hugo Forums](https://discourse.gohugo.io/)
-- [Doks Discussions](https://github.com/h-enk/doks/discussions)
+- [Doks](https://getdoks.org/) | [commands](https://getdoks.org/docs/prologue/commands/) | [discussions](https://github.com/h-enk/doks/discussions)
+- [Hugo](https://gohugo.io/documentation/) | [forums](https://discourse.gohugo.io/)
+- [Netlify](https://docs.netlify.com/) | [community](https://community.netlify.com/)
