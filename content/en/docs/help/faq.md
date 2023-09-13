@@ -23,6 +23,8 @@ Discord's slash commands can be terribly inconsistent, and it can be hard to kno
 
 I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
 
+I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
+
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 
 1. Sprinto doesn't know your starting word count and doesn't want to guess.
@@ -50,9 +52,11 @@ C# using the Discord.Net package and MongoDB. In production he runs on Linux; in
 ## How'd you make this amazing website?
 
 This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes and CSS. You can view the website's source code at [github.com/pengowray/doks-sprinto](https://github.com/pengowray/doks-sprinto).
+This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes and CSS. You can view the website's source code at [github.com/pengowray/doks-sprinto](https://github.com/pengowray/doks-sprinto).
 
 ## Is Sprinto's source code available?
 
+I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
 I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
 
 ## How do I hide Sprinto from my @ mentions list?
@@ -95,6 +99,8 @@ Sprinto is a non-sentient robot and so has no ability (for now) to think or feel
 Come to Sprinto Planet—Sprinto's support server—and ask away, or use the `/feedback` command.
 
 Examples:
+{{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
+{{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 {{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
 {{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 
