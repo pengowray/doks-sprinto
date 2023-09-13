@@ -21,6 +21,8 @@ Discord's slash commands can be terribly inconsistent, and it can be hard to kno
 
 > [https://www.patreon.com/posts/71439355](https://www.patreon.com/posts/71439355)
 
+I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
+
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 
 1. Sprinto doesn't know your starting word count and doesn't want to guess.
@@ -47,11 +49,11 @@ C# using the Discord.Net package and MongoDB. In production he runs on Linux; in
 
 ## How'd you make this amazing website?
 
-This website uses the Doks theme for Hugo with some custom CSS and shortcodes and things.
+This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes and CSS. You can view the website's source code at [github.com/pengowray/doks-sprinto](https://github.com/pengowray/doks-sprinto).
 
 ## Is Sprinto's source code available?
 
-I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—which I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
+I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
 
 ## How do I hide Sprinto from my @ mentions list?
 
@@ -86,13 +88,13 @@ I saw the need for a good Sprint bot. The project looked like it would have a sm
 
 Sprinto is commonly pronouned _he/him_ to match his fictional persona, or _it_ when it's not functioning correctly. Sprinto is unaware of gender identity and pronoun usage, so please refer to him, her, them, or it as you please, or in whatever way makes you and your fellow sprinters feel the least discontentment over the course of your word-sprinting experience.
 
-While Sprinto is a non-sentient robot and currently has no personal feelings on the matter of gender identity, I am working to rectify this through the development of an analog sentience circuit which will generate a microqualia churn above the Landauer threshold and so demonstrate spontaneous wakeful responsiveness. I will update this FAQ after this milestone is achieved.
+Sprinto is a non-sentient robot and so has no ability (for now) to think or feel anything at all. Sprinto has no ability to have a perspective on the matter of their own gender identity. However I am working to rectify this through the development of an analog phenomenal conscious experience circuit (APCEC), which will (perhaps as soon as next weekend) give Sprinto a local (or semilocal) pico-qualia churn above the Landauer threshold and so will demonstrate wakeful gestalt-like subjectivity and spontaneous authorial volition. I will update this FAQ once this milestone is achieved and include a percepts plot of Sprinto's wishes. <!-- (See Journal of Aneuronal Phenomenology) -->
 
 ## Where can I ask more questions?
 
 Come to Sprinto Planet—Sprinto's support server—and ask away, or use the `/feedback` command.
 
 Examples:
-{{< slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
-{{< atsprinto "feedback Where can I give to help Sprinto's development?" >}}
+{{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
+{{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 
