@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Help on</title><link>https://sprintobot.com/docs/help/</link><description>Recent content in Help on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprintobot.com/docs/help/index.xml" rel="self" type="application/rss+xml"/><item><title>Active Sprinter role</title><link>https://sprintobot.com/docs/active-sprinter-role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/active-sprinter-role/</guid><description>What is the &amp;lsquo;Active Sprinter&amp;rsquo; role? #
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Help on</title><link>https://sprintobot.com/docs/help/</link><description>Recent content in Help on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Jan 2022 14:40:56 +0100</lastBuildDate><atom:link href="https://sprintobot.com/docs/help/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview of Help</title><link>https://sprintobot.com/docs/overview-of-help/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/overview-of-help/</guid><description>Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
+Getting Started #
+Invite Sprinto to your server, then Set up Sprinto (or just start sprinting) Sprinting #
+Sprint (basics) — common ways to use /sprint Sprint (all options) — complete sprint options guide During sprint — join, leave, cancel, and setting your word count Sprint (admin) — the few sprint options and commands only available to Sprint MCs Help #
+Overview of Help — this page Active Sprinter role — Setting up a role on your server named @Active Sprinters Admin commands — about the [
+Admin
+To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.</description></item><item><title>Active Sprinter role</title><link>https://sprintobot.com/docs/active-sprinter-role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/active-sprinter-role/</guid><description>What is the &amp;lsquo;Active Sprinter&amp;rsquo; role? #
 In brief:
 Makes members who are currently in a sprint with Sprinto more visible in the discord members list. It&amp;rsquo;s just an optional nice thing to make it more obvious when a sprint is running on your server. I&amp;rsquo;m not sure why this documentation got so long for a simple feature. The @Active Sprinters role is an extra thing admins can set up, but is not necessary for the running of Sprinto.</description></item><item><title>Admin commands</title><link>https://sprintobot.com/docs/admin-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/admin-commands/</guid><description>Commands available to guild owners, administrators and people with a role named SprintAdmin. Some commands are also available to people with a SprintMC role.
 Sprint Admin intro #
@@ -6,11 +12,7 @@ A Sprint Admin [
 Admin
 To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.
 ] is someone with extra privileges on a server. A server&amp;rsquo;s owner, its administrators, and anyone with a role named Sprint Admin.</description></item><item><title>Allowed channels (admin)</title><link>https://sprintobot.com/docs/allowed-channels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/allowed-channels/</guid><description>Sprinting channel whitelist (Sprinto Setup) #
-If a whitelist is setup, sprints will be disallowed in channels which have not been &amp;lsquo;whitelisted&amp;rsquo; and users will be pointed to the allowed (whitelisted) channels.
-Note: Sprinto does not have a concept of secret or hidden channels. Sprinto will attempt to point Discord users to a sprint room even if the user does not have permission to see or use that channel.
-All these commands require a @Sprint Admin [
-Admin
-To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.</description></item><item><title>Carl-bot x Sprinto</title><link>https://sprintobot.com/docs/carl-bot-x-sprinto/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/carl-bot-x-sprinto/</guid><description>Scheduling Sprints #
+If any channels on your server are set as &amp;lsquo;allowed&amp;rsquo; with set-allowed-channel then starting sprints will be disallowed in channels which have not been set as allowed. When a member of your server tries to sprint in a channel which has not been allowed they&amp;rsquo;ll pointed to all allowed channels. If no channels are explicitly set as &amp;lsquo;allowed&amp;rsquo; (the default) then Sprinto allows sprinting in all channels.</description></item><item><title>Carl-bot x Sprinto</title><link>https://sprintobot.com/docs/carl-bot-x-sprinto/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/carl-bot-x-sprinto/</guid><description>Scheduling Sprints #
 NOTE: Carl-bot is not associated with Sprinto. I&amp;rsquo;ve provided this info to help you schedule sprints, to extend Sprinto&amp;rsquo;s functionality beyond what it was originally designed for.
 Want to scheduling sprints more than an hour in advance, or set up multiple sprints in a row? You can use Carl-bot for this purpose. Sprinto may get a built-in way in future, but for now there&amp;rsquo;s Carl-bot, a popular Discord bot which is developed completely independently of Sprinto (I have nothing to do with it!</description></item><item><title>Curious commands</title><link>https://sprintobot.com/docs/curious-commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/curious-commands/</guid><description>These commands are documented here mostly for curiousity&amp;rsquo;s sake. You don&amp;rsquo;t need any of them, and they&amp;rsquo;re largely not useful, but they&amp;rsquo;re documented here all the same.
 parse #
@@ -36,7 +38,7 @@ Wake up you pet so they&amp;rsquo;ll run with you in sprints.</description></ite
 Discord&amp;rsquo;s slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a discord UI/UX issue, or something else. I&amp;rsquo;ve written up a trouble shooting guide here that attempts to cover most of them:
 https://www.patreon.com/posts/71439355
 Why do I need to join my own sprint? Shouldn&amp;rsquo;t I join automatically? #
-Sprinto doesn&amp;rsquo;t know your starting word count and doesn&amp;rsquo;t want to guess.</description></item><item><title>Less used sprint commands</title><link>https://sprintobot.com/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/misc-sprint/</guid><description>See also: Starting a sprint, and full list of Sprint commands.
+Sprinto doesn&amp;rsquo;t know your starting word count and doesn&amp;rsquo;t want to guess.</description></item><item><title>Less used</title><link>https://sprintobot.com/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/misc-sprint/</guid><description>See also: Starting a sprint, and full list of Sprint commands.
 Final #
 /final Synonyms
 @Sprinto#2517 final
@@ -55,11 +57,4 @@ You can also choose to never or always receive pings at the start of sprints wit
 Commands #
 forgetme #
 /forgetme @Sprinto#2517 forget me
-Sprinto wont ping you at the start of sprints until after you join another one.</description></item><item><title>Ping roles</title><link>https://sprintobot.com/docs/ping-roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/ping-roles/</guid><description>You can set roles to always mention at the start of sprints in a channel.
-If members of your Discord server can self assign roles (for example using another bot), then you may have a role named @Sprinters and want Sprinto to always mention (ping) those users when a new Sprint starts. You can do that with /setup-pingroles-set .
-Commands for changing the ping roles list #
-pingroles-set #
-/setup-pingroles-set role:
-@sprinters-role
-@Sprinto#2517 always_ping_role sprinters-role
-Replace @sprinters-role with the name of the role you want Sprinto to mention at the start of sprints, such as @Sprinters.</description></item></channel></rss>
+Sprinto wont ping you at the start of sprints until after you join another one.</description></item></channel></rss>
