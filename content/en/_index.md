@@ -14,7 +14,9 @@ One minute after creating the sprint, time begins.
 
 Now do some writing!
 
-Enter your word count at the end:
+... <i>15 minutes later</i> ...
+
+Enter your word count at the end: (It's on the honour system)
 
 {{< slash name="words" key0="count" val0="442" >}}
 
@@ -22,11 +24,20 @@ Sprinto will congratulate all the sprinters and show a scoreboard.
 
 Congratulations! You've written some words! Start again and write some more!
 
+{{< alts "With a starting word count">}}
+{{< slash name="sprint" >}}
+{{< slash name="join" key0="count" val0="1000" >}}
+... <i>15 minutes later</i> ...
+{{< slash name="words" key0="count" val0="1442" >}}
+Here the starting 1000 words are automatically deducted from the final tally, so Sprinto will treat this as 442 words written.
+{{< /alts >}}
+
 {{< alts "Without slash commands">}}
 You can also @Sprinto:
 {{< atsprinto "sprint" >}}
 {{< atsprinto "join" >}}
-{{< atsprinto "120" >}}
+... <i>15 minutes later</i> ...
+{{< atsprinto "442" >}}
 
 Sprinto accepts fairly flexible input, so try commands you think ought to work, or see the docs for more things.
 {{< /alts >}}

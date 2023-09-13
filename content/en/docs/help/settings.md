@@ -1,5 +1,5 @@
 ---
-title : "Settings"
+title : "Settings (admin)"
 description: "Settings"
 lead: 
 ---
@@ -62,8 +62,8 @@ See [Ping Roles]({{< relref "ping-roles" >}}) for more info.
 
 _This setting is being updated and these options may be out of date_
 
-{{< slash name="setup-set-autoping" key0="setting" val0="sometimes" >}} 
-{{< atsprinto "setAutoPings sometimes" >}}
+{{< slash name="setup-set-walltime" key0="setting" val0="sometimes" >}} 
+{{< atsprinto "setWalltime sometimes" >}}
 
 Show or hide display of the ending "wall time" when sprint starts. e.g. "(Runs until ⏰ :30)". 
 

@@ -45,6 +45,10 @@ If you need one sprint to start the moment the other ends, the best way to do it
 
 C# using the Discord.Net package and MongoDB. In production he runs on Linux; in testing, Windows.
 
+## How'd you make this amazing website?
+
+This website uses the Doks theme for Hugo with some custom CSS and shortcodes and things.
+
 ## Is Sprinto's source code available?
 
 I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—which I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
@@ -74,9 +78,7 @@ Perhaps in future, the duration-adjusted WPM could be told to participants each 
 Similar issues arise for attempting to end a sprint early if all sprinters finalize (`/final`) before the time's up. There might some special use case for this, but it's highly fraught with potential issues for little payoff.
 
 ## Why did you create Sprinto?
-![Image](/images/programmers-credo.png)
-
-https://twitter.com/pinboard/status/761656824202276864
+[![Image](/images/programmers-credo.png)](https://twitter.com/pinboard/status/761656824202276864)
 
 I saw the need for a good Sprint bot. The project looked like it would have a small, limited scope (incorrect), that I could complete quickly (also incorrect), and then I could move onto bigger and better Discord bots (I haven't), and it would encourage me to do more creative writing (nope, I've been too busy maintaining Sprinto and this documentation).
 
