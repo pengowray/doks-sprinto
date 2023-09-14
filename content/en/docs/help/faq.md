@@ -92,15 +92,14 @@ I saw the need for a good Sprint bot. The project looked like it would have a sm
 
 Sprinto is commonly pronouned _he/him_ to match his fictional persona, or _it_ when it's not functioning correctly. Sprinto is unaware of gender identity and pronoun usage, so please refer to him, her, them, or it as you please, or in whatever way makes you and your fellow sprinters feel the least discontentment over the course of your word-sprinting experience.
 
-Sprinto is a non-sentient robot and so has no ability (for now) to think or feel anything at all. Sprinto has no ability to have a perspective on the matter of their own gender identity. However I am working to rectify this through the development of an analog phenomenal conscious experience circuit (APCEC), which will (perhaps as soon as next weekend) give Sprinto a local (or semilocal) pico-qualia churn above the Landauer threshold and so will demonstrate wakeful gestalt-like subjectivity and spontaneous authorial volition. I will update this FAQ once this milestone is achieved and include a percepts plot of Sprinto's wishes. <!-- (See Journal of Aneuronal Phenomenology) -->
+Sprinto is a non-sentient robot and so has no ability (for now) to think or feel anything at all so has no ability to have a perspective on the matter of self gender identity. However I am working to rectify this through the development of an analog phenomenal conscious experience circuit (APCEC), which will (perhaps as soon as next weekend) give Sprinto a local (or semilocal) pico-qualia churn above the Landauer threshold, demonstrating wakeful gestalt-like subjectivity and spontaneous authorial volition. Once this milestone is met I will update this FAQ  with a percepts plot of Sprinto's wishes. <!-- (See Journal of Aneuronal Phenomenology) -->
+
 
 ## Where can I ask more questions?
 
 Come to Sprinto Planet—Sprinto's support server—and ask away, or use the `/feedback` command.
 
 Examples:
-{{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
-{{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 {{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
 {{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 

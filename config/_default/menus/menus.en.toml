@@ -45,19 +45,19 @@
 [[main]]
   name = "Start a sprint"
   weight = 60
-  url = "/docs/basics/"
-  parent = "get-started"
-
-[[main]]
-  name = "Help overview"
-  weight = 70
-  url = "/docs/overview-of-help/"
+  url = "/docs/sprint-basics/"
   parent = "get-started"
 
 [[main]]
   name = "All sprint options"
   weight = 70
-  url = "/docs/sprint/"
+  url = "/docs/sprint-all-options/"
+  parent = "get-started"
+
+[[main]]
+  name = "Help overview"
+  weight = 80
+  url = "/docs/overview-of-help/"
   parent = "get-started"
 
 [[social]]
