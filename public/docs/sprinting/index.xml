@@ -23,7 +23,7 @@ for 25 at :15
 /sprint options:
 for however long in a bit
 The parameters are all optional and can be in any order.
-/sprint Without any options, the default sprint is for 15 minutes in 1 minute.</description></item><item><title>During sprint</title><link>https://sprintobot.com/docs/during-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/during-sprint/</guid><description>Cancel #
+/sprint Without any options, the default sprint is for 15 minutes in 1 minute.</description></item><item><title>During the sprint</title><link>https://sprintobot.com/docs/during-the-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/during-the-sprint/</guid><description>Cancel #
 Oops! Made a mistake? You can cancel a sprint with:
 /cancel If Sprinto didn&amp;rsquo;t understand your /sprint command you can cancel it and start over. Note that if others have joined your sprint, you might need them to /cancel too.
 Force cancel #
