@@ -119,4 +119,4 @@ Sprint a marathon: after a bit (in 7.5 to 12.5 minutes), sprint for 1 hour, then
 ## See also
 
 - [Sprint (all options)]({{< relref "sprint" >}})
-- [During sprint]({{< relref "words" >}}) — join, leave, cancel, and setting your word count
+- [During the sprint]({{< relref "words" >}}) — join, leave, cancel, and setting your word count

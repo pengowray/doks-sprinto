@@ -82,5 +82,7 @@ By default Sprinto ignores messages from other bots. Setting "listen-to-carl" to
 
 ## See also
 * [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-* [ActiveSprinter]({{< relref "activesprinter" >}}) (another role used by Sprinto)
-* [Voice]({{< relref "voice" >}})
+- [Allowed channels (admin)]({{<relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
+* [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
+- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+* [Voice]({{<relref "voice" >}})

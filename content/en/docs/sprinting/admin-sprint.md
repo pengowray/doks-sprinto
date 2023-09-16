@@ -30,11 +30,11 @@ SprintMCs who add "please" to a sprint command can set it to run for longer, or 
 Note: This isn't to force anyone to be polite. It's an added check so you don't accidentally run long sprints.
 
 Example:
-{{< slash name="sprint" key0="options" val0="for 90 minutes please" >}} 
-{{< atsprinto "sprint for 90 pls" >}} 
+{{<slash name="sprint" key0="options" val0="for 90 minutes please" >}} 
+{{<atsprinto "sprint for 90 pls" >}} 
 {{<alts>}}
-{{< slash name="sprint" key0="options" val0="90 pls" >}} 
-{{< atsprinto "sprint for 1.5 hours s’il vous plaît" >}} 
+{{<slash name="sprint" key0="options" val0="90 pls" >}} 
+{{<atsprinto "sprint for 1.5 hours s’il vous plaît" >}} 
 {{</alts>}}
 
 ### cancel please
@@ -54,10 +54,10 @@ Forces a running sprint to end, regardless of how many sprinters have joined.
 ### nudge please
 {{<tag-mc>}}
 
-{{< slash name="admin-force-nudge" >}} 
-{{< atsprinto "nudge pls" >}} 
+{{<slash name="admin-force-nudge" >}} 
+{{<atsprinto "nudge pls" >}} 
 {{<alts>}}
-{{< slash name="sprint" key0="options" val0="nudge pls" >}} 
+{{<slash name="sprint" key0="options" val0="nudge pls" >}} 
 {{</alts>}}
 
 Moves a running sprint on to the next stage immediately, typically only used for testing or debugging purposes.
@@ -69,3 +69,14 @@ If a bug occurs and the sprint becomes stuck, {{< atsprintoembed "nudge" >}} (wi
 | `/admin-forget-user 123456789` or `@sprinto forgetuser 123456789` | (MC) Stops a user 123456789 getting pinged at the start of sprints, as if they had typed `/forgetme` themselves. Replace `123456789` with the ID of the Discord user. If you can't see their user id, you might have to turn on "Developer Mode" in Discord settings, then "Copy ID" will appear when you right click the user. You can also use their user name (with no `@`), if they haven't left the server. Use `/admin-forget-all-users` or `@sprinto forget_all_users` (A) to forget all users. |
 | `@sprinto pinguser <user> <number>` | (MC) Turn pings on for a user, like if they typed `/pingme`. Replace `<number>` with the number of sprints. Default is 3. For "never" use 0. For always, use 1000. |
 -->
+
+
+## See also
+* [Setup]({{<relref "setup" >}}) (setting up Sprinto)
+- [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
+* [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
+- [Allowed channels (admin)]({{<relref "whitelist" >}}) — commands to prevent users running sprints where they're not supposed to
+- [Carl-bot x Sprinto]({{<relref "admin" >}}) — using carl-bot to schedule sprints
+- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+- [Voice]({{<relref "voice" >}}) — Experimental voice channel support

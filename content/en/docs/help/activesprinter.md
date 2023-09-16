@@ -1,7 +1,8 @@
 ---
 title : "Active Sprinter role"
 description: "Setting up an active sprinter role for sprints to be more visible on Discord"
-lead: 
+#lead: ""
+keywords: ["roles", "active sprinter"]
 ---
 ## What is the 'Active Sprinter' role?
 
@@ -12,7 +13,7 @@ In brief:
 
 The {{<role "@Active Sprinters">}} role is an extra thing admins can set up, but is not necessary for the running of Sprinto. It gives sprinters currently participating in a sprint (in any channel) the role {{<role "@Active Sprinters">}}. You can use this to make sprinters pop up to the top of the server's members list under the "Active Sprinters" role banner, which lets others on the server know a sprint is happening. Having the role can give sprinters a special color username while they're participating in a sprint, as well as a special badge next to their name. Badges require a Discord boosted servers.
 
-Admins can use {{< atsprintoembed "create_active_role" >}} to set up an {{<role "@Active Sprinters">}} role. Once it's created, anyone who joins a sprint will now get automatically added to the {{<role "@Active Sprinters">}} role during the sprint. At the end of the Sprint everyone is removed from the role. Works with multiple sprint rooms.
+Admins can use {{<atsprintoembed "create_active_role" >}} to set up an {{<role "@Active Sprinters">}} role. Once it's created, anyone who joins a sprint will now get automatically added to the {{<role "@Active Sprinters">}} role during the sprint. At the end of the Sprint everyone is removed from the role. Works with multiple sprint rooms.
 
 If you no longer wish to use this feature, just delete the {{<role "@Active Sprinters">}} role in Discord.
 
@@ -27,7 +28,7 @@ These commands are available to server administrators and members with "Manage R
 ### Creative Active Role
 {{<tag-admin>}}
 
-{{< atsprinto "create_active_role" >}} 
+{{<atsprinto "create_active_role" >}} 
 
 Create a role on the server named {{<role "@Active Sprinters">}} for Sprinto to use. The role is created:
 * mentionable
@@ -85,3 +86,9 @@ Role attributes: The `@Active Sprinter` role color, badge icon and position in t
 4. (optionally) Make it mentionable? If the {{<role "@Active Sprinters">}} role is mentionable, it can also be used to mention (ping) active sprinters by sprinters or other users.
 
    Note: Sprinto never mentions the {{<role "@Active Sprinters">}} role, so the role can be mentionable or not mentionable and sprints will run just fine. Here's why (to clear up any confusion): The same {{<role "@Active Sprinters">}} role is used for every sprint channel, so if Sprinto were to try to use the role to ping a sprint in one channel, Sprinto would inadvertently also ping different sprinters who were sprinting in every other sprinting channel. Instead, Sprinto tags (mentions) the individual sprinters who have joined each individual sprint.
+
+## See also
+
+- [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
+- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
