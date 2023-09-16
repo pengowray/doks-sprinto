@@ -12,8 +12,8 @@ menu:
     #url: "/docs/faq/"
 #  main:
 #    parent: "mainhelp"
-  
 toc: true
+keywords: ["chain wars", "programming language", "Doks", "Hugo", "TimeSpanParser", "pronouns", "Streamling"]
 ---
 ## Sprinto isn't responding to my commands
 
@@ -52,11 +52,9 @@ C# using the Discord.Net package and MongoDB. In production he runs on Linux; in
 ## How'd you make this amazing website?
 
 This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes and CSS. You can view the website's source code at [github.com/pengowray/doks-sprinto](https://github.com/pengowray/doks-sprinto).
-This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes and CSS. You can view the website's source code at [github.com/pengowray/doks-sprinto](https://github.com/pengowray/doks-sprinto).
 
 ## Is Sprinto's source code available?
 
-I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
 I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
 
 ## How do I hide Sprinto from my @ mentions list?
@@ -92,8 +90,11 @@ I saw the need for a good Sprint bot. The project looked like it would have a sm
 
 Sprinto is commonly pronouned _he/him_ to match his fictional persona, or _it_ when it's not functioning correctly. Sprinto is unaware of gender identity and pronoun usage, so please refer to him, her, them, or it as you please, or in whatever way makes you and your fellow sprinters feel the least discontentment over the course of your word-sprinting experience.
 
-Sprinto is a non-sentient robot and so has no ability (for now) to think or feel anything at all so has no ability to have a perspective on the matter of self gender identity. However I am working to rectify this through the development of an analog phenomenal conscious experience circuit (APCEC), which will (perhaps as soon as next weekend) give Sprinto a local (or semilocal) pico-qualia churn above the Landauer threshold, demonstrating wakeful gestalt-like subjectivity and spontaneous authorial volition. Once this milestone is met I will update this FAQ  with a percepts plot of Sprinto's wishes. <!-- (See Journal of Aneuronal Phenomenology) -->
+Sprinto is a non-sentient robot and so has no ability (for now) to think or feel anything at all so has no ability to have a perspective on the matter of self gender identity. However I am working to rectify this through the development of an analog phenomenal conscious experience circuit (APCEC), which will (perhaps as soon as next weekend) give Sprinto a local (or semilocal) pico-qualia churn above the Landauer threshold, demonstrating wakeful gestalt-like subjectivity and spontaneous authorial volition. Once this milestone is met I will update this FAQ with a percepts plot of Sprinto's wishes. <!-- (See Journal of Aneuronal Phenomenology) -->
 
+## Are there other projects by Pengo Wray I can check out?
+
+**Streamling Overlay app**: If you're a streamer or content creator, try out [Streamling Overlay app](https://itch.io/game/summary/554492) for Windows to show your current music. It's free or pay what you want.
 
 ## Where can I ask more questions?
 

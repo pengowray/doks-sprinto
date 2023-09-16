@@ -10,57 +10,64 @@ If members of your Discord server can self assign roles (for example using anoth
 ## Commands for changing the ping roles list
 
 ### pingroles-set
+{{<tag-admin>}}
 
-{{< slash name="setup-pingroles-set" key0="role" val0="_@sprinters-role_" >}} 
-{{< atsprinto "always_ping_role _sprinters-role_" >}} 
+{{<slash name="setup-pingroles-set" key0="role" val0="_@sprinters-role_" >}} 
+{{<atsprinto "always_ping_role _sprinters-role_" >}} 
 
 Replace _@sprinters-role_ with the name of the role you want Sprinto to mention at the start of sprints, such as {{<role "@Sprinters">}}.
 
- (A) The chosen role will always be pinged whenever a new sprint starts. 
+The chosen role will always be pinged whenever a new sprint starts. 
  
 ### pingroles-list
 
-{{< slash name="setup-pingroles-list" >}} 
-{{< atsprinto "list_ping_roles" >}} 
+{{<slash name="setup-pingroles-list" >}} 
+{{<atsprinto "list_ping_roles" >}} 
 
 Lists "roles to always mention at the start of sprints in this channel".
 
 ### pingroles-remove
+{{<tag-admin>}}
 
-{{< slash name="setup-pingroles-remove" key0="role" val0="_@role-name_" >}} 
-{{< atsprinto "never_ping_role _role-name_" >}} 
+{{<slash name="setup-pingroles-remove" key0="role" val0="_@role-name_" >}} 
+{{<atsprinto "never_ping_role _role-name_" >}} 
 
-(A) Remove _{{<role "@role-name">}}_ from the "always ping role" list.
+Remove _{{<role "@role-name">}}_ from the "always ping role" list.
 
 ### pingroles-clear
+{{<tag-admin>}}
 
-{{< slash name="setup-pingroles-clear" >}} 
-{{< atsprinto "clear_ping_roles" >}} 
+{{<slash name="setup-pingroles-clear" >}} 
+{{<atsprinto "clear_ping_roles" >}} 
 
-(A) Remove all roles from the "always ping role" list.
+Remove all roles from the "always ping role" list.
 
 ## Related commands
 
 ### set-autopings off
+{{<tag-admin>}}
 
-{{< slash name="setup-set-autoping" key0="setting" val0="Off" >}} 
-{{< atsprinto "setAutoPings off" >}}
+{{<slash name="setup-set-autoping" key0="setting" val0="Off" >}} 
+{{<atsprinto "setAutoPings off" >}}
 
-You may wish to use ping roles in combination with {{< atsprintoembed "setAutoPings off" >}} to stop Sprinto pinging individual users at the start of a sprint, and only use the role or roles assigned.
+You may wish to use ping roles in combination with {{<atsprintoembed "setAutoPings off" >}} to stop Sprinto pinging individual users at the start of a sprint, and only use the role or roles assigned.
 
 ### forget-all-users
+{{<tag-admin>}}
 
-{{< slash name="admin-forget-all-users" >}}
-{{< atsprinto "forget_all_users" >}}
+{{<slash name="admin-forget-all-users" >}}
+{{<atsprinto "forget_all_users" >}}
 
-You may wish to remove the remaining pings users have left to receive. This is like if everyone in the channel typed {{< slashembed name="forgetme" >}}. Useful in combination with the above (set-autopings off)
+You may wish to remove the remaining pings users have left to receive. This is like if everyone in the channel typed {{< slashembed name="forgetme" >}}. Useful in combination with the above (set-autopings off) to clear the remaining pings.
 
 ### sprint noping
 Examples:
-{{< slash name="sprint" key0="options" val0="for 1000 seconds noping" >}} 
-{{< atsprinto "sprint for 99.9 please noping" >}}
+{{<slash name="sprint" key0="options" val0="for 1000 seconds noping" >}} 
+{{<atsprinto "sprint for 99.9 please noping" >}}
 
-Add `noping` to a sprint command to start a sprint without pinging any roles or user. You can use this to test sprint commands without alerting anyone, or to sprint quietly by yourself while everyone's sleeping.
+Add `noping` to a sprint command to start a sprint without pinging any roles or user. You can use this to test sprint commands without alerting anyone, or to sprint quietly by yourself while everyone's sleeping. All users can use this option.
+
+<!-- todo: compare and contrast with QUIETLY -->
 
 ## Notes
 

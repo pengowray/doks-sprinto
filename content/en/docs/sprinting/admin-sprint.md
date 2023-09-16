@@ -30,11 +30,11 @@ SprintMCs who add "please" to a sprint command can set it to run for longer, or 
 Note: This isn't to force anyone to be polite. It's an added check so you don't accidentally run long sprints.
 
 Example:
-{{< slash name="sprint" key0="options" val0="for 90 minutes please" >}} 
-{{< atsprinto "sprint for 90 pls" >}} 
+{{<slash name="sprint" key0="options" val0="for 90 minutes please" >}} 
+{{<atsprinto "sprint for 90 pls" >}} 
 {{<alts>}}
-{{< slash name="sprint" key0="options" val0="90 pls" >}} 
-{{< atsprinto "sprint for 1.5 hours s’il vous plaît" >}} 
+{{<slash name="sprint" key0="options" val0="90 pls" >}} 
+{{<atsprinto "sprint for 1.5 hours s’il vous plaît" >}} 
 {{</alts>}}
 
 ### cancel please
@@ -54,10 +54,10 @@ Forces a running sprint to end, regardless of how many sprinters have joined.
 ### nudge please
 {{<tag-mc>}}
 
-{{< slash name="admin-force-nudge" >}} 
-{{< atsprinto "nudge pls" >}} 
+{{<slash name="admin-force-nudge" >}} 
+{{<atsprinto "nudge pls" >}} 
 {{<alts>}}
-{{< slash name="sprint" key0="options" val0="nudge pls" >}} 
+{{<slash name="sprint" key0="options" val0="nudge pls" >}} 
 {{</alts>}}
 
 Moves a running sprint on to the next stage immediately, typically only used for testing or debugging purposes.

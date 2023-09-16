@@ -4,13 +4,14 @@ description:
 lead: 
 # identifier: "less-used"
 # url: "docs/less-used"
+keywords: ["parse", "dare", "invite", "sprintmc", "refresh active role", "prefix"]
 ---
 
 These commands are documented here mostly for curiousity's sake. You don't need any of them, and they're largely not useful, but they're documented here all the same. 
 
 ### parse
 
-{{< atsprinto "parse _time_" >}}
+{{<atsprinto "parse _time_" >}}
 
 Try parsing _time_ with Sprinto's time span parser. 
 
@@ -27,7 +28,7 @@ See [pengowray/TimeSpanParser](https://github.com/pengowray/TimeSpanParser) on g
 
 ### dare 
 
-{{< atsprinto "dare" >}}
+{{<atsprinto "dare" >}}
 
 Get a writing dare (via the now deleted nanowrimo.org [word_sprints](https://nanowrimo.org/word_sprints) page)
 
@@ -39,12 +40,12 @@ Create an invite link to take Sprinto to another server. Also gives a link to th
 
 ### sprintmc
 
-{{< atsprinto "sprintmc" >}}
+{{<atsprinto "sprintmc" >}}
 Tells you about the {{< role "@Sprint MC" >}} role, and provides help to set it up. Use the {{< slashembed name="feedback" >}} command to remind me to update the link it gives to point to these new docs.
 
 ### refresh active role
-{{< slash name="admin-refresh-active-role" >}}
-{{< atsprinto "refresh_active_role" >}}
+{{<slash name="admin-refresh-active-role" >}}
+{{<atsprinto "refresh_active_role" >}}
 
 Moves people in and out of the {{< role "@Active Sprinters" >}} role, just in case some people are stuck in the wrong place. Can be used by anyone. For more info about this command and role: [ActiveSprinter]({{< relref "ActiveSprinter" >}}).
 

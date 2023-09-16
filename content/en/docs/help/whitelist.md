@@ -17,8 +17,8 @@ All these commands require an {{<tag-admin>}}, that is: a {{<role "@Sprint Admin
 ### set-allowed-channel
 {{<tag-admin>}}
 
-{{< slash name="setup-set-allowed-channel" >}} 
-{{< atsprinto "set_sprinting_channel_here" >}} 
+{{<slash name="setup-set-allowed-channel" >}} 
+{{<atsprinto "set_sprinting_channel_here" >}} 
 
 Whitelist a channel to allow sprints to be run in it. Multiple channels can be selected by using this command in multiple channels. 
 
@@ -27,16 +27,16 @@ Starts using a whilelist if it was previously not used.
 ### unset-allowed-channel
 {{<tag-admin>}}
 
-{{< slash name="setup-unset-allowed-channel" >}} 
-{{< atsprinto "unset_sprinting_channel_here" >}} 
+{{<slash name="setup-unset-allowed-channel" >}} 
+{{<atsprinto "unset_sprinting_channel_here" >}} 
 
 Remove a channel from the whitelist. If none are left on the whitelist, sprinting is not restricted to any channel.
 
 ### clear-allowed-channels
 {{<tag-admin>}}
 
-{{< slash name="setup-clear-allowed-channels" >}} 
-{{< atsprinto "clear_allowed_channels" >}} 
+{{<slash name="setup-clear-allowed-channels" >}} 
+{{<atsprinto "clear_allowed_channels" >}} 
 
 Clears the whitelist and stops using it. Allows sprints to be run in all channels.
 

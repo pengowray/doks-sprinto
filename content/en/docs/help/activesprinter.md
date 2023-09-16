@@ -1,7 +1,8 @@
 ---
 title : "Active Sprinter role"
 description: "Setting up an active sprinter role for sprints to be more visible on Discord"
-lead: 
+#lead: ""
+keywords: ["roles", "active sprinter"]
 ---
 ## What is the 'Active Sprinter' role?
 
@@ -12,7 +13,7 @@ In brief:
 
 The {{<role "@Active Sprinters">}} role is an extra thing admins can set up, but is not necessary for the running of Sprinto. It gives sprinters currently participating in a sprint (in any channel) the role {{<role "@Active Sprinters">}}. You can use this to make sprinters pop up to the top of the server's members list under the "Active Sprinters" role banner, which lets others on the server know a sprint is happening. Having the role can give sprinters a special color username while they're participating in a sprint, as well as a special badge next to their name. Badges require a Discord boosted servers.
 
-Admins can use {{< atsprintoembed "create_active_role" >}} to set up an {{<role "@Active Sprinters">}} role. Once it's created, anyone who joins a sprint will now get automatically added to the {{<role "@Active Sprinters">}} role during the sprint. At the end of the Sprint everyone is removed from the role. Works with multiple sprint rooms.
+Admins can use {{<atsprintoembed "create_active_role" >}} to set up an {{<role "@Active Sprinters">}} role. Once it's created, anyone who joins a sprint will now get automatically added to the {{<role "@Active Sprinters">}} role during the sprint. At the end of the Sprint everyone is removed from the role. Works with multiple sprint rooms.
 
 If you no longer wish to use this feature, just delete the {{<role "@Active Sprinters">}} role in Discord.
 
@@ -27,7 +28,7 @@ These commands are available to server administrators and members with "Manage R
 ### Creative Active Role
 {{<tag-admin>}}
 
-{{< atsprinto "create_active_role" >}} 
+{{<atsprinto "create_active_role" >}} 
 
 Create a role on the server named {{<role "@Active Sprinters">}} for Sprinto to use. The role is created:
 * mentionable

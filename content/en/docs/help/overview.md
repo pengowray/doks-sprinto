@@ -3,23 +3,24 @@ title : "Overview of Help"
 description: Links to all the help pages
 lead: 
 weight: -10
+keywords: ["overview"]
 ---
 
 Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
 
-# Getting Started
+## Getting Started
 
 - [Invite Sprinto to your server]({{< relref "invite" >}}), then
 - [Set up Sprinto]({{< relref "setup" >}}) (or just start sprinting)
 
-# Sprinting
+## Sprinting
 
 - [Sprint (basics)]({{< relref "basics" >}}) — common ways to use `/sprint`
 - [Sprint (all options)]({{< relref "sprint" >}}) — complete sprint options guide
 - [During sprint]({{< relref "words" >}}) — join, leave, cancel, and setting your word count
 - [Sprint (admin)]({{< relref "admin-sprint" >}}) — the few sprint options and commands only available to Sprint MCs
 
-# Help
+## Help
 
 - [Overview of Help]({{< relref "overview" >}}) — this page
 - [Active Sprinter role]({{< relref "ActiveSprinter" >}})  — Setting up a role on your server named {{<role "@Active Sprinters">}}
@@ -35,7 +36,7 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 - [Settings (admin)]({{< relref "settings" >}}) — Sprint channel settings
 - [Voice]({{< relref "voice" >}}) — Experimental voice channel support
 
-## More info:
+## More info
 
 - [Main page]({{< relref "/" >}}) — has examples of how to sprint
 - [Docs Index]({{< relref "/docs/" >}}) — generated list of all docs
