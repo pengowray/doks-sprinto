@@ -43,3 +43,10 @@ Clears the whitelist and stops using it. Allows sprints to be run in all channel
 <!-- Previously named "/setup-reset-sprinting-channels" but sometimes people accdientally used that command because it had "sprint" in it. Also: @sprinto reset_sprinting_channels -->
 
 <!-- Alternatively, you can remove Sprinto's _Send Messages_ permission in rooms you don't want Sprinto to respond in, or remove his _Read Messages_ permission in channels you don't want Sprinto seen in. --> 
+
+## See also
+- [Overview of Help]({{<relref "overview" >}})
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+* [Setup]({{< relref "setup" >}}) (setting up Sprinto)
+- [Admin commands]({{<relref "admin" >}}) 
+

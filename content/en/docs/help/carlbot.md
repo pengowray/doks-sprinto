@@ -41,7 +41,6 @@ Prefix command:
 <pre>!af silent 24h sprint in a bit for 30
 {{</alts>}}
 
-
 You also can edit or add autofeeds, and set how often they recur, in the Carl-bot dashboard: [carl.gg](https://carl.gg/). 
 
 See Carl-bot's autofeed documentation for more: 
@@ -80,5 +79,10 @@ If you'd like to use a different scheduling bot, please suggest it on the Sprint
 {{<alts Synonym>}}
 {{<atsprinto "feedback Here's my suggestion for another bot for Sprinto to listen to..." >}}
 {{</alts>}}
+
+## See also
+- [Admin commands]({{<relref "admin" >}})
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings, including `setup-set-listen-to-carl`
+- [Sprint (all options)]({{<relref "sprint" >}}) — complete sprint options guide
 
 

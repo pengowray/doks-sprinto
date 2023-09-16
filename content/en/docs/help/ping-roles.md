@@ -76,3 +76,8 @@ Add `noping` to a sprint command to start a sprint without pinging any roles or 
 * These commands are only for mentions (pings) at the start of sprints. Anyone who has joined a sprint will be pinged by their username during a sprint.
 * These commands will not cause Sprinto to assign anyone to the roles. Sprinto doesn't have any mechanism for that.
 * Sprinto will still track recent sprinters and ping them (as well as the roles you choose). If sprinters want to always be pinged they can also use {{< slashembed name="pings-always" >}} to be specifically pinged at the start of sprints regardless.
+
+## See also
+- [pingme]({{<relref "pingme" >}})  — Controlling mentions for the next sprint. Includes some admin commands too. 
+- [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings

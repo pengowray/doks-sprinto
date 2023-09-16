@@ -104,3 +104,6 @@ Examples:
 {{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
 {{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 
+## See also
+- [Overview of Help]({{<relref "overview" >}})
+- [Curious commands]({{<relref "curious" >}}) — commands you don't need.

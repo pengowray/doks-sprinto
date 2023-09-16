@@ -382,3 +382,16 @@ Sprinto doesn't know your timezone, and assumes you have a more typical one:
 
 Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour deviants, so if you are a timezone deviant please just pretend you're anywhere else in the world when using the `at :<MM>` and `until :<MM>` parameters. If this is an actual major issue for your Discord server, please let me know.
 -->
+
+## See also
+- [Overview of Help]({{<relref "overview" >}}) 
+- [Sprint (basics)]({{<relref "basics" >}}) — common ways to use `/sprint` — like this page but much shorter and less complete
+- [During the sprint]({{<relref "words" >}}) — join, leave, cancel, and setting your word count — commands to use once the sprint has started
+- [Sprint (admin)]({{<relref "admin-sprint" >}}) — the few sprint options and commands only available to Sprint MCs and admins
+- [Allowed channels (admin)]({{<relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
+- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+- [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints
+- [Carl-bot x Sprinto]({{<relref "admin" >}}) — using carl-bot to schedule sprints.
+- [Active Sprinter role]({{<relref "ActiveSprinter" >}})  — Setting up a role on your server named {{<role "@Active Sprinters">}}
+

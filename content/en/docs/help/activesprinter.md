@@ -86,3 +86,9 @@ Role attributes: The `@Active Sprinter` role color, badge icon and position in t
 4. (optionally) Make it mentionable? If the {{<role "@Active Sprinters">}} role is mentionable, it can also be used to mention (ping) active sprinters by sprinters or other users.
 
    Note: Sprinto never mentions the {{<role "@Active Sprinters">}} role, so the role can be mentionable or not mentionable and sprints will run just fine. Here's why (to clear up any confusion): The same {{<role "@Active Sprinters">}} role is used for every sprint channel, so if Sprinto were to try to use the role to ping a sprint in one channel, Sprinto would inadvertently also ping different sprinters who were sprinting in every other sprinting channel. Instead, Sprinto tags (mentions) the individual sprinters who have joined each individual sprint.
+
+## See also
+
+- [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
+- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings

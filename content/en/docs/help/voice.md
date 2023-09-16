@@ -28,9 +28,9 @@ Join a voice channel first, then use this command. This sets Sprinto's voice cha
 ### clear_voice_home 
 {{<tag-admin>}}
 
-{{< atsprinto "clear_voice_home ">}} 
+{{<atsprinto "clear_voice_home ">}} 
 {{<alts>}}
-{{< atsprinto "reset_voice_home ">}} 
+{{<atsprinto "reset_voice_home ">}} 
 {{</alts>}}
 
 Reset Sprint's voice channel to the default (i.e. any voice channel with "sprint" in the name)
@@ -42,13 +42,19 @@ If Sprinto's previous voice channel is removed you may have to use this command 
 ### voice_home_on
 {{<tag-mc>}}
 
-{{< atsprinto "voice_home_on">}} 
+{{<atsprinto "voice_home_on">}} 
 
 Allow Sprinto to join voice channels on your Discord server (defaults to on)
 
 ### voice_home_off
 {{<tag-mc>}}
 
-{{< atsprinto "voice_home_off">}} 
+{{<atsprinto "voice_home_off">}} 
 
 Stop Sprinto joining voice channels 
+
+## See also
+- [Overview of Help]({{<relref "overview" >}})
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+- [Setup]({{< relref "setup" >}}) (setting up Sprinto)
+- [Admin commands]({{<relref "admin" >}}) 

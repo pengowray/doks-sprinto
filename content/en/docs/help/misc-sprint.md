@@ -5,7 +5,7 @@ lead: "Less used sprint commands (Miscellaneous commands)"
 identifier: "misc-sprint"
 url: "docs/misc-sprint"
 ---
-See also: [Starting a sprint]({{< relref "basics" >}}), and [full list of Sprint commands]({{< relref "sprint" >}}).
+See also: [Starting a sprint]({{<relref "basics" >}}), and [full list of Sprint commands]({{<relref "sprint" >}}).
 
 ### Final
 
@@ -35,14 +35,14 @@ For example, to finalize with 1200 total words:
 {{<slash name="words" key0="count" val0="final 1200">}}
 {{</alts>}}
 
-Note: you can still update your word count after using {{< slashembed name="final" >}}. It's only to flag to Sprinto that your word count is in, so as not to wait for you when all other word counts are in.
+Note: you can still update your word count after using {{<slashembed name="final" >}}. It's only to flag to Sprinto that your word count is in, so as not to wait for you when all other word counts are in.
 
 ### who
 
 {{< atsprinto "who" >}}
 Lists active sprinters in the channel. 
 
-An X (❌) next to a Sprinter's name indicates they've voted to {{< slashembed name="cancel" >}}.
+An X (❌) next to a Sprinter's name indicates they've voted to {{<slashembed name="cancel" >}}.
 
 ### starting (tare)
 
@@ -57,12 +57,12 @@ For example:
 
 _During a sprint,_ change your starting word count without changing your current word count. I'm not sure why you'd want to do this. 
 
-Instead of using this, you can {{< slashembed name="join" >}} again with a different starting word count, and then set your new word count with {{< slashembed name="words" >}}.
+Instead of using this, you can {{<slashembed name="join" >}} again with a different starting word count, and then set your new word count with {{<slashembed name="words" >}}.
 
 ### rejoin
 
 {{<atsprinto "rejoin" >}}
-Rejoin a sprint you left with {{< slashembed name="leave" >}}. You can also just use {{< slashembed name="join" >}} again.
+Rejoin a sprint you left with {{<slashembed name="leave" >}}. You can also just use {{<slashembed name="join" >}} again.
 
 This command used to restore your previous word count. I might bring back that functionality one day if I'm really bored.
 

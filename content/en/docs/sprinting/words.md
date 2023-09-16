@@ -133,3 +133,10 @@ Generate a link to invite Sprinto to your own Discord server
 {{<atsprinto "feedback _your feedback here_">}}
 {{</alts>}}
 Give your your suggestions and improvement ideas. A copy will be posted anonymously on the Sprinto Planet support server. ⟨[discord.gg/jWBcCYQ](https://discord.gg/jWBcCYQ)⟩ Please join to see the dev's response
+
+## See also
+- [Overview of Help]({{<relref "overview" >}}) 
+- [Sprint (basics)]({{<relref "basics" >}}) — common ways to use `/sprint`
+- [Sprint (all options)]({{<relref "sprint" >}}) — complete sprint options guide
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+- [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints

@@ -5,7 +5,7 @@ lead:
 ---
 ## Optional steps
 
-Once you've [Invited Sprinto to your Discord Server]({{< relref "invite" >}}), there's many optional steps you can take as a server owner or administrator to make things better.
+Once you've [Invited Sprinto to your Discord Server]({{< relref "invite" >}}), you can start sprinting right away. However, there's many optional steps you can take as a server owner or administrator to make things better.
 
 1. **Create a dedicated sprint room (or two).** Sprinto usage can quickly overwhelm any chat room, so almost all servers create a dedicated sprint channel with a name like `#writing-sprints`, `#sprints-and-excerpts` or something thematically appropriate for their server like `#sprinting_dojo`.
 

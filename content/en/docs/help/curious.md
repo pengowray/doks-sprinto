@@ -58,6 +58,9 @@ In the old days, Sprinto would respond to messages in chat which started with an
 {{</alts>}}
 
 ## See also
-
-* [Starting a sprint]({{< relref "basics" >}})
-* [Miscellaneous sprint commands]({{< relref "misc-sprint" >}}) 
+- [Overview of Help]({{<relref "overview" >}})
+- [Starting a sprint (basics)]({{<relref "basics" >}})
+- [Miscellaneous sprint commands]({{<relref "misc-sprint" >}}) 
+- [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints
+- [Voice]({{<relref "voice" >}}) — Experimental voice channel support
+- [FAQ]({{<relref "faq" >}})
