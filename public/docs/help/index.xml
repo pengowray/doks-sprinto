@@ -22,18 +22,10 @@ Sprinto parses this as 34:17:20:00 or 34 days, 17 hours, 20 minutes
 more examples
 @Sprinto#2517 parse 1 day 3,000,000 seconds
 Sprinto parses this as `35:17:20:00` or 35 days, 17 hours, 20 minutes See pengowray/TimeSpanParser on github for more about the open source TimeSpanParser library created by Pengo Wray for Sprinto.</description></item><item><title>Emoji Pets</title><link>https://sprintobot.com/docs/emoji-pets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/emoji-pets/</guid><description>Emoji Pet #
-Your very own emoji pet is available as a reward to &amp;ldquo;Emoji Pet&amp;rdquo; tier Sprinto Patreons.
-Your emoji pet will keep you company on sprints and stop you from ever coming last :)
-Interacting #
-pet info #
-@Sprinto#2517 pet info
-Show info about your pet.
-pet pet #
-@Sprinto#2517 pet pet
-Pet your pet (will also show if your pet is sleeping)
-pet wake #
-@Sprinto#2517 pet wake
-Wake up you pet so they&amp;rsquo;ll run with you in sprints.</description></item><item><title>FAQ</title><link>https://sprintobot.com/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/faq/</guid><description>Sprinto isn&amp;rsquo;t responding to my commands #
+Your very own emoji pet is available as a reward to Sprinto Patreons and Ko-fi supporters.
+Your emoji pet will keep you company on sprints and stop you from ever coming last 🙂
+As of November 2023, all Sprinto Patreons ($2 tier and above) and all Ko-fi supporters will receive an emoji pet for November. If you&amp;rsquo;re a Patreon or Ko-fi supporter and don&amp;rsquo;t have an emoji pet, please let me know.</description></item><item><title>Emoji Pets TOS</title><link>https://sprintobot.com/docs/emoji-pets-tos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/emoji-pets-tos/</guid><description>Disclaimer / Terms of Service #
+Virtual items (Emoji Pets and Pixel Pets) are a reward for Sprinto supporters, as a thank you for supporting the development, hosting and maintenance of Sprinto bot. They are not goods. They do not have value. They cannot be refunded. They cannot be traded and as such are neither fungible nor non-fungible. I reserve the right to remove your pet, or all pets, for any reason, including but not limited to because you&amp;rsquo;ve been disruptive, abusive of the bot, or because of factors like because Discord changes the API again and I can&amp;rsquo;t be bothered putting the effort in to keep up with it this time, or because I accidently messed up the database and lost your pet, or just because it all becomes too much for me.</description></item><item><title>FAQ</title><link>https://sprintobot.com/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/faq/</guid><description>Sprinto isn&amp;rsquo;t responding to my commands #
 Discord&amp;rsquo;s slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a discord UI/UX issue, or something else. I&amp;rsquo;ve written up a trouble shooting guide here that attempts to cover most of them:
 https://www.patreon.com/posts/71439355
 I&amp;rsquo;ll move the above guide to the main website eventually. I promise I&amp;rsquo;m not just funneling you over to Patreon where you can help support this bot.</description></item><item><title>Less used</title><link>https://sprintobot.com/docs/misc-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/misc-sprint/</guid><description>See also: Starting a sprint, and full list of Sprint commands.
@@ -48,11 +40,4 @@ Final count #
 /final count:
 count
 Finalize your word count with count words.
-For example, to finalize with 1200 total words:</description></item><item><title>Ping me</title><link>https://sprintobot.com/docs/ping-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/ping-me/</guid><description>Overview #
-If you miss three sprints or use /forgetme or /sneak-away the pings will stop.
-Use /pingme to be mentioned when the next sprint starts even if you haven&amp;rsquo;t sprinted recently (or to change your mind after /forgetme or /pings-never .
-You can also choose to never or always receive pings at the start of sprints with /pings-never and /pings-always .
-Commands #
-forgetme #
-/forgetme @Sprinto#2517 forget me
-Sprinto wont ping you at the start of sprints until after you join another one.</description></item></channel></rss>
+For example, to finalize with 1200 total words:</description></item></channel></rss>
