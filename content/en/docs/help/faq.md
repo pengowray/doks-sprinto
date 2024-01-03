@@ -23,8 +23,6 @@ Discord's slash commands can be terribly inconsistent, and it can be hard to kno
 
 I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
 
-I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
-
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 
 1. Sprinto doesn't know your starting word count and doesn't want to guess.
