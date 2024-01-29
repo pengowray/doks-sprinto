@@ -21,9 +21,7 @@ Discord's slash commands can be terribly inconsistent, and it can be hard to kno
 
 > [https://www.patreon.com/posts/71439355](https://www.patreon.com/posts/71439355)
 
-I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
-
-I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.
+I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.w
 
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 

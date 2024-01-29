@@ -26,7 +26,7 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 - [Active Sprinter role]({{<relref "ActiveSprinter" >}})  — Setting up a role on your server named {{<role "@Active Sprinters">}}
 - [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
 - [Allowed channels (admin)]({{<relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
-- [Carl-bot x Sprinto]({{<relref "admin" >}}) — using carl-bot to schedule sprints.
+- [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
 - [Curious commands]({{<relref "curious" >}}) — commands you don't need.
 - [Emoji Pet]({{<relref "emojipet" >}}) — special commands to interact with or change your emoji pet
 - [FAQ]({{<relref "faq" >}}) — Answers to frequently asked questions about Sprinto (and trivia)
