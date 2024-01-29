@@ -76,7 +76,7 @@ If a bug occurs and the sprint becomes stuck, {{< atsprintoembed "nudge" >}} (wi
 - [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
 * [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
 - [Allowed channels (admin)]({{<relref "whitelist" >}}) — commands to prevent users running sprints where they're not supposed to
-- [Carl-bot x Sprinto]({{<relref "admin" >}}) — using carl-bot to schedule sprints
+- [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
 - [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
 - [Voice]({{<relref "voice" >}}) — Experimental voice channel support

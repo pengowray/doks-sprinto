@@ -392,6 +392,6 @@ Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour 
 - [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
 - [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints
-- [Carl-bot x Sprinto]({{<relref "admin" >}}) — using carl-bot to schedule sprints.
+- [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
 - [Active Sprinter role]({{<relref "ActiveSprinter" >}})  — Setting up a role on your server named {{<role "@Active Sprinters">}}
 
