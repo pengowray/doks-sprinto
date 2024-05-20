@@ -1,9 +1,9 @@
 <div class="gg">
     <span class="gg-icon-outer">
         <img alt="" title="" class="gg-icon" style="width: 24px; height: 24px;" 
-        src="{{ with .Get "carl" }}https://cdn.discordapp.com/avatars/235148962103951360/ed3dac3b6e7a851df781632a4295fcb9.webp?size=56{{ else }}https://cdn.discordapp.com/avatars/421646775749967872/b9f6b309631dd6f15f9dc51c4f7cd0ab.webp?size=56{{ end }}" >
+        src="{{ with .Get "carl" }}/images/carlbot.webp{{ else }}/images/sprinto-128px.png{{ end }}" >
     </span>
-    <b>/{{ .Get "name" }}</b> 
+    <b>/{{ .Get "name" }}</b>
     {{ if or (.Get "key0") (.Get "val0") }}
     <span class="gg-options">
         <span class="gg-options-key">{{ .Get "key0" }}:</span>
