@@ -3,26 +3,10 @@ Popular and fun ways to start a sprint #
 Standard 15 minute sprint #
 Start a sprint for the default duration (15 minutes, starting in 1 minute)
 /sprint Synonyms
-These do the same thing: /sprint options:
-for 15 mins in 1 minute
-/sprint options:
-for 15 in 1
-/sprint options:
-15 in 1
-Shorter or longer #
+These do the same thing: /sprint options: for 15 mins in 1 minute /sprint options: for 15 in 1 /sprint options: 15 in 1 Shorter or longer #
 Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)</description></item><item><title>Sprint (all options)</title><link>https://sprintobot.com/docs/sprint-all-options/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint-all-options/</guid><description>The Sprint Command in detail #
-/sprint options:
-duration when
-You can optinally include a &amp;ldquo;duration&amp;rdquo; and a &amp;ldquo;when&amp;rdquo; parameter, for example:
-/sprint options:
-for 10 minutes in 2 min
-/sprint options:
-until :30 now
-/sprint options:
-for 25 at :15
-/sprint options:
-for however long in a bit
-The parameters are all optional and can be in any order.
+/sprint options: duration when You can optinally include a &amp;ldquo;duration&amp;rdquo; and a &amp;ldquo;when&amp;rdquo; parameter, for example:
+/sprint options: for 10 minutes in 2 min /sprint options: until :30 now /sprint options: for 25 at :15 /sprint options: for however long in a bit The parameters are all optional and can be in any order.
 /sprint Without any options, the default sprint is for 15 minutes in 1 minute.</description></item><item><title>During the sprint</title><link>https://sprintobot.com/docs/during-the-sprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/during-the-sprint/</guid><description>Cancel #
 Oops! Made a mistake? You can cancel a sprint with:
 /cancel If Sprinto didn&amp;rsquo;t understand your /sprint command you can cancel it and start over. Note that if others have joined your sprint, you might need them to /cancel too.
@@ -31,11 +15,7 @@ MC
 To use this command you must have the @SprintMC role, @SprintAdmin role, be an administrator on the server, or be the server owner.
 /admin-force-cancel Synonyms
 @Sprinto#2517 cancel pls
-/cancel please:
-True
-/sprint options:
-cancel pls
-@Sprinto#2517 cancel ffs
+/cancel please: True /sprint options: cancel pls @Sprinto#2517 cancel ffs
 @Sprinto#2517 cancel pleeeeeeeease
 Forces a running sprint to end, regardless of how many sprinters have joined.</description></item><item><title>Sprint (admin)</title><link>https://sprintobot.com/docs/sprint-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sprintobot.com/docs/sprint-admin/</guid><description>Special sprint-related commands which are available only to an Admin
 To use this command you must have the @SprintAdmin role, be an administrator on the server, or be the server owner.
