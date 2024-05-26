@@ -7,9 +7,9 @@ lead:
 
 ## Method 1
 
-![Image](/images/add-to-server-combined.png)
+![Image](/images/sprint-add-app.png)
 
-If you can see Sprinto on another server, you can click Sprinto or "view profile" and invite him directly from his info.
+If you can see Sprinto on another Discord server, you can click Sprinto or "view profile" and invite him directly from his info with the "Add App" button.
 
 ## Method 2
 
