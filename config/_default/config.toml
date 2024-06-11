@@ -66,6 +66,7 @@ rel  = "sitemap"
   blog = "/blog/:title/"
 # docs = "/docs/1.0/:sections[1:]/:title/"
   docs = "/docs/:title/"
+# termscond = "/:slug"
 
 [minify.tdewolff.html]
   keepWhitespace = false
