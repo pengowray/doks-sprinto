@@ -162,3 +162,18 @@
     visibility: visible;
     opacity: 1;
 }
+
+/* Docs next/previous navigation readability in dark mode */
+[data-dark-mode] body .docs-navigation a {
+    color: #dee2e6;
+    text-decoration: none;
+}
+
+[data-dark-mode] body .docs-navigation a:hover,
+[data-dark-mode] body .docs-navigation a:focus {
+    color: #8ed6fb;
+}
+
+[data-dark-mode] body .docs-navigation .card {
+    color: inherit;
+}
