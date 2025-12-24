@@ -7,8 +7,6 @@ lastmod: 2024-06-10T19:00:18+10:00
 draft: false
 images: []
 ---
-# Terms and Conditions
-
  <p>By using sprintobot.com website (Website), its Discord bot (Service, Services, Bots, App) you are agreeing to the below mentioned Terms and Privacy Policy (Policy). You acknowledge that you have the priviledge to use the Bots freely on any Discord Server (Server) you share with it, that you can invite it to any Server that you have "Manage Server" rights for and that this priviledge might get revoked for you, if you're subject of breaking the terms and/or policy of Bots, or the Terms of Service, Privacy Policy and/or Community Guidelines of Discord Inc. Website, Services may collect specific data as described in Policy. The intended usage of this data is for core functionalities.</p>
 
  <p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users, and others who access or use the Service.</p>
@@ -44,7 +42,7 @@ images: []
 <h2 id="applicablelaw">Virtual items</h2>
 <p>Virtual items (Emoji Pets and Pixel Pets) are rewards for Sprinto supporters, as a thank you for supporting the development, hosting and maintenance of the Sprinto Bot service. They are not goods. They do not have value. They cannot be refunded. They cannot be traded or sold, and as such are neither fungible nor non-fungible. We reserve the right to remove your pet, or all pets, for any reason. There may be changes to the fee structure, charges, or changes to the terms or features of virtual items at any time without notice. I’m sorry, and thank you.</p>
 <h2 id="affiliation">Affiliation</h2>
- Website and Bots are not affiliated with, supported or made by Discord Inc. Any direct connection to Discord or any of its Trademark objects is purely coincidental. We do not claim to have the copyright ownership of any of Discord's assets, trademarks or other intellectual property. 
+ Website and Bots are not affiliated with, supported or made by Discord Inc. Any direct connection to Discord or any of its Trademark objects is purely coincidental. We do not claim to have the copyright ownership of any of Discord's assets, trademarks or other intellectual property.
 <h2 id="feedback">Feedback</h2>
 <p>​​You may choose to submit comments or ideas about the Services. By submitting any feedback, you agree that your disclosure is free, unsolicited, and unrestricted and will not place us under any fiduciary or other obligation and that we are free to use such feedback without further compensation to you and/or to disclose such feedback on a non-confidential basis or otherwise to any person.</p>
 <h2 id="termination">Termination</h2>

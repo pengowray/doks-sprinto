@@ -17,28 +17,29 @@ If Sprinto didn't understand your {{< slashembed name="sprint" >}} command you c
 
 {{<tag-mc>}}
 
-{{<slash name="admin-force-cancel" >}} 
+{{<slash name="admin-force-cancel" >}}
 {{<alts>}}
-{{<atsprinto "cancel pls" >}} 
-{{<slash name="cancel" key0="please" val0="True" >}} 
-{{<slash name="sprint" key0="options" val0="cancel pls" >}} 
-{{<atsprinto "cancel ffs" >}} 
-{{<atsprinto "cancel pleeeeeeeease" >}} 
+{{<atsprinto "cancel pls" >}}
+{{<slash name="cancel" key0="please" val0="True" >}}
+{{<slash name="sprint" key0="options" val0="cancel pls" >}}
+{{<atsprinto "cancel ffs" >}}
+{{<atsprinto "cancel pleeeeeeeease" >}}
 {{</alts>}}
 
 Forces a running sprint to end, regardless of how many sprinters have joined.
 
 ## Join a sprint
+
 {{<slash name="join" >}}
 {{<alts>}}
 {{<slash name="join" key0="count" val0="0" >}}
-{{<atsprinto "join" >}} 
+{{<atsprinto "join" >}}
 {{</alts>}}
 Join once a sprint is started, join the sprint (with zero starting words). Note: You must join your own sprint too.
 
 {{<slash name="join" key0="count" val0="10000" >}}
 {{<alts>}}
-{{<atsprinto "join 10000" >}} 
+{{<atsprinto "join 10000" >}}
 {{</alts>}}
 Join with 10,000 words (This is the word count of the document you're working on so it can be subtracted from your final count)
 
@@ -47,12 +48,13 @@ Join with 10,000 words (This is the word count of the document you're working on
 {{<slash name="join" key0="count" val0="same" >}}
 {{<slash name="join" key0="count" val0="last" >}}
 {{<slash name="join" key0="count" val0="=" >}}
-{{<atsprinto "same" >}} 
-{{<atsprinto "=" >}} 
+{{<atsprinto "same" >}}
+{{<atsprinto "=" >}}
 {{</alts>}}
 Join with your last word count (e.g. from your previous sprint)
 
 ## Some different ways to declare or update your word count
+
 {{< slash name="words" key0="count" val0="10150" >}}
 When time's up, declare the word count of your document is now 10,150. If you started with 0 words, your word count might look more like: {{<slashembed name="words" key0="count" val0="150" >}}
 
@@ -66,20 +68,20 @@ If you know how many _new_ words you've written, but perhaps changed documents o
 {{<alts>}}
 {{<slash name="words" key0="count" val0="add 50" >}}
 {{</alts>}}
-Add another 50 new words to your count. Perhaps from your second manuscript. 
+Add another 50 new words to your count. Perhaps from your second manuscript.
 
 {{<slash name="words" key0="count" val0="10150 final" >}}
 Give your final word count early, before the sprint is over. This way Sprinto won't wait for another {{<slashembed name="words">}} from you after time's up. |
 
 {{<slash name="join" key0="count" val0="15000" >}}
-You can rejoin a sprint with a different number of starting words before giving your word count with {{<slashembed name="words">}}. Sometimes it's easier. 
+You can rejoin a sprint with a different number of starting words before giving your word count with {{<slashembed name="words">}}. Sometimes it's easier.
 
 {{<slash name="join" key0="count" val0="just 200 final" >}}
-Late to the party? Forgot to join? Dive-bomb in just before the finish line with just your final tally and surprise everyone! You can't use this to join a sprint before it's fully underway. 
+Late to the party? Forgot to join? Dive-bomb in just before the finish line with just your final tally and surprise everyone! You can't use this to join a sprint before it's fully underway.
 
 Why are there so many commands? All you need is to
 {{<slash name="join" >}}
-and then give a final count with 
+and then give a final count with
 {{<slash name="words" key0="count" val0="_your word count_">}}
 For example:
 {{<slash name="words" key0="count" val0="150">}}
@@ -135,7 +137,8 @@ Generate a link to invite Sprinto to your own Discord server
 Give your your suggestions and improvement ideas. A copy will be posted anonymously on the Sprinto Planet support server. ⟨[discord.gg/jWBcCYQ](https://discord.gg/jWBcCYQ)⟩ Please join to see the dev's response
 
 ## See also
-- [Overview of Help]({{<relref "overview" >}}) 
+
+- [Overview of Help]({{<relref "overview" >}})
 - [Sprint (basics)]({{<relref "basics" >}}) — common ways to use `/sprint`
 - [Sprint (all options)]({{<relref "sprint" >}}) — complete sprint options guide
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings

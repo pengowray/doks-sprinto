@@ -5,6 +5,7 @@ lead:
 weight: 20
 ---
 ## The Sprint Command in detail
+
 {{<slash name="sprint" key0="options" val0="_duration_ _when_ " >}}
 <!-- {{< atsprinto "sprint `duration` `when` `preset` `other`" >}} -->
 
@@ -15,7 +16,7 @@ You can optinally include a "duration" and a "when" parameter, for example:
 {{<slash name="sprint" key0="options" val0="for 25 at :15 " >}}
 {{<slash name="sprint" key0="options" val0="for however long in a bit" >}}
 
-The parameters are all optional and can be in any order. 
+The parameters are all optional and can be in any order.
 
 {{<slash name="sprint" >}}
 Without any options, the default sprint is for 15 minutes in 1 minute.
@@ -23,6 +24,7 @@ Without any options, the default sprint is for 15 minutes in 1 minute.
 There's also presets (which set both the duration and when the sprint starts); Flags such as _quietly_ (which prevents people getting pinged when the sprint is annouced); and "endtime" which explicitly sets how long for sprinters to give their final tally.
 
 ## "for"
+
 {{<tag-duration>}} {{<tag-minutes>}}
 
 How long to sprint for?
@@ -41,6 +43,7 @@ How long to sprint for?
 Run a 20 minute sprint. Time is assumed to be in minutes unless you give another unit.
 
 ## "until"
+
 {{<tag-duration>}} {{<tag-time>}}
 
 When will the sprint run until?
@@ -62,9 +65,11 @@ Run a sprint from the start time until quarter-to, starting immediately.
 Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere else with a half-hour difference from everyone else, you'll have to adjust.
 
 ## Random duration options
+
 Undecided? You can choose a random length for your sprints.
 
 ### Burst sprint
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{<slash name="sprint" key0="options" val0="burst" >}}
@@ -76,6 +81,7 @@ Possible durations, each an equal wheel slice (seconds): 35 45 45 60 60 75 75 90
 {{</alts>}}
 
 ### Micro sprint
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{< slash name="sprint" key0="options" val0="micro" >}}
@@ -88,6 +94,7 @@ Possible durations, each an equal wheel slice (seconds): 35 45 45 60 60 75 75 90
 μ-sprint for a random duration between 1 to 6 minutes.
 
 ### Flash sprint
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{< slash name="sprint" key0="options" val0="flash" >}}
@@ -98,6 +105,7 @@ Possible durations, each an equal wheel slice (seconds): 35 45 45 60 60 75 75 90
 Sprint for a random duration between 2.5 to 10.5 minutes
 
 ### Not a long sprint
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{< slash name="sprint" key0="options" val0="not long" >}}
@@ -111,6 +119,7 @@ Sprint for a random duration between 2.5 to 10.5 minutes
 Start a sprint for between 5 and 12 minutes (randomly decided)
 
 ### But not for _too_ long
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{<slash name="sprint" key0="options" val0="not too long" >}}
@@ -123,6 +132,7 @@ Start a sprint for between 5 and 12 minutes (randomly decided)
 Spin the wheel and start a sprint that's between 5 and 20 minutes.
 
 ### However long
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{<slash name="sprint" key0="options" val0="for however long" >}}
@@ -136,7 +146,7 @@ Other synonyms "random", "rng" and "the wheel" may get used for other options in
 
 The original random sprint. Spin the wheel and start a sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes
 {{<alts "Details">}}
-All 'however long' possibilities (minutes): 
+All 'however long' possibilities (minutes):
 <ul>
 <li>10m30s, 13m20s, 17, 19, 21, 25. </li>
 <li>Rare sprints (3% chance to pick one of these): 40, 5, 5m30s </li>
@@ -144,6 +154,7 @@ All 'however long' possibilities (minutes):
 {{</alts>}}
 
 ### I don't know how long
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{< slash name="sprint" key0="options" val0="i don't know how long" >}}
@@ -153,7 +164,7 @@ All 'however long' possibilities (minutes):
 {{< atsprinto "sprint i don't care" >}}
 {{</alts>}}
 
-Sprint between 1 and 60 minutes. There's a 60× higher chance of a one-minute sprint than a 60 minute sprint. 
+Sprint between 1 and 60 minutes. There's a 60× higher chance of a one-minute sprint than a 60 minute sprint.
 
 {{<alts "Details">}}
 How it's calculated: There's 60/1830 (=3%) chance of a 1-minute sprint; 59/1830 chance of a two-minute sprint, 58/1830 chance of a three-minute sprint, etc. Another way to think of it, there's 1830 mables in a pot. One is selected. Here's the numbers on each marble:</p>
@@ -168,6 +179,7 @@ This distribution attempts to better balance it so if you do many sprints, you'r
 {{</alts>}}
 
 ### Not too short
+
 {{<tag-duration>}} {{<tag-random>}}
 
 {{<slash name="sprint" key0="options" val0="not too short" >}}
@@ -193,7 +205,7 @@ Note: This might not be updated and could be using an old list of durations.
 | --- | --- | --- | --- |
 | burst | `burst` | 35s – 150s  | Randomly up to 2.5 minutes |
 | micro | `μ` | 1 – 6 | Randomly  between 1 to 6 minutes |
-| flash | `flash` | 2.5 – 10.5 | Randomly between 2.5 to 10.5 minutes | 
+| flash | `flash` | 2.5 – 10.5 | Randomly between 2.5 to 10.5 minutes |
 | not long | `nl` | 5 – 12 |  Randomly between 5 and 12 minutes |
 | not too long | `ntl` | 5 – 20 |  Randomly between 5 and 20 minutes |
 | however long | `hel` | 5 – 40 | Usually between 10 and 25 minutes, but a tiny chance of approximately 5 or 40 minutes. |
@@ -203,7 +215,8 @@ Note: This might not be updated and could be using an old list of durations.
 ## When?
 
 ### in x minutes
-{{<tag-when>}} {{<tag-minutes>}} 
+
+{{<tag-when>}} {{<tag-minutes>}}
 
 {{< slash name="sprint" key0="options" val0="in 5" >}}
 {{< atsprinto "sprint in 5" >}}
@@ -211,6 +224,7 @@ Note: This might not be updated and could be using an old list of durations.
 Sprint in 5 minutes (for the default of 15 minutes)
 
 ### for x minutes in y minutes
+
 {{<tag-duration>}} {{<tag-when>}}
 
 {{< slash name="sprint" key0="options" val0="for 35 in 5" >}}
@@ -231,17 +245,19 @@ Note: Durations you can also use seconds or other units if you specify them, for
 Sprinto uses the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser) library, which was developed for Sprinto.
 
 ### at
-{{<tag-when>}} {{<tag-time>}} 
+
+{{<tag-when>}} {{<tag-time>}}
 
 {{<slash name="sprint" key0="options" val0="at :30 " >}}
 {{<atsprinto "sprint at :30 " >}}
 
 At half past the hour (for almost all timezones). You can leave off either the `:` or the word `at` (but not both).
 
-Change `30` to the minutes of the time you want the sprint to start. :00 for on the hour, :15 for quarter past, etc. 
+Change `30` to the minutes of the time you want the sprint to start. :00 for on the hour, :15 for quarter past, etc.
 
 ### Now
-{{<tag-when>}} 
+
+{{<tag-when>}}
 
 {{<slash name="sprint" key0="options" val0="now" >}}
 {{<atsprinto "sprint now" >}}
@@ -249,7 +265,8 @@ Change `30` to the minutes of the time you want the sprint to start. :00 for on 
 Start immediately.
 
 ### next
-{{<tag-when>}} {{<tag-minutes>}} 
+
+{{<tag-when>}} {{<tag-minutes>}}
 {{<slash name="sprint" key0="options" val0="next 5" >}}
 {{<atsprinto "sprint next 5" >}}
 
@@ -262,18 +279,20 @@ Use `next 15` to start at :00 :15 :30 :45
 For example, if the time right now is 11:32 pm in your time zone, then `next 5` will start the sprint at 11:35 pm; `next 10` will start at 11:40 pm; and `next 15` will start at 11:45pm
 
 ### next, grace
-{{<tag-when>}} {{<tag-minutes>}} {{<tag-minutes>}} 
+
+{{<tag-when>}} {{<tag-minutes>}} {{<tag-minutes>}}
 
 A "grace" period can also be given to prevent "next" from starting too soon. For example:
 
 {{< slash name="sprint" key0="options" val0="next 10 grace 2" >}}
 
-This will start at the next 10 minute boundary, but not for at least 2 minutes. 
+This will start at the next 10 minute boundary, but not for at least 2 minutes.
 
 These kinds of settings might be useful for setting a default sprint starting time.
 
 ### in (minutes) to (minutes)
-{{<tag-when>}} {{<tag-minutes>}}  {{<tag-minutes>}} 
+
+{{<tag-when>}} {{<tag-minutes>}}  {{<tag-minutes>}}
 
 {{< slash name="sprint" key0="options" val0="in 5 to 10 minutes" >}}
 {{< atsprinto "sprint in 5 to 10 minutes" >}}
@@ -283,6 +302,7 @@ Starts the sprint in 5 to 10 minutes. If run this sprint command at 7:14, the sp
 <!--TODO: next <minutes> grace <minutes> -->
 
 ## Shortcuts
+
 {{<tag-when>}}
 
 Find a nice "round" time to start between these times.
@@ -291,8 +311,8 @@ Find a nice "round" time to start between these times.
 | --- | --- |
 | `now` | in 0s |
 | `real soon` or `in a few ticks` | in 30s to 60s |
-| `shortly` | in 1 to 2 minutes | 
-| `soon` | in 2 to 3 minutes | 
+| `shortly` | in 1 to 2 minutes |
+| `soon` | in 2 to 3 minutes |
 | `iaf` or `in a few` | in 3 to 5 mins |
 | `iab` or `in a bit` | in 2½ to 7½ mins |
 | `aab` or `after a bit` | in 7½ to 12½ mins |
@@ -307,7 +327,7 @@ Examples:
 
 ## Presets
 
-Convenient ways to start a sprint. 
+Convenient ways to start a sprint.
 
 | Preset | Meaning |
 | --- | --- |
@@ -321,13 +341,14 @@ Convenient ways to start a sprint.
 
 You can override any part of a preset. For example,
 
-{{<slash name="sprint" key0="options" val0="quick 10" >}} 
+{{<slash name="sprint" key0="options" val0="quick 10" >}}
 is the same as
-{{<slash name="sprint" key0="options" val0="for 10 minutes in 30 seconds endtime 90s" >}} 
- 
+{{<slash name="sprint" key0="options" val0="for 10 minutes in 30 seconds endtime 90s" >}}
+
 Please send feedback if you have suggestions for other presets or shortcuts.
 
 ## endtime
+
 {{<tag-minutes>}}
 
 {{<slash name="sprint" key0="options" val0="endtime 10 " >}}
@@ -336,13 +357,14 @@ Please send feedback if you have suggestions for other presets or shortcuts.
 {{<slash name="sprint" key0="options" val0="fin 10 " >}}
 {{</alts>}}
 
-How long sprinters have to give their final word count. 
+How long sprinters have to give their final word count.
 
-If you don't set this, the default ranges from 2 to 7.5 minutes depending on the length of your sprint. (calculated as: 1:30 min + 30s per 5 minutes of sprint) 
+If you don't set this, the default ranges from 2 to 7.5 minutes depending on the length of your sprint. (calculated as: 1:30 min + 30s per 5 minutes of sprint)
 
 Use {{<atsprintoembed "status">}} to check the endtime duration for a currently running sprint.
 
 ## Sprint flags
+
 | Keyword | Meaning |
 | --- | --- |
 | `quietly` | Don't ping anyone to announce the sprint. Synonym: `quiet` |
@@ -351,15 +373,14 @@ Use {{<atsprintoembed "status">}} to check the endtime duration for a currently 
 | `lock` | Lock the sprint, meaning only a SprintMC can cancel it. See: [sprint admin commands]({{< relref "admin-sprint" >}}) |
 
 Examples:
-{{<slash name="sprint" key0="options" val0="for 5 quietly" >}} 
+{{<slash name="sprint" key0="options" val0="for 5 quietly" >}}
 Don't alert anyone about the start of your 5 minute sprint.
 
-{{<slash name="sprint" key0="options" val0="marathon endtime 12 noff" >}} 
+{{<slash name="sprint" key0="options" val0="marathon endtime 12 noff" >}}
 Run a 1 hour (marathon) sprint, give 12 minutes for sprinters to give or adjust their final word counts, and don't show the scoreboard until those 12 minutes are up.
 
-{{<slash name="sprint" key0="options" val0="for 1.5hr in 5 pls" >}} 
+{{<slash name="sprint" key0="options" val0="for 1.5hr in 5 pls" >}}
 Run a 90 minute sprint in 5 minutes
-
 
 <!-- | `delay <minutes>` | (removed) Delay the opening of the sprint by this many minutes. I've effectively removed this feature as it didn't seem useful. I can enable it on your server if you really want but you'll have to let me know why you want it). If your start time is too far into the future, part of the time will be converted into a delay. | -->
 <!-- | `help` | Gives you a link to this wiki page | -->
@@ -384,7 +405,8 @@ Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour 
 -->
 
 ## See also
-- [Overview of Help]({{<relref "overview" >}}) 
+
+- [Overview of Help]({{<relref "overview" >}})
 - [Sprint (basics)]({{<relref "basics" >}}) — common ways to use `/sprint` — like this page but much shorter and less complete
 - [During the sprint]({{<relref "words" >}}) — join, leave, cancel, and setting your word count — commands to use once the sprint has started
 - [Sprint (admin)]({{<relref "admin-sprint" >}}) — the few sprint options and commands only available to Sprint MCs and admins
@@ -394,4 +416,3 @@ Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour 
 - [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints
 - [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
 - [Active Sprinter role]({{<relref "ActiveSprinter" >}})  — Setting up a role on your server named {{<role "@Active Sprinters">}}
-

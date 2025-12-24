@@ -7,6 +7,7 @@ keywords: ["roles", "active sprinter"]
 ## What is the 'Active Sprinter' role?
 
 In brief:
+
 * Makes members who are currently in a sprint with Sprinto more visible in the discord members list.
 * It's just an optional nice thing to make it more obvious when a sprint is running on your server.
 * I'm not sure why this documentation got so long for a simple feature.
@@ -21,43 +22,46 @@ If you no longer wish to use this feature, just delete the {{<role "@Active Spri
 
 ## Active sprinter related commands
 
-There are various commands to help set up the {{<role "@Active Sprinters">}} role and check that Sprinto can use it. 
+There are various commands to help set up the {{<role "@Active Sprinters">}} role and check that Sprinto can use it.
 
 These commands are available to server administrators and members with "Manage Roles" or "Manage Server" permissions:
 
 ### Creative Active Role
+
 {{<tag-admin>}}
 
-{{<atsprinto "create_active_role" >}} 
+{{<atsprinto "create_active_role" >}}
 
 Create a role on the server named {{<role "@Active Sprinters">}} for Sprinto to use. The role is created:
+
 * mentionable
-*  _hoisted_ under Sprinto's highest role
-*  with no permissions nor color. 
+* _hoisted_ under Sprinto's highest role
+* with no permissions nor color.
 
 If can't be created, it will tell you why.
 
 There are notes in a section below on customizing the role. In short, feel free to customize the role in anyway, such as changing the color or whether it's mentionable.
 
-Note you can create an {{<role "@Active Sprinters">}} role manually in Discord and it will work just the same and be used by Sprinto. However, using {{< atsprintoembed "create_active_role" >}} is recommended because Sprinto will respond with any issues. 
+Note you can create an {{<role "@Active Sprinters">}} role manually in Discord and it will work just the same and be used by Sprinto. However, using {{< atsprintoembed "create_active_role" >}} is recommended because Sprinto will respond with any issues.
 
 You can also use {{< atsprintoembed "create_active_role" >}} _after_ the role is already create to check for issues.
 
 ### repair_active_role
+
 {{<tag-admin>}}
 
-{{< atsprinto "repair_active_role" >}} 
+{{< atsprinto "repair_active_role" >}}
 
 Sets the {{<role "@Active Sprinters">}} role to be hoisted, mentionable and its position to be under Sprinto's highest role.
 
 ### refresh_active_role
 
 {{< slash name="admin-refresh-active-role" >}}
-{{< atsprinto "refresh_active_role" >}} 
+{{< atsprinto "refresh_active_role" >}}
 
-Attempts to fix membership of the {{<role "@Active Sprinters">}} role for special cases where people are stuck with or without the {{<role "@Active Sprinter">}} role that they should or shouldn't have. This command should never be needed, but it's here in case. 
+Attempts to fix membership of the {{<role "@Active Sprinters">}} role for special cases where people are stuck with or without the {{<role "@Active Sprinter">}} role that they should or shouldn't have. This command should never be needed, but it's here in case.
 
-Despite "admin" in the name, this command can be used by anyone. 
+Despite "admin" in the name, this command can be used by anyone.
 
 ## Customizing the Active Sprinter role
 
@@ -67,14 +71,14 @@ Role attributes: The `@Active Sprinter` role color, badge icon and position in t
 
 1. (optionally) Change the color — if you want sprinters to have a different color when sprinting, feel free to change the color of the role.
 
-2. (optionally) Rename the role (a little) — Sprinto will still find the role if it's named slightly differently: You can remove the space, change the capitalization or add a plural ending or anything else to the end. For example, the following are all valid names for the role: 
+2. (optionally) Rename the role (a little) — Sprinto will still find the role if it's named slightly differently: You can remove the space, change the capitalization or add a plural ending or anything else to the end. For example, the following are all valid names for the role:
    * {{<role "@ActiveSprinter">}}
    * {{<role "@ActiveSprinters">}}
    * {{<role "@Active Sprinter">}}
    * {{<role "@Active Sprinters">}}
    * {{<role "@activesprinters">}}
    * {{<role "@active sprinters are the best">}}
-   
+
    I haven't allowed it to be more customizable than this to avoid unforseen conflicts or security issues.
 
 3. (optionally) Change the position of "Active Sprinters" on the members list: Under **Server Settings > Roles**, drag Sprinto's role at the top (or as high as you're comfortable) and drag the Active Sprinter role just under it. This way everyone on your server will more easily see a sprint is running.
@@ -89,6 +93,6 @@ Role attributes: The `@Active Sprinter` role color, badge icon and position in t
 
 ## See also
 
-- [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
-- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
-- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+* [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
+* [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+* [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings

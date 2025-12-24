@@ -1,20 +1,18 @@
 /** Custom styles */
 
-[data-dark-mode] .gg {
-    background-color: #383a40;
-}
-
 .gg {
     font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    /* overflow-x: hidden; */
-    /* max-height: 50vh; */
     border-radius: 8px;
     vertical-align: baseline;
     margin: 14px;
     padding: 14px;
     background-color: #ebedef;
     text-align: left;
+}
+
+[data-dark-mode] .gg {
+    background-color: #383a40;
 }
 
 .gg-icon-outer {
@@ -24,10 +22,6 @@
 
 .gg-icon {
     border-radius: 50%;
-}
-
-[data-dark-mode] .gg-options {
-    background-color: rgb(17, 18, 20);
 }
 
 .gg-options {
@@ -42,31 +36,30 @@
     padding: 4px;
 }
 
-[data-dark-mode] .gg-options-key {
+[data-dark-mode] .gg-options {
     background-color: rgb(17, 18, 20);
 }
 
 .gg-options-key {
     background-color: rgb(237, 239, 232);
-    padding: 8px 8px 2px 8px;
+    padding: 8px 8px 2px;
+    border-radius: 0;
+    border-width: 0;
+}
+
+[data-dark-mode] .gg-options-key {
+    background-color: rgb(17, 18, 20);
+}
+
+.gg-options-val {
+    background-color: rgb(255, 255, 255);
+    padding: 8px 8px 2px;
     border-radius: 0;
     border-width: 0;
 }
 
 [data-dark-mode] .gg-options-val {
     background-color: #232428;
-}
-
-.gg-options-val {
-    background-color: rgb(255, 255, 255);
-    padding: 8px 8px 2px 8px;
-    border-radius: 0;
-    border-width: 0;
-}
-
-[data-dark-mode] .atsprinto {
-    color: #d5d9ef;
-    background: #424676;
 }
 
 .atsprinto {
@@ -78,18 +71,22 @@
     font-size: 0;
 }
 
+[data-dark-mode] .atsprinto {
+    color: #d5d9ef;
+    background: #424676;
+}
+
+.gg-role {
+    color: #9e8007;
+    background: #fcf2d4;
+}
+
 [data-dark-mode] .gg-role {
     color: #f1c40f;
     background: #4b483b;
 }
 
-.gg-role {
-    color: #9e8007; // darker than actual for added visibility 
-    background: #fcf2d4;
-}
-
 .tag {
-    // via copilot
     font-size: 12px;
     font-weight: 600;
     line-height: 1;
@@ -104,7 +101,7 @@
 }
 
 [data-dark-mode] .tag {
-    color: #b6aaa8; // color: #fff;
+    color: #b6aaa8;
     background-color: #163851;
 }
 
@@ -113,7 +110,6 @@
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-    /* If you want dots under the hoverable text */
 }
 
 [data-dark-mode] .tooltip2 {
@@ -136,8 +132,6 @@
     bottom: 100%;
     left: 50%;
     margin-left: -60px;
-    /* Use half of the width (120/2 = 60), to center the tooltip */
-    /* Fade in tooltip */
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -156,7 +150,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: #555 transparent transparent;
 }
 
 [data-dark-mode] .tooltip2 .tooltiptext2::after {

@@ -15,38 +15,42 @@ Note: Sprinto does not have a concept of secret or hidden channels. Sprinto will
 All these commands require an {{<tag-admin>}}, that is: a {{<role "@Sprint Admin">}}, server administrator or server owner.
 
 ### set-allowed-channel
+
 {{<tag-admin>}}
 
-{{<slash name="setup-set-allowed-channel" >}} 
-{{<atsprinto "set_sprinting_channel_here" >}} 
+{{<slash name="setup-set-allowed-channel" >}}
+{{<atsprinto "set_sprinting_channel_here" >}}
 
-Whitelist a channel to allow sprints to be run in it. Multiple channels can be selected by using this command in multiple channels. 
+Whitelist a channel to allow sprints to be run in it. Multiple channels can be selected by using this command in multiple channels.
 
 Starts using a whilelist if it was previously not used.
 
 ### unset-allowed-channel
+
 {{<tag-admin>}}
 
-{{<slash name="setup-unset-allowed-channel" >}} 
-{{<atsprinto "unset_sprinting_channel_here" >}} 
+{{<slash name="setup-unset-allowed-channel" >}}
+{{<atsprinto "unset_sprinting_channel_here" >}}
 
 Remove a channel from the whitelist. If none are left on the whitelist, sprinting is not restricted to any channel.
 
 ### clear-allowed-channels
+
 {{<tag-admin>}}
 
-{{<slash name="setup-clear-allowed-channels" >}} 
-{{<atsprinto "clear_allowed_channels" >}} 
+{{<slash name="setup-clear-allowed-channels" >}}
+{{<atsprinto "clear_allowed_channels" >}}
 
 Clears the whitelist and stops using it. Allows sprints to be run in all channels.
 
 <!-- Previously named "/setup-reset-sprinting-channels" but sometimes people accdientally used that command because it had "sprint" in it. Also: @sprinto reset_sprinting_channels -->
 
-<!-- Alternatively, you can remove Sprinto's _Send Messages_ permission in rooms you don't want Sprinto to respond in, or remove his _Read Messages_ permission in channels you don't want Sprinto seen in. --> 
+<!-- Alternatively, you can remove Sprinto's _Send Messages_ permission in rooms you don't want Sprinto to respond in, or remove his _Read Messages_ permission in channels you don't want Sprinto seen in. -->
 
 ## See also
+
 - [Overview of Help]({{<relref "overview" >}})
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
-* [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-- [Admin commands]({{<relref "admin" >}}) 
+- [Setup]({{< relref "setup" >}}) (setting up Sprinto)
 
+- [Admin commands]({{<relref "admin" >}})

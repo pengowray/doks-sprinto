@@ -22,7 +22,7 @@ Finalize your word count so Sprinto won't wait for you to update it later. Can b
 
 {{<slash name="final" key0="count" val0="_count_">}}
 
-Finalize your word count with _count_ words. 
+Finalize your word count with _count_ words.
 
 For example, to finalize with 1200 total words:
 
@@ -40,7 +40,7 @@ Note: you can still update your word count after using {{<slashembed name="final
 ### who
 
 {{< atsprinto "who" >}}
-Lists active sprinters in the channel. 
+Lists active sprinters in the channel.
 
 An X (❌) next to a Sprinter's name indicates they've voted to {{<slashembed name="cancel" >}}.
 
@@ -55,7 +55,7 @@ For example:
 {{<atsprinto "tare 1000" >}}
 {{</alts>}}
 
-_During a sprint,_ change your starting word count without changing your current word count. I'm not sure why you'd want to do this. 
+_During a sprint,_ change your starting word count without changing your current word count. I'm not sure why you'd want to do this.
 
 Instead of using this, you can {{<slashembed name="join" >}} again with a different starting word count, and then set your new word count with {{<slashembed name="words" >}}.
 
@@ -67,9 +67,10 @@ Rejoin a sprint you left with {{<slashembed name="leave" >}}. You can also just 
 This command used to restore your previous word count. I might bring back that functionality one day if I'm really bored.
 
 ### status
+
 {{<atsprinto "status" >}}
 
-Check your word count, time remaining and number of active sprinters. Will give your `/pings-status` if no sprint is running 
+Check your word count, time remaining and number of active sprinters. Will give your `/pings-status` if no sprint is running
 
 ### close / stop / end
 

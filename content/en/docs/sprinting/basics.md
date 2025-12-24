@@ -11,7 +11,7 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 
 ### Standard 15 minute sprint
 
-Start a sprint for the default duration (15 minutes, starting in 1 minute) 
+Start a sprint for the default duration (15 minutes, starting in 1 minute)
 
 {{<slash name="sprint" >}}
 {{<alts "Synonyms" >}}
@@ -23,7 +23,7 @@ These do the same thing:
 
 ### Shorter or longer
 
-Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes) 
+Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)
 
 {{<slash name="sprint" key0="options" val0="5" >}}
 {{<slash name="sprint" key0="options" val0="30" >}}
@@ -38,7 +38,7 @@ Alternatives:
     {{<slash name="sprint" key0="options" val0="for 30 mins very soon" >}}
 {{</alts>}}
 
-## More sprint examples 
+## More sprint examples
 
 ### sprint in 5
 
@@ -64,19 +64,21 @@ Start a sprint in 5 minutes time for the default length (15 minutes).
 Start a sprint in 5 minutes time for 20 minutes.
 
 ### sprint at :45
+
 {{<slash name="sprint" key0="options" val0="at :45 " >}}
 {{<alts>}}
 {{<slash name="sprint" key0="options" val0=":45" >}}
 {{<slash name="sprint" key0="options" val0="at :45 for 15" >}}
 {{<atsprinto "sprint :45 ">}}
 {{</alts>}}
-Start a sprint at whatever time is the next "quarter to". For example, if it's currently 11:39, this command will start a sprint at 11:45. 
+Start a sprint at whatever time is the next "quarter to". For example, if it's currently 11:39, this command will start a sprint at 11:45.
 
-It's easier for sprinters to keep track if the start and end times line up with clock time. 
+It's easier for sprinters to keep track if the start and end times line up with clock time.
 
-Tip: Add a space after `:45 ` (or whatever time you choose) to stop Discord trying to turn it into an emoji.
+Tip: Add a space after `:45` (or whatever time you choose) to stop Discord trying to turn it into an emoji.
 
 ### sprint in a bit
+
 {{<slash name="sprint" key0="options" val0="iab" >}}
 {{<alts>}}
 {{<atsprinto "sprint iab ">}}
@@ -86,6 +88,7 @@ Tip: Add a space after `:45 ` (or whatever time you choose) to stop Discord tryi
 Sprinto will find a nice time to start the sprint in the next 2½ to 7½ minutes (an increment of 5 minutes clock time).
 
 ### sprint quick
+
 {{<slash name="sprint" key0="options" val0="quick" >}}
 {{<alts>}}
 {{<atsprinto "sprint quick">}}
@@ -95,17 +98,18 @@ Sprinto will find a nice time to start the sprint in the next 2½ to 7½ minutes
 Start a 5 minute sprint in 30 seconds, also with reduced time to give your final word count.
 
 ### sprint for however long
+
 {{<slash name="sprint" key0="options" val0="hel" >}}
 {{<alts>}}
 {{<atsprinto "sprint hel">}}
 {{<slash name="sprint" key0="options" val0="for however long in 1 min" >}}
 {{</alts>}}
 
-Sprinto spins the wheel and starts a Sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes. 
+Sprinto spins the wheel and starts a Sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes.
 
 You can also combine this, for example:
 {{<slash name="sprint" key0="options" val0="hel iab" >}}
- 
+
 ### sprint marathon
 
 {{<slash name="sprint" key0="options" val0="marathon" >}}

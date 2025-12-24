@@ -6,6 +6,7 @@ draft: false
 images: []
 ---
 ## Example usage
+
 Create a 15 minute sprint:
 {{< slash name="sprint" >}}
 You and other participants can join:
@@ -58,7 +59,7 @@ This creates a 20 minute sprint, which will start in 2 to 3 minutes. Sprinto wil
 Sprint for "however long" (a random length of time) "in a bit" (in 2½ to 7½ minutes. Sprinto will pick a nice start time<!-- which has the minutes as a multiple of five-->)
 
 {{< slash name="join" key0="count" val0="1000" >}}
-Join the sprint with a starting count of 1000 words. These words will be deducted from your final count. 
+Join the sprint with a starting count of 1000 words. These words will be deducted from your final count.
 
 {{< slash name="same" >}}
 Join with sprint with however many words you had last time.

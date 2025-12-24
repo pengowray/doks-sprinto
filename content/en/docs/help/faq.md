@@ -39,7 +39,7 @@ No, sorry. Keeping track of sprints is high on my to-do list and I'd like to add
 
 ## How about back-to-back sprints? (also called chain wars or word crawls)
 
-Nope, sorry. Also high on the list. 
+Nope, sorry. Also high on the list.
 
 If you need one sprint to start the moment the other ends, the best way to do it right now is to run two sprints in different channels on your server. Have the second one start when the first ends. This will allow time for final word counts to be given for the first sprint.
 
@@ -59,7 +59,7 @@ I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)â
 
 You can vote to make the issue more visible to Discord's developers here:
 
-https://support.discord.com/hc/en-us/community/posts/360036052991-Add-Include-mentions-by-bots-to-the-display-list-for-Recent-Mentions-so-it-can-be-turned-off- 
+https://support.discord.com/hc/en-us/community/posts/360036052991-Add-Include-mentions-by-bots-to-the-display-list-for-Recent-Mentions-so-it-can-be-turned-off-
 
 This issue has been reduced somewhat since Discord introduced chat replies, and I should probably say no one's ever actually brought this up to me, so maybe it's not really frequently asked.
 
@@ -67,9 +67,9 @@ This issue has been reduced somewhat since Discord introduced chat replies, and 
 
 > TL;DR: No, it would complicate the user experience too much and sprinters would no longer feel like they were participating in the same sprint.
 
-The WPM is currently given assuming you were present for the entire sprint. 
+The WPM is currently given assuming you were present for the entire sprint.
 
-I've considered making it work as suggested, and it seems like it would make sense, especially for very long sprints, but it gets complicated and messy when you think it through. For example, what happens when someone forgets to join until later in a sprint? Or if a sprinter wants to leave half way and doesn't want the second half of the sprint counted? So Sprinto would need special commands for users to adjust how long they were present (and Sprinto would also have to teach sprinters how to use these commands) for a correct WPM. 
+I've considered making it work as suggested, and it seems like it would make sense, especially for very long sprints, but it gets complicated and messy when you think it through. For example, what happens when someone forgets to join until later in a sprint? Or if a sprinter wants to leave half way and doesn't want the second half of the sprint counted? So Sprinto would need special commands for users to adjust how long they were present (and Sprinto would also have to teach sprinters how to use these commands) for a correct WPM.
 
 It also means not everyone's WPM has the same basis, so it's less of a level playing field: it's harder to maintain a high WPM over a longer sprint.
 
@@ -80,6 +80,7 @@ Perhaps in future, the duration-adjusted WPM could be told to participants each 
 Similar issues arise for attempting to end a sprint early if all sprinters finalize (`/final`) before the time's up. There might some special use case for this, but it's highly fraught with potential issues for little payoff.
 
 ## Why did you create Sprinto?
+
 [![Image](/images/programmers-credo.png)](https://twitter.com/pinboard/status/761656824202276864)
 
 I saw the need for a good Sprint bot. The project looked like it would have a small, limited scope (incorrect), that I could complete quickly (also incorrect), and then I could move onto bigger and better Discord bots (I haven't), and it would encourage me to do more creative writing (nope, I've been too busy maintaining Sprinto and this documentation).
@@ -103,5 +104,6 @@ Examples:
 {{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 
 ## See also
+
 - [Overview of Help]({{<relref "overview" >}})
 - [Curious commands]({{<relref "curious" >}}) â€” commands you don't need.
