@@ -6,8 +6,10 @@ disableHugoGeneratorInject = true
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
-paginate = 7
 rssLimit = 10
+
+[pagination]
+pagerSize = 7
 
 # Multilingual
 defaultContentLanguage = "en"

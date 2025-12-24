@@ -1,11 +1,12 @@
 # Deploy your Hyas site to GitHub Pages
+#
+# NOTE: Legacy workflow intentionally disabled.
+# The canonical Pages deployment workflow is `static.yml`.
 
-name: GitHub Pages
+name: GitHub Pages (legacy disabled)
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   deploy:
