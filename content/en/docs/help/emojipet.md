@@ -1,19 +1,19 @@
 ---
 title : "Emoji Pets"
 description: "Interacting with and modifying your Emoji Pet"
-lead: 
+lead:
 ---
 ## Emoji Pet
 
 ![Emoji Pet demo](https://cdn.discordapp.com/attachments/622903029330346006/622989709626441730/unknown.png)
 
-Your very own emoji pet is available as a reward to [Sprinto Patreons](https://www.patreon.com/pengowray) and Ko-fi supporters.
+Your very own emoji pet is available as a reward to [Sprinto Patreons](https://www.patreon.com/pengowray) and recurring Ko-fi supporters.
 
 Your emoji pet will keep you company on sprints and stop you from ever coming last 🙂
 
-As of November 2023, all Sprinto Patreons ($2 tier and above) and all Ko-fi supporters will receive an emoji pet for November. If you're a Patreon or Ko-fi supporter and don't have an emoji pet, please let me know.
+All current Sprinto Patreons ($2 tier and above) will receive an emoji pet. You need to link your Patreon or Ko-fi account to your Discord account and join Sprinto Planet (the support Discord). If you have any issues, please let me know (Pengo Wray) on Sprinto Planet.
 
-**Emoji Pet Lore:** (As at November 2023) Originally emoji pets were a meme for the $50 Patreon tier, because I didn't think anyone would ever choose that tier, so I didn't expect to have to code them up. Then someone did, so I did. Emoji pets are now available during November (Nanowrimo) to all Patreons, and I'm still working out how they'll work beyond Novemeber but I don't have plans to remove them. I've also started work on some bigger rewards for higher tiers (sorry they weren't ready for nano this year), but for now, enjoy your emoji pet!
+**Emoji Pet Lore:** Originally emoji pets were a meme for the $50 Patreon tier, because I didn't think anyone would ever choose that tier, so I didn't expect to have to code them up. Then someone did, so I did. But now Emoji Pets are now available to all Patreons. In future, hopefully I'll have some custom comissioned pixel art pets available.
 
 ## Interacting
 
