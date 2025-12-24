@@ -3,7 +3,7 @@
   "description": "Doks child theme",
   "version": "0.5.0",
   "engines": {
-    "node": ">=16.16.0"
+    "node": ">=20.0.0"
   },
   "browserslist": [
     "defaults"
@@ -52,7 +52,7 @@
     "exec-bin": "^1.0.0",
     "flexsearch": "^0.7.21",
     "highlight.js": "^11.5",
-    "hugo-installer": "^2.0.0",
+    "hugo-installer": "^4.0.1",
     "instant.page": "^5.1",
     "katex": "^0.16",
     "lazysizes": "^5.3",
@@ -66,6 +66,6 @@
     "stylelint-config-standard-scss": "^4.0"
   },
   "otherDependencies": {
-    "hugo": "0.101.0"
+    "hugo": "0.125.7"
   }
 }
