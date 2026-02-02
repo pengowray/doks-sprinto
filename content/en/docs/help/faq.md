@@ -1,7 +1,7 @@
 ---
 title : "FAQ"
 identifier: "faq"
-description: 
+description:
 lead: Answers to frequently asked questions about Sprinto
 menu:
   docs:
@@ -17,11 +17,11 @@ keywords: ["chain wars", "programming language", "Doks", "Hugo", "TimeSpanParser
 ---
 ## Sprinto isn't responding to my commands
 
-Discord's slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a discord UI/UX issue, or something else. I've written up a trouble shooting guide here that attempts to cover most of them:
+Discord's slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a Discord UI/UX issue, or something else.
 
-> [https://www.patreon.com/posts/71439355](https://www.patreon.com/posts/71439355)
+I've written up a troubleshooting guide here:
 
-I'll move the above guide to the main website eventually. I promise I'm not just funneling you over to Patreon where you can help support this bot.w
+- [Troubleshooting]({{<relref "troubleshooting" >}})
 
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 
