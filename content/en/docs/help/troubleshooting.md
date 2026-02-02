@@ -22,7 +22,10 @@ If you're having trouble, here are some tips. The first few are for users; the l
 
 **@Sprinto the role vs @Sprinto the bot. The role doesn't respond. Discord creates this role by default and it's a usability nightmare. The color of each depends on the Discord server settings and may look identical.**
 
-- All of Sprinto's commands work with `@Sprinto` as a prefix. Some folk will find `@Sprinto` more reliable and easier than slash commands: e.g. **`@Sprinto sprint 30`**
+- All of Sprinto's commands work with `@Sprinto` as a prefix. Some folk will find `@Sprinto` more reliable and easier than slash commands. Example:
+
+{{<atsprinto "sprint 30" >}}
+(Starts a 30-minute sprint. Example of using Sprinto without the slash command)
 
 - If there's a Discord role named `@Sprinto` you might accidentally mention it instead of `@Sprinto` the bot. Check you didn't mention a role.
 
@@ -30,7 +33,7 @@ If you're having trouble, here are some tips. The first few are for users; the l
 
 {{<atsprinto "hello sprinto" >}}
 
-- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. (More admin tips below under "For admins")
+- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. There are more admin tips below under "For admins".
 
 ## 2) Make sure you're actually sending a slash command
 
