@@ -16,11 +16,11 @@ Discord's slash commands can be terribly inconsistent, and it can be hard to kno
 
 If you're having trouble, here are some tips. The first few are for users; the last section is for server admins.
 
-## 1) Spot the difference: @Sprinto the role vs @Sprinto the bot
+### 1) @Sprinto the role vs @Sprinto the bot
 
 ![@Sprinto role vs bot](/images/help/troubleshooting/01-role-vs-bot.png)
 
-**@Sprinto the role vs @Sprinto the bot. The role doesn't respond. Discord creates this role by default and it's a usability nightmare. The color of each depends on the Discord server settings and may look identical.**
+**Spot the difference: The @Sprinto role doesn't respond. Discord creates this role with the same name as the bot and it's a usability nightmare. The color and formatting of the role and bot may also be very similar, depending on Discord server settings.**
 
 - All of Sprinto's commands work with `@Sprinto` as a prefix. Some folk will find `@Sprinto` more reliable and easier than slash commands. Example:
 
@@ -33,9 +33,9 @@ If you're having trouble, here are some tips. The first few are for users; the l
 
 {{<atsprinto "hello sprinto" >}}
 
-- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. There are more admin tips below under "For admins".
+- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. There's more admin tips below under "For admins".
 
-## 2) Make sure you're actually sending a slash command
+### 2) Make sure you're actually sending a slash command
 
 Sometimes sprint commands don't succeed because they're sent as chat messages.
 
@@ -61,7 +61,7 @@ Tips:
 
 - Ask for help or report strange Sprinto behavior with `/feedback`, or come to the Sprinto Planet Discord for support.
 
-## 3) Check “Legacy chat input” (it breaks slash commands)
+### 3) Check “Legacy chat input” (it breaks slash commands)
 
 ![Legacy chat input setting](/images/help/troubleshooting/04-legacy-chat-input.png)
 
@@ -92,6 +92,10 @@ Thanks for your patience and support.
 - Everyone who you want to use Sprinto needs **Use Application Commands** permission (role locking can cause issues).
 
 Discord required bots to switch to slash commands. Sprinto needed a surprising amount of work to keep working with the new system, and it's still a work in progress. Some less common commands can only be accessed by mentioning `@Sprinto` for now, but I'm working on it.
+
+## History
+
+This guide was originally posted on "#📣-news-and-updates" on the Sprinto Planet discord, then heavily updated and illustrated for a [Patreon post](https://www.patreon.com/posts/71439355) which was titled "Sprinto has switched to slash commands (tips)" (2022), and has now moved here for easier access and better formatting.
 
 ## See also
 
