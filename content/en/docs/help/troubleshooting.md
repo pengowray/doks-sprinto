@@ -8,24 +8,29 @@ menu:
     parent: "docshelp"
     weight: 630
 toc: true
-keywords: ["troubleshooting", "faq", "not responding"]
+keywords: ["troubleshooting", "faq", "not responding", "commands", "permissions"]
 ---
 ## Sprinto isn't responding to my commands
 
 Discord's slash commands can be terribly inconsistent, and it can be hard to know if the problem is a permissions problem, or a Discord UI/UX issue, or something else.
 
-If you're having trouble, here are some tips.
+If you're having trouble, here are some tips. The first few are for users; the last section is for server admins.
 
 ## 1) Spot the difference: @Sprinto the role vs @Sprinto the bot
 
 ![@Sprinto role vs bot](/images/help/troubleshooting/01-role-vs-bot.png)
 
-**@Sprinto the role vs @Sprinto the bot. The role doesn't respond. Discord creates this role by default and it's a usability nightmare.**
+**@Sprinto the role vs @Sprinto the bot. The role doesn't respond. Discord creates this role by default and it's a usability nightmare. The color of each depends on the Discord server settings and may look identical.**
 
 - All of Sprinto's commands work with `@Sprinto` as a prefix. Some folk will find `@Sprinto` more reliable and easier than slash commands: e.g. **`@Sprinto sprint 30`**
 
 - If there's a Discord role named `@Sprinto` you might accidentally mention it instead of `@Sprinto` the bot. Check you didn't mention a role.
-- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily.
+
+- To be really sure, you can mention Sprinto by his full name, `@Sprinto#2517` This will mention the bot specifically and not the role, which is annoying to type but can test if this is the issue and not something else. If you copy `@Sprinto` commands from this documentation, it will copy @Sprinto as @Sprinto#2517
+
+{{<atsprinto "hello sprinto" >}}
+
+- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. (More admin tips below under "For admins")
 
 ## 2) Make sure you're actually sending a slash command
 
