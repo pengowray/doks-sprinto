@@ -43,11 +43,11 @@ Sometimes sprint commands don't succeed because they're sent as chat messages.
 
 **Sometimes sprint commands don't succeed because they're sent as chat messages.**
 
-Slash commands that succeed look like this:
+How to tell if you're sending a chat message instead of a slash command:
 
-![Successful slash command](/images/help/troubleshooting/03-sent-as-slash-command.png)
+![Slash commands that fail vs succeed](/images/help/troubleshooting/03-sprinto-help-get-sprinting.png)
 
-**Slash commands that succeed look like this.**
+**Slash commands that fail vs succeed**
 
 - Slash commands can be unreliable. Sometimes you'll just type `/sprint` into chat instead of sending a `/sprint` command to Sprinto. Mobile is more prone to this problem.
 
@@ -88,14 +88,14 @@ Thanks for your patience and support.
 - **Adding Sprinto to your server again (to a server he's already on) may fix permission problems.**
 - **Check Sprinto can send messages in the channels you want to run sprints.**
 - If Sprinto appears stuck on “Sending command...” for more than ~10 seconds, that's usually a Discord hangup. Check your internet connection and restart Discord.
-- You can manage Sprinto in the **Integrations** section of your **Server Settings** (note: this isn't available on Discord mobile).
-- Everyone who you want to use Sprinto needs **Use Application Commands** permission (role locking can cause issues).
+- You can manage Sprinto in the **Integrations** section of your **Server Settings** Note: this isn't available on Discord mobile.
+- Everyone you want to be able to use Sprinto needs **Use Application Commands** permission. Role locking can cause issues.
 
-Discord required bots to switch to slash commands. Sprinto needed a surprising amount of work to keep working with the new system, and it's still a work in progress. Some less common commands can only be accessed by mentioning `@Sprinto` for now, but I'm working on it.
+Discord required bots to switch to slash commands. Sprinto needed a surprising amount of work to keep working with the new system, and it's still a work in progress. Some less common commands can only be accessed by mentioning `@Sprinto` for now.
 
 ## History
 
-This guide was originally posted on "#📣-news-and-updates" on the Sprinto Planet discord, then heavily updated and illustrated for a [Patreon post](https://www.patreon.com/posts/71439355) which was titled "Sprinto has switched to slash commands (tips)" (2022), and has now moved here for easier access and better formatting.
+This guide was originally posted on the Sprinto Planet discord (in "#📣-news-and-updates"), then heavily updated with screenshots for a [Patreon post](https://www.patreon.com/posts/71439355) which was titled "Sprinto has switched to slash commands (tips)" (2022), and has now moved here to the Sprinto website for easier access and better formatting and has been updated again.
 
 ## See also
 
