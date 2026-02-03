@@ -25,6 +25,8 @@
 }
 
 .gg-options {
+    display: inline-flex;
+    align-items: center;
     border-color: rgb(0, 120, 215);
     border-width: 0.733333px;
     background-color: rgb(237, 239, 232);
@@ -33,7 +35,8 @@
     line-height: 22px;
     margin-top: 6px;
     max-width: calc(100% - 30px);
-    padding: 4px;
+    overflow: hidden;
+    padding: 0;
 }
 
 [data-dark-mode] .gg-options {
@@ -42,7 +45,8 @@
 
 .gg-options-key {
     background-color: rgb(237, 239, 232);
-    padding: 8px 8px 2px;
+    display: inline-block;
+    padding: 4px 8px;
     border-radius: 0;
     border-width: 0;
 }
@@ -53,7 +57,8 @@
 
 .gg-options-val {
     background-color: rgb(255, 255, 255);
-    padding: 8px 8px 2px;
+    display: inline-block;
+    padding: 4px 8px;
     border-radius: 0;
     border-width: 0;
 }
