@@ -15,11 +15,11 @@
   },
   "scripts": {
     "init": "shx rm -rf .git && git init -b main",
-    "create": "exec-bin node_modules/.bin/hugo/hugo new",
+    "create": "hugo new",
     "prestart": "npm run clean",
-    "start": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --noHTTPCache",
+    "start": "hugo server --bind=0.0.0.0 --disableFastRender --noHTTPCache",
     "prebuild": "npm run clean",
-    "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
+    "build": "hugo --gc --minify",
     "build:preview": "npm run build -D -F",
     "clean": "shx rm -rf public resources",
     "clean:install": "shx rm -rf package-lock.json node_modules ",
@@ -28,12 +28,11 @@
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
     "lint:markdown-fix": "markdownlint-cli2 --fix \"*.md\" \"content/**/*.md\"",
-    "server": "exec-bin node_modules/.bin/hugo/hugo server",
+    "server": "hugo server",
     "test": "npm run -s lint",
     "env": "env",
     "precheck": "npm version",
-    "check": "exec-bin node_modules/.bin/hugo/hugo version",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
+    "check": "hugo version",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
@@ -47,15 +46,15 @@
   "devDependencies": {
     "auto-changelog": "^2.5.0",
     "eslint": "^8.57.1",
-    "exec-bin": "^1.0.0",
-    "hugo-installer": "^4.0.1",
+    "hugo-bin": "^0.161.0",
     "markdownlint-cli2": "^0.23.1",
     "shx": "^0.4.0",
     "stylelint": "^14.16.1",
     "stylelint-config-standard-scss": "^4.0"
   },
-  "otherDependencies": {
-    "hugo": "0.155.3"
+  "hugo-bin": {
+    "buildTags": "extended",
+    "version": "0.155.3"
   },
   "overrides": {
     "glob": "^13.0.6",
