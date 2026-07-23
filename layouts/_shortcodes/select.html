@@ -1,0 +1,8 @@
+{{- /*
+  A mock Discord dropdown. Placeholder text is the first positional
+  argument.
+
+    {{< select "Add a setting" >}}
+*/ -}}
+{{- $label := cond (isset .Params 0) (.Get 0) (.Get "label") -}}
+<span class="gg-select"><span class="gg-select-label">{{ $label }}</span><span class="gg-select-caret" aria-hidden="true">⌄</span></span>

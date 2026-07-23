@@ -35,6 +35,17 @@ More on counting, leaving, cancelling and the rest: [During the sprint]({{< relr
 
 ## Reading the scoreboard
 
+When the reporting window closes, Sprinto posts the results:
+
+{{< reply >}}
+🏆 **CONGRATS EVERYONE**
+`=` `1.` {{< mention "alex" >}} — **500 words** (33 wpm)
+`=` `1.` {{< mention "sam" >}} — **500 words** (33 wpm)
+&nbsp;&nbsp;&nbsp;&nbsp;`3.` {{< mention "jo" >}} — **120 words** (8 wpm)
+&nbsp;&nbsp;&nbsp;&nbsp;`  ` {{< mention "kit" >}} — **2,005 words deleted** (4% of starting words)
+Combined word count: 1,120 words over 15 minutes.
+{{< /reply >}}
+
 Everyone who joined gets a line: their name, the words they wrote during the sprint, and a words-per-minute figure in brackets. Ranks are shared on a tie, marked with `=`. If three or more people wrote something, Sprinto adds a combined total for the whole room underneath.
 
 The words-per-minute number divides your words by the **whole sprint length**, not by however long you were actually at the keyboard. Join five minutes late into a twenty minute sprint and your wpm will look low. That's on purpose, so the figure means the same thing for everybody on the board.

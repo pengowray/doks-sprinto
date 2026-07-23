@@ -1,0 +1,11 @@
+{{- /*
+  One mock Discord button. Label is the first positional argument.
+
+    {{< button "Allow sprints here" >}}
+    {{< button "Done" style="primary" >}}
+
+  style: secondary (default), primary, danger, success
+*/ -}}
+{{- $label := cond (isset .Params 0) (.Get 0) (.Get "label") -}}
+{{- $style := .Get "style" | default "secondary" -}}
+<span class="gg-btn gg-btn-{{ $style }}">{{ $label }}</span>

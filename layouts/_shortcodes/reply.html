@@ -1,0 +1,37 @@
+{{- /*
+  A mock-up of a message in Discord, used to show what Sprinto actually
+  replies. Block shortcode; the inner text is markdown.
+
+    {{< reply >}}
+    🍏🍏🍏 **SPRINT STARTING NOW** 🍏🍏🍏
+    {{< /reply >}}
+
+  Params, all optional:
+    name       display name (default "Sprinto")
+    app        set to "0" for a human speaker, which drops the App badge
+               and swaps the avatar for a lettered circle
+    avatar     image path, overriding the default
+    ephemeral  set to "1" to add Discord's "Only you can see this" footer
+*/ -}}
+{{- $name := .Get "name" | default "Sprinto" -}}
+{{- $isApp := ne (.Get "app") "0" -}}
+{{- $avatar := .Get "avatar" | default (cond $isApp "/images/sprinto-128px.png" "") -}}
+<div class="gg gg-msg">
+  <div class="gg-msg-avatar">
+    {{- if $avatar -}}
+      <img alt="" class="gg-icon" width="40" height="40" src="{{ $avatar }}">
+    {{- else -}}
+      <span class="gg-avatar-letter" aria-hidden="true">{{ substr $name 0 1 }}</span>
+    {{- end -}}
+  </div>
+  <div class="gg-msg-main">
+    <div class="gg-msg-head">
+      <span class="gg-msg-name">{{ $name }}</span>
+      {{- if $isApp }}<span class="gg-app">App</span>{{ end -}}
+    </div>
+    <div class="gg-msg-body">{{ .Inner | markdownify }}</div>
+    {{- if eq (.Get "ephemeral") "1" }}
+    <div class="gg-eph">Only you can see this</div>
+    {{- end }}
+  </div>
+</div>

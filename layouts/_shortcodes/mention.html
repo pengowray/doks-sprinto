@@ -1,0 +1,8 @@
+{{- /*
+  A mock @user mention, for use inside `reply` blocks where the bot's real
+  output would carry a Discord mention.
+
+    {{< mention "alex" >}}
+*/ -}}
+{{- $name := cond (isset .Params 0) (.Get 0) (.Get "name") -}}
+<span class="gg-mention">@{{ $name }}</span>
