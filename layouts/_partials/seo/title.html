@@ -1,0 +1,12 @@
+{{- /* Overrides @thulite/seo so the homepage keeps its "Sprinto - Discord sprinting bot"
+       title instead of repeating the site title twice. */ -}}
+{{- $separator := site.Params.seo.title.separator | default "|" }}
+{{- $title := "" }}
+{{- if .Params.seo.title }}
+  {{- $title = .Params.seo.title }}
+{{- else if .IsHome }}
+  {{- $title = printf "%s %s %s" site.Title $separator (site.Params.titleAddition | default site.Title) }}
+{{- else }}
+  {{- $title = printf "%s %s %s" .Title $separator (site.Params.seo.title.suffix | default site.Title) }}
+{{- end }}
+<title>{{ $title }}</title>

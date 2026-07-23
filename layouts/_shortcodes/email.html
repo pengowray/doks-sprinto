@@ -1,0 +1,6 @@
+{{- /* Was supplied by @hyas/doks; @thulite/doks-core only ships the partial, so
+       keep a shortcode here for content that writes {{< email user="…" domain="…" >}}. */ -}}
+{{- $user := .Get "user" -}}
+{{- $domain := .Get "domain" -}}
+{{- $address := printf "%s@%s" $user $domain -}}
+{{ partial "main/email" (dict "emailAddress" $address "emailTitle" $address) }}

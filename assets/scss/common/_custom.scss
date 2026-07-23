@@ -11,7 +11,7 @@
     text-align: left;
 }
 
-[data-dark-mode] .gg {
+[data-bs-theme="dark"] .gg {
     background-color: #383a40;
 }
 
@@ -39,7 +39,7 @@
     padding: 0;
 }
 
-[data-dark-mode] .gg-options {
+[data-bs-theme="dark"] .gg-options {
     background-color: rgb(17, 18, 20);
 }
 
@@ -51,7 +51,7 @@
     border-width: 0;
 }
 
-[data-dark-mode] .gg-options-key {
+[data-bs-theme="dark"] .gg-options-key {
     background-color: rgb(17, 18, 20);
 }
 
@@ -63,7 +63,7 @@
     border-width: 0;
 }
 
-[data-dark-mode] .gg-options-val {
+[data-bs-theme="dark"] .gg-options-val {
     background-color: #232428;
 }
 
@@ -76,7 +76,7 @@
     font-size: 0;
 }
 
-[data-dark-mode] .atsprinto {
+[data-bs-theme="dark"] .atsprinto {
     color: #d5d9ef;
     background: #424676;
 }
@@ -86,7 +86,7 @@
     background: #fcf2d4;
 }
 
-[data-dark-mode] .gg-role {
+[data-bs-theme="dark"] .gg-role {
     color: #f1c40f;
     background: #4b483b;
 }
@@ -105,7 +105,7 @@
     margin: 2px 4px 4px 0;
 }
 
-[data-dark-mode] .tag {
+[data-bs-theme="dark"] .tag {
     color: #b6aaa8;
     background-color: #163851;
 }
@@ -117,7 +117,7 @@
     border-bottom: 1px dotted black;
 }
 
-[data-dark-mode] .tooltip2 {
+[data-bs-theme="dark"] .tooltip2 {
     border-bottom: 1px dotted white;
 }
 
@@ -141,7 +141,7 @@
     transition: opacity 0.3s;
 }
 
-[data-dark-mode] .tooltip2 .tooltiptext2 {
+[data-bs-theme="dark"] .tooltip2 .tooltiptext2 {
     background-color: #383a40;
     color: #fff;
 }
@@ -158,7 +158,7 @@
     border-color: #555 transparent transparent;
 }
 
-[data-dark-mode] .tooltip2 .tooltiptext2::after {
+[data-bs-theme="dark"] .tooltip2 .tooltiptext2::after {
     border-color: #383a40 transparent transparent;
 }
 
@@ -169,16 +169,16 @@
 }
 
 /* Docs next/previous navigation readability in dark mode */
-[data-dark-mode] body .docs-navigation a {
+[data-bs-theme="dark"] body .docs-navigation a {
     color: #dee2e6;
     text-decoration: none;
 }
 
-[data-dark-mode] body .docs-navigation a:hover,
-[data-dark-mode] body .docs-navigation a:focus {
+[data-bs-theme="dark"] body .docs-navigation a:hover,
+[data-bs-theme="dark"] body .docs-navigation a:focus {
     color: #8ed6fb;
 }
 
-[data-dark-mode] body .docs-navigation .card {
+[data-bs-theme="dark"] body .docs-navigation .card {
     color: inherit;
 }
