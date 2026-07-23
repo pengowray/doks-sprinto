@@ -1,5 +1,13 @@
 PATH=$PATH;C:\Program Files\nodejs
 npm install
-npm audit fix
 
 npm run start
+
+Note: npm audit is clean (0 vulnerabilities) since Hugo moved to hugo-bin, so
+there is nothing to fix. Don't run `npm audit fix --force`. If audit ever does
+flag something, check what --force would actually do first: last time it
+offered to downgrade the Hugo installer two major versions to dodge a
+transitive dependency it would have pulled straight back in anyway.
+
+Pushing to master publishes the live site immediately (GitHub Pages, via
+.github/workflows/static.yml). Work on a branch.
