@@ -35,6 +35,7 @@ Note you can join a sprint at any time, even when it's started or waiting for fi
 
 ## Is there a way to keep a running scoreboard, set goals, or track progress over multiple sprints?
 
+<!-- TODO(owner): word history now exists internally; decide what the public answer should be -->
 No, sorry. Keeping track of sprints is high on my to-do list and I'd like to add these sorts of features eventually.
 
 ## How about back-to-back sprints? (also called chain wars or word crawls)
@@ -45,7 +46,9 @@ If you need one sprint to start the moment the other ends, the best way to do it
 
 ## What is Sprinto written in?
 
-C# using the Discord.Net package and MongoDB. In production he runs on Linux; in testing, Windows.
+Sprinto was rewritten in 2026. It's now written in Rust, using the twilight Discord library, with a PostgreSQL database behind it. It runs on Linux, in production and in testing alike.
+
+The day-to-day sprint commands work the same as before; it's mostly the admin and settings side that changed shape underneath.
 
 ## How'd you make this amazing website?
 
@@ -53,7 +56,8 @@ This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes
 
 ## Is Sprinto's source code available?
 
-I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
+<!-- TODO(owner): confirm source-release status and the contributor invitation still stand -->
+I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for the old version of Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
 
 ## How do I hide Sprinto from my @ mentions list?
 

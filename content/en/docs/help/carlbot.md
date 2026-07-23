@@ -1,17 +1,36 @@
 ---
 title : "Carl-bot x Sprinto"
-description: "How to schedule sprints with the help of Carl-bot"
+description: "Chaining sprints, and scheduling them further ahead with Carl-bot"
 lead:
 identifier: "carlbot"
 ---
 
-## Scheduling Sprints
+## Sprinto can chain sprints on its own now
 
-NOTE: Carl-bot is not associated with Sprinto. I've provided this info to help you schedule sprints, to extend Sprinto's functionality beyond what it was originally designed for.
+If what you want is a run of sprints back to back, you probably don't need Carl-bot at all. `/sprint` understands chains directly:
 
-Want to scheduling sprints more than an hour in advance, or set up multiple sprints in a row? You can use Carl-bot for this purpose. Sprinto may get a built-in way in future, but for now there's Carl-bot, a popular Discord bot which is developed completely independently of Sprinto (I have nothing to do with it!)
+{{<slash name="sprint" key0="options" val0="25 then 50 then 15" >}}
+Three sprints in a row: 25 minutes, then 50, then 15.
 
-## Setup:
+{{<slash name="sprint" key0="options" val0="25 break 7 x3" >}}
+The same 25 minute sprint repeated three times, with a 7 minute break between each.
+
+{{<slash name="sprint" key0="options" val0="pomo x4" >}}
+Four pomodoro-style work blocks with the usual pomodoro break rhythm.
+
+If a chain is already running and you'd rather not wait out the gap, a host or {{<tag-mc>}} can jump straight to the next block:
+
+{{<slash name="go" >}}
+
+See [Sprint (all options)]({{<relref "sprint" >}}) for the full chain grammar.
+
+What Carl-bot still gives you that chains don't: scheduling something more than an hour ahead, or a sprint that announces itself automatically at the same time every day. For that, read on.
+
+## Scheduling further ahead with Carl-bot
+
+NOTE: Carl-bot is not associated with Sprinto. This is here to help you extend Sprinto beyond what it does natively, using a popular Discord bot developed completely independently of Sprinto.
+
+## Setup
 
 1. [Invite Sprinto]({{< relref "invite" >}}) to your server
 
@@ -21,10 +40,13 @@ Want to scheduling sprints more than an hour in advance, or set up multiple spri
 
   Tip: Carl-bot does not require any special permissions to interact with Sprinto. So, if you're not using Carl-bot for other purposes, you can remove almost all his permissions.
 
-1. By default Sprinto ignores messages from other bots, so tell Sprinto it's OK to listen to Carl-bot, in each sprinting channel, using one of these commands:
+1. By default Sprinto ignores messages from other bots, so turn on the `carl` setting in each sprinting channel:
 
-{{<slash name="setup-set-listen-to-carl" key0="setting" val0="On">}}
-{{<atsprinto "setListenToCarl on">}}
+{{<atsprinto "settings carl on">}}
+{{<alts "Synonym">}}
+{{<slash name="settings channel">}}
+Open the channel settings panel and turn `carl` on.
+{{</alts>}}
 
 Now you're ready to schedule a sprint via Carl-bot.
 
@@ -49,38 +71,21 @@ See Carl-bot's autofeed documentation for more:
 
 ## Notes
 
-- In each Discord channel where you might schedule a sprint, be sure to use:
+- In each Discord channel where you might schedule a sprint, be sure the `carl` setting is on:
 
-{{<atsprinto "setListenToCarl on">}}
-{{<alts Synonym>}}
-{{<slash name="setup-set-listen-to-carl" key0="setting" val0="On">}}
+{{<atsprinto "settings carl on">}}
+{{<alts "Synonym">}}
+{{<slash name="settings channel">}}
 {{</alts>}}
 
 - When you're composing a message for Carl-bot to send `<@421646775749967872>` becomes `@Sprinto`. Writing it in long form with Sprinto's ID like this is more reliable than just typing `@Sprinto`
 - Set your time zone via the dashboard at [carl.gg](https://carl.gg/)
-- Sprinto will not prevent someone starting another Sprint which conflicts with Carl-scheduled sprints.
-- When running chain sprints (back to back sprints), be mindful of the "end time" to finish up Sprint. You can set this manually to make it more predictable. (And you might want to give another minute between sprints to be sure they don't overlap). For example, this sprint gives 5 minutes for word counts: `sprint in 2 for 15 endtime 5`
-- If you work out some commands for scheduling a nice series sprints, feel free to share it on the Sprinto discord server. I would like to add more examples or tips to this doc.
-- To have Sprinto always ping a role when a new sprint is announced. Use:
-
-  {{<slash name="setup-pingroles-set" key0="role" val0="_@role_">}}
-
-  For more, see: [SprintAdmin: Always ping a role at sprint start]({{< relref "faq#always-ping-a-role-at-sprint-start" >}})
-
-- Please do not abuse the bots. Don't, for example, schedule very large numbers of sprints that you don't intend for anyone to join. Abuse may lead to your account and/or your Discord server being barred from using Sprinto.
-
-## Why only carl-bot?
-
-I don't know any others. Unfortunately "reminder-bot" cannot be used (because Sprinto can't see its webhook-style reminder messages).
-
-If you'd like to use a different scheduling bot, please suggest it on the Sprinto Discord or with the feedback command:
-
-{{<slash name="feedback" key0="your-feedback" val0="Here's my suggestion for another bot for Sprinto to listen to...">}}
-{{<alts Synonym>}}
-{{<atsprinto "feedback Here's my suggestion for another bot for Sprinto to listen to..." >}}
-{{</alts>}}
+- Sprinto will not prevent someone starting another sprint which conflicts with Carl-scheduled sprints.
+- When running chain sprints (back to back sprints) via Carl-bot, be mindful of the "endtime" needed to finish up each one. Setting it manually makes things more predictable, and it's worth leaving another minute between sprints so they don't overlap. For example, this sprint gives 5 minutes for word counts: `sprint in 2 for 15 endtime 5`
+- Please don't abuse the bots. Don't, for example, schedule very large numbers of sprints that you don't intend for anyone to join. Abuse may lead to your account and/or your Discord server being barred from using Sprinto.
+- Reminder-bot doesn't work for this, because Sprinto can't see its webhook-style reminder messages. If you'd like to use a different scheduling bot, suggest it with {{<slashembed name="feedback">}}.
 
 ## See also
 - [Admin commands]({{<relref "admin" >}})
-- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings, including `setup-set-listen-to-carl`
-- [Sprint (all options)]({{<relref "sprint" >}}) — complete sprint options guide
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings, including `carl`
+- [Sprint (all options)]({{<relref "sprint" >}}) — complete sprint options guide, including chains

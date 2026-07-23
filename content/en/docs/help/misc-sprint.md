@@ -84,8 +84,9 @@ These will tell you to use another command such as /cancel or /leave instead bec
 {{<slash name="cancel" >}}
 End the sprint for everyone (if everyone agrees)
 
-{{< slash name="admin-force-cancel" >}}
-End the sprint for everyone regardless. (Requires you have a {{<role "@Sprint MC">}} or {{<role "@SprintAdmin">}} role, or be an admin on the Discord server.)
+{{<tag-mc>}}
+{{< slash name="cancelplease" >}}
+End the sprint for everyone regardless, no vote needed. (Requires you have a {{<role "@Sprint MC">}} or {{<role "@Sprint Admin">}} role, or be an admin on the Discord server.)
 
 {{<slash name="leave" >}}
 Leave the sprint but leave it running for everyone/anyone else.
@@ -96,18 +97,24 @@ Don't ping me about the next few sprints.
 {{<slash name="sneak-away" >}}
 Leave the sprint and forgetme (don't ping me about the next few sprints), and also don't announce I've left (only you will see the reply)
 
-{{<slash name="pings-never" >}}
+{{<slash name="pingme" key0="count" val0="never">}}
 Don't ever ping me about future sprints in this channel, even if I join one later.
-
-{{<atsprinto "voice_home_off" >}}
-Stop Sprinto joining voice channels.
 {{</alts>}}
 
 ### undo / redo
 
+{{<slash name="undo" >}}
+{{<alts>}}
+{{<atsprinto "undo" >}}
 {{<atsprinto "wc_undo" >}}
-{{<atsprinto "wc_redo" >}}
+{{</alts>}}
 
-Undo or redo your last `/words`, `/join` or other command which changed your word count or sprint status. This was the start of a general undo feature, but was never finished.
+{{<slash name="redo" >}}
+{{<alts>}}
+{{<atsprinto "redo" >}}
+{{<atsprinto "wc_redo" >}}
+{{</alts>}}
+
+Undo or redo your last `/words`, `/join` or other command that changed your word count or sprint status. Works back up to 100 steps, per person.
 
 <!-- | `/words reset`| Same as `/words 0 new` | -->

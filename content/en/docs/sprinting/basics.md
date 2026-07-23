@@ -1,126 +1,164 @@
 ---
 title : "Sprint basics"
-description: 
+description: How to start a sprint, join it, and report your word count
 lead: "Sprint basics"
 weight: 10
 ---
 
-Write with your friends! Run a sprint and compete with your writing group! Focus on your writing, share word counts, write the most you can!
+Write with your friends! A sprint is a shared timer. Somebody starts one, everyone who wants in joins, and then you all write until the time runs out. At the end you say how many words you got down and Sprinto posts a scoreboard.
 
-## Popular and fun ways to start a sprint
+It's on the honour system. Nobody is checking your document.
 
-### Standard 15 minute sprint
+## The four steps
 
-Start a sprint for the default duration (15 minutes, starting in 1 minute)
+**1. Start it.**
 
 {{<slash name="sprint" >}}
-{{<alts "Synonyms" >}}
-These do the same thing:
-    {{<slash name="sprint" key0="options" val0="for 15 mins in 1 minute" >}}
-    {{<slash name="sprint" key0="options" val0="for 15 in 1" >}}
-    {{<slash name="sprint" key0="options" val0="15 in 1" >}}
-{{</alts >}}
 
-### Shorter or longer
+That's a 15 minute sprint, starting in 1 minute. The minute before the start is the join window, so people have a moment to notice and pile in.
 
-Start a 5, 30 or 60 minute sprint (can change it to up to 60 minutes)
+**2. Join it.**
 
-{{<slash name="sprint" key0="options" val0="5" >}}
+{{<slash name="join" >}}
+
+You have to join your own sprint. Sprinto doesn't add you automatically, and it's the single most common thing new sprinters get caught by. If you're partway through a document already, join with the count you're starting from and Sprinto will subtract it later: {{<slashembed name="join" key0="word-count" val0="10000" >}}
+
+**3. Write.** Sprinto announces the start, and announces when time's up. There's a bell partway through if you've turned chimes on.
+
+**4. Report.**
+
+{{<slash name="words" key0="count" val0="442" >}}
+
+You get 10 minutes after time's up to get your count in before the scoreboard closes. If you joined with a starting count, give the new total and Sprinto works out the difference.
+
+More on counting, leaving, cancelling and the rest: [During the sprint]({{< relref "words" >}}).
+
+## Reading the scoreboard
+
+Everyone who joined gets a line: their name, the words they wrote during the sprint, and a words-per-minute figure in brackets. Ranks are shared on a tie, marked with `=`. If three or more people wrote something, Sprinto adds a combined total for the whole room underneath.
+
+The words-per-minute number divides your words by the **whole sprint length**, not by however long you were actually at the keyboard. Join five minutes late into a twenty minute sprint and your wpm will look low. That's on purpose, so the figure means the same thing for everybody on the board.
+
+If you deleted more than you wrote, Sprinto says so instead, without ranking you. Cutting words is still work.
+
+## If you forget to report
+
+You'll still show up on the scoreboard, on zero. It happens to everyone.
+
+For the few minutes right after time's up, you can fix it:
+
+{{<slash name="late" key0="count" val0="442" >}}
+
+Sprinto edits the scoreboard in place, so your count lands where it should have. The window is 10 minutes after the sprint ends by default, and after that the board is closed for good.
+
+## Handy ways to start a sprint
+
+Every part is optional and the order doesn't matter, so most of these can be mixed together.
+
+### A different length
+
 {{<slash name="sprint" key0="options" val0="30" >}}
-{{<slash name="sprint" key0="options" val0="60" >}}
-{{<alts "Synonyms">}}
-Other ways to start a 30 minute sprint in 1 minute:
-    {{<slash name="sprint" key0="options" val0="for 30 minutes in 1 minute" >}}
-    {{<slash name="sprint" key0="options" val0="for 30" >}}
-    {{<slash name="sprint" key0="options" val0="30 in 1" >}}
-    {{<slash name="sprint" key0="options" val0="30 1" >}}
-Alternatives:
-    {{<slash name="sprint" key0="options" val0="for 30 mins very soon" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="for 30 minutes" >}}
+{{<slash name="sprint" key0="options" val0="for 30 in 1" >}}
+{{<atsprinto "sprint 30" >}}
 {{</alts>}}
+A bare number is a length in minutes. Anything from half a minute up to an hour. A {{<role "@Sprint MC">}} can push past that by asking nicely, with `please`.
 
-## More sprint examples
-
-### sprint in 5
+### Start a bit later
 
 {{<slash name="sprint" key0="options" val0="in 5" >}}
-{{<alts>}}
+{{<alts "Synonyms" >}}
 {{<slash name="sprint" key0="options" val0="for 15 in 5" >}}
-{{<slash name="sprint" key0="options" val0="15 5" >}}
-{{<atsprinto "sprint for 5">}}
-{{<atsprinto "sprint for 15 in 5">}}
-{{<atsprinto "sprint 15 5">}}
+{{<atsprinto "sprint in 5" >}}
 {{</alts>}}
-Start a sprint in 5 minutes time for the default length (15 minutes).
+Default length, starting in five minutes. Handy when you want to give people time to arrive.
 
-### sprint for 20 in 5
+### Both at once
 
 {{<slash name="sprint" key0="options" val0="for 20 in 5" >}}
-{{<alts>}}
-{{<atsprinto "sprint 20 5">}}
-{{<atsprinto "sprint for 20 in 5">}}
-{{<atsprinto "sprint in five mins for 20 mins">}}
-{{<slash name="sprint" key0="options" val0="in twenty minutes for five minutes" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="20 5" >}}
+{{<atsprinto "sprint 20 5" >}}
+{{<atsprinto "sprint in five mins for 20 mins" >}}
 {{</alts>}}
-Start a sprint in 5 minutes time for 20 minutes.
+Twenty minutes of writing, starting in five.
 
-### sprint at :45
+### On the clock
 
 {{<slash name="sprint" key0="options" val0="at :45 " >}}
-{{<alts>}}
+{{<alts "Synonyms" >}}
 {{<slash name="sprint" key0="options" val0=":45" >}}
 {{<slash name="sprint" key0="options" val0="at :45 for 15" >}}
-{{<atsprinto "sprint :45 ">}}
+{{<atsprinto "sprint :45 " >}}
 {{</alts>}}
-Start a sprint at whatever time is the next "quarter to". For example, if it's currently 11:39, this command will start a sprint at 11:45.
+Start at the next quarter-to. If it's 11:39 now, the sprint starts at 11:45. Round start and end times are much easier for everyone to keep track of. Write only the minutes, since Sprinto doesn't know your time zone.
 
-It's easier for sprinters to keep track if the start and end times line up with clock time.
+Tip: put a space after `:45` so Discord doesn't try to turn it into an emoji.
 
-Tip: Add a space after `:45` (or whatever time you choose) to stop Discord trying to turn it into an emoji.
-
-### sprint in a bit
+### In a bit
 
 {{<slash name="sprint" key0="options" val0="iab" >}}
-{{<alts>}}
-{{<atsprinto "sprint iab ">}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "sprint iab " >}}
 {{<slash name="sprint" key0="options" val0="for 15 mins in a bit" >}}
 {{</alts>}}
+Sprinto picks a tidy start time somewhere in the next 2½ to 7½ minutes.
 
-Sprinto will find a nice time to start the sprint in the next 2½ to 7½ minutes (an increment of 5 minutes clock time).
-
-### sprint quick
+### Quick
 
 {{<slash name="sprint" key0="options" val0="quick" >}}
-{{<alts>}}
-{{<atsprinto "sprint quick">}}
-{{<slash name="sprint" key0="options" val0="for 5 in 30 endtime 90s" >}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "sprint quick" >}}
 {{</alts>}}
+Five minutes, starting in thirty seconds, with a shortened window for final counts. Good for a warm-up.
 
-Start a 5 minute sprint in 30 seconds, also with reduced time to give your final word count.
-
-### sprint for however long
+### However long
 
 {{<slash name="sprint" key0="options" val0="hel" >}}
-{{<alts>}}
-{{<atsprinto "sprint hel">}}
-{{<slash name="sprint" key0="options" val0="for however long in 1 min" >}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "sprint hel" >}}
+{{<slash name="sprint" key0="options" val0="for however long" >}}
 {{</alts>}}
+Can't decide? Sprinto spins a wheel. Usually 10 to 25 minutes, with a small chance of something around 5 or 40. Combine it with anything else, for example {{<slashembed name="sprint" key0="options" val0="hel iab" >}}
 
-Sprinto spins the wheel and starts a Sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes.
+### Pomodoro
 
-You can also combine this, for example:
-{{<slash name="sprint" key0="options" val0="hel iab" >}}
+{{<slash name="sprint" key0="options" val0="pomo" >}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "sprint pomo" >}}
+{{<slash name="sprint" key0="options" val0="pomodoro" >}}
+{{</alts>}}
+A 25 minute block. Add a repeat to get the real rhythm: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four of them with five minute breaks in between, and a longer break before every fourth.
 
-### sprint marathon
+### Marathon
 
 {{<slash name="sprint" key0="options" val0="marathon" >}}
-{{<alts>}}
-{{<atsprinto "sprint marathon">}}
-{{<slash name="sprint" key0="options" val0="for 60 in 7.5 to 12.5 mins endtime 10" >}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "sprint marathon" >}}
 {{</alts>}}
+An hour of writing, starting in 7½ to 12½ minutes, with ten minutes at the end for final counts.
 
-Sprint a marathon: after a bit (in 7.5 to 12.5 minutes), sprint for 1 hour, then 10 minutes for final word counts.
+There is a lot more where this came from: wheels, chains, breaks, flags, exact clock windows. See [Sprint (all options)]({{< relref "sprint" >}}).
+
+## Running it again
+
+Liked that one? Do it again without retyping it.
+
+{{<slash name="sprint" key0="options" val0="again" >}}
+Re-runs the channel's last sprint, but freshly worked out. Random wheels spin again, and "in a bit" style start times get picked again from now.
+
+{{<slash name="sprint" key0="options" val0="identical" >}}
+Repeats the exact same durations as last time. If the wheel gave you 17 minutes, you get 17 minutes.
+
+If the last sprint was pinned to a clock time with `at` or `until`, there's nothing for `again` to re-roll, so it'll ask you to use `identical` instead.
+
+Either one takes changes on the end, optionally with `but`:
+
+{{<slash name="sprint" key0="options" val0="identical but at :30 " >}}
+{{<slash name="sprint" key0="options" val0="again in 2" >}}
 
 ## See also
 
-- [Sprint (all options)]({{< relref "sprint" >}})
-- [During the sprint]({{< relref "words" >}}) — join, leave, cancel, and setting your word count
+- [During the sprint]({{< relref "words" >}}) — join, leave, cancel, and word counts
+- [Sprint (all options)]({{< relref "sprint" >}}) — the full grammar
