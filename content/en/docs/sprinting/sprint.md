@@ -61,7 +61,7 @@ A sprint of 15, 16, 17, 18, 19 or 20 minutes, picked at random. The bare form (`
 
 The roll lands on whole minutes if both ends are whole minutes; on 30 second steps if both ends sit on a half minute (`for 10m to 12m30s`); otherwise on exact seconds (`for 9m01s to 12m55s`).
 
-If the second number is a clock time it's read as an ending time instead, so `20 to :30` still runs *until* half past.
+If the second number is a clock time it's read as an ending time instead, so `20 to :30` still runs _until_ half past.
 
 ## "until"
 
@@ -517,7 +517,7 @@ Up to 5 chimes per sprint, and they have to be at least a minute apart. Any that
 
 Silence, even if this channel normally sets one.
 
-How many of those bells actually ping *you* is your own setting: see {{<atsprintoembed "chimes">}}.
+How many of those bells actually ping _you_ is your own setting: see {{<atsprintoembed "chimes">}}.
 
 ## Chains
 
@@ -581,7 +581,7 @@ Both take overrides on the end, with an optional `but` to make it read like a se
 {{<slash name="sprint" key0="options" val0="again for 30" >}}
 {{<slash name="sprint" key0="options" val0="identical but at :30" >}}
 
-By default they repeat the *last block*, so after a chain you get the last sprint of it. Add `chain` for the whole thing:
+By default they repeat the _last block_, so after a chain you get the last sprint of it. Add `chain` for the whole thing:
 
 {{<slash name="sprint" key0="options" val0="again chain" >}}
 {{<alts "Synonyms" >}}

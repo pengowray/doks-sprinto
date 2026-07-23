@@ -5,7 +5,12 @@
     "MD024": false,
     "MD026": false,
     "MD033": false,
-    "MD034": false
+    "MD034": false,
+    // Command-reference pages list each command as an h3 with no h2 above it,
+    // deliberately: an h2 per command would flood the table of contents.
+    "MD001": false,
+    // Bold lines are used as image captions, not as headings.
+    "MD036": false
   },
   "ignores": ["node_modules", "CHANGELOG.md", "README.md"]
 }

@@ -36,7 +36,7 @@ They act on the channel you type them in, and clearing empties the list so sprin
 
 ## See also
 
-- [Overview of Help]({{<relref "overview" >}})
-- [Settings]({{<relref "settings" >}}): everything else you can configure
-- [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-- [Admin commands]({{<relref "admin" >}})
+* [Overview of Help]({{<relref "overview" >}})
+* [Settings]({{<relref "settings" >}}): everything else you can configure
+* [Setup]({{< relref "setup" >}}) (setting up Sprinto)
+* [Admin commands]({{<relref "admin" >}})

@@ -10,7 +10,6 @@ lead:
 ![Image](/images/sprint-add-app.png)
 <!-- TODO(owner): screenshot may need retaking -->
 
-
 If you can see Sprinto on another server, you can click Sprinto or "view profile" and invite him directly from his info with the "Add App" button.
 
 ## Method 2
@@ -28,7 +27,6 @@ https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&perm
 
 ![Image](/images/sprinto-invite-dialog.png)
 <!-- TODO(owner): screenshot may need retaking -->
-
 
 Alternatively you can open the link in a web browser, but make sure you're logged into [discord.com/login](https://discord.com/login) on that browser first.
 
