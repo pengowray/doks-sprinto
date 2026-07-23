@@ -156,6 +156,23 @@
     margin-bottom: 0;
 }
 
+/* Discord renders `##` as a header inside a message, so mock-ups keep it.
+   Scale it back to message size and drop the permalink anchor the docs
+   theme adds, which makes no sense inside a pretend chat message. */
+.gg-msg-body h1,
+.gg-msg-body h2,
+.gg-msg-body h3,
+.gg-msg-body h4 {
+    margin: 0 0 4px;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.375;
+}
+
+.gg-msg-body .anchor {
+    display: none;
+}
+
 .gg-msg-body code {
     padding: 1px 3px;
     border-radius: 3px;

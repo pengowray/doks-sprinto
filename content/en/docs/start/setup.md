@@ -21,7 +21,7 @@ Sprinto often fails to see any usage when he has to share a general `#bots` chan
 
 Sprints started in different channels run independently. You cannot run more than one simultaneous sprint in a channel.
 
-### Rename the {{<role "@Sprinto">}} role
+### Rename the @Sprinto role
 
 Rename the {{<role "@Sprinto">}} role to {{<role "@Role for Sprinto">}} to make it easier to use Sprinto.
 
@@ -73,6 +73,39 @@ Opens Discord's role picker. If people on your server can self-assign a role lik
 {{< slash name="settings sprint-defaults" >}}
 
 Sets the default length and start time for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute. A long-form channel might prefer 30 minutes starting in 5.
+
+It opens on the server default, and on a new server it looks like this:
+
+{{<reply ephemeral="1">}}
+
+## Sprint defaults: Server default
+
+These apply when someone runs `/sprint` with no options in this server, unless a channel overrides them. Green shows what's in effect; a check marks a server default (click it again to clear).
+Length 15 min, start 1 min, bells -1, late 10 min.
+No default sprint options set. Using Sprinto's original default (for 15 mins in 1 min).
+{{</reply>}}
+
+{{<buttons>}}
+{{<button "Server default" "primary">}}
+{{<button "This channel">}}
+{{<button "Edit text">}}
+{{<button "Reset to built-in">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<button "15" "success">}}
+{{<button "20">}}
+{{<button "30">}}
+{{<button "40">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<button "in 1 min" "success">}}
+{{<button "in 1-2 min">}}
+{{<button "in 2-3 min">}}
+{{</buttons>}}
+
+Click **This channel** first if you only want to change this one channel. Green marks the length and start that are in effect right now; clicking one pins it at the scope you're on, and a check appears next to it. **Edit text** takes anything you could type after {{<slashembed name="sprint">}}, so a start delay of 5 minutes, or a different bell, goes in there.
 
 ### Everything else
 

@@ -43,7 +43,9 @@ Sprinto won't ping you at the start of sprints until after you join another one.
 
 Sneak away like a ninja. Leave the current sprint if you've joined, and Sprinto won't ping you at the start of sprints until after you join another one. This command's response is only seen by you. Equivalent of using both {{<slashembed name="leave" >}} and {{<slashembed name="forgetme" >}} together, but "ephemeral" (visible only to you).
 
-### always / never
+<!-- The bot deep-links here from /help always and /help never (help_always_never
+     in crates/sprinto-render/src/lexicon.rs). Keep the {#always-never} id. -->
+### always / never {#always-never}
 
 {{<atsprinto always >}}
 Be included in the pings at the start of all future sprints in this channel, until you change the setting again.
@@ -58,7 +60,13 @@ These aren't separate slash commands; use {{<slashembed name="pingme" key0="coun
 {{<slash name="pings-status" >}}
 {{<atsprinto pingstatus >}}
 
-Check your ping status.
+Check your ping status. The answer is for the channel you ask in, and only you see it:
+
+{{< reply ephemeral="1" >}}
+I'll ping you at the start of the next 3 sprint(s) here.
+{{< /reply >}}
+
+The other answers you can get are `your pings are off`, `I'll ping you at the start of every sprint here.` if you've set yourself to always, and `I've stopped pinging you at the start of sprints. Join a sprint to re-arm them.` once your three have run out. After {{<slashembed name="forgetme" >}} it tells you both halves, the state now and the state you'd go back to, like `Your pings are off until you join a sprint; then: I'll ping you at the start of the next 3 sprint(s) here.`
 
 ## Sprint MC-only commands
 

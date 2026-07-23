@@ -23,6 +23,19 @@ You don't have just one pet anymore, you have a collection.
 
 Opens a panel where you can see everything you've got, pick which one sprints with you, and rename it.
 
+{{< reply ephemeral="1" >}}
+
+## Your pets and items
+
+{{< /reply >}}
+{{< buttons >}}
+{{< button "🐢 Nugget ✓" >}}
+{{< button "🦊 Ember" >}}
+{{< button "🪑 seat" >}}
+{{< /buttons >}}
+
+One button per pet, and the tick is on the one that's currently sprinting with you. Press a pet to open it. Nobody else in the channel sees the panel.
+
 The pet currently sprinting with you is your **companion**, and it occupies your **sprint seat**. You can only have one companion at a time, and you can't swap it out mid-sprint since the scoreboard's already running by then.
 
 ## Getting pets

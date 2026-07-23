@@ -39,9 +39,120 @@ Server-wide defaults, inherited by every channel that hasn't overridden them its
 
 Both panels show **only what differs from the defaults**. On a freshly set up server that's nothing at all, so you get an almost blank panel with an "add" control. That's correct, not a bug.
 
+Here's the whole thing on a brand new server:
+
+{{<reply ephemeral="1">}}
+
+## Channel sprint settings
+
+Everything here uses the default. Add a setting below to change one.
+
+### In effect here
+
+- Ping roles: (none) (default). Edit with {{<slashembed name="settings roles">}}
+- Sprint defaults: Length 15 min, start 1 min, bells -1, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
+More info: <https://sprintobot.com/docs/settings-admin/>
+{{</reply>}}
+
+{{<buttons>}}
+{{<button "You">}}
+{{<button "Channel" "primary">}}
+{{<button "Server">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<select "Add a setting">}}
+{{</buttons>}}
+
+The three buttons along the top switch between your own settings, this channel and the whole server. The dropdown is the only other control, because there is nothing yet to remove.
+
 The idea is that the panel is a list of your decisions, not a wall of switches you have to read past. Add a setting to pin it and edit it; remove it to hand it back to the default. Adding a setting doesn't change anything on its own, it just brings the setting out where you can see it.
 
+Pick `walltime` from the dropdown, click its button once to cycle it, and the same panel now reads:
+
+{{<reply ephemeral="1">}}
+
+## Channel sprint settings
+
+- Wall time: Static timer (classic)
+- Tidy sprints (autodelete joins & word counts): On (server default)
+
+### In effect here
+
+- Ping roles: (none) (default). Edit with {{<slashembed name="settings roles">}}
+- Sprint defaults: Length 15 min, start 1 min, bells -1, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
+More info: <https://sprintobot.com/docs/settings-admin/>
+{{</reply>}}
+
+{{<buttons>}}
+{{<button "You">}}
+{{<button "Channel" "primary">}}
+{{<button "Server">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<button "Wall time: Static timer (classic)" "primary">}}
+{{<button "✕">}}
+{{<select "Add a setting">}}
+{{</buttons>}}
+
+Two rows appeared, and they're there for different reasons. **Wall time** was set in this channel, so it gets a button (click it to cycle to the next value) and a ✕ to hand it back. **Tidy sprints** is marked `(server default)`: somebody set it on the server panel, this channel is going along with it, and it's listed so you know why sprints here behave that way. To pin it in this channel, add it from the dropdown; it starts on whatever it already resolved to, so nothing changes until you click it.
+
 A channel falls back to the server default, and the server falls back to Sprinto's built-in default. So setting `show-quotes off` once at the server level turns quotes off everywhere, and a single channel can still add `show-quotes on` for itself.
+
+#### The "in effect here" block
+
+Underneath every channel and server panel is a short read-only summary. Ping roles, allowed channels and default sprint options aren't edited from this panel, they have their own commands, but this is where you find out what they currently are. Each line tells you which command to use.
+
+The server panel's version adds the channel list:
+
+{{<reply ephemeral="1">}}
+
+## Server default sprint settings
+
+Everything here uses the default. Add a setting below to change one.
+
+### In effect server-wide
+
+- Sprint channels: #writing-sprints, #sprint-marathon. Edit with {{<slashembed name="settings sprint-channels">}}
+- Ping roles: {{<role "@Sprinters">}}. Edit with {{<slashembed name="settings roles">}}
+- Sprint defaults: Length 20 min, start 1-2 min, bells -1, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
+More info: <https://sprintobot.com/docs/settings-admin/>
+{{</reply>}}
+
+{{<buttons>}}
+{{<button "You">}}
+{{<button "Channel">}}
+{{<button "Server" "primary">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<select "Add a setting">}}
+{{</buttons>}}
+
+That server has never changed a toggle, so the panel itself is still empty, but it has picked sprint channels, a ping role and a 20 minute default. `bells -1` means one bell, one minute before the end. `late 10 min` is how long after time's up word counts are still accepted. Read the sprint channels line as "sprints run only in these two", and see [Allowed channels]({{<relref "whitelist" >}}).
+
+#### When the channel panel says sprints don't run here
+
+If your server has picked its sprint channels and you open {{<slashembed name="settings channel">}} somewhere that isn't one of them, there's nothing to configure, so Sprinto says so instead of showing you settings that would never apply:
+
+{{<reply ephemeral="1">}}
+Sprints don't run in this channel. Right now they run only in: #writing-sprints, #sprint-marathon.
+To let sprints run here, use the button below, or manage the list with {{<slashembed name="settings sprint-channels">}}.
+More info: <https://sprintobot.com/docs/settings-admin/>
+{{</reply>}}
+
+{{<buttons>}}
+{{<button "You">}}
+{{<button "Channel" "primary">}}
+{{<button "Server">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<button "Allow sprints in this channel" "success">}}
+{{</buttons>}}
+
+The button adds this channel to the list, and the panel turns into the ordinary one. The You and Server tabs work normally from here.
 
 ### settings roles
 
@@ -103,8 +214,8 @@ If a quote is a problem, or just annoyingly prescriptive, tell me and I'll take 
 
 ## See also
 
-* [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-* [Allowed channels]({{<relref "whitelist" >}}): keeping sprints out of channels they don't belong in
-* [Ping roles]({{<relref "ping-roles" >}}): a role to mention at every sprint start
-* [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
-* [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
+- [Setup]({{< relref "setup" >}}) (setting up Sprinto)
+- [Allowed channels]({{<relref "whitelist" >}}): keeping sprints out of channels they don't belong in
+- [Ping roles]({{<relref "ping-roles" >}}): a role to mention at every sprint start
+- [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
+- [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)

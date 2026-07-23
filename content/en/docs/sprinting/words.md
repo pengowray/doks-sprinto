@@ -4,6 +4,42 @@ description:
 lead: Commands for once the sprint's started
 ---
 
+## What Sprinto posts
+
+A sprint has three announcements, and they're all the same shape: a decorated banner, a line of detail, then who's involved.
+
+**The join window.** The sprint is booked but hasn't started, so there's still time to get in:
+
+{{< reply >}}
+🍋🍋🍋 **JOIN THE SPRINT** 🍋🍋🍋
+The next sprint runs for 15 minutes and will begin in 60 seconds.
+`/join` (with your starting word count), or `/same` (use your last word count).
+📢 Pings: {{< mention "alex" >}} (not joined)
+{{< /reply >}}
+
+The fruit is different every sprint, it's only decoration. 📢 Pings is everyone Sprinto is calling in: people who asked to be pinged, any ping role, and the person who started the sprint if they still haven't joined it, as above. When the start is more than two minutes away you get a clock time instead of "in 60 seconds", shown in your own timezone.
+
+**The start.**
+
+{{< reply >}}
+🍏🍏🍏 **SPRINT STARTING NOW** 🍏🍏🍏
+Duration: 15 minutes (until ⏰ 10:45).
+⏳ Time's up in 15 minutes
+📣 Participants: {{< mention "alex" >}} (1,200), {{< mention "sam" >}} (0)
+{{< /reply >}}
+
+The end time is in your own timezone, and "in 15 minutes" ticks down by itself while you write. 📣 Participants is who's actually in the sprint. The number after each name is the count they joined with; it becomes something like `(1,200+300)` once they've told Sprinto how it's going, and vanishes altogether once their count is in.
+
+**Time's up.**
+
+{{< reply >}}
+🛑🛑🛑 **TIME'S UP** 🛑🛑🛑
+Please give your final word count with `/words`, e.g. `/words 150`
+📣 Participants: {{< mention "alex" >}} (1,200), {{< mention "sam" >}} (0)
+{{< /reply >}}
+
+The example number is worked out from the length of the sprint, not from anything you wrote. Since names lose their count once they've reported, the Participants line here doubles as the list of who Sprinto is still waiting on.
+
 ## Cancel
 
 Oops! Made a mistake? You can cancel a sprint with:
@@ -60,11 +96,19 @@ Join with your last word count (e.g. from your previous sprint)
 {{< slash name="words" key0="count" val0="10150" >}}
 When time's up, declare the word count of your document is now 10,150. If you started with 0 words, your word count might look more like: {{<slashembed name="words" key0="count" val0="150" >}}
 
+Either way, Sprinto answers with the words you wrote *during the sprint*, not the total in your document:
+
+{{< reply >}}
+{{< mention "alex" >}}, Word count updated: **150** words.
+{{< /reply >}}
+
+Your name is on it so the channel can tell whose count it is, but it won't ping you.
+
 {{<slash name="words" key0="count" val0="\-" >}}
 At the end of a sprint you may wish to simply leave your word count unchanged. Don't forget the dash `-` without it, Sprinto will just show your current word count.
 
 {{<slash name="words" key0="count" val0="150 new" >}}
-If you know how many _new_ words you've written, but perhaps changed documents or lost track of your starting word count, you can just declare how many of your words are `new` (written during the sprint). Use {{< slashembed name="words" key0="count" val0="0 new" >}} to reset your count to your starting word count.
+If you know how many *new* words you've written, but perhaps changed documents or lost track of your starting word count, you can just declare how many of your words are `new` (written during the sprint). Use {{< slashembed name="words" key0="count" val0="0 new" >}} to reset your count to your starting word count.
 
 {{<slash name="words" key0="count" val0="+50" >}}
 {{<alts>}}
@@ -91,6 +135,20 @@ and then give a final count with
 For example:
 {{<slash name="words" key0="count" val0="150">}}
 The rest are just for your convenience.
+
+## Typos
+
+Typed commands don't have to be spelled right. If Sprinto is confident about what you meant, it runs it and shows you what it decided:
+
+{{< reply name="alex" app="0" >}}
+{{< mention "Sprinto" >}} wrods 250
+{{< /reply >}}
+
+{{< reply >}}
+{{< mention "alex" >}}, ↳ /words : Word count updated: **250** words.
+{{< /reply >}}
+
+The `↳` line is the correction: it's the command Sprinto ran on your behalf. If nothing is close enough to be sure about, it stays quiet rather than guessing. Slash commands come from Discord's own menu, so there's nothing there to correct.
 
 ## I forgot to report
 
@@ -182,7 +240,7 @@ Generate a link to invite Sprinto to your own Discord server
 
 {{<slash name="feedback" key0="text" val0="_your feedback here_" >}}
 {{<alts>}}
-{{<atsprinto "feedback _your feedback here_">}}
+{{<atsprinto "feedback *your feedback here*">}}
 {{</alts>}}
 Give your suggestions and improvement ideas. A copy will be posted anonymously on the Sprinto Planet support server. ⟨[discord.gg/jWBcCYQ](https://discord.gg/jWBcCYQ)⟩ Please join to see the dev's response
 

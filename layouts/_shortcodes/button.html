@@ -1,11 +1,15 @@
 {{- /*
-  One mock Discord button. Label is the first positional argument.
+  One mock Discord button.
+
+  Hugo forbids mixing positional and named parameters in a single call, so
+  use one form or the other:
 
     {{< button "Allow sprints here" >}}
-    {{< button "Done" style="primary" >}}
+    {{< button "Done" "primary" >}}
+    {{< button label="Done" style="primary" >}}
 
   style: secondary (default), primary, danger, success
 */ -}}
 {{- $label := cond (isset .Params 0) (.Get 0) (.Get "label") -}}
-{{- $style := .Get "style" | default "secondary" -}}
+{{- $style := cond (isset .Params 0) (.Get 1 | default "secondary") (.Get "style" | default "secondary") -}}
 <span class="gg-btn gg-btn-{{ $style }}">{{ $label }}</span>
