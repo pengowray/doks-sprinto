@@ -20,7 +20,7 @@ const purgecss = purgeCSSPlugin({
         'data-toggle-tab', // tabs.js
         'id',
         'size',
-        'type'
+        'type',
     ],
     safelist: [
         'active',
@@ -62,13 +62,13 @@ const purgecss = purgeCSSPlugin({
         'tag',
         'tooltip2',
         'tooltiptext2',
-        'docs-navigation'
-    ]
+        'docs-navigation',
+    ],
 });
 
 export default {
   plugins: [
     autoprefixer(),
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
+    ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : []),
   ],
 };
