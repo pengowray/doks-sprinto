@@ -1,97 +1,110 @@
 ---
-title : "Settings (admin)"
+title : "Settings"
 description: "Settings"
-lead:
+lead: "One command for everything you can configure"
+url: "docs/settings-admin"
 ---
 
-All settings can be set to `on`, `off` or `default`. There's also a choice for `help` which displays help for the setting without changing it.
+Everything Sprinto can be told to do differently lives under one command: {{<slashembed name="settings">}}. Anyone can look. Changing a channel or server setting needs an {{<tag-admin>}}, that is a {{<role "@Sprint Admin">}}, a server administrator, or the server owner.
 
-### settings
+Sprinto configures nothing when it joins your server. No channel, no role, no saved settings. It works straight away in every channel it can post in, and you only come here if you want something changed.
 
-{{< slash name="settings" >}}
-{{< atsprinto "settings" >}}
+{{<alts "Where did setup-set-show-quotes and friends go?">}}
+The old `setup-set-*` commands (`setup-set-allowed-channel`, `setup-pingroles-set`, `setup-set-show-quotes`, `setup-set-show-ps`, `setup-set-show-patreon-requests`, `setup-set-autoping`, `setup-set-walltime`, `setup-set-listen-to-carl`, `setup-set-default`, `setup-show-default` and the rest) have all been removed. There were about ten of them and they all did nearly the same thing. They're now the one `/settings` command below. If an old pin or an old link sent you here, that's why.
+{{</alts>}}
 
-Display values of channel settings.
+## The six subcommands
 
-### show-patreon-requests
+### settings me
 
-{{<tag-admin>}}
+{{<slash name="settings me" >}}
 
-{{< slash name="setup-set-show-patreon-requests" key0="setting" val0="On" >}}
-{{< atsprinto "setShowPatreonRequests on" >}}
+Your own settings, and only yours. This is where you set your **chimes**: the little bells Sprinto can ring partway through a sprint. Chimes are off by default, so turn them on here if you want them. There's also a link through to your {{<slashembed name="pets">}} panel.
 
-Show / don't show requests to join Sprinto's Patreon, donate through Ko-fi (or to buy Sprinto merch) at the end of sprints.
+Nobody else's settings are affected, on any server.
 
-You can also use {{< atsprintoembed "patreon" >}} and {{< atsprintoembed "merch" >}} for links.
+### settings channel
 
-As a courtesy I allow the occassional Patreon related messages to be "turned off". There aren't many of these messages, and sometimes one might still slip through, e.g. if it's part of a news update.
+{{<slash name="settings channel" >}}
 
-### show-quotes
+What's different about *this* channel. Anyone can open it and read; an {{<tag-admin>}} can change it.
 
-{{<tag-admin>}}
+### settings server
 
-{{< slash name="setup-set-show-quotes" key0="setting" val0="On" >}}
-{{< atsprinto "setShowQuotes on" >}}
+{{<slash name="settings server" >}}
 
-Hide or show quotes at the end of sprints.
+Server-wide defaults, inherited by every channel that hasn't overridden them itself. Same rule: anyone can read, {{<tag-admin>}} to change.
 
-Quotes are meant to provoke thought and discussion. They appear approximate once every two sprints or so. If they're not appropriate for your sprinting group, turn them off.
+#### Why the panel looks empty
 
-I don't mind removing individual quotes from the database if they're problematic or even overly prescriptive.
+Both panels show **only what differs from the defaults**. On a freshly set up server that's nothing at all, so you get an almost blank panel with an "add" control. That's correct, not a bug.
 
-Feel free to report any quotes by leaving feedback with the {{< slashembed name="feedback" >}} command. Be sure to include the quote itself in your feedback. You can also join the Sprinto Planet Discord server to leave feedback.
+The idea is that the panel is a list of your decisions, not a wall of switches you have to read past. Add a setting to pin it and edit it; remove it to hand it back to the default. Adding a setting doesn't change anything on its own, it just brings the setting out where you can see it.
 
-### show-ps (post sprint text)
+A channel falls back to the server default, and the server falls back to Sprinto's built-in default. So setting `show-quotes off` once at the server level turns quotes off everywhere, and a single channel can still add `show-quotes on` for itself.
 
-{{<tag-admin>}}
+### settings roles
 
-{{< slash name="setup-set-show-ps" key0="setting" val0="On" >}}
-{{< atsprinto "setShowPS on" >}}
+{{<slash name="settings roles" >}}
 
-Show or hide all post-sprint text. Turning this off will hide quotes, updates, combined word counts, `/forgetme` help, and everything else which would otherwise be shown after the scoreboard.
+Pick the roles Sprinto mentions when a sprint starts here. It's a native Discord role picker. See [Ping roles]({{<relref "ping-roles" >}}).
 
-### set-autoping
+### settings sprint-channels
 
-{{<tag-admin>}}
+{{<slash name="settings sprint-channels" >}}
 
-{{< slash name="setup-set-autoping" key0="setting" val0="On" >}}
-{{< atsprinto "setAutoPings on" >}}
+Pick which channels sprints are allowed in. An empty list, which is the default, means sprints work anywhere. See [Allowed channels]({{<relref "whitelist" >}}).
 
-Set whether sprinters who join should automatically be pinged (mentioned) at the start of the next few sprints. If off, users will not be added to the list of users be pinged at the start of future sprints. Users can still manually use `/pingme` or `/always`. Even with autopings off, the `always_ping_role` setting will be respected, so, for example, if you have a @sprinter role which users can add themselves to and use `@sprinto always_ping_role @sprinter`, then Sprinto will alert them of new sprints via that role. Use {{<atsprintoembed "forgetallusers">}} {{<tag-admin>}} to remove all existing individual user pings.
+### settings sprint-defaults
 
-See [Ping Roles]({{< relref "ping-roles" >}}) for more info.
+{{<slash name="settings sprint-defaults" >}}
 
-### show-walltime
+This channel's default sprint: how long it runs and how long it waits before starting. Out of the box that's 15 minutes long with a 1 minute join window.
 
-{{<tag-admin>}}
+## The text form
 
-Note: This setting is being updated and these options may be out of date.
+If you'd rather type than click, every key works as text:
 
-{{< slash name="setup-set-walltime" key0="setting" val0="sometimes" >}}
-{{< atsprinto "setWalltime sometimes" >}}
+{{<atsprinto "settings show-quotes off" >}}
+{{<atsprinto "settings walltime sometimes" >}}
+{{<atsprinto "settings" >}}
 
-Show or hide display of the ending "wall time" when sprint starts. e.g. "(Runs until ⏰ :30)".
+Values are forgiving. `on`, `off`, `yes`, `no`, `true`, `false` and similar all land where you'd expect, as does `default` (which means "go back to inheriting"). Keys are forgiving too: `family-friendly`, `familyfriendly`, `family_friendly` and `clean` are the same key.
 
-* With `sometimes` (the default) it will only be shown if the sprint ends near an exact minute.
-* With `on` it will be always shown (at least for sprints longer than 2 minutes).
+Give it a key it doesn't know, or a value it can't read, and it won't scold you. It shows you the current value instead.
 
-Wall time also shown with the `/time` command for both `on` and `sometimes`.
+## Every setting
 
-### listen-to-carl
+Channel and server scope. Anyone can view, {{<tag-admin>}} to change.
 
-{{<tag-admin>}}
+| Key | Default | What it does |
+| --- | --- | --- |
+| `walltime` | on | How the start message shows the end of the sprint. `on` gives a live countdown that ticks in each reader's own client and timezone. `sometimes` gives the older static end-minute, e.g. "(Runs until ⏰ :30)", for sprints of 2 minutes or more. `off` shows the duration only. Also affects {{<slashembed name="time">}}. |
+| `show-ps` | on | The post-sprint text: quotes, combined word counts, updates, `/forgetme` help, everything below the scoreboard. Turning this off hides all of it, including anything the settings below would have shown. |
+| `show-quotes` | on | Quotes at the end of sprints, roughly one sprint in two. They're meant to provoke a bit of thought and discussion. If that's not what your group is there for, turn them off. |
+| `family-friendly` | on | Filters out the occasional crass quote. On by default, so a new server never sees the sweary ones. Turn it off if your group would rather have the full set. |
+| `show-patreon` | on | Occasional requests to support Sprinto through Patreon, Ko-fi or merch. There aren't many, and one may still slip through if it's part of a news update. |
+| `auto-pings` | on | Whether joining a sprint signs you up to be pinged at the start of the next few. With this off, joining never touches anyone's ping settings, and people who want pings use {{<slashembed name="pingme">}} themselves. Ping roles are still honoured either way. |
+| `carl` | off | Lets a feeder bot such as Carl-bot start sprints here. Sprinto ignores other bots unless you turn this on. See [Carl-bot x Sprinto]({{<relref "carlbot" >}}). |
+| `shuffle-leaderboard` | off | Lists the scoreboard in a stable random order with no rank numbers instead of ranking it, with pets at the bottom. Some groups find this takes the edge off the competition. |
+| `tidy-sprints` | off | Sprinto deletes its own join and word-count confirmations a few seconds after posting, to stop a busy sprint burying the channel. It only ever removes its own confirmations, never anything you typed. |
+| `preset` | none | The channel's default sprint, written the same way you'd write it after {{<slashembed name="sprint">}}. For example `20 iab` for a 20 minute sprint starting in a bit. Someone typing a bare {{<slashembed name="sprint">}} gets this. |
 
-{{< slash name="setup-set-listen-to-carl" key0="setting" val0="Off">}}
-{{< atsprinto "setListenToCarl off">}}
+Your own scope, under `/settings me`:
 
-By default Sprinto ignores messages from other bots. Setting "listen-to-carl" to On tells Sprinto it’s OK to listen to Carl-bot. This allows Carl-bot to start sprints on a schedule. See [Carl-bot x Sprinto]({{< relref "carlbot" >}}) for more info.
+| Key | Default | What it does |
+| --- | --- | --- |
+| `chimes` | off | How many bells you get partway through a sprint. Mid-sprint chimes are new in this release. |
+| pets | | Opens your {{<slashembed name="pets">}} panel. |
+
+## Reporting a quote
+
+If a quote is a problem, or just annoyingly prescriptive, tell me and I'll take it out. Use {{<slashembed name="feedback">}} and include the quote itself, or come and say so on the Sprinto Planet Discord server.
 
 ## See also
 
 * [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-* [Allowed channels (admin)]({{<relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
-
+* [Allowed channels]({{<relref "whitelist" >}}): keeping sprints out of channels they don't belong in
+* [Ping roles]({{<relref "ping-roles" >}}): a role to mention at every sprint start
+* [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
 * [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
-* [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
-
-* [Voice]({{<relref "voice" >}})

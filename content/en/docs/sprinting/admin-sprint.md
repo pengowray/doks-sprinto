@@ -42,10 +42,9 @@ Example:
 
 {{<tag-mc>}}
 
-{{< slash name="admin-force-cancel" >}}
+{{< slash name="cancelplease" >}}
 {{< atsprinto "cancel pls" >}}
 {{<alts>}}
-{{< slash name="cancel" key0="please" val0="True" >}}
 {{< slash name="sprint" key0="options" val0="cancel pls" >}}
 {{< atsprinto "cancel ffs" >}}
 {{< atsprinto "cancel pleeeeeeeease" >}}
@@ -57,7 +56,7 @@ Forces a running sprint to end, regardless of how many sprinters have joined.
 
 {{<tag-mc>}}
 
-{{<slash name="admin-force-nudge" >}}
+{{<slash name="nudge-please" >}}
 {{<atsprinto "nudge pls" >}}
 {{<alts>}}
 {{<slash name="sprint" key0="options" val0="nudge pls" >}}
@@ -67,11 +66,12 @@ Moves a running sprint on to the next stage immediately, typically only used for
 
 If a bug occurs and the sprint becomes stuck, {{< atsprintoembed "nudge" >}} (without the "please") can also be used by anyone to nudge the sprint along. That's if Sprinto can successfully detect that the sprint is stuck.
 
-<!--
+### go
 
-| `/admin-forget-user 123456789` or `@sprinto forgetuser 123456789` | (MC) Stops a user 123456789 getting pinged at the start of sprints, as if they had typed `/forgetme` themselves. Replace `123456789` with the ID of the Discord user. If you can't see their user id, you might have to turn on "Developer Mode" in Discord settings, then "Copy ID" will appear when you right click the user. You can also use their user name (with no `@`), if they haven't left the server. Use `/admin-forget-all-users` or `@sprinto forget_all_users` (A) to forget all users. |
-| `@sprinto pinguser <user> <number>` | (MC) Turn pings on for a user, like if they typed `/pingme`. Replace `<number>` with the number of sprints. Default is 3. For "never" use 0. For always, use 1000. |
--->
+{{<slash name="go" >}}
+{{<atsprinto "go" >}}
+
+Starts the waiting sprint right now, skipping the rest of the join window. Available to whoever started the sprint, as well as to a Sprint MC.
 
 ## See also
 

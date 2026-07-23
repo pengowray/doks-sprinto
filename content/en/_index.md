@@ -27,7 +27,7 @@ Congratulations! You've written some words! Start again and write some more!
 
 {{< alts "With a starting word count">}}
 {{< slash name="sprint" >}}
-{{< slash name="join" key0="count" val0="1000" >}}
+{{< slash name="join" key0="word-count" val0="1000" >}}
 ... <i>15 minutes later</i> ...
 {{< slash name="words" key0="count" val0="1442" >}}
 Here the starting 1000 words are automatically deducted from the final tally, so Sprinto will treat this as 442 words written.
@@ -58,7 +58,7 @@ This creates a 20 minute sprint, which will start in 2 to 3 minutes. Sprinto wil
 {{< slash name="sprint" key0="options" val0="hel iab" >}}
 Sprint for "however long" (a random length of time) "in a bit" (in 2½ to 7½ minutes. Sprinto will pick a nice start time<!-- which has the minutes as a multiple of five-->)
 
-{{< slash name="join" key0="count" val0="1000" >}}
+{{< slash name="join" key0="word-count" val0="1000" >}}
 Join the sprint with a starting count of 1000 words. These words will be deducted from your final count.
 
 {{< slash name="same" >}}
@@ -72,3 +72,7 @@ Adding a plus sign means you don't rememeber how many words you said you joined 
 
 See the docs for many more ways to use Sprinto.
 {{< /alts >}}
+
+---
+
+Coming back after a break? Sprinto's had a full rewrite. See [What's new]({{< relref "whats-new" >}}) for what changed.

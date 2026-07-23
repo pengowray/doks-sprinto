@@ -13,7 +13,7 @@ Sprinto considers anyone who has a role named {{<role "@Sprint Admin">}} or {{<r
 
 ## Sprint MC intro
 
-A _Sprint MC_ [{{<tag-mc>}}]  is a less powerful role (which Sprint Admins also automatically have). Sprint MCs can cancel sprints, or remove a single user from the the ping list, or run "locked" sprints which ordinary users cannot cancel.
+A _Sprint MC_ [{{<tag-mc>}}]  is a less powerful role (which Sprint Admins also automatically have). Sprint MCs can force-cancel sprints with {{<slashembed name="cancelplease">}}, force a stuck sprint on with {{<slashembed name="nudge-please">}}, remove a single user from the ping list, or run "locked" sprints which ordinary users cannot cancel. See [Sprint (admin)]({{<relref "admin-sprint" >}}) for the full list.
 
 Sprinto considers anyone who has a role named {{<role "@Sprint MC">}} or {{<role "@Sprint MCs">}} or {{<role "@Sprinto MC">}} or {{<role "@sprintmcs">}} (space optional, any capitalization, and will also accept Sprinto MC) to be a _Sprint MC_. Additionally anyone with Sprint Admin powers also has Sprint MC powers.
 

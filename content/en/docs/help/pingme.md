@@ -6,116 +6,98 @@ lead: "After a sprint, participants will be tagged (@mentioned) at the start of 
 
 ## Overview
 
-If you miss three sprints or use {{<slashembed name="forgetme" >}} or {{<slashembed name="sneak-away" >}} the pings will stop.
+Only people who've actually asked to be pinged get the @mention when a sprint starts. Everyone who joined is still listed on the scoreboard, just quietly, without a mention.
 
-Use {{<slashembed name="pingme" >}} to be mentioned when the next sprint starts even if you haven't sprinted recently (or to change your mind after {{< slashembed name="forgetme" >}} or {{<slashembed name="pings-never" >}}.
+If you miss three sprints, or use {{<slashembed name="forgetme" >}} or {{<slashembed name="sneak-away" >}}, the pings will stop.
 
-You can also choose to never or always receive pings at the start of sprints with {{<slashembed name="pings-never" >}} and {{<slashembed name="pings-always" >}}.
+Use {{<slashembed name="pingme" >}} to be mentioned when the next sprint starts, even if you haven't sprinted recently (or to change your mind after {{<slashembed name="forgetme" >}} or setting yourself to never).
+
+You can also choose to never or always receive pings at the start of sprints with {{<atsprintoembed "never" >}} and {{<atsprintoembed "always" >}}, or {{<slashembed name="pingme" key0="count" val0="never" >}} and {{<slashembed name="pingme" key0="count" val0="always" >}}.
+
+If you leave the server, Sprinto now stops pinging you too. That didn't used to work.
 
 ## Commands
+
+### pingme
+
+{{<slash name="pingme" >}}
+{{<atsprinto "ping me" >}}
+
+Sprinto will ping you at the start of the next 3 sprints in this channel.
+
+{{<slash name="pingme" key0="count" val0="10" >}}
+
+Choose how many sprints to be pinged at the start of (e.g. `1`, `10`, `100`). The `count` option also takes `always` or `never`, same as the commands below.
 
 ### forgetme
 
 {{<slash name="forgetme" >}}
 {{<atsprinto "forget me" >}}
 
-Sprinto wont ping you at the start of sprints until after you join another one.
+Sprinto won't ping you at the start of sprints until after you join another one.
 
 ### sneak-away
 
 {{<slash name="sneak-away" >}}
 {{<atsprinto "sneak away" >}}
 
-Sneak away like a ninja. Leave the current sprint if you're joined and Sprinto wont ping you at the start of sprints until after you join another one. This command's response will only be seen by you. Equivalent of using both {{< slashembed name="leave" >}} and {{< slashembed name="forgetme" >}} together, but the response is "ephemeral" (visible only to you).
+Sneak away like a ninja. Leave the current sprint if you've joined, and Sprinto won't ping you at the start of sprints until after you join another one. This command's response is only seen by you. Equivalent of using both {{<slashembed name="leave" >}} and {{<slashembed name="forgetme" >}} together, but "ephemeral" (visible only to you).
 
-### pingme
+### always / never
 
-{{<slash name="pingme" >}}
-{{<atsprinto "ping me" >}}
-Sprinto will ping you at the start of the next 3 sprints in this channel.
-
-<!-- | `/pingme 10` | Choose how many sprints to be pinged at the start of. (e.g. 1 or 10 or 100). This will become your default after finishing a sprint. `_pingme 3` is what you typically start with. | -->
-
-### pings-always
-
-{{<slash name="pings-always" >}}
 {{<atsprinto always >}}
-Be included in the pings at the start of all future sprints in this channel, until you change the setting again. |
+Be included in the pings at the start of all future sprints in this channel, until you change the setting again.
 
-### pings-never
-
-{{<slash name="pings-never" >}}
 {{<atsprinto never >}}
-Never ping you at the start of the sprints, even after you've done one.
+Never ping you at the start of sprints, even after you've done one.
+
+These aren't separate slash commands; use {{<slashembed name="pingme" key0="count" val0="always" >}} or {{<slashembed name="pingme" key0="count" val0="never" >}} instead.
 
 ### pings-status
 
 {{<slash name="pings-status" >}}
 {{<atsprinto pingstatus >}}
-Check your ping status
 
-### Ping
+Check your ping status.
 
-{{<atsprinto "ping" >}}
-Check Sprinto's round-trip latency to Discord's server. This is nothing to do with sprint mentions. If you used this by mistake you probably meant {{< atsprintoembed "ping me" >}}
-
-## SprintMC-only commands
-
-### forget user (by id)
+## Sprint MC-only commands
 
 {{<tag-mc>}}
 
-{{<slash name="admin-forget-user" key0="user_id" val0="_123456789_" >}}
-{{<atsprinto "forgetuser _123456789_" >}}
+These don't have slash commands of their own; use them by mentioning Sprinto.
 
-Replace _123456789_ with the Discord ID of the user.
+### forgetuser
 
-Stops a user getting pinged at the start of sprints, as if they had typed {{< slashembed name="forgetuser" >}} themselves.
+{{<atsprinto "forgetuser _user_" >}}
 
-If you can't see their user id, you might have to turn on "Developer Mode" in Discord settings, then "Copy ID" will appear when you right click the user.
+Replace _user_ with a Discord user ID, or a username with no `@` at the start. Stops that person getting pinged at the start of sprints, as if they'd used {{<slashembed name="forgetme" >}} themselves.
 
-### forget user (by name)
-
-{{<tag-mc>}}
-
-{{<slash name="admin-forget-user-by-name" key0="user" val0="_username-to-forget_" >}}
-{{<atsprinto "forgetuser _username-to-forget_" >}}
-
-Replace _username-to-forget_ with the username of the user.
-
-When using {{< atsprintoembed "forgetuser" >}}, there's no need to add an @ at the start of the username. Note this version of the command can take either an id or username.
+If you can't see someone's user ID, turn on "Developer Mode" in Discord's settings, then "Copy ID" will appear when you right-click their name.
 
 ### pinguser
 
-{{<tag-mc>}}
-
 {{<atsprinto "pinguser _user_ _number_" >}}
 
-Replace _user_ with the user's name.
-
-Replace _number_ with the number of sprints. Default is 3. For "never ping" use 0. For always ping, use 1000.
+Replace _user_ with the user's name or ID. Replace _number_ with the number of sprints; default is 3, use `0` for never, `1000` for always.
 
 Example:
-{{< atsprinto "pinguser Pengo 3" >}}
+{{<atsprinto "pinguser Pengo 3" >}}
 
-Turns pings on for Pengo, as if he'd typed {{< slashembed name="pingme" >}} himself.
+Turns pings on for Pengo, as if they'd used {{<slashembed name="pingme" >}} themselves.
 
-### pingroles-set
+## Ping roles
 
 {{<tag-admin>}}
 
-{{<slash name="setup-pingroles-set" key0="role" val0="_@rolename_" >}}
-{{<atsprinto "always_ping_role _rolename_" >}}
-
-With this command you can set a role to always get a mention at the start of sprints (in the channel the command is used). See the help page on [Ping Roles]({{<relref "ping-roles" >}}) for more on this and related commands.
+Always pinging a role at the start of sprints, rather than individual people, is now part of {{<slash name="settings roles" >}}, a native Discord picker, rather than a typed command. See [Ping roles]({{<relref "ping-roles" >}}) for the full picture.
 
 <!--
 ## Todo
 
 * (TODO) guild or channel default number of pings
-* (TODO) time-based, e.g. `/pingme for 15 hrs` or `/forgetme for 8 hrs` 
+* (TODO) time-based, e.g. `/pingme for 15 hrs` or `/forgetme for 8 hrs`
 -->
 
 ## See also
 
-- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+- [Ping roles (admin)]({{<relref "ping-roles" >}}) — Set up a role to always be pinged

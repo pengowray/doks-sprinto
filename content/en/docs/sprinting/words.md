@@ -17,27 +17,27 @@ If Sprinto didn't understand your {{< slashembed name="sprint" >}} command you c
 
 {{<tag-mc>}}
 
-{{<slash name="admin-force-cancel" >}}
+{{<slash name="cancelplease" >}}
+{{<atsprinto "cancelplease" >}}
 {{<alts>}}
-{{<atsprinto "cancel pls" >}}
-{{<slash name="cancel" key0="please" val0="True" >}}
-{{<slash name="sprint" key0="options" val0="cancel pls" >}}
-{{<atsprinto "cancel ffs" >}}
-{{<atsprinto "cancel pleeeeeeeease" >}}
+{{<atsprinto "cancelpls" >}}
+{{<atsprinto "forcecancel" >}}
 {{</alts>}}
 
 Forces a running sprint to end, regardless of how many sprinters have joined.
+
+Anyone can use it on a sprint that hasn't started yet, or one where nobody else has joined. Once a sprint is underway with other people in it, forcing it is for {{<role "@Sprint MC">}}s.
 
 ## Join a sprint
 
 {{<slash name="join" >}}
 {{<alts>}}
-{{<slash name="join" key0="count" val0="0" >}}
+{{<slash name="join" key0="word-count" val0="0" >}}
 {{<atsprinto "join" >}}
 {{</alts>}}
-Join once a sprint is started, join the sprint (with zero starting words). Note: You must join your own sprint too.
+Join the sprint with zero starting words. Note: You must join your own sprint too.
 
-{{<slash name="join" key0="count" val0="10000" >}}
+{{<slash name="join" key0="word-count" val0="10000" >}}
 {{<alts>}}
 {{<atsprinto "join 10000" >}}
 {{</alts>}}
@@ -45,13 +45,15 @@ Join with 10,000 words (This is the word count of the document you're working on
 
 {{<slash name="same" >}}
 {{<alts>}}
-{{<slash name="join" key0="count" val0="same" >}}
-{{<slash name="join" key0="count" val0="last" >}}
-{{<slash name="join" key0="count" val0="=" >}}
+{{<slash name="join" key0="word-count" val0="same" >}}
+{{<slash name="join" key0="word-count" val0="last" >}}
+{{<slash name="join" key0="word-count" val0="=" >}}
 {{<atsprinto "same" >}}
-{{<atsprinto "=" >}}
 {{</alts>}}
 Join with your last word count (e.g. from your previous sprint)
+
+{{<slash name="same" key0="adjustment" val0="+300 new" >}}
+`/same` also takes an optional adjustment, so you can pick up your last count with a tweak on top.
 
 ## Some different ways to declare or update your word count
 
@@ -71,12 +73,15 @@ If you know how many _new_ words you've written, but perhaps changed documents o
 Add another 50 new words to your count. Perhaps from your second manuscript.
 
 {{<slash name="words" key0="count" val0="10150 final" >}}
-Give your final word count early, before the sprint is over. This way Sprinto won't wait for another {{<slashembed name="words">}} from you after time's up. |
+{{<alts>}}
+{{<slash name="final" key0="count" val0="10150" >}}
+{{</alts>}}
+Give your final word count early, before the sprint is over. This way Sprinto won't wait for another {{<slashembed name="words">}} from you after time's up.
 
-{{<slash name="join" key0="count" val0="15000" >}}
+{{<slash name="join" key0="word-count" val0="15000" >}}
 You can rejoin a sprint with a different number of starting words before giving your word count with {{<slashembed name="words">}}. Sometimes it's easier.
 
-{{<slash name="join" key0="count" val0="just 200 final" >}}
+{{<slash name="join" key0="word-count" val0="just 200 final" >}}
 Late to the party? Forgot to join? Dive-bomb in just before the finish line with just your final tally and surprise everyone! You can't use this to join a sprint before it's fully underway.
 
 Why are there so many commands? All you need is to
@@ -85,7 +90,38 @@ and then give a final count with
 {{<slash name="words" key0="count" val0="_your word count_">}}
 For example:
 {{<slash name="words" key0="count" val0="150">}}
-The rest of the are just for your convenience.
+The rest are just for your convenience.
+
+## I forgot to report
+
+{{<slash name="late" key0="count" val0="10150" >}}
+{{<alts>}}
+{{<slash name="late" >}}
+{{<atsprinto "late 10150" >}}
+{{<atsprinto "latewc 10150" >}}
+{{</alts>}}
+
+The scoreboard isn't set in stone the moment it's posted. For 10 minutes after time's up you can still put your number in, or fix one you got wrong, with {{<slashembed name="late">}}. The scoreboard updates in place.
+
+It takes the same sorts of counts as {{<slashembed name="words">}}, so {{<slashembed name="late" key0="count" val0="+250" >}} and {{<slashembed name="late" key0="count" val0="300 new" >}} both work.
+
+The host can change that window when starting the sprint, with `late 20` for longer or `late none` to turn it off. See [Sprint (all options)]({{<relref "sprint" >}}).
+
+## Undo
+
+{{<slash name="undo" >}}
+{{<alts>}}
+{{<atsprinto "undo">}}
+{{</alts>}}
+Take back your last word count.
+
+{{<slash name="redo" >}}
+{{<alts>}}
+{{<atsprinto "redo">}}
+{{</alts>}}
+Put it back again.
+
+Both step through your own reports one at a time, up to 100 of them, so you can undo your way out of a bad number without cancelling anything.
 
 ## More sprint-related commands
 
@@ -99,7 +135,8 @@ By itself will show your starting and current word count.
 {{<slash name="time" >}}
 {{<alts>}}
 {{<atsprinto "time">}}
-{{<slash name="sprint" key0="options" val0="time" >}}
+{{<atsprinto "timeleft">}}
+{{<atsprinto "howlong">}}
 {{</alts>}}
 How long is remaining in the current sprint?
 
@@ -109,9 +146,22 @@ Leave a sprint you have joined.
 {{<slash name="cancel" >}}
 {{<alts>}}
 {{<atsprinto "cancel">}}
-{{<slash name="sprint" key0="options" val0="cancel" >}}
 {{</alts>}}
 Cancel the active sprint.
+
+{{<slash name="go" >}}
+{{<alts>}}
+{{<atsprinto "go">}}
+{{<atsprinto "begin">}}
+{{</alts>}}
+Don't wait out the rest of the join window, start the sprint now. Only the person who started it, or a {{<role "@Sprint MC">}}, can do this.
+
+{{<slash name="nudge" >}}
+{{<alts>}}
+{{<atsprinto "nudge">}}
+{{<atsprinto "results">}}
+{{</alts>}}
+If a sprint looks stuck waiting on someone's word count, this asks Sprinto to move it along.
 
 {{<atsprinto "who" >}}
 Who's in the current sprint.
@@ -130,11 +180,11 @@ Show longer help in the channel. Still it's not nearly as complete as the help h
 {{<atsprinto "invite" >}}
 Generate a link to invite Sprinto to your own Discord server
 
-{{<slash name="feedback" >}}
+{{<slash name="feedback" key0="text" val0="_your feedback here_" >}}
 {{<alts>}}
 {{<atsprinto "feedback _your feedback here_">}}
 {{</alts>}}
-Give your your suggestions and improvement ideas. A copy will be posted anonymously on the Sprinto Planet support server. ⟨[discord.gg/jWBcCYQ](https://discord.gg/jWBcCYQ)⟩ Please join to see the dev's response
+Give your suggestions and improvement ideas. A copy will be posted anonymously on the Sprinto Planet support server. ⟨[discord.gg/jWBcCYQ](https://discord.gg/jWBcCYQ)⟩ Please join to see the dev's response
 
 ## See also
 

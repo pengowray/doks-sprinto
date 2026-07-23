@@ -1,56 +1,42 @@
 ---
-title : "Allowed channels (admin)"
-description: Admin whitelist commands
+title : "Sprint channels"
+description: Choosing which channels sprints can run in
 lead: 
 url: "docs/allowed-channels"
 ---
-### Sprinting channel whitelist (Sprinto Setup)
 
-If any channels on your server are set as 'allowed' with `set-allowed-channel` then starting sprints will be disallowed in channels which have not been set as allowed. When a member of your server tries to sprint in a channel which has not been allowed they'll pointed to all allowed channels. If no channels are explicitly set as 'allowed' (the default) then Sprinto allows sprinting in all channels.
+By default sprints work in every channel Sprinto can post in. If that's not what you want, you can name the channels where sprints belong, and Sprinto will turn them down everywhere else.
 
-Alternatively, you can use Discord's permissions system to disallow Sprinto from reading or sending messages in channels where he should not be used or seen. You may also have to remove permissions from users to use bot commands in those channels too. However, using the `set-allowed-channel` command (detailed below) is simpler and is recommended.
+{{<slash name="settings sprint-channels" >}}
 
-Note: Sprinto does not have a concept of secret or hidden channels. Sprinto will attempt to point Discord users to a sprint room even if the user does not have permission to see or use that channel.
+That opens a native Discord channel picker. Choose the channels sprints are allowed in and save. Anyone can open it and see the list; changing it needs an {{<tag-admin>}}, that is a {{<role "@Sprint Admin">}}, a server administrator, or the server owner.
 
-All these commands require an {{<tag-admin>}}, that is: a {{<role "@Sprint Admin">}}, server administrator or server owner.
+## How the list behaves
 
-### set-allowed-channel
+* **An empty list means sprints work anywhere.** That's the default, and it's not a mistake. You only need this command if you want sprints restricted.
+* Once the list has anything in it, {{<slashembed name="sprint">}} in any other channel is refused, and the person is pointed at the channels that do allow it.
+* Take everything back off the list and you're back to sprints working anywhere.
+* **DMs always work**, whatever the list says.
 
-{{<tag-admin>}}
+Sprinto has no concept of secret or hidden channels. When it points someone at an allowed channel it will name that channel even if they can't see it.
 
-{{<slash name="setup-set-allowed-channel" >}}
+Alternatively you can use Discord's own permissions and stop Sprinto reading or posting in the channels it shouldn't appear in. That works, but you may also have to take command permissions away from members in those channels, so the picker above is usually less fiddly.
+
+## Text forms
+
+The old underscore commands still work if they're in your muscle memory or your server's pins:
+
 {{<atsprinto "set_sprinting_channel_here" >}}
-
-Whitelist a channel to allow sprints to be run in it. Multiple channels can be selected by using this command in multiple channels.
-
-Starts using a whilelist if it was previously not used.
-
-### unset-allowed-channel
-
-{{<tag-admin>}}
-
-{{<slash name="setup-unset-allowed-channel" >}}
 {{<atsprinto "unset_sprinting_channel_here" >}}
-
-Remove a channel from the whitelist. If none are left on the whitelist, sprinting is not restricted to any channel.
-
-### clear-allowed-channels
-
-{{<tag-admin>}}
-
-{{<slash name="setup-clear-allowed-channels" >}}
 {{<atsprinto "clear_allowed_channels" >}}
 
-Clears the whitelist and stops using it. Allows sprints to be run in all channels.
+They act on the channel you type them in, and clearing empties the list so sprints work anywhere again. The picker does the same job in one go, so it's the better habit.
 
-<!-- Previously named "/setup-reset-sprinting-channels" but sometimes people accdientally used that command because it had "sprint" in it. Also: @sprinto reset_sprinting_channels -->
-
-<!-- Alternatively, you can remove Sprinto's _Send Messages_ permission in rooms you don't want Sprinto to respond in, or remove his _Read Messages_ permission in channels you don't want Sprinto seen in. -->
+<!-- Previously named "/setup-reset-sprinting-channels" but sometimes people accidentally used that command because it had "sprint" in it. Also: @sprinto reset_sprinting_channels -->
 
 ## See also
 
 - [Overview of Help]({{<relref "overview" >}})
-- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+- [Settings]({{<relref "settings" >}}): everything else you can configure
 - [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-
 - [Admin commands]({{<relref "admin" >}})

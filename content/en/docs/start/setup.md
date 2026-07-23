@@ -3,40 +3,117 @@ title : "Setting up Sprinto"
 description: 
 lead: 
 ---
-## Optional steps
+## The short version
 
-Once you've [Invited Sprinto to your Discord Server]({{< relref "invite" >}}), you can start sprinting right away. However, there's many optional steps you can take as a server owner or administrator to make things better.
+Invite Sprinto, then run {{<slashembed name="sprint">}}. That's genuinely it.
 
-1. **Create a dedicated sprint room (or two).** Sprinto usage can quickly overwhelm any chat room, so almost all servers create a dedicated sprint channel with a name like `#writing-sprints`, `#sprints-and-excerpts` or something thematically appropriate for their server like `#sprinting_dojo`.
+Sprinto sets nothing up when he joins. He doesn't create a channel, he doesn't create a role, he doesn't write any settings. He just works, straight away, in every channel he can see. If you never touch a single option on this page your sprints will still run.
 
-   Sprinto often fails to see any usage when he has to share a general `#bots` channel. Some servers even have two sprint channels, one for short spontaneous sprints (perhaps 15 or 30 minutes) and one for longer, pre-planned sprints (up to an hour).
+Everything below is optional. The first section is the part most servers are glad they did.
 
-   Sprints started in different channels run independently. You cannot run more than one simultaneous sprint in a channel.
+## Worth doing first (about five minutes)
 
-2. Rename the {{<role "@Sprinto">}} role to {{<role "@Role for Sprinto">}} to make it easier to use Sprinto.
+### Make a dedicated sprint channel (or two)
 
-   Why is this necessary? Sprinto accepts commands in two ways, either as slash commands such as {{<slashembed name="time">}} or as commands which start by mentioning Sprinto, for example: {{<atsprintoembed "time">}}. Bots on Discord—including Sprinto—automatically create a "role" with their own name ({{<role "@Sprinto">}}) which can be mentioned in an almost identical way to mentioning Sprinto the bot ({{<atsprintoembed>}}). If someone mentions Sprinto the role instead of Sprinto the bot, then their command is confusingly ignored. Renaming the role prevents this.
+Sprinto usage can quickly overwhelm any chat room, so almost all servers create a dedicated sprint channel with a name like `#writing-sprints`, `#sprints-and-excerpts` or something thematically appropriate for their server like `#sprinting_dojo`.
 
-3. **Create a Sprint MC role.** If you create a role named {{<role "@Sprint MC">}} (or {{<role "@Sprint MCs">}}), anyone assigned the role will have additional powers to help run and manage sprints, such as forcing a sprint to end.
+Sprinto often fails to see any usage when he has to share a general `#bots` channel. Some servers even have two sprint channels, one for short spontaneous sprints (perhaps 15 or 30 minutes) and one for longer, pre-planned sprints (up to an hour).
 
-   Note: The server owner and administrators also have the permissions of {{<role "@Sprint MC">}}
+Sprints started in different channels run independently. You cannot run more than one simultaneous sprint in a channel.
 
-   See [Admin Commands]({{< relref "admin" >}}) for more info on this role and the Sprint Admin role.
+### Rename the {{<role "@Sprinto">}} role
 
-4. **Create a Sprint Admin role.** Commands for configuring Sprinto require someone with a role named {{<role "@Sprint Admin">}}, though they'll also work for the server owner and administrators. See [Admin Commands]({{< relref "admin" >}}) for more info on this role and the Sprint MC role.
+Rename the {{<role "@Sprinto">}} role to {{<role "@Role for Sprinto">}} to make it easier to use Sprinto.
 
-5. Use {{< atsprintoembed "create_active_role" >}} to set up an {{<role "@Active Sprinters">}} role.
+Why is this necessary? Sprinto accepts commands in two ways, either as slash commands such as {{<slashembed name="time">}} or as commands which start by mentioning Sprinto, for example: {{<atsprintoembed "time">}}. Bots on Discord, including Sprinto, automatically create a "role" with their own name ({{<role "@Sprinto">}}) which can be mentioned in an almost identical way to mentioning Sprinto the bot ({{<atsprintoembed>}}). If someone mentions Sprinto the role instead of Sprinto the bot, then their command is confusingly ignored. Renaming the role prevents this.
 
-   Anyone participating in a sprint will be automatically added to the {{<role "@Active Sprinters">}} role during the sprint, so everyone can see sprinters (and that a sprint is happening) in the members list. See [Active Sprinter Role]({{< relref "ActiveSprinter" >}}) for more info on this role and other related commands.
+### Check Sprinto can actually post
 
-6. Sprints in the wrong rooms? If you want to prevent anyone starting a sprint outside of the sprint rooms, you can use {{< slashembed name="setup-set-allowed-channel" >}} in the channel or channels where you want to allow sprints to be run. For more info and other related commands, see [Allowed Channels]({{< relref "whitelist" >}}).
+In your sprint channel, run {{<slashembed name="sprint">}}. If Sprinto can't post there, he'll quietly tell you so in a message only you can see, rather than starting a sprint nobody can follow. If that happens, check the channel's permissions and give him Send Messages.
 
-7. To help users see Sprinto you can order his role to place him higher in the members list. Server Settings > Roles > Drag the _Sprinto_ role up as high as you're comfortable.
+## Roles you create yourself
 
-8. If other bots have similar commands which may confuse or trip up sprinters, you can remove their permissions in your sprinting channels to make it easier to use and find Sprinto's commands. Similarly you can remove permission to use Sprinto commands elsewhere.
+Two roles give people extra powers over sprints:
 
-9. **Rename Sprinto** and give him a thematically suitable nickname on your server, such as Sir Sprinto Esquire. (Right-click on Sprinto and "Change Nickname"). Note: Sprinto may occassionally still refer to himself as "Sprinto".
+* {{<role "@Sprint MC">}} can force sprints along: cancelling, nudging, running locked sprints.
+* {{<role "@Sprint Admin">}} can change Sprinto's settings.
 
-10. Feel free to **plug your writing server** on #plug-your-writing-server on Sprinto's support server.
+Sprinto never creates these roles. You make them yourself, like any other Discord role, and he matches them **by name**. Capitalisation doesn't matter, the space is optional, and plurals work, so {{<role "@Sprint MC">}}, {{<role "@sprintmcs">}} and {{<role "@Sprinto MC">}} are all the same thing to him.
 
-11. (Coming soon) Change the default Sprint times.
+The server owner and anyone with Administrator already have both, so on a small server you may not need either role at all.
+
+Full detail is on the [Admin commands]({{< relref "admin" >}}) page.
+
+## Optional configuration
+
+All of these are optional and all of them can be changed later.
+
+### Restrict where sprints can run
+
+{{<tag-admin>}}
+
+{{< slash name="settings sprint-channels" >}}
+
+Opens Discord's own channel picker. Choose the channels where sprints are allowed.
+
+An empty list means sprints work anywhere, and that's the default. DMs always work regardless. More at [Allowed channels]({{< relref "whitelist" >}}).
+
+### Ping a role when a sprint starts
+
+{{<tag-admin>}}
+
+{{< slash name="settings roles" >}}
+
+Opens Discord's role picker. If people on your server can self-assign a role like {{<role "@Sprinters">}}, pick it here and Sprinto will mention it whenever a sprint starts in this channel. More at [Ping roles]({{< relref "ping-roles" >}}).
+
+### Set this channel's default sprint
+
+{{<tag-admin>}}
+
+{{< slash name="settings sprint-defaults" >}}
+
+Sets the default length and start time for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute. A long-form channel might prefer 30 minutes starting in 5.
+
+### Everything else
+
+{{<tag-admin>}}
+
+{{< slash name="settings channel" >}}
+{{< slash name="settings server" >}}
+
+`channel` covers this one channel; `server` sets the default for every channel that hasn't been given its own answer. Anyone can look; you need to be an admin to change anything.
+
+Both open an add/remove panel that **only lists what differs from the defaults**. On a freshly invited Sprinto that panel is nearly empty. That's the point, not a fault: you're looking at your changes, not at a wall of options you never touched. Add a setting and it appears; remove it and it goes back to the default and disappears again.
+
+See [Settings]({{< relref "settings" >}}) for the full list of keys.
+
+### The Active Sprinters role
+
+{{<tag-admin>}}
+
+{{< slash name="create-active-role" >}}
+
+Creates an {{<role "@Active Sprinters">}} role. Anyone in a running sprint is added to it for the duration, so sprinters (and the fact that a sprint is happening at all) show up in the members list. Sprinto needs Manage Roles for this one. See [Active Sprinter role]({{< relref "activesprinter" >}}).
+
+## Settings worth knowing about
+
+Three defaults that servers most often want to change:
+
+* **family-friendly** is **on**, which keeps the sweary quotes out. Turn it off if your server would rather have them.
+* **tidy-sprints** is **off**. Turn it on and Sprinto deletes his own join and word-count confirmations, so the channel keeps just the sprint itself.
+* **shuffle-leaderboard** is **off**, so the scoreboard is ranked by word count. Turn it on and the ranks come off entirely: everyone is listed in a random order, with counts still shown. Good for a server that would rather nobody came first.
+
+Set any of them with {{<slashembed name="settings channel">}} or {{<slashembed name="settings server">}}, or in text: {{<atsprintoembed "settings tidy-sprints on">}}. All of them are covered on the [Settings]({{< relref "settings" >}}) page.
+
+## Cosmetic and nice to have
+
+* **Rename Sprinto.** Give him a thematically suitable nickname on your server, such as Sir Sprinto Esquire. (Right-click on Sprinto and "Change Nickname".) He may occasionally still refer to himself as "Sprinto".
+* **Move him up the members list.** Server Settings > Roles > drag the _Sprinto_ role up as high as you're comfortable, so people can find him.
+* **Keep other bots out of the sprint channel.** If other bots have similar commands which may confuse or trip up sprinters, remove their permissions in your sprinting channels. You can do the reverse too, and remove permission to use Sprinto's commands elsewhere.
+* **Plug your writing server** on #plug-your-writing-server on Sprinto's [support server](https://discord.gg/TZJ8YVU).
+
+## See also
+
+* [Sprint basics]({{< relref "basics" >}}) for how sprints actually run
+* [Admin commands]({{< relref "admin" >}})
+* [Settings]({{< relref "settings" >}})
