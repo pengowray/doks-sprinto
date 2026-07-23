@@ -6,6 +6,7 @@ disableHugoGeneratorInject = true
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
+languageCode = "en-US"
 rssLimit = 10
 
 [pagination]
@@ -16,32 +17,38 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 # defaultContentLanguageInSubdir = true
 
-# add redirects/headers
+# hugo_stats.json feeds PurgeCSS (see config/postcss.config.js)
+[build.buildStats]
+  enable = true
+
 [outputs]
-home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
-section = ["HTML", "RSS", "SITEMAP"]
+home = ["html", "rss", "sitemap", "searchIndex", "llms"]
+page = ["html", "markdown"]
+section = ["html", "rss", "sitemap"]
 
-# remove .{ext} from text/netlify
-[mediaTypes."text/netlify"]
-suffixes = [""]
-delimiter = ""
-
-# add output format for netlify _redirects
-[outputFormats.REDIRECTS]
-mediaType = "text/netlify"
-baseName = "_redirects"
+# add output format for the FlexSearch index
+[outputFormats.searchIndex]
+mediaType = "application/json"
+baseName = "search-index"
 isPlainText = true
 notAlternative = true
 
-# add output format for netlify _headers
-[outputFormats.HEADERS]
-mediaType = "text/netlify"
-baseName = "_headers"
+# add output format for the "copy as Markdown" buttons
+[outputFormats.markdown]
+baseName = "index"
+isHTML = false
 isPlainText = true
-notAlternative = true
+mediaType = "text/markdown"
+
+# add output format for llms.txt
+[outputFormats.llms]
+baseName = "llms"
+isHTML = false
+isPlainText = true
+mediaType = "text/plain"
 
 # add output format for section sitemap.xml
-[outputFormats.SITEMAP]
+[outputFormats.sitemap]
 mediaType = "application/xml"
 baseName = "sitemap"
 isHTML = false
@@ -50,7 +57,7 @@ noUgly = true
 rel  = "sitemap"
 
 [caches]
-  [caches.getjson]
+  [caches.getresource]
     dir = ":cacheDir/:project"
     maxAge = "10s"
 
@@ -71,6 +78,7 @@ rel  = "sitemap"
 # termscond = "/:slug"
 
 [minify.tdewolff.html]
+  keepComments = true # if false, the build signature is stripped
   keepWhitespace = false
 
 [related]
@@ -86,3 +94,10 @@ rel  = "sitemap"
     [[related.indices]]
     name = "date"
     weight = 10
+
+[imaging]
+  anchor = "Center"
+  bgColor = "#ffffff"
+  hint = "photo"
+  quality = 85
+  resampleFilter = "Lanczos"
