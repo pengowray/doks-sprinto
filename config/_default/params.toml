@@ -1,78 +1,22 @@
-# Meta Data for SEO
-
-## Homepage
+# Hugo
 title = "Sprinto"
-titleSeparator = "-"
-titleAddition = "Discord sprinting bot"
+titleAddition = "Discord sprinting bot" # used for the homepage <title>, see layouts/_partials/seo/title.html
 description = "Sprinto brings creators together."
+images = ["images/default-image.png"]
 
-## Documentation
-# docsVersion = "0.3"
+# mainSections
+mainSections = ["docs"]
 
-## Open Graph
-# images = ["doks.png"]
-ogLocale = "en_US"
-# domainTLD = "doks.netlify.app"
-domainTLD = "sprintobot.com"
-titleHome = "Sprinto bot"
-
-## Twitter Cards
-twitterSite = "@sprintobot"
-twitterCreator = "@pengowray"
-
-## JSON-LD
-# schemaType = "Person"
-schemaType = "Organization"
-schemaName = "Sprinto Discord Bot"
-schemaAuthor = "Pengo Wray"
-schemaAuthorTwitter = "https://twitter.com/pengowray"
-# schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/pengowray"
-schemaLocale = "en-US"
-# TODO
-# schemaLogo = "logo-doks.png"
-# schemaLogoWidth = 512
-# schemaLogoHeight = 512
-# schemaImage = "doks.png"
-# schemaImageWidth = 1280
-# schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/sprintobot"
-schemaLinkedIn = ""
-schemaGitHub = "https://github.com/pengowray/sprinto"
-schemaSection = "blog"
+# Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
+math = false # false (default) or true
+mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 googleAnalytics = 'G-KJELGBPRHT'
 
-## Sitelinks Search Box
-siteLinksSearchBox = false
-
-## Chrome Browser
-themeColor = "#fff"
-
-# Images - Temporarily left in place for backward compatibility
-quality = 85
-bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
-lqipWidth = "20x"
-smallLimit = "300"
-
-# Images
-imageResponsive = true
-imageConvertTo = "webp"
-imageImageSizes = ["480","720","1080","1280","1600","2048"]
-singleSize = false
-imageAddClass = "img-fluid lazyload blur-up"
-
-### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
-fillImage = "1270x740 Center" # normalize image size
+[social]
+  twitter = "sprintobot"
 
 # Footer
-#footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
-#footer = "Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
-#footer = "[Invite Sprinto](https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576) ⸻ [Join Support Server](https://discord.gg/7ZSuEgM) ⸻ [top.gg](https://top.gg/bot/421646775749967872) ⸻ [Sprinto on Patreon](https://www.patreon.com/pengowray)** ⸻ [Buy me a coffee](https://ko-fi.com/pengowray) (Ko-fi)"
-#footer = "<a href=\"https://discord.gg/7ZSuEgM\">Sprinto Support Server</a> ⸻ <a href=\"https://www.patreon.com/pengowray\">Sprinto on Patreon</a> ⸻ <a href=\"https://ko-fi.com/pengowray\">Buy me a coffee</a> (Ko-fi) <br> Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
 footer = """<a class=\"text-muted\" href=\"https://discord.gg/7ZSuEgM\">Join Sprinto's Support Server</a>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJELGBPRHT"></script>
@@ -85,51 +29,135 @@ footer = """<a class=\"text-muted\" href=\"https://discord.gg/7ZSuEgM\">Join Spr
 </script>
 """
 
-# Feed
-copyRight = "Copyright (c) 2023 Pengo Wray"
-
 # Alert
-alert = false
-alertDismissable = true
-# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-# alertText = "Introducing Sprinto! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
 alertText = "Introducing Sprinto!"
 
-# Edit Page
-# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
-repoHost = "GitHub"
-#repoHost = "Gitea"
-docsRepo = "https://github.com/pengowray/doks-sprinto"
-docsRepoBranch = "master"
-# docsRepoSubPath = ""
-docsRepoSubPath = "docs"
-editPage = false
-lastMod = false
+# Doks (@thulite/doks-core)
+[doks]
+  # Color mode
+  colorMode = "auto" # auto (default), light or dark
+  colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
 
-[sections]
-  # sectionNav = ["docs", "guides"]
-  sectionNav = ["docs", "blog"]
+  # Navbar
+  navbarSticky = true # true (default) or false
+  containerBreakpoint = "xxl" # "", "sm", "md", "lg", "xl", "xxl", or "fluid" (default)
 
-[options]
-  lazySizes = true
-  clipBoard = true
-  instantPage = true
-  flexSearch = true
-  searchSectionsShow = []
-  searchSectionsIndex = []
-  darkMode = true
-  bootStrapJs = true
-  breadCrumb = false
-  highLight = true
-  kaTex = false
-  multilingualMode = false
-  docsVersioning = false
-  fullWidth = false
-  navbarSticky = true
-  toTopButton = false
-  scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
+  ## Button
+  navBarButton = false # false (default) or true
+  navBarButtonUrl = "/docs/invite-sprinto/"
+  navBarButtonText = "Invite Sprinto"
 
-[menu]
-  [menu.section]
-    auto = true
-    collapsibleSidebar = false
+  # FlexSearch
+  flexSearch = true # true (default) or false
+  searchExclKinds = [] # list of page kinds to exclude from search indexing
+  searchExclTypes = [] # list of content types to exclude from search indexing
+  showSearch = [] # [] (all pages, default) or homepage (optionally) and list of sections
+  indexSummary = false # true or false (default)
+
+  ## Search results
+  showDate = false # false (default) or true
+  showSummary = true # true (default) or false
+  searchLimit = 99 # 0 (no limit, default) or natural number
+
+  # Global alert
+  alert = false # false (default) or true
+  alertDismissable = true # true (default) or false
+
+  # Bootstrap
+  bootstrapJavascript = true # false (default) or true
+
+  # Nav
+  sectionSwitcher = false # true or false (default)
+  sectionNav = ["docs", "blog"] # ["docs"] (default) or list of sections
+  toTopButton = false # false (default) or true
+  breadcrumbTrail = false # false (default) or true
+  headlineHash = true # true (default) or false
+  scrollSpy = false # true (default) or false
+
+  # Multilingual
+  multilingualMode = false # false (default) or true
+  showMissingLanguages = true # true (default) or false
+
+  # Versioning
+  docsVersioning = false # false (default) or true
+  docsVersion = "1.0"
+
+  # UX
+  headerBar = false # true (default) or false
+  backgroundDots = false # true (default) or false
+  aiButtons = true # true (default) or false
+
+  # Homepage
+  sectionFooter = false # false (default) or true
+
+  # Blog
+  relatedPosts = false # false (default) or true
+  imageList = true # true (default) or false
+  imageSingle = true # true (default) or false
+
+  # Repository
+  editPage = false # false (default) or true
+  lastMod = false # false (default) or true
+  repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
+  docsRepo = "https://github.com/pengowray/doks-sprinto"
+  docsRepoBranch = "master" # main (default), master, or <branch name>
+  docsRepoSubPath = "docs" # "" (none, default) or <sub path>
+
+  krokiURL = "https://kroki.io"
+
+  [doks.menu]
+    [doks.menu.section]
+      auto = true # true (default) or false
+      collapsibleSidebar = false # true (default) or false
+
+# Render hooks
+[render_hooks.image]
+  errorLevel = 'ignore' # ignore (default), warning, or error (fails the build)
+
+[render_hooks.link]
+  errorLevel = 'ignore' # ignore (default), warning, or error (fails the build)
+  highlightBroken = false # true or false (default)
+
+# Images (@thulite/images)
+[thulite_images]
+  [thulite_images.defaults]
+    decoding = "async" # sync, async, or auto (default)
+    fetchpriority = "auto" # high, low, or auto (default)
+    loading = "lazy" # eager or lazy (default)
+    widths = [480, 720, 1080, 1280, 1600, 2048]
+    sizes = "auto" # 100vw (default), 75vw, or auto for example
+    process = "" # "fill 1600x900" or "fill 2100x900" for example
+    lqip = "20x webp q20" # "16x webp q20" or "21x webp q20" for example
+
+# Inline SVG (@thulite/inline-svg)
+[inline_svg]
+  iconSetDir = "tabler-icons" # tabler-icons (default)
+  iconSetVariant = "outline" # outline (default) or filled
+
+# SEO (@thulite/seo)
+[seo]
+  [seo.title]
+    separator = "-" # "|" (default)
+    suffix = "" # site title (default)
+  [seo.description]
+    summaryFallback = true # fall back to the page summary, as the old theme did
+    siteParamsFallback = true # then to the site description
+    [seo.description.length]
+      errorLevel = 'ignore' # ignore, warning (default), or error
+  [seo.favicons]
+    icon = "favicon.png" # favicon.png (default)
+    svgIcon = "favicon.svg" # favicon.svg (default)
+  [seo.schemas]
+    type = "Organization" # Organization (default) or Person
+    logo = "favicon-512x512.png"
+    name = "Sprinto Discord Bot"
+    sameAs = [
+      "https://github.com/pengowray/sprinto",
+      "https://bsky.app/profile/sprintobot.com",
+      "https://twitter.com/sprintobot",
+    ]
+    images = ["images/default-image.png"]
+    article = []
+    newsArticle = []
+    blogPosting = ["blog"]
+    product = []

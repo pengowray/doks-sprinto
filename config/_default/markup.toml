@@ -3,6 +3,11 @@ defaultMarkdownHandler = "goldmark"
 [goldmark]
   [goldmark.extensions]
     linkify = false
+    [goldmark.extensions.passthrough]
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
   [goldmark.parser]
     autoHeadingID = true
     autoHeadingIDType = "github"
@@ -13,14 +18,18 @@ defaultMarkdownHandler = "goldmark"
     unsafe = true
 
 [highlight]
-  codeFences = false
+  anchorLineNos = false
+  codeFences = true
   guessSyntax = false
-  hl_Lines = ""
+  hl_Lines = ''
+  hl_inline = false
+  lineAnchors = ''
   lineNoStart = 1
   lineNos = false
-  lineNumbersInTable = true
+  lineNumbersInTable = false
   noClasses = false
-  style = "dracula"
+  noHl = false
+  style = 'monokai'
   tabWidth = 4
 
 [tableOfContents]

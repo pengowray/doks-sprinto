@@ -1,6 +1,8 @@
+title = "Sprinto"
 baseurl = "https://sprintobot.com/"
 # baseurl = "https://morse.games/sprinto"
 canonifyURLs = false
+copyright = "Copyright (c) 2023 Pengo Wray"
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
