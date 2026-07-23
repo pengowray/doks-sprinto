@@ -6,8 +6,9 @@ url: "docs/emoji-pets"
 ---
 ## Pets
 
-<!-- TODO(owner): replace with a local asset, this CDN link can expire -->
-![Emoji Pet demo](https://cdn.discordapp.com/attachments/622903029330346006/622989709626441730/unknown.png)
+<!-- TODO(owner): a screenshot of the /pets panel would suit this page. The old
+     one was a Discord CDN attachment link that has since 404'd, so it is
+     removed rather than left broken. Put a replacement in assets/images/. -->
 
 A pet is a small cosmetic companion that sprints alongside you and shows up on the scoreboard.
 

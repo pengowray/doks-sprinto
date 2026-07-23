@@ -101,7 +101,7 @@ Three defaults that servers most often want to change:
 
 * **family-friendly** is **on**, which keeps the sweary quotes out. Turn it off if your server would rather have them.
 * **tidy-sprints** is **off**. Turn it on and Sprinto deletes his own join and word-count confirmations, so the channel keeps just the sprint itself.
-* **shuffle-leaderboard** is **off**, so the scoreboard is ranked by word count. Turn it on if you'd rather nobody came first.
+* **shuffle-leaderboard** is **off**, so the scoreboard is ranked by word count. Turn it on and the ranks come off entirely: everyone is listed in a random order, with counts still shown. Good for a server that would rather nobody came first.
 
 Set any of them with {{<slashembed name="settings channel">}} or {{<slashembed name="settings server">}}, or in text: {{<atsprintoembed "settings tidy-sprints on">}}. All of them are covered on the [Settings]({{< relref "settings" >}}) page.
 
