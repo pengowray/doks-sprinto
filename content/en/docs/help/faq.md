@@ -40,9 +40,15 @@ No, sorry. Keeping track of sprints is high on my to-do list and I'd like to add
 
 ## How about back-to-back sprints? (also called chain wars or word crawls)
 
-Nope, sorry. Also high on the list.
+Yes. `/sprint` runs chains directly. Put any of these in its `options`:
 
-If you need one sprint to start the moment the other ends, the best way to do it right now is to run two sprints in different channels on your server. Have the second one start when the first ends. This will allow time for final word counts to be given for the first sprint.
+- `25 then 50 then 15` runs three sprints in a row.
+- `25 break 7 x3` runs the same 25 minute sprint three times, with a 7 minute break between each.
+- `pomo x4` runs four 25 minute pomodoro blocks with 5 minute breaks in between.
+
+Up to eight blocks, and 5 minutes between them unless you ask for something else. If a chain is running and you'd rather not wait out the gap, the person who started the sprint, or a Sprint MC, can jump straight to the next block with `/go`.
+
+See [Sprint (all options)]({{<relref "sprint" >}}) for the full chain grammar.
 
 ## What is Sprinto written in?
 
@@ -101,10 +107,12 @@ Sprinto is a non-sentient robot and so has no ability (for now) to think or feel
 
 ## Where can I ask more questions?
 
-Come to Sprinto Planet—Sprinto's support server—and ask away, or use the `/feedback` command.
+Come to Sprinto Planet, Sprinto's support server, and ask away, or use the `/feedback` command.
+
+Feedback is posted anonymously on Sprinto Planet: the post doesn't name you or your server. If the developer answers, the answer comes back to you in the channel you asked from, so you don't have to join Sprinto Planet to hear back.
 
 Examples:
-{{<slash name="feedback" key0="your-feedback" val0="Why is Sprinto so awesome?" >}}
+{{<slash name="feedback" key0="text" val0="Why is Sprinto so awesome?" >}}
 {{<atsprinto "feedback Where can I give to help Sprinto's development?" >}}
 
 ## See also

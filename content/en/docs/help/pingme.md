@@ -6,7 +6,7 @@ lead: "After a sprint, participants will be tagged (@mentioned) at the start of 
 
 ## Overview
 
-Only people who've actually asked to be pinged get the @mention when a sprint starts. Everyone who joined is still listed on the scoreboard, just quietly, without a mention.
+Joining a sprint signs you up for pings at the start of the next 3 sprints in that channel, unless an admin has turned `autopings` off there. Only people on that list get the @mention; everyone else in the sprint is still listed by name, just quietly.
 
 If you miss three sprints, or use {{<slashembed name="forgetme" >}} or {{<slashembed name="sneak-away" >}}, the pings will stop.
 
@@ -21,7 +21,7 @@ If you leave the server, Sprinto now stops pinging you too. That didn't used to 
 ### pingme
 
 {{<slash name="pingme" >}}
-{{<atsprinto "ping me" >}}
+{{<atsprinto "pingme" >}}
 
 Sprinto will ping you at the start of the next 3 sprints in this channel.
 
@@ -72,13 +72,12 @@ The other answers you can get are `your pings are off`, `I'll ping you at the st
 
 {{<tag-mc>}}
 
-These don't have slash commands of their own; use them by mentioning Sprinto.
-
 ### forgetuser
 
+{{<slash name="admin-forget-user" key0="user" val0="_user_" >}}
 {{<atsprinto "forgetuser _user_" >}}
 
-Replace _user_ with a Discord user ID, or a username with no `@` at the start. Stops that person getting pinged at the start of sprints, as if they'd used {{<slashembed name="forgetme" >}} themselves.
+Replace _user_ with a mention of them, or their Discord user ID. A plain username won't work. Stops that person getting pinged at the start of sprints, as if they'd used {{<slashembed name="forgetme" >}} themselves. Only you see the slash command's reply.
 
 If you can't see someone's user ID, turn on "Developer Mode" in Discord's settings, then "Copy ID" will appear when you right-click their name.
 
@@ -86,18 +85,20 @@ If you can't see someone's user ID, turn on "Developer Mode" in Discord's settin
 
 {{<atsprinto "pinguser _user_ _number_" >}}
 
-Replace _user_ with the user's name or ID. Replace _number_ with the number of sprints; default is 3, use `0` for never, `1000` for always.
+This one isn't a slash command; mention Sprinto to use it.
+
+Replace _user_ with a mention of them, or their Discord user ID. A plain username won't work. Replace _number_ with the number of sprints; default is 3, use `0` for never, `1000` for always.
 
 Example:
-{{<atsprinto "pinguser Pengo 3" >}}
+{{<atsprinto "pinguser <@221579760545955840> 3" >}}
 
-Turns pings on for Pengo, as if they'd used {{<slashembed name="pingme" >}} themselves.
+Turns pings on for that person, as if they'd used {{<slashembed name="pingme" >}} themselves.
 
 ## Ping roles
 
 {{<tag-admin>}}
 
-Always pinging a role at the start of sprints, rather than individual people, is now part of {{<slash name="settings roles" >}}, a native Discord picker, rather than a typed command. See [Ping roles]({{<relref "ping-roles" >}}) for the full picture.
+Always pinging a role at the start of sprints, rather than individual people, is part of {{<slash name="settings roles" >}}, a native Discord picker. The typed commands still work: {{<atsprintoembed "pingroles" >}} lists the roles, and `pingroles add @role`, `pingroles remove @role` and `pingroles reset` change them. See [Ping roles]({{<relref "ping-roles" >}}) for the full picture.
 
 <!--
 ## Todo

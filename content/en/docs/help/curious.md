@@ -17,9 +17,11 @@ Sprinto used to let you try parsing a time span directly, just to see how it rea
 
 ### dare
 
-_This command didn't make it into the rewrite._
+{{< atsprinto "dare me" >}}
 
-It used to hand out a writing dare, pulled from the now-deleted nanowrimo.org [word_sprints](https://nanowrimo.org/word_sprints) page.
+Hands out one writing dare, and nothing else. The dares are pulled from the now-deleted nanowrimo.org [word_sprints](https://nanowrimo.org/word_sprints) page.
+
+There's no slash command for this, so you have to @Sprinto or send him a DM. `dare`, `dare me` and `give me a dare` all work.
 
 ### invite
 
@@ -30,14 +32,14 @@ Create an invite link to take Sprinto to another server. Also gives a link to th
 ### sprintmc
 
 {{<atsprinto "sprintmc" >}}
-Tells you about the {{< role "@Sprint MC" >}} role, and provides help to set it up. Use the {{< slashembed name="feedback" >}} command to remind me to update the link it gives to point to these new docs.
+Tells you how to set up the {{< role "@Sprint MC" >}} role: create a role with exactly that name and give it to whoever should have it. {{< role "@Sprint Admin" >}} works the same way for settings powers. That one sentence is the whole reply. For the rest, see [Admin commands]({{<relref "admin" >}}).
 
 ### create / refresh active role
 
 {{<slash name="create-active-role" >}}
 {{<slash name="refresh-active-role" >}}
 
-`/create-active-role` sets up the {{< role "@Active Sprinters" >}} role on your server. `/refresh-active-role` moves people in and out of it, just in case some people are stuck in the wrong place. Either can be used by anyone. For more info about this command and role: [ActiveSprinter]({{< relref "ActiveSprinter" >}}).
+`/create-active-role` sets up the {{< role "@Active Sprinters" >}} role on your server. `/refresh-active-role` moves people in and out of it, just in case some people are stuck in the wrong place. Both need the **Manage Roles** permission, or a {{< role "@Sprint Admin" >}} role. For more info about this command and role: [ActiveSprinter]({{< relref "ActiveSprinter" >}}).
 
 ### prefix
 
@@ -52,17 +54,17 @@ In the old days, Sprinto would respond to messages in chat which started with an
 
 {{<slash name="sprint" key0="options" val0="explain for 20 in 5">}}
 {{<alts>}}
-{{<atsprinto "explain for 20 in 5" >}}
-{{<atsprinto "timeline for 20 in 5" >}}
-{{<atsprinto "preview for 20 in 5" >}}
+{{<atsprinto "sprint explain for 20 in 5" >}}
+{{<atsprinto "sprint timeline for 20 in 5" >}}
+{{<atsprinto "sprint preview for 20 in 5" >}}
 {{</alts>}}
 
-Put `explain`, `timeline`, or `preview` in front of any {{<slashembed name="sprint" >}} command to see how Sprinto would schedule it, a dry run, without actually starting anything.
+Put `explain`, `timeline`, or `preview` in front of any {{<slashembed name="sprint" >}} command to see how Sprinto would schedule it, a dry run, without actually starting anything. The keyword only works there, as the first thing after `sprint`.
 
 {{<slash name="sprint" key0="options" val0="peek for 20 in 5">}}
-{{<atsprinto "peek for 20 in 5" >}}
+{{<atsprinto "sprint peek for 20 in 5" >}}
 
-`peek` does the same thing, except only you see the reply. Add `me` or `private` right after any of the other keywords for the same effect, for example {{<atsprinto "explain me for 20 in 5" >}}.
+`peek` does the same thing, except only you see the reply. Add `me` or `private` right after any of the other keywords for the same effect, for example {{<atsprinto "sprint explain me for 20 in 5" >}}.
 
 ## See also
 

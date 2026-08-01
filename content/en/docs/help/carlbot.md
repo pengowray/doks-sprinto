@@ -16,7 +16,7 @@ Three sprints in a row: 25 minutes, then 50, then 15.
 The same 25 minute sprint repeated three times, with a 7 minute break between each.
 
 {{<slash name="sprint" key0="options" val0="pomo x4" >}}
-Four pomodoro-style work blocks with the usual pomodoro break rhythm.
+Four 25 minute pomodoro blocks, with 5 minute breaks in between.
 
 If a chain is already running and you'd rather not wait out the gap, a host or {{<tag-mc>}} can jump straight to the next block:
 
@@ -60,8 +60,10 @@ example:
 {{<alts "Synonym">}}
 Prefix command:
 
-<pre>!af silent 24h sprint in a bit for 30
+<pre>!af silent 24h &lt;@421646775749967872&gt; sprint in a bit for 30</pre>
 {{</alts>}}
+
+The autofeed message must include `<@421646775749967872>`, in both forms above. Sprinto only reads messages that mention it, so an autofeed without the mention posts on schedule and starts nothing, even with `carl` on.
 
 You also can edit or add autofeeds, and set how often they recur, in the Carl-bot dashboard: [carl.gg](https://carl.gg/).
 

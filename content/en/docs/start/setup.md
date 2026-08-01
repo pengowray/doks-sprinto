@@ -29,7 +29,9 @@ Why is this necessary? Sprinto accepts commands in two ways, either as slash com
 
 ### Check Sprinto can actually post
 
-In your sprint channel, run {{<slashembed name="sprint">}}. If Sprinto can't post there, he'll quietly tell you so in a message only you can see, rather than starting a sprint nobody can follow. If that happens, check the channel's permissions and give him Send Messages.
+Run {{<slashembed name="settings channel">}} in your sprint channel. The bottom of the panel marks View Channel and Send Messages with a ✅ or an ❌. Anyone can look.
+
+Running {{<slashembed name="sprint">}} tells you too: if Sprinto can't post there, he'll quietly say so in a message only you can see, rather than starting a sprint nobody can follow. Either way, the fix is in the channel's permissions.
 
 ## Roles you create yourself
 
@@ -72,7 +74,7 @@ Opens Discord's role picker. If people on your server can self-assign a role lik
 
 {{< slash name="settings sprint-defaults" >}}
 
-Sets the default length and start time for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute. A long-form channel might prefer 30 minutes starting in 5.
+Sets the default length, start time and bell for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute, with one bell a minute before the end. A long-form channel might prefer 30 minutes starting in 5.
 
 It opens on the server default, and on a new server it looks like this:
 
@@ -105,7 +107,15 @@ No default sprint options set. Using Sprinto's original default (for 15 mins in 
 {{<button "in 2-3 min">}}
 {{</buttons>}}
 
-Click **This channel** first if you only want to change this one channel. Green marks the length and start that are in effect right now; clicking one pins it at the scope you're on, and a check appears next to it. **Edit text** takes anything you could type after {{<slashembed name="sprint">}}, so a start delay of 5 minutes, or a different bell, goes in there.
+{{<buttons>}}
+{{<button "🔔 1 minute" "success">}}
+{{<button "🔔 50% and 🔔 1 minute">}}
+{{<button "🔕 No chime">}}
+{{</buttons>}}
+
+Click **This channel** first if you only want to change this one channel. Green marks the length, start and bell in effect right now; clicking one pins it at the scope you're on and a check appears next to it, and clicking a checked one clears it again. On a new server **Reset to built-in** is greyed out, because there is nothing set to clear.
+
+The bell buttons mean one bell a minute before the end, which is what you get out of the box; a bell at halfway as well; or no bell at all. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so a 5 minute start delay or a bell the buttons don't offer goes in there. Fixed clock times like `at :30` are refused, because a default has to work at any hour.
 
 ### Everything else
 
@@ -132,7 +142,7 @@ Creates an {{<role "@Active Sprinters">}} role. Anyone in a running sprint is ad
 
 Three defaults that servers most often want to change:
 
-* **family-friendly** is **on**, which keeps the sweary quotes out. Turn it off if your server would rather have them.
+* **family-friendly** is **on**, which keeps the sweary quotes and replies out. Turn it off if your server would rather have them.
 * **tidy-sprints** is **off**. Turn it on and Sprinto deletes his own join and word-count confirmations, so the channel keeps just the sprint itself.
 * **shuffle-leaderboard** is **off**, so the scoreboard is ranked by word count. Turn it on and the ranks come off entirely: everyone is listed in a random order, with counts still shown. Good for a server that would rather nobody came first.
 

@@ -62,7 +62,7 @@ Tips:
 
 - Discord is bad at copy-pasting slash commands, so avoid that if you can. It's also bad at copy-pasting `@Sprinto` (it might switch to @'ing the role).
 
-- Ask for help or report strange Sprinto behavior with `/feedback`, or come to the Sprinto Planet Discord for support.
+- Ask for help or report strange Sprinto behavior with `/feedback`, or come to the Sprinto Planet Discord for support. Your report is posted anonymously on Sprinto Planet, and if the developer answers it, the reply arrives in the channel you sent it from, so you don't have to join anything to hear back.
 
 ### 3) Check “Legacy chat input” (it breaks slash commands)
 

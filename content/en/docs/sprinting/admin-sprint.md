@@ -5,7 +5,7 @@ url: "/docs/sprint-admin"
 lead: 
 ---
 
-Special sprint-related commands which are available only to an {{<tag-admin>}} or {{<tag-mc>}}.
+Special sprint-related commands, most of them available only to an {{<tag-admin>}} or {{<tag-mc>}}. Adding "please" is the exception: anyone can do that.
 
 ## Commands
 
@@ -22,11 +22,11 @@ Example:
 {{< atsprinto "sprint for 30 in 5 endtime 10 lock" >}}
 Begins a 30 minute locked sprint with 5 minutes to join and 10 minutes to give a word count. Note: "lock" can also appear elsewhere, such as at the start.
 
-See [Sprint] for the other parameters you can add to a `/sprint`
+See [Sprint (all options)]({{<relref "sprint" >}}) for the other parameters you can add to a `/sprint`.
 
 ### sprint please
 
-SprintMCs who add "please" to a sprint command can set it to run for longer, or have slightly increased "ready" time before it starts than would normally be allowed.
+Adding "please" to a sprint command raises some of Sprinto's limits, and anyone can do it: a sprint of up to 2 hours instead of 1, and a start up to 90 minutes ahead instead of an hour. A {{<role "@Sprint MC">}} gets two more on top: a start up to 2 hours ahead, and up to an hour for word counts to come in instead of 30 minutes.
 
 Note: This isn't to force anyone to be polite. It's an added check so you don't accidentally run long sprints.
 

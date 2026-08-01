@@ -196,7 +196,7 @@ Sprint between 1 and 60 minutes, with short sprints far more likely than long on
 
 Roughly: a quarter of these land under 9 minutes, half land under 18 minutes, and a quarter run longer than 30 minutes.
 
-Unlike the other wheels, `idk` can hand you an untidy number, so don't be surprised by a 23 minute 14 second sprint.
+`idk` can land on any whole minute from 1 to 60.
 
 You can still pin the length yourself and keep the rest: {{<slashembed name="sprint" key0="options" val0="idk 5 minutes" >}} gives you the 5 minutes you asked for.
 
@@ -242,8 +242,13 @@ Sprint for between 20 and 60 minutes, anywhere in that range with equal odds.
 
 {{< slash name="sprint" key0="options" val0="in 5" >}}
 {{< atsprinto "sprint in 5" >}}
+{{< alts "Synonyms" >}}
+{{< slash name="sprint" key0="options" val0="delay 5" >}}
+{{< slash name="sprint" key0="options" val0="delay:5" >}}
+{{< atsprinto "sprint delay 5" >}}
+{{</alts>}}
 
-Sprint in 5 minutes (for the default of 15 minutes)
+Sprint in 5 minutes (for the default of 15 minutes). `delay 5` and `delay:5` mean the same as `in 5`.
 
 ### for x minutes in y minutes
 
@@ -390,8 +395,8 @@ Convenient ways to start a sprint.
 | {{<slashembed name="sprint" key0="options" val0="dream" >}} | for 10m, starting on the next 5 minute mark | `dreamy`, `dreamily` |
 | {{<slashembed name="sprint" key0="options" val0="pomo" >}} | for 25m (chain them with `pomo x4`) | `pomodoro` |
 | {{<slashembed name="sprint" key0="options" val0="long" >}} | for 30 in 2.5 to 7.5 mins | `longer`, `slow` |
-| {{<slashembed name="sprint" key0="options" val0="marathon" >}} | for 60 in 7.5 to 13 mins endtime 10, with a halfway bell | `for a marathon` |
-| {{<slashembed name="sprint" key0="options" val0="megathon" >}} | for 120 in 7.5 to 13 mins endtime 10, with a halfway bell | `for ages` |
+| {{<slashembed name="sprint" key0="options" val0="marathon" >}} | for 60 in 7.5 to 13 mins endtime 10, with a halfway bell as well as the usual one-minute warning | `for a marathon` |
+| {{<slashembed name="sprint" key0="options" val0="megathon" >}} | for 120 in 7.5 to 13 mins endtime 10, with a halfway bell as well as the usual one-minute warning | `for ages` |
 
 <!-- | `just` | `/sprint now` | -->
 
@@ -415,11 +420,11 @@ Please send feedback if you have suggestions for other presets or shortcuts.
 {{<atsprinto "sprint pomo x4" >}}
 {{</alts>}}
 
-`pomo` is a 25 minute block. On its own it's just a 25 minute sprint; repeat it and you get the pomodoro rhythm, with the usual break between blocks and a longer 15 minute break after each set of four.
+`pomo` is a 25 minute block. On its own it's just a 25 minute sprint; repeat it and you get the pomodoro rhythm, with a 5 minute break between blocks. Ask for five or more blocks and the break after the fourth is 15 minutes, in place of whatever you set `break` to.
 
 {{<slash name="sprint" key0="options" val0="pomo x4" >}}
 
-Four 25 minute blocks, with breaks in between. See [chains](#chains) for what `x4` and `break` do.
+Four 25 minute blocks, with 5 minute breaks in between. See [chains](#chains) for what `x4` and `break` do.
 
 ## endtime
 
@@ -437,9 +442,9 @@ Four 25 minute blocks, with breaks in between. See [chains](#chains) for what `x
 
 How long sprinters have to give their final word count, once the writing time is up.
 
-If you don't set this, the default ranges from 2 to 10 minutes depending on the length of your sprint (1 minute 30 seconds, plus another 30 seconds per 5 minutes of sprint). A 15 minute sprint gets 3 minutes; an hour-long one gets the full 10.
+If you don't set this, the default is 1 minute 30 seconds, plus another 30 seconds per 5 minutes of sprint, and never less than 2 minutes. A 15 minute sprint gets 3 minutes; an hour-long one gets 7 minutes 30 seconds. It stops climbing at 10 minutes, and only a sprint of 85 minutes or more gets that far, which needs `please`. `marathon` and `megathon` set their endtime to 10 minutes themselves.
 
-It can be set anywhere from 30 seconds to 30 minutes.
+It can be set anywhere from 30 seconds to 30 minutes, or up to an hour for a {{<role "@Sprint MC">}} using `please`.
 
 Use {{<atsprintoembed "status">}} to check the endtime duration for a currently running sprint.
 
@@ -458,7 +463,7 @@ After the scoreboard is posted, people can still fix their number with {{<slashe
 
 {{<slash name="sprint" key0="options" val0="late none" >}}
 
-Turn late edits off for this sprint, so the scoreboard is final as soon as it's posted. `late 0` does the same thing.
+Turn late edits off for this sprint, so the scoreboard is final as soon as it's posted. `late 0` and `late off` do the same thing.
 
 ## Sprint flags
 
@@ -469,7 +474,7 @@ Turn late edits off for this sprint, so the scoreboard is final as soon as it's 
 | `noff` | "No fast finish" — Always wait the full ending time for final word counts before showing the final results (instead of speeding it up if everyone's given their word counts). Synonyms: `no ff`, `no fast finish` |
 | `ff` | The opposite: allow the fast finish, even if this channel normally turns it off. Synonym: `fast finish` |
 | `nops` | Leave off the P.S. line at the bottom of the sprint messages. Synonym: `no ps` |
-| `no bell` | No mid-sprint chimes at all. See [chimes](#chimes). Synonyms: `no chime`, `chime none` |
+| `no bell` | No mid-sprint chimes at all. See [chimes](#chimes). Synonyms: almost any way of saying it, such as `no chime`, `no bells`, `nobell`, `zero chimes`, `without any bells`, `chime none`, `chime off` and `chime 0` |
 | `please` | Ask Sprinto to do things he wouldn't normally, such as running a sprint up to 2 hours. Synonyms: `pls`, `thanks`, `danke`, and a long list of other polite (and impolite) phrasings |
 | `lock` | Lock the sprint, meaning only a Sprint MC can cancel it. Synonyms: `locked`, `nocancel`, `uncancellable`. See: [sprint admin commands]({{< relref "admin-sprint" >}}) |
 
@@ -487,7 +492,7 @@ Run a 90 minute sprint in 5 minutes
 
 {{<tag-minutes>}}
 
-A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. Every sprint gets one by default, a minute before time's up.
+A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. Every sprint gets one by default, a minute before time's up. A sprint of a minute or less doesn't get one, since the bell would land at the start.
 
 {{<slash name="sprint" key0="options" val0="for 40 chime -10" >}}
 {{<alts "Synonyms" >}}
@@ -511,13 +516,13 @@ You can ask for several, separated by commas or spaces, and they can mix forms:
 
 {{<slash name="sprint" key0="options" val0="for 60 chime -50%, -10, -1" >}}
 
-Up to 5 chimes per sprint, and they have to be at least a minute apart. Any that land outside the writing time are quietly dropped. `marathon` and `megathon` come with a halfway bell already.
+Up to 5 chimes per sprint, and they have to be at least a minute apart. Any of yours that land outside the writing time are dropped, and the start message says how many. `marathon` and `megathon` come with a halfway bell already, on top of the one minute warning.
 
 {{<slash name="sprint" key0="options" val0="for 30 no bell" >}}
 
 Silence, even if this channel normally sets one.
 
-How many of those bells actually ping _you_ is your own setting: see {{<atsprintoembed "chimes">}}.
+How many of those bells actually ping _you_ is your own setting, and out of the box none of them do: see {{<atsprintoembed "chimes">}}. When a bell does ping you, Sprinto takes your ping off the start message, so the bell replaces it rather than adding to it. Your name stays on the participants list either way.
 
 ## Chains
 
@@ -539,7 +544,7 @@ And set the gap between blocks with `break` (or `rest`):
 
 {{<slash name="sprint" key0="options" val0="for 25 x4 break 5" >}}
 
-The gap is 5 minutes if you don't say otherwise, and a chain can be at most 8 blocks long.
+The gap is 5 minutes if you don't say otherwise, and a chain can be at most 8 blocks long. In a `pomo` chain the break after every fourth block is 15 minutes, whatever you set here.
 
 Anything you set before the first `then` (other than the length and the start time) carries across the whole chain, so you only have to say `quietly` or `chime -1` once:
 

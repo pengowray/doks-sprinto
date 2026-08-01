@@ -19,16 +19,15 @@ If you no longer want the feature, just delete the {{<role "@Active Sprinters">}
 
 ## Commands
 
-Both commands need the **Manage Roles** permission (server administrators already have it).
+Both commands need the **Manage Roles** permission, or a {{<role "@Sprint Admin">}} role (server administrators and the owner already count). Both are slash commands only: mentioning Sprinto won't work for them.
 
 ### create-active-role
 
 {{<tag-admin>}}
 
 {{<slash name="create-active-role">}}
-{{<atsprinto "create_active_role" >}}
 
-Creates a role on the server named {{<role "@Active Sprinters">}} for Sprinto to use: mentionable, hoisted under Sprinto's own highest role, no permissions or color. If it can't be created, Sprinto will tell you why.
+Creates a role on the server named {{<role "@Active Sprinters">}} for Sprinto to use: shown separately in the members list, mentionable, no permissions and no color. Discord drops a new role at the bottom of your role list, so move it up yourself if you want its color and badge to show (step 3 below). If it can't be created, Sprinto will tell you why.
 
 If the role already exists, this just confirms that and does nothing further. You can also create an {{<role "@Active Sprinters">}} role manually in Discord and Sprinto will use it just the same.
 
@@ -37,11 +36,10 @@ If the role already exists, this just confirms that and does nothing further. Yo
 {{<tag-admin>}}
 
 {{<slash name="refresh-active-role">}}
-{{<atsprinto "refresh_active_role" >}}
 
-Re-syncs who currently holds the {{<role "@Active Sprinters">}} role against who's actually sprinting right now, for the rare case someone's stuck with it, or without it, when they shouldn't be.
+Gives the {{<role "@Active Sprinters">}} role to everyone who's sprinting right now, and takes it off anyone Sprinto gave it to who has since stopped.
 
-This should never be needed in the ordinary run of things, but there's a real reason it can be: Sprinto tracks who it gave the role to in memory, not in Discord, so a restart in the middle of a sprint can lose track of a few people. Their next sprint tidies them up automatically; if you don't want to wait, run this command instead.
+This should never be needed in the ordinary run of things, but there's a real reason it can be: Sprinto tracks who it gave the role to in memory, not in Discord, so a restart in the middle of a sprint can lose track of a few people. Someone left without the role gets it back from this command. Someone left wearing it is the one case it can't fix, because Sprinto can't see holders it didn't give the role to itself: their next sprint takes it off them, or you can remove it by hand in Discord.
 
 ## Customizing the Active Sprinter role
 

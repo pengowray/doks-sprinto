@@ -11,7 +11,7 @@ keywords: ["what's new", "changelog", "release notes", "rewrite"]
 
 Sprinto ran on the same code from March 2023 until June 2026. This release replaces all of it.
 
-The important thing first: **you don't have to relearn anything.** {{<slashembed name="sprint" >}}, {{<slashembed name="join" >}}, {{<slashembed name="words" >}} and the rest work exactly as they did, the replies read the same, and the defaults haven't moved (15 minute sprint, 1 minute join window, 10 more minutes to report your words before the scoreboard closes).
+The important thing first: **you don't have to relearn anything.** {{<slashembed name="sprint" >}}, {{<slashembed name="join" >}}, {{<slashembed name="words" >}} and the rest work exactly as they did, the replies read the same, and the defaults haven't moved (15 minute sprint, 1 minute join window, 3 more minutes to report your words before the scoreboard posts). Longer sprints get a longer reporting window, up to 10 minutes, and Sprinto says how long you have when time's up.
 
 What changed is everything around that: word counts are harder to trip up, sprints can be repeated and chained, pets are a collection now, and the ten-odd `setup-set-something` commands have collapsed into one.
 
@@ -22,6 +22,8 @@ Everything below is measured against the bot you were actually using. A few of t
 **{{<slashembed name="same" >}} is reliable again.** On the old bot, an absent-minded plain {{<slashembed name="join" >}} would quietly wipe the word count it had stored for you, so {{<slashembed name="same" >}} would reuse a zero and you'd have to look your number up again. Joining no longer touches your stored count.
 
 **Obvious typos get fixed, and you can see what happened.** If your input is a clear slip, Sprinto takes the sensible reading and posts a small `↳` line showing the correction, so nothing is silently changed behind your back. When it genuinely can't tell what you meant, it now offers buttons with the totals already worked out instead of guessing at one.
+
+**A total too big to have been written gets a second look.** If the total you gave would mean more new words than anyone could have typed in the time the sprint has run, Sprinto asks before filing it, with buttons for the readings it thinks you meant. One of them files the number exactly as you typed it, so nothing is off limits. Confirm a total that big once and it stops asking.
 
 **Spelled-out numbers work.** "for twenty" and "fifty new" parse the way you'd expect.
 
@@ -61,7 +63,7 @@ Repeat a block with `x` (or `times`), and set the gap between blocks with `break
 {{<slash name="sprint" key0="options" val0="25 break 7 x3" >}}
 {{<slash name="sprint" key0="options" val0="pomo x4" >}}
 
-`pomo` is a 25 minute block on the pomodoro rhythm, with a longer break before every fourth one. `dream` is a preset too.
+`pomo` is a 25 minute block on the pomodoro rhythm, with a longer break after every fourth one. `dream` is a preset too.
 
 ### Mid-sprint chimes
 
@@ -71,7 +73,7 @@ The old bot said nothing between "go" and "time's up". Now every sprint gets a o
 {{<slash name="sprint" key0="options" val0="45 chime 50%" >}}
 {{<slash name="sprint" key0="options" val0="20 chime none" >}}
 
-If you'd like to be personally pinged on those chimes rather than just seeing them in the channel, turn on `chimes` under {{<slashembed name="settings me" >}}. It's off by default.
+If you'd like to be personally pinged on those chimes rather than just seeing them in the channel, set `chimes` under {{<slashembed name="settings me" >}} to how many of a sprint's last chimes should @ you, up to 5. It's 0 out of the box.
 
 ### Dry runs
 
@@ -96,7 +98,7 @@ See [Sprint (all options)]({{<relref "sprint" >}}) for the full list.
 
 {{<slash name="pets" >}}
 
-Pets from the old bot came across with you.
+Pets from the old bot came across with you. If you were supporting when Sprinto took over, yours is already in the panel. If you weren't, it's kept out of sight rather than lost, and you get the same pet back, name and look intact, the first time you support again.
 
 More at [Pets]({{<relref "emojipet" >}}).
 
@@ -114,13 +116,13 @@ The old bot had about ten near-identical commands for this: `setup-set-allowed-c
 
 {{<slash name="settings sprint-channels" >}} which channels allow sprints, using Discord's own channel picker. An empty list means sprints work anywhere, which is the default. {{<tag-admin>}} to change.
 
-{{<slash name="settings sprint-defaults" >}} new: give this channel its own default sprint length and start time, so a bare {{<slashembed name="sprint" >}} does whatever your room actually likes. {{<tag-admin>}} to change.
+{{<slash name="settings sprint-defaults" >}} new: give this channel its own default sprint length, start time and bells, so a bare {{<slashembed name="sprint" >}} does whatever your room actually likes. {{<tag-admin>}} to change.
 
-There's a text form too, `settings <key> <value>`, and it's forgiving: on, off, sometimes, default and their obvious synonyms all work. Type a key it doesn't recognise and it shows you the current value rather than scolding you.
+There's a text form too, `settings <key> <value>`, and it's forgiving: on, off, sometimes, default and their obvious synonyms all work. Give a value it doesn't recognise and it shows you the current one rather than scolding you. Give a key it doesn't recognise and it lists the keys.
 
 **One thing that surprises admins:** the channel and server panels show only what you've changed from the defaults. A freshly set up server sees a nearly empty panel. That's not a bug and nothing is missing, it just means you're running on defaults.
 
-Three settings are worth knowing about, since they're new or newly documented: `family-friendly` is **on** by default and keeps the sweary quotes out; `tidy-sprints` is **off** by default and, when on, has Sprinto delete its own join and word-count confirmations to keep a busy channel readable; `shuffle-leaderboard` is **off** by default.
+Three settings are worth knowing about, since they're new or newly documented: `family-friendly` is **on** by default and keeps the sweary quotes and replies out; `tidy-sprints` is **off** by default and, when on, has Sprinto delete its own join and word-count confirmations to keep a busy channel readable; `shuffle-leaderboard` is **off** by default.
 
 More on all of this at [Settings]({{<relref "settings" >}}) and [Set up your server]({{<relref "setup" >}}).
 
@@ -128,9 +130,11 @@ More on all of this at [Settings]({{<relref "settings" >}}) and [Set up your ser
 
 `pinguser N` respects the number you gave it. Asking to ping someone for the next three sprints now pings them for three sprints.
 
-**Only people who asked to be pinged get pinged.** The participant line at the start of a sprint still shows everyone who has joined, but the mentions are scoped, so it's a quiet list for anyone who didn't sign up for a notification.
+**Only people on the ping list get pinged.** The participant line at the start of a sprint still shows everyone who has joined, but the mentions are scoped, so it's a quiet list for anyone who isn't due a notification.
 
 **People who leave the server stop being pinged.** This is one of those things that was supposed to work and never did.
+
+**And you can stop pings for someone else.** {{<slashembed name="admin-forget-user" >}} stops pinging one writer in this channel, and takes a pasted user ID as well as a mention, so it still works once they've left the server ({{<tag-mc>}} or {{<tag-admin>}}). {{<slashembed name="admin-forget-all-users" >}} stops pinging everyone here ({{<tag-admin>}}). Both reply only to you.
 
 See [pingme]({{<relref "pingme" >}}) for the whole set.
 
@@ -152,7 +156,7 @@ See [pingme]({{<relref "pingme" >}}) for the whole set.
 Some things didn't make the crossing. Straight answers:
 
 <!-- TODO(owner): sign off on the delay wording before publishing -->
-- **`delay N`**, which held the join window shut so a sprint could be queued to start later, isn't in this release. It was used something like one to two thousand times a year while it existed, so it wasn't nothing, but it carried a lot of complexity. Proper sprint scheduling is planned and will work differently.
+- **`delay N`** no longer holds the join window shut so a sprint can be queued to start later. That was used something like one to two thousand times a year while it existed, so it wasn't nothing, but it carried a lot of complexity. The word itself still works: `delay 10` now means the same as `in 10`, a plain wait before the start with the join window open. Proper sprint scheduling is planned and will work differently.
 <!-- end delay item -->
 
 - **Voice.** The chime in a voice channel is built, but it hasn't been proven in a live call yet, so it's switched off at launch. It was only ever enabled for about 32 servers. It's planned to come back. See [Voice]({{<relref "voice" >}}).

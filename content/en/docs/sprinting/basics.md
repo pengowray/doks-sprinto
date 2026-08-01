@@ -23,13 +23,13 @@ That's a 15 minute sprint, starting in 1 minute. The minute before the start is 
 
 You have to join your own sprint. Sprinto doesn't add you automatically, and it's the single most common thing new sprinters get caught by. If you're partway through a document already, join with the count you're starting from and Sprinto will subtract it later: {{<slashembed name="join" key0="word-count" val0="10000" >}}
 
-**3. Write.** Sprinto announces the start, and announces when time's up. There's a bell partway through if you've turned chimes on.
+**3. Write.** Sprinto announces the start, and announces when time's up. A bell rings in the channel a minute before the end. If you want that bell to ping you as well, set your chimes to 1 or more under {{<slashembed name="settings me" >}}.
 
 **4. Report.**
 
 {{<slash name="words" key0="count" val0="442" >}}
 
-You get 10 minutes after time's up to get your count in before the scoreboard closes. If you joined with a starting count, give the new total and Sprinto works out the difference.
+You get a few minutes after time's up to give your count before Sprinto posts the scoreboard. On a 15 minute sprint that's 3 minutes, and the time's-up message says how long. If you joined with a starting count, give the new total and Sprinto works out the difference.
 
 More on counting, leaving, cancelling and the rest: [During the sprint]({{< relref "words" >}}).
 
@@ -46,11 +46,11 @@ When the reporting window closes, Sprinto posts the results:
 Combined word count: 1,120 words over 15 minutes.
 {{< /reply >}}
 
-Everyone who joined gets a line: their name, the words they wrote during the sprint, and a words-per-minute figure in brackets. Ranks are shared on a tie, marked with `=`. If three or more people wrote something, Sprinto adds a combined total for the whole room underneath.
+Everyone who joined gets a line: their name, the words they wrote during the sprint, and a words-per-minute figure in brackets. Ranks are shared on a tie, marked with `=`. If three or more people wrote something, Sprinto adds a combined total for the whole room underneath. If nobody wrote and three or more people cut, it adds the deletions instead: `Combined: 600 words deleted (10% of combined starting words).`
 
 The words-per-minute number divides your words by the **whole sprint length**, not by however long you were actually at the keyboard. Join five minutes late into a twenty minute sprint and your wpm will look low. That's on purpose, so the figure means the same thing for everybody on the board.
 
-If you deleted more than you wrote, Sprinto says so instead, without ranking you. Cutting words is still work.
+If you deleted more than you wrote, Sprinto says so instead, without ranking you. Cutting words is still work. The percentage beside it is how much of your starting words you cut. It's left off when it would tell you nothing: a starting count under 20 words, or a cut of more than twenty times what you started with.
 
 ## If you forget to report
 
@@ -74,7 +74,7 @@ Every part is optional and the order doesn't matter, so most of these can be mix
 {{<slash name="sprint" key0="options" val0="for 30 in 1" >}}
 {{<atsprinto "sprint 30" >}}
 {{</alts>}}
-A bare number is a length in minutes. Anything from half a minute up to an hour. A {{<role "@Sprint MC">}} can push past that by asking nicely, with `please`.
+A bare number is a length in minutes. Anything from half a minute up to an hour. Anyone can push past an hour, up to two, by asking nicely with `please`.
 
 ### Start a bit later
 
@@ -140,7 +140,7 @@ Can't decide? Sprinto spins a wheel. Usually 10 to 25 minutes, with a small chan
 {{<atsprinto "sprint pomo" >}}
 {{<slash name="sprint" key0="options" val0="pomodoro" >}}
 {{</alts>}}
-A 25 minute block. Add a repeat to get the real rhythm: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four of them with five minute breaks in between, and a longer break before every fourth.
+A 25 minute block. Add a repeat to get the real rhythm: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four of them with five minute breaks in between. Ask for more than four and the break after the fourth block is a longer one, 15 minutes.
 
 ### Marathon
 
@@ -148,7 +148,7 @@ A 25 minute block. Add a repeat to get the real rhythm: {{<slashembed name="spri
 {{<alts "Synonyms" >}}
 {{<atsprinto "sprint marathon" >}}
 {{</alts>}}
-An hour of writing, starting in 7½ to 12½ minutes, with ten minutes at the end for final counts.
+An hour of writing, starting in 7½ to 13 minutes, with ten minutes at the end for final counts.
 
 There is a lot more where this came from: wheels, chains, breaks, flags, exact clock windows. See [Sprint (all options)]({{< relref "sprint" >}}).
 
