@@ -118,6 +118,8 @@ The old bot had about ten near-identical commands for this: `setup-set-allowed-c
 
 {{<slash name="settings sprint-defaults" >}} new: give this channel its own default sprint length, start time and bells, so a bare {{<slashembed name="sprint" >}} does whatever your room actually likes. {{<tag-admin>}} to change.
 
+{{<slash name="settings theme" >}} new: which emoji decorate the sprint announcements. Pick **Screen reader friendly** and Sprinto uses the same four named emoji every sprint instead of a fresh random trio, and stops shouting its headings, which is a good deal easier to listen to. {{<tag-admin>}} to change.
+
 There's a text form too, `settings <key> <value>`, and it's forgiving: on, off, sometimes, default and their obvious synonyms all work. Give a value it doesn't recognise and it shows you the current one rather than scolding you. Give a key it doesn't recognise and it lists the keys.
 
 **One thing that surprises admins:** the channel and server panels show only what you've changed from the defaults. A freshly set up server sees a nearly empty panel. That's not a bug and nothing is missing, it just means you're running on defaults.
@@ -131,6 +133,8 @@ More on all of this at [Settings]({{<relref "settings" >}}) and [Set up your ser
 `pinguser N` respects the number you gave it. Asking to ping someone for the next three sprints now pings them for three sprints.
 
 **Only people on the ping list get pinged.** The participant line at the start of a sprint still shows everyone who has joined, but the mentions are scoped, so it's a quiet list for anyone who isn't due a notification.
+
+**The ping list is ordered by who's about to run out.** `(last ping)` now comes at the head of the names instead of sitting somewhere in the middle of them. The `(always)` tag next to standing subscribers is gone: it said the same thing about the same people every sprint.
 
 **People who leave the server stop being pinged.** This is one of those things that was supposed to work and never did.
 

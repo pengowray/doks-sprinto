@@ -94,6 +94,8 @@ Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere
 
 Undecided? You can choose a random length for your sprints.
 
+Each wheel has its own list of lengths and picks one at random. A length listed twice comes up twice as often, and a spin never lands on anything that isn't on the list. Sprinto names the wheel he spun at the top of the sprint announcement, like `...Spinning the not too short wheel...`.
+
 ### Burst sprint
 
 {{<tag-duration>}} {{<tag-random>}}
@@ -101,7 +103,10 @@ Undecided? You can choose a random length for your sprints.
 {{<slash name="sprint" key0="options" val0="burst" >}}
 {{<atsprinto "sprint burst" >}}
 
-A very quick sprint with a randomly chosen length from 35 to 150 seconds, anywhere in that range with equal odds. It also opens with a short join window (30 to 60 seconds) so it doesn't keep you waiting longer than the sprint itself.
+A very quick sprint with a randomly chosen length from 35 to 150 seconds. Half the spins come out under 90 seconds. It also opens with a short join window (30 to 60 seconds) so it doesn't keep you waiting longer than the sprint itself.
+{{<alts "Details">}}
+<p>The wheel's 14 slices: 35s, 45s ×2, 60s ×2, 75s ×2, 90s ×2, 100s, 105s, 120s, 135s, 150s.</p>
+{{</alts>}}
 
 ### Micro sprint
 
@@ -192,7 +197,7 @@ All 'however long' possibilities (minutes):
 {{< atsprinto "sprint idc" >}}
 {{</alts>}}
 
-Sprint between 1 and 60 minutes, with short sprints far more likely than long ones. A one-minute sprint is about 60 times as likely as a 60 minute one.
+Sprint between 1 and 60 minutes, with short sprints far more likely than long ones. A one-minute sprint is 60 times as likely as a 60 minute one.
 
 Roughly: a quarter of these land under 9 minutes, half land under 18 minutes, and a quarter run longer than 30 minutes.
 
@@ -201,7 +206,7 @@ Roughly: a quarter of these land under 9 minutes, half land under 18 minutes, an
 You can still pin the length yourself and keep the rest: {{<slashembed name="sprint" key0="options" val0="idk 5 minutes" >}} gives you the 5 minutes you asked for.
 
 {{<alts "How the idk wheel is weighted">}}
-<p>The odds slope steadily downward: every extra minute of length is a little less likely than the one before it, all the way from 1 minute to 60. A 1 minute sprint is about 60 times as likely as a 60 minute one.</p>
+<p>The wheel has 1,830 slices: 60 of them say one minute, 59 say two minutes, 58 say three, on down to a single slice saying sixty. So every extra minute of length is a little less likely than the one before it, and a 1 minute sprint is exactly 60 times as likely as a 60 minute one.</p>
 <p>The idea is that if every length between 1 and 60 minutes were equally likely, then across many sprints you'd spend nearly all of your <em>time</em> inside the long ones and almost never be in a short one. Weighting the wheel toward short sprints evens that out, so at any given moment you're about as likely to be in a sprint of one length as another.</p>
 <p>I'm no mathematician though, so if you have a better idea about this kind of thing please leave feedback:</p>
 {{<slash name="feedback" key0="text" val0="I'm a mathematics professor at Brown University and I have an idea for improving and generalizing the sprint duration distributions of the IDK sprint wheel using a formula which takes account of... " >}}
@@ -217,22 +222,25 @@ You can still pin the length yourself and keep the rest: {{<slashembed name="spr
 {{<atsprinto "sprint nts" >}}
 {{</alts>}}
 
-Sprint for between 20 and 60 minutes, anywhere in that range with equal odds.
+Sprint for between 20 and 60 minutes, weighted toward the short end: just over half the spins come out under 30 minutes, and about a quarter at 40 minutes or more.
+{{<alts "Details">}}
+<p>The wheel's 67 slices: 20m ×3, 20m30s, 21m ×4, 22m, 22m15s, 23m ×2, 23m30s, 24m, 24m10s, 24m40s, 25m ×4, 25m45s, 26m, 26m35s ×2, 27m ×3, 27m30s ×3, 28m ×3, 29m ×2, 29m10s, 30m ×3, 32m, 32m45s, 34m50s, 35m ×2, 35m40s, 37m, 38m, 39m10s, 39m35s, 40m, 41m, 42m, 43m10s, 43m30s ×2, 45m, 46m, 46m20s, 47m, 50m ×2, 51m, 53m30s, 55m ×2, 57m30s, 60m.</p>
+{{</alts>}}
 
 ### Summary of random sprint wheels
 
-| Long name | Short name | min to max | How long will the sprint be? |
+| Long name | Short name | min to max | Where the spins land |
 | --- | --- | --- | --- |
-| burst | `burst` | 35s to 150s | Anywhere up to 2.5 minutes, even odds |
-| micro | `micro`, `μ` | 1 to 6 | Anywhere between 1 and 6 minutes, even odds |
-| flash | `flash` | 2.5 to 10.5 | Anywhere between 2.5 and 10.5 minutes, even odds |
-| not long | `nl` | 5 to 12 | Anywhere between 5 and 12 minutes, even odds |
-| not too long | `ntl` | 5 to 20 | Anywhere between 5 and 20 minutes, even odds |
-| not too short | `nts` | 20 to 60 | Anywhere between 20 and 60 minutes, even odds |
-| however long | `hel` | 5 to 40 | One of a handful of set lengths, usually 10 to 25 minutes, with a 3% chance of about 5 or 40 |
-| i don't know how long | `idk` | 1 to 60 | Anywhere between 1 and 60 minutes, weighted heavily toward the short end |
+| burst | `burst` | 35s to 150s | Half under 90 seconds |
+| micro | `micro`, `μ` | 1 to 6 | 3 minutes most often; half under 3 minutes |
+| flash | `flash` | 2.5 to 10.5 | Spread fairly evenly; half under 5.5 minutes |
+| not long | `nl` | 5 to 12 | Half under 7.5 minutes |
+| not too long | `ntl` | 5 to 20 | Half under 11 minutes |
+| not too short | `nts` | 20 to 60 | Thickest in the twenties; half under 30 minutes |
+| however long | `hel` | 5 to 40 | One of six set lengths, 10.5 to 25 minutes, with a 3% chance of 5, 5.5 or 40 |
+| i don't know how long | `idk` | 1 to 60 | Whole minutes only, short far more likely; half under 18 minutes |
 
-`for x to y` isn't a wheel, but it rolls the same way: see [above](#for-x-to-y-a-rolled-length).
+`for x to y` isn't a wheel and has no list: every step between the two lengths you give is equally likely. See [above](#for-x-to-y-a-rolled-length).
 
 ## When?
 

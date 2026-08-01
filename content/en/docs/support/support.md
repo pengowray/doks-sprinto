@@ -7,7 +7,7 @@ Help keep Sprinto alive and support continued development on [Patreon](https://p
 
 ## Linking your support
 
-On Patreon, connect your Discord account to your Patreon account and Sprinto finds you on its own. Your sprint seat and pet usually turn up within a minute, and by the next day at the latest.
+On Patreon, connect your Discord account to your Patreon account and Sprinto finds you on its own. Your sprint seat and pet usually turn up within a minute, and by the next day at the latest. If a day goes by and nothing has arrived, say so with {{<slashembed name="feedback" >}}.
 
 On Ko-fi, or on Patreon with no Discord account connected, you'll be sent a code instead. Use it in Discord:
 

@@ -117,6 +117,16 @@ Click **This channel** first if you only want to change this one channel. Green 
 
 The bell buttons mean one bell a minute before the end, which is what you get out of the box; a bell at halfway as well; or no bell at all. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so a 5 minute start delay or a bell the buttons don't offer goes in there. Fixed clock times like `at :30` are refused, because a default has to work at any hour.
 
+### Make announcements screen reader friendly
+
+{{<tag-admin>}}
+
+{{< slash name="settings theme" >}}
+
+Pick **Screen reader friendly** from the dropdown and the sprint announcements switch to a fixed set of four emoji named for what they mean, `soon`, `go`, `ding` and `horrah`, instead of a fresh random trio each time. A screen reader then reads out "soon soon soon, Join the sprint" rather than "sunflower sunflower sunflower, JOIN THE SPRINT". The wording changes with it: headings come out of capitals, the bell line says `60 seconds` rather than `60s`, and the Pings and Participants labels drop their emoji.
+
+It opens on the server default; click **This channel** to set one channel only. Servers start on **Random emojis**. Sprints run exactly the same either way. More at [Settings]({{< relref "settings" >}}).
+
 ### Everything else
 
 {{<tag-admin>}}

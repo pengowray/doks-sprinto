@@ -10,9 +10,11 @@ Joining a sprint signs you up for pings at the start of the next 3 sprints in th
 
 If you miss three sprints, or use {{<slashembed name="forgetme" >}} or {{<slashembed name="sneak-away" >}}, the pings will stop.
 
+The 📢 Pings line at the start of a sprint lists the people closest to running out first, and marks someone's last remaining ping `(last ping)`. Any ping role, and the person who started the sprint if they haven't joined it, come before them.
+
 Use {{<slashembed name="pingme" >}} to be mentioned when the next sprint starts, even if you haven't sprinted recently (or to change your mind after {{<slashembed name="forgetme" >}} or setting yourself to never).
 
-You can also choose to never or always receive pings at the start of sprints with {{<atsprintoembed "never" >}} and {{<atsprintoembed "always" >}}, or {{<slashembed name="pingme" key0="count" val0="never" >}} and {{<slashembed name="pingme" key0="count" val0="always" >}}.
+You can also choose to never or always receive pings at the start of sprints in this channel, with {{<slashembed name="pings-never" >}} and {{<slashembed name="pings-always" >}}.
 
 If you leave the server, Sprinto now stops pinging you too. That didn't used to work.
 
@@ -44,16 +46,21 @@ Sprinto won't ping you at the start of sprints until after you join another one.
 Sneak away like a ninja. Leave the current sprint if you've joined, and Sprinto won't ping you at the start of sprints until after you join another one. This command's response is only seen by you. Equivalent of using both {{<slashembed name="leave" >}} and {{<slashembed name="forgetme" >}} together, but "ephemeral" (visible only to you).
 
 <!-- The bot deep-links here from /help always and /help never (help_always_never
-     in crates/sprinto-render/src/lexicon.rs). Keep the {#always-never} id. -->
-### always / never {#always-never}
+     in crates/sprinto-render/src/lexicon.rs). Keep the {#always-never} id, whatever
+     the heading says. -->
+### pings-always / pings-never {#always-never}
 
+{{<slash name="pings-always" >}}
 {{<atsprinto always >}}
+
 Be included in the pings at the start of all future sprints in this channel, until you change the setting again.
 
+{{<slash name="pings-never" >}}
 {{<atsprinto never >}}
-Never ping you at the start of sprints, even after you've done one.
 
-These aren't separate slash commands; use {{<slashembed name="pingme" key0="count" val0="always" >}} or {{<slashembed name="pingme" key0="count" val0="never" >}} instead.
+Never ping you at the start of sprints in this channel, even after you join one. {{<slashembed name="pingme" >}} undoes it.
+
+{{<slashembed name="pingme" key0="count" val0="always" >}} and {{<slashembed name="pingme" key0="count" val0="never" >}} do the same thing.
 
 ### pings-status
 

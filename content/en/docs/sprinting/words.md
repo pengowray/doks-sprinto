@@ -28,7 +28,7 @@ Duration: 15 minutes (until ⏰ 10:45).
 📣 Participants: {{< mention "alex" >}} (1,200), {{< mention "sam" >}} (0)
 {{< /reply >}}
 
-The banner says how long you're writing for. A whole number of minutes or hours is spelled out ("FIFTEEN MINUTES", "ONE HOUR"); anything else keeps its digits, like "3 MINUTES 30 SECONDS". The end time is in your own timezone, and "in 15 minutes" ticks down by itself while you write. The 🔔 says when the bell rings. 📣 Participants is who's actually in the sprint. The number after each name is the count they joined with; it becomes something like `(1,200+300)` once they've told Sprinto how it's going, and vanishes altogether once their count is in.
+The banner says how long you're writing for. A whole number of minutes or hours is spelled out ("FIFTEEN MINUTES", "ONE HOUR"), and a length within a few seconds of one counts as whole, so a 38m02s sprint reads "THIRTY-EIGHT MINUTES". Anything further off keeps its digits, like "3 MINUTES 30 SECONDS", and under two minutes it's seconds, like "90 SECONDS". The end time is in your own timezone, and "in 15 minutes" ticks down by itself while you write. The 🔔 says when the bell rings. 📣 Participants is who's actually in the sprint. The number after each name is the count they joined with; it becomes something like `(1,200+300)` once they've told Sprinto how it's going, and vanishes altogether once their count is in.
 
 **The bell.**
 
@@ -81,7 +81,7 @@ Anyone can use it on a sprint that hasn't started yet, or one where nobody else 
 {{</alts>}}
 Join the sprint with zero starting words. Note: You must join your own sprint too.
 
-A bare `/join` always means zero, rejoins included. If you're already in the sprint with 10,000 starting words, say the number again with {{<slashembed name="join" key0="word-count" val0="10000" >}} rather than `/join` on its own, or you'll be starting from nothing.
+A bare `/join` always means zero, rejoins included. If you're already in the sprint with 10,000 starting words, say the number again with {{<slashembed name="join" key0="word-count" val0="10000" >}} rather than `/join` on its own, or you'll be starting from nothing. A comment in brackets counts as bare too, so {{<atsprintoembed "join (back from tea)">}} also puts you back on zero.
 
 {{<slash name="join" key0="word-count" val0="10000" >}}
 {{<alts>}}
@@ -149,6 +149,24 @@ and then give a final count with
 For example:
 {{<slash name="words" key0="count" val0="150">}}
 The rest are just for your convenience.
+
+## Saying something with your count
+
+Anything in brackets is a comment for the room, not part of the command. Sprinto takes it out before reading the rest, and repeats it in bold at the end of its reply:
+
+{{< reply name="alex" app="0" >}}
+{{< mention "Sprinto" >}} words 850 [brb tea]
+{{< /reply >}}
+
+{{< reply >}}
+{{< mention "alex" >}}, Word count updated: 850 words (150 new) **[brb tea]**
+{{< /reply >}}
+
+Round `(…)` and square `[…]` brackets both work, and so do several in one line. Forget the closing bracket and the rest of the line is the comment. It works on {{<slashembed name="sprint">}} and {{<slashembed name="join">}} as well as the counting commands; on a sprint the comment goes in the line above the announcement, since the announcement is the reply.
+
+Brackets holding nothing but a number are the count, not a comment: once the sprint is under way, {{<slashembed name="words" key0="count" val0="(350)" >}} reports 350. You can also paste Sprinto's own reply straight back at it. {{<atsprintoembed "words 1,250 words (250 new)">}} sets your total to 1,250 **and** your starting count to 1,000, so the "(250 new)" you sent is the answer you get. Before the sprint starts there's nothing new yet, so the same line simply joins you with 1,250 starting words.
+
+Saying how much of it is new is also how you get a big total past Sprinto: {{<atsprintoembed "words 50,000 words (250 new)">}} goes straight through, crediting 250 words to the sprint and filing the other 49,750 as your starting count. It only asks about the new words now, so `100,000 words (50,000 new)` still gets a question.
 
 ## Typos
 

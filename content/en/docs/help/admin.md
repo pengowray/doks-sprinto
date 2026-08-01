@@ -7,7 +7,7 @@ Commands available to guild owners, administrators and people with a role named 
 
 ## Sprint Admin intro
 
-A _Sprint Admin_  [{{<tag-admin>}}] is someone with extra privileges on a server. A server's owner, its administrators, and anyone with a role named `Sprint Admin`. For simplicity, they'll all be called _SprintAdmin_ here. Sprint Admins can configure Sprinto, for example, they can set which channels sprints run in, or remove all users from the ping list.
+A _Sprint Admin_  [{{<tag-admin>}}] is someone with extra privileges on a server. A server's owner, its administrators, and anyone with a role named `Sprint Admin`. For simplicity, they'll all be called _SprintAdmin_ here. Sprint Admins can configure Sprinto, for example, they can set which channels sprints run in, remove all users from the ping list, or [take a quote off a set of sprint results]({{<relref "settings" >}}#removing-or-reporting-a-quote).
 
 Sprinto considers anyone who has a role named {{<role "@Sprint Admin">}} or {{<role "@Sprint Admins">}} or {{<role "@sprintadmin">}} (space optional, any capitalization, and will also accept Sprinto Admin) to be a _Sprint Admin_.
 
