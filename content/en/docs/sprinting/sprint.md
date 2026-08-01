@@ -94,7 +94,7 @@ Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere
 
 Undecided? You can choose a random length for your sprints.
 
-Each wheel has its own list of lengths and picks one at random. A length listed twice comes up twice as often, and a spin never lands on anything that isn't on the list. Sprinto names the wheel he spun at the top of the sprint announcement, like `...Spinning the not too short wheel...`.
+Each wheel has its own list of lengths and picks one at random. A length listed twice comes up twice as often.
 
 ### Burst sprint
 
@@ -103,7 +103,7 @@ Each wheel has its own list of lengths and picks one at random. A length listed 
 {{<slash name="sprint" key0="options" val0="burst" >}}
 {{<atsprinto "sprint burst" >}}
 
-A very quick sprint with a randomly chosen length from 35 to 150 seconds. Half the spins come out under 90 seconds. It also opens with a short join window (30 to 60 seconds) so it doesn't keep you waiting longer than the sprint itself.
+A very quick sprint with a randomly chosen length from 35 to 150 seconds. Half the spins come out under 90 seconds. It also opens with a short join window (30 to 60 seconds).
 {{<alts "Details">}}
 <p>The wheel's 14 slices: 35s, 45s ×2, 60s ×2, 75s ×2, 90s ×2, 100s, 105s, 120s, 135s, 150s.</p>
 {{</alts>}}
@@ -206,7 +206,7 @@ Roughly: a quarter of these land under 9 minutes, half land under 18 minutes, an
 You can still pin the length yourself and keep the rest: {{<slashembed name="sprint" key0="options" val0="idk 5 minutes" >}} gives you the 5 minutes you asked for.
 
 {{<alts "How the idk wheel is weighted">}}
-<p>The wheel has 1,830 slices: 60 of them say one minute, 59 say two minutes, 58 say three, on down to a single slice saying sixty. So every extra minute of length is a little less likely than the one before it, and a 1 minute sprint is exactly 60 times as likely as a 60 minute one.</p>
+<p>The wheel has 1,830 slices: 60 of them say one minute, 59 say two minutes, 58 say three, on down to a single slice saying sixty. So every extra minute of length is a little less likely than the one before it, and a 1 minute sprint is 60 times as likely as a 60 minute one.</p>
 <p>The idea is that if every length between 1 and 60 minutes were equally likely, then across many sprints you'd spend nearly all of your <em>time</em> inside the long ones and almost never be in a short one. Weighting the wheel toward short sprints evens that out, so at any given moment you're about as likely to be in a sprint of one length as another.</p>
 <p>I'm no mathematician though, so if you have a better idea about this kind of thing please leave feedback:</p>
 {{<slash name="feedback" key0="text" val0="I'm a mathematics professor at Brown University and I have an idea for improving and generalizing the sprint duration distributions of the IDK sprint wheel using a formula which takes account of... " >}}
@@ -224,23 +224,23 @@ You can still pin the length yourself and keep the rest: {{<slashembed name="spr
 
 Sprint for between 20 and 60 minutes, weighted toward the short end: just over half the spins come out under 30 minutes, and about a quarter at 40 minutes or more.
 {{<alts "Details">}}
-<p>The wheel's 67 slices: 20m ×3, 20m30s, 21m ×4, 22m, 22m15s, 23m ×2, 23m30s, 24m, 24m10s, 24m40s, 25m ×4, 25m45s, 26m, 26m35s ×2, 27m ×3, 27m30s ×3, 28m ×3, 29m ×2, 29m10s, 30m ×3, 32m, 32m45s, 34m50s, 35m ×2, 35m40s, 37m, 38m, 39m10s, 39m35s, 40m, 41m, 42m, 43m10s, 43m30s ×2, 45m, 46m, 46m20s, 47m, 50m ×2, 51m, 53m30s, 55m ×2, 57m30s, 60m.</p>
+<p>The wheel has 67 slices, bunched at the short end: just over half are under 30 minutes, and about a quarter are 40 minutes or more. They aren't all whole minutes, so a spin can hand you 26m35s.</p>
 {{</alts>}}
 
 ### Summary of random sprint wheels
 
 | Long name | Short name | min to max | Where the spins land |
 | --- | --- | --- | --- |
-| burst | `burst` | 35s to 150s | Half under 90 seconds |
-| micro | `micro`, `μ` | 1 to 6 | 3 minutes most often; half under 3 minutes |
-| flash | `flash` | 2.5 to 10.5 | Spread fairly evenly; half under 5.5 minutes |
-| not long | `nl` | 5 to 12 | Half under 7.5 minutes |
-| not too long | `ntl` | 5 to 20 | Half under 11 minutes |
-| not too short | `nts` | 20 to 60 | Thickest in the twenties; half under 30 minutes |
+| burst | `burst` | 35s to 150s | Anywhere up to 2.5 minutes, 50% chance of under 90 seconds |
+| micro | `micro`, `μ` | 1 to 6 | 3 minutes most often; 50% chance of under 3 minutes |
+| flash | `flash` | 2.5 to 10.5 | Spread fairly evenly; 50% chance of under 5.5 minutes |
+| not long | `nl` | 5 to 12 | 50% chance of under 7.5 minutes |
+| not too long | `ntl` | 5 to 20 | 50% chance of under 11 minutes |
+| not too short | `nts` | 20 to 60 | Thickest in the twenties; 50% chance of under 30 minutes |
 | however long | `hel` | 5 to 40 | One of six set lengths, 10.5 to 25 minutes, with a 3% chance of 5, 5.5 or 40 |
-| i don't know how long | `idk` | 1 to 60 | Whole minutes only, short far more likely; half under 18 minutes |
+| i don't know how long | `idk` | 1 to 60 | Whole minutes only, short far more likely; 50% chance of under 18 minutes |
 
-`for x to y` isn't a wheel and has no list: every step between the two lengths you give is equally likely. See [above](#for-x-to-y-a-rolled-length).
+`for x to y` creates a custom wheel: every step between the two lengths you give is equally likely. See [above](#for-x-to-y-a-rolled-length).
 
 ## When?
 
@@ -250,13 +250,8 @@ Sprint for between 20 and 60 minutes, weighted toward the short end: just over h
 
 {{< slash name="sprint" key0="options" val0="in 5" >}}
 {{< atsprinto "sprint in 5" >}}
-{{< alts "Synonyms" >}}
-{{< slash name="sprint" key0="options" val0="delay 5" >}}
-{{< slash name="sprint" key0="options" val0="delay:5" >}}
-{{< atsprinto "sprint delay 5" >}}
-{{</alts>}}
 
-Sprint in 5 minutes (for the default of 15 minutes). `delay 5` and `delay:5` mean the same as `in 5`.
+Sprint in 5 minutes (for the default of 15 minutes).
 
 ### for x minutes in y minutes
 
@@ -450,7 +445,7 @@ Four 25 minute blocks, with 5 minute breaks in between. See [chains](#chains) fo
 
 How long sprinters have to give their final word count, once the writing time is up.
 
-If you don't set this, the default is 1 minute 30 seconds, plus another 30 seconds per 5 minutes of sprint, and never less than 2 minutes. A 15 minute sprint gets 3 minutes; an hour-long one gets 7 minutes 30 seconds. It stops climbing at 10 minutes, and only a sprint of 85 minutes or more gets that far, which needs `please`. `marathon` and `megathon` set their endtime to 10 minutes themselves.
+If you don't set this, the default ranges from 2 to 10 minutes depending on the length of your sprint. A 15 minute sprint gets 3 minutes. How it's calculated: 1 minute 30 seconds, plus another 30 seconds per 5 minutes of sprint, and never less than 2 minutes. An hour-long sprint gets 7 minutes 30 seconds. It stops climbing at 10 minutes, and only a sprint of 85 minutes or more gets that far, which needs `please`. `marathon` and `megathon` set their endtime to 10 minutes themselves.
 
 It can be set anywhere from 30 seconds to 30 minutes, or up to an hour for a {{<role "@Sprint MC">}} using `please`.
 
@@ -482,7 +477,7 @@ Turn late edits off for this sprint, so the scoreboard is final as soon as it's 
 | `noff` | "No fast finish" — Always wait the full ending time for final word counts before showing the final results (instead of speeding it up if everyone's given their word counts). Synonyms: `no ff`, `no fast finish` |
 | `ff` | The opposite: allow the fast finish, even if this channel normally turns it off. Synonym: `fast finish` |
 | `nops` | Leave off the P.S. line at the bottom of the sprint messages. Synonym: `no ps` |
-| `no bell` | No mid-sprint chimes at all. See [chimes](#chimes). Synonyms: almost any way of saying it, such as `no chime`, `no bells`, `nobell`, `zero chimes`, `without any bells`, `chime none`, `chime off` and `chime 0` |
+| `no bell` | No mid-sprint chimes at all. See [chimes](#chimes). Synonyms: almost any way of saying it, such as `no chime`, `no bells`, `nobell`, `zero chimes`, `without any bells`, `chime none`, `chime off`. `chime 0` is also assumed to mean no chimes. |
 | `please` | Ask Sprinto to do things he wouldn't normally, such as running a sprint up to 2 hours. Synonyms: `pls`, `thanks`, `danke`, and a long list of other polite (and impolite) phrasings |
 | `lock` | Lock the sprint, meaning only a Sprint MC can cancel it. Synonyms: `locked`, `nocancel`, `uncancellable`. See: [sprint admin commands]({{< relref "admin-sprint" >}}) |
 
@@ -500,7 +495,7 @@ Run a 90 minute sprint in 5 minutes
 
 {{<tag-minutes>}}
 
-A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. Every sprint gets one by default, a minute before time's up. A sprint of a minute or less doesn't get one, since the bell would land at the start.
+A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. Every sprint gets one by default, a minute before time's up. A sprint of a minute or less doesn't get one.
 
 {{<slash name="sprint" key0="options" val0="for 40 chime -10" >}}
 {{<alts "Synonyms" >}}
@@ -530,7 +525,7 @@ Up to 5 chimes per sprint, and they have to be at least a minute apart. Any of y
 
 Silence, even if this channel normally sets one.
 
-How many of those bells actually ping _you_ is your own setting, and out of the box none of them do: see {{<atsprintoembed "chimes">}}. When a bell does ping you, Sprinto takes your ping off the start message, so the bell replaces it rather than adding to it. Your name stays on the participants list either way.
+How many of those bells actually ping _you_ is your own setting, and out of the box none of them do: see {{<atsprintoembed "chimes">}}.
 
 ## Chains
 

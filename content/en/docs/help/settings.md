@@ -228,13 +228,13 @@ Click **This channel** first if you only want to change this one channel; a chan
 
 If you'd rather type than click, every setting works as text too:
 
-{{<atsprinto "settings quotes off" >}}
+{{<atsprinto "settings show-quotes off" >}}
 {{<atsprinto "settings walltime sometimes" >}}
 {{<atsprinto "settings" >}}
 
 The text form always changes this channel. Server defaults are set from the panel, with {{<slashembed name="settings server">}}.
 
-Values are forgiving. `on`, `off`, `yes`, `no`, `true`, `false` and similar all land where you'd expect, as does `default` (which means "go back to inheriting"). Keys are not forgiving. Four of the names in the table below only work in the panel: typed, `show-ps` is `ps`, `show-quotes` is `quotes`, `show-patreon` is `patreon` and `auto-pings` is `autopings`. The other seven work as written, and a few have spares: `clean` for `family-friendly`, `tidy` or `autodelete` for `tidy-sprints`, `emoji` for `theme`.
+Values are forgiving. `on`, `off`, `yes`, `no`, `true`, `false` and similar all land where you'd expect, as does `default` (which means "go back to inheriting"). Keys are forgiving too. Every name in the table below works as written, with or without its hyphens, and a few have spares: `clean` for `family-friendly`, `tidy` or `autodelete` for `tidy-sprints`, `emoji` for `theme`.
 
 Give it a value it can't read and it won't scold you; it shows you the current value instead. Give it a key it doesn't know and it lists the keys it does know.
 

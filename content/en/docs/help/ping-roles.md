@@ -25,13 +25,13 @@ Anyone can open it and read the list. Changing it needs an {{<tag-admin>}}, that
 
 Sprinto also tracks who's been sprinting lately and pings those people too, on top of any roles you've chosen. The two don't cancel each other out.
 
-If you'd rather the role were the only thing pinged, turn off `autopings` for the channel, so joining a sprint no longer signs anyone up for future pings:
+If you'd rather the role were the only thing pinged, turn off `auto-pings` for the channel, so joining a sprint no longer signs anyone up for future pings:
 
-{{<atsprinto "settings autopings off" >}}
+{{<atsprinto "settings auto-pings off" >}}
 
 That's also available in the panel under {{<slashembed name="settings channel">}}. See [Settings]({{<relref "settings" >}}).
 
-Turning `autopings` off doesn't clear the pings people have already earned. To wipe those, as if everyone in the channel had typed {{<slashembed name="forgetme">}}:
+Turning `auto-pings` off doesn't clear the pings people have already earned. To wipe those, as if everyone in the channel had typed {{<slashembed name="forgetme">}}:
 
 {{<slash name="admin-forget-all-users" >}} {{<tag-admin>}}
 {{<alts>}}
@@ -40,7 +40,7 @@ Turning `autopings` off doesn't clear the pings people have already earned. To w
 
 Only you see the slash command's reply.
 
-Individual sprinters can still opt in for themselves at any time with {{<slashembed name="pingme">}}, whatever `autopings` is set to, and ping roles are honoured either way.
+Individual sprinters can still opt in for themselves at any time with {{<slashembed name="pingme">}}, whatever `auto-pings` is set to, and ping roles are honoured either way.
 
 ## Starting a sprint without pinging anyone
 
