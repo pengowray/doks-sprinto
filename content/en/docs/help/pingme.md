@@ -107,13 +107,6 @@ Turns pings on for that person, as if they'd used {{<slashembed name="pingme" >}
 
 Always pinging a role at the start of sprints, rather than individual people, is part of {{<slash name="settings roles" >}}, a native Discord picker. The typed commands still work: {{<atsprintoembed "pingroles" >}} lists the roles, and `pingroles add @role`, `pingroles remove @role` and `pingroles reset` change them. See [Ping roles]({{<relref "ping-roles" >}}) for the full picture.
 
-<!--
-## Todo
-
-* (TODO) guild or channel default number of pings
-* (TODO) time-based, e.g. `/pingme for 15 hrs` or `/forgetme for 8 hrs`
--->
-
 ## See also
 
 - [Ping roles (admin)]({{<relref "ping-roles" >}}) — Set up a role to always be pinged

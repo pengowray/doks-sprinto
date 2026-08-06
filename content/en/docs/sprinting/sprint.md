@@ -103,7 +103,7 @@ Each wheel has its own list of lengths and picks one at random. A length listed 
 {{<slash name="sprint" key0="options" val0="burst" >}}
 {{<atsprinto "sprint burst" >}}
 
-A very quick sprint with a randomly chosen length from 35 to 150 seconds. Half the spins come out under 90 seconds. It also opens with a short join window (30 to 60 seconds).
+A very quick sprint with a randomly chosen length from 35 to 150 seconds, usually around a minute and a half. It also opens with a short join window (30 to 60 seconds).
 {{<alts "Details">}}
 <p>The wheel's 14 slices: 35s, 45s ×2, 60s ×2, 75s ×2, 90s ×2, 100s, 105s, 120s, 135s, 150s.</p>
 {{</alts>}}
@@ -222,23 +222,25 @@ You can still pin the length yourself and keep the rest: {{<slashembed name="spr
 {{<atsprinto "sprint nts" >}}
 {{</alts>}}
 
-Sprint for between 20 and 60 minutes, weighted toward the short end: just over half the spins come out under 30 minutes, and about a quarter at 40 minutes or more.
+Sprint for between 20 and 60 minutes, weighted toward the short end. Most spins land in the twenties or thirties, and the long end is thin.
 {{<alts "Details">}}
 <p>The wheel has 67 slices, bunched at the short end: just over half are under 30 minutes, and about a quarter are 40 minutes or more. They aren't all whole minutes, so a spin can hand you 26m35s.</p>
 {{</alts>}}
 
 ### Summary of random sprint wheels
 
-| Long name | Short name | min to max | Where the spins land |
+| Long name | Short name | Full range | Usually |
 | --- | --- | --- | --- |
-| burst | `burst` | 35s to 150s | Anywhere up to 2.5 minutes, 50% chance of under 90 seconds |
-| micro | `micro`, `μ` | 1 to 6 | 3 minutes most often; 50% chance of under 3 minutes |
-| flash | `flash` | 2.5 to 10.5 | Spread fairly evenly; 50% chance of under 5.5 minutes |
-| not long | `nl` | 5 to 12 | 50% chance of under 7.5 minutes |
-| not too long | `ntl` | 5 to 20 | 50% chance of under 11 minutes |
-| not too short | `nts` | 20 to 60 | Thickest in the twenties; 50% chance of under 30 minutes |
-| however long | `hel` | 5 to 40 | One of six set lengths, 10.5 to 25 minutes, with a 3% chance of 5, 5.5 or 40 |
-| i don't know how long | `idk` | 1 to 60 | Whole minutes only, short far more likely; 50% chance of under 18 minutes |
+| burst | `burst` | 35s to 2m30s | 45s to 2 minutes |
+| micro | `micro`, `μ` | 1 to 6 minutes | 1.5 to 4.5 minutes, most often 3 |
+| flash | `flash` | 2.5 to 10.5 minutes | 3 to 9 minutes |
+| not long | `nl` | 5 to 12 minutes | 5 to 10 minutes |
+| not too long | `ntl` | 5 to 20 minutes | 7 to 16 minutes |
+| not too short | `nts` | 20 to 60 minutes | 23 to 46 minutes |
+| however long | `hel` | 5 to 40 minutes | one of six set lengths, 10.5 to 25 minutes, with an odd chance of 5, 5.5 or 40 |
+| i don't know how long | `idk` | 1 to 60 minutes | 6 to 37 minutes, whole minutes only, short far more likely |
+
+**Usually** is where about two thirds of spins land. The rest fall elsewhere inside the full range.
 
 `for x to y` creates a custom wheel: every step between the two lengths you give is equally likely. See [above](#for-x-to-y-a-rolled-length).
 

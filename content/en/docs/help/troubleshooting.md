@@ -19,7 +19,6 @@ If you're having trouble, here are some tips. The first few are for users; the l
 ### 1) @Sprinto the role vs @Sprinto the bot
 
 ![@Sprinto role vs bot](/images/help/troubleshooting/01-role-vs-bot.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 **Spot the difference: The @Sprinto role doesn't respond. Discord creates this role with the same name as the bot and it's a usability nightmare. The color and formatting of the role and bot may also be very similar, depending on Discord server settings.**
 
@@ -41,14 +40,12 @@ If you're having trouble, here are some tips. The first few are for users; the l
 Sometimes sprint commands don't succeed because they're sent as chat messages.
 
 ![Sent as a chat message](/images/help/troubleshooting/02-sent-as-chat-message.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 **Sometimes sprint commands don't succeed because they're sent as chat messages.**
 
 How to tell if you're sending a chat message instead of a slash command:
 
 ![Slash commands that fail vs succeed](/images/help/troubleshooting/03-sprinto-help-get-sprinting.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 **Slash commands that fail vs succeed**
 
@@ -67,7 +64,6 @@ Tips:
 ### 3) Check “Legacy chat input” (it breaks slash commands)
 
 ![Legacy chat input setting](/images/help/troubleshooting/04-legacy-chat-input.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 **Slash commands will not work if you're using “Legacy chat input”, so keep this off unless you need it.** (User Settings > Accessibility)
 
@@ -78,7 +74,6 @@ Tips:
 - If Sprinto isn't starting sprints, make sure he has permission to send messages in your sprinting channel. `/sprint` will warn you if Sprinto does not have **Send Messages** permission (but `@Sprinto sprint` can't).
 
 ![Use Application Commands permission](/images/help/troubleshooting/05-use-application-commands.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 - If users can't see the slash command menus, check they have **Use Application Commands** permission (can be set per-channel or per-role).
 
@@ -89,7 +84,6 @@ Tips:
 Thanks for your patience and support.
 
 ![Permission summary](/images/help/troubleshooting/06-permission-summary.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 - **Adding Sprinto to your server again (to a server he's already on) may fix permission problems.**
 - **Check Sprinto can send messages in the channels you want to run sprints.**

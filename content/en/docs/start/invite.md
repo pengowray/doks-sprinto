@@ -8,7 +8,6 @@ lead:
 ## Method 1
 
 ![Image](/images/sprint-add-app.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 If you can see Sprinto on another server, you can click Sprinto or "view profile" and invite him directly from his info with the "Add App" button.
 
@@ -26,7 +25,6 @@ https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&perm
 4. Choose the server and click Continue (see below)
 
 ![Image](/images/sprinto-invite-dialog.png)
-<!-- TODO(owner): screenshot may need retaking -->
 
 Alternatively you can open the link in a web browser, but make sure you're logged into [discord.com/login](https://discord.com/login) on that browser first.
 
@@ -42,8 +40,6 @@ Two, really.
 The invite link asks for a few more bits than that. They're held in reserve for features that aren't switched on right now, and you can untick them at invite time without breaking sprints. If you later turn on something that needs one, you can re-invite with the same link to grant it.
 
 If a sprint won't start in a particular channel, permissions are the usual culprit: {{<slashembed name="sprint">}} is refused with a quiet note only you can see when Sprinto can't post there.
-
-<!-- TODO(owner): confirm the permission bitmask in the Discord developer portal still matches what we want -->
 
 ## Sprinto joined. Now what?
 

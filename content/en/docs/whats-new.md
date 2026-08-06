@@ -7,8 +7,6 @@ toc: true
 keywords: ["what's new", "changelog", "release notes", "rewrite"]
 ---
 
-<!-- TODO(owner): add release date once known -->
-
 Sprinto ran on the same code from March 2023 until June 2026. This release replaces all of it.
 
 The important thing first: **you don't have to relearn anything.** {{<slashembed name="sprint" >}}, {{<slashembed name="join" >}}, {{<slashembed name="words" >}} and the rest work exactly as they did, the replies read the same, and the defaults haven't moved (15 minute sprint, 1 minute join window, 3 more minutes to report your words before the scoreboard posts). Longer sprints get a longer reporting window, up to 10 minutes, and Sprinto says how long you have when time's up.
@@ -159,9 +157,7 @@ See [pingme]({{<relref "pingme" >}}) for the whole set.
 
 Some things didn't make the crossing. Straight answers:
 
-<!-- TODO(owner): sign off on the delay wording before publishing -->
 - **`delay N`** no longer holds the join window shut so a sprint can be queued to start later. That was used something like one to two thousand times a year while it existed, so it wasn't nothing, but it carried a lot of complexity. The word itself still works: `delay 10` now means the same as `in 10`, a plain wait before the start with the join window open. Proper sprint scheduling is planned and will work differently.
-<!-- end delay item -->
 
 - **Voice.** The chime in a voice channel is built, but it hasn't been proven in a live call yet, so it's switched off at launch. It was only ever enabled for about 32 servers. It's planned to come back. See [Voice]({{<relref "voice" >}}).
 

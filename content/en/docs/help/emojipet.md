@@ -6,10 +6,6 @@ url: "docs/emoji-pets"
 ---
 ## Pets
 
-<!-- TODO(owner): a screenshot of the /pets panel would suit this page. The old
-     one was a Discord CDN attachment link that has since 404'd, so it is
-     removed rather than left broken. Put a replacement in assets/images/. -->
-
 A pet is a small cosmetic companion that sprints alongside you and shows up on the scoreboard.
 
 You don't have just one pet anymore, you have a collection.
@@ -45,7 +41,5 @@ Pets aren't bought outright and they don't appear from nothing. They arrive by s
 
 
 Every pet you're given is yours to keep. Whether one can sprint depends on your sprint seat, not on the pet.
-
-<!-- TODO(owner): expand once the pets rework settles (eggs, appearance rolling, seat mechanics) -->
 
 * [Terms of Service]({{<relref "emojipet-tos">}})
