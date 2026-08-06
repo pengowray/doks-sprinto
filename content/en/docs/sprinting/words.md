@@ -6,7 +6,7 @@ lead: Commands for once the sprint's started
 
 ## What Sprinto posts
 
-A sprint has three announcements, and they're all the same shape: a decorated banner, a line of detail, then who's involved. There's also a bell partway through, which is one short line on its own.
+A sprint has three announcements, and they're all the same shape: a decorated banner, a line of detail, then who's involved. A sprint that asked for a bell also gets one short line partway through.
 
 **The join window.** The sprint is booked but hasn't started, so there's still time to get in:
 
@@ -17,18 +17,18 @@ The next sprint runs for 15 minutes and will begin in 60 seconds.
 📢 Pings: {{< mention "alex" >}} (not joined)
 {{< /reply >}}
 
-The fruit is different every sprint, it's only decoration. 📢 Pings is everyone Sprinto is calling in: people who asked to be pinged, any ping role, and the person who started the sprint if they still haven't joined it, as above. When the start is more than two minutes away you get a clock time instead of "in 60 seconds", shown in your own timezone.
+The fruit is different every sprint, it's only decoration. 📢 Pings is everyone Sprinto is calling in: people who asked to be pinged, any ping role, and the person who started the sprint if they still haven't joined it, as above. From two minutes out the start clock comes as well, like `in 5 minutes (at 10:05)`, shown in your own timezone.
 
 **The start.**
 
 {{< reply >}}
 🍏🍏🍏 **THE SPRINT BEGINS: FIFTEEN MINUTES** 🍏🍏🍏
 Duration: 15 minutes (until ⏰ 10:45).
-⏳ Time's up in 15 minutes 🔔 at 60s remaining.
+⏳ Time's up in 15 minutes
 📣 Participants: {{< mention "alex" >}} (1,200), {{< mention "sam" >}} (0)
 {{< /reply >}}
 
-The banner says how long you're writing for. A whole number of minutes or hours is spelled out ("FIFTEEN MINUTES", "ONE HOUR"), and a length within a few seconds of one counts as whole, so a 38m02s sprint reads "THIRTY-EIGHT MINUTES". Anything further off keeps its digits, like "3 MINUTES 30 SECONDS", and under two minutes it's seconds, like "90 SECONDS". The end time is in your own timezone, and "in 15 minutes" ticks down by itself while you write. The 🔔 says when the bell rings. 📣 Participants is who's actually in the sprint. The number after each name is the count they joined with; it becomes something like `(1,200+300)` once they've told Sprinto how it's going, and vanishes altogether once their count is in.
+The banner says how long you're writing for. A whole number of minutes or hours is spelled out ("FIFTEEN MINUTES", "ONE HOUR"), and a length within a few seconds of one counts as whole, so a 38m02s sprint reads "THIRTY-EIGHT MINUTES". Anything further off keeps its digits, like "3 MINUTES 30 SECONDS", and under two minutes it's seconds, like "90 SECONDS". The end time is in your own timezone, and "in 15 minutes" ticks down by itself while you write. A sprint with bells adds `🔔 at 60s remaining.` to that line. 📣 Participants is who's actually in the sprint. The number after each name is the count they joined with; it becomes something like `(1,200+300)` once they've told Sprinto how it's going, and vanishes altogether once their count is in.
 
 **The bell.**
 
@@ -36,7 +36,7 @@ The banner says how long you're writing for. A whole number of minutes or hours 
 🔔 **60 seconds remaining**
 {{< /reply >}}
 
-Every sprint gets one a minute before time's up, unless the host set different bells or turned them off. It doesn't @ anyone unless they asked it to, and it never shows word counts. See [chimes]({{<relref "sprint" >}}#chimes).
+Nothing rings unless the sprint asks for it: your command, this channel's default sprint, or a preset like `marathon`. A bell doesn't @ anyone unless they asked it to, and it never shows word counts. See [chimes]({{<relref "sprint" >}}#chimes).
 
 **Time's up.**
 
@@ -130,10 +130,12 @@ Join with 10,000 words (This is the word count of the document you're working on
 {{</alts>}}
 Join with your last word count (e.g. from your previous sprint)
 
+That's the last count you gave Sprinto in any channel: a word count you reported, or the count a join put you on. A bare `/join` counts, and puts you on zero.
+
 {{<slash name="same" key0="adjustment" val0="+300 new" >}}
 `/same` also takes an optional adjustment, so you can pick up your last count with a tweak on top.
 
-Once you're already in the sprint, `/same` reports instead of joining: it files your last count as your new total, exactly like typing that number into {{<slashembed name="words">}}. If that would mean more new words than the sprint has had time for, Sprinto asks which you meant and puts the choices on buttons instead of putting the number on the board.
+Once you're already in the sprint, `/same` reports instead of joining: it files your last count as your new total, exactly like typing that number into {{<slashembed name="words">}}. If that would mean more new words than the sprint has had time for, Sprinto asks which you meant and puts the choices on buttons instead of putting the number on the board. An adjustment then goes on the count you're on here, so `/same +300` means the same as {{<slashembed name="words" key0="count" val0="+300" >}}.
 
 ## Some different ways to declare or update your word count
 
@@ -151,7 +153,7 @@ If you joined with no starting count there's only one number to give back, so it
 Sprinto won't file a number that looks wrong: a total far bigger than the sprint has had time for, or one that would put your new words below zero. It shows you what the number would mean and puts the choices on buttons. If it really is right, add `please`: {{<slashembed name="words" key0="count" val0="50000 please" >}}.
 
 {{<slash name="words" key0="count" val0="\-" >}}
-At the end of a sprint you may wish to simply leave your word count unchanged. Don't forget the dash `-` without it, Sprinto will just show your current word count. The dash also locks the count in, like {{<slashembed name="final" >}}, so the sprint stops waiting on you.
+At the end of a sprint you may wish to simply leave your word count unchanged. Don't forget the dash `-` without it, Sprinto will just show your current word count. The dash also marks you done, like {{<slashembed name="final" >}}, so the sprint stops waiting on you.
 
 {{<slash name="words" key0="count" val0="150 new" >}}
 If you know how many *new* words you've written, but perhaps changed documents or lost track of your starting word count, you can just declare how many of your words are `new` (written during the sprint). Use {{< slashembed name="words" key0="count" val0="0 new" >}} to reset your count to your starting word count.
@@ -166,7 +168,7 @@ Add another 50 new words to your count. Perhaps from your second manuscript.
 {{<alts>}}
 {{<slash name="final" key0="count" val0="10150" >}}
 {{</alts>}}
-Give your final word count early, before the sprint is over. This way Sprinto won't wait for another {{<slashembed name="words">}} from you after time's up. If you never joined at all, {{<slashembed name="final" key0="count" val0="10150" >}} joins you and locks the count in at once, so nobody waits on you. {{<slashembed name="final" >}} on its own only works once you're in the sprint.
+Give your final word count early, before the sprint is over. This way Sprinto won't wait for another {{<slashembed name="words">}} from you after time's up. If you never joined at all, {{<slashembed name="final" key0="count" val0="10150" >}} joins you and marks you done at once, so nobody waits on you. {{<slashembed name="final" >}} on its own does the same on zero.
 
 {{<slash name="join" key0="word-count" val0="15000" >}}
 You can rejoin a sprint with a different number of starting words before giving your word count with {{<slashembed name="words">}}. Sometimes it's easier.
@@ -282,12 +284,11 @@ Cancel the active sprint.
 {{</alts>}}
 Don't wait out the rest of the join window, start the sprint now. Only the person who started it, or a {{<role "@Sprint MC">}}, can do this.
 
-{{<slash name="nudge" >}}
+{{<atsprinto "nudge" >}}
 {{<alts>}}
-{{<atsprinto "nudge">}}
 {{<atsprinto "results">}}
 {{</alts>}}
-If a sprint looks stuck waiting on someone's word count, this asks Sprinto to move it along.
+If a sprint looks stuck waiting on someone's word count, this asks Sprinto to move it along. There's no slash command for this, so you have to @Sprinto. The one that moves a sprint on whether it's stuck or not is {{<slashembed name="nudge-please" >}}, for {{<role "@Sprint MC">}}s.
 
 {{<atsprinto "who" >}}
 Who's in the current sprint.

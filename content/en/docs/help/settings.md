@@ -19,7 +19,7 @@ The old `setup-set-*` commands (`setup-set-allowed-channel`, `setup-pingroles-se
 
 {{<slash name="settings me" >}}
 
-Your own settings, and only yours. Every sprint rings a bell partway through by default, and **Max chimes** here is how many of those bells @ you. It starts at 0, so you're never pinged unless you ask; the bells ring in the channel either way. There's also a link through to your {{<slashembed name="pets">}} panel.
+Your own settings, and only yours. **Max chimes** is how many of a sprint's bells @ you. It starts at 0, so you're never pinged unless you ask; the bells ring in the channel either way. There's also a link through to your {{<slashembed name="pets">}} panel.
 
 Nobody else's settings are affected, on any server.
 
@@ -50,7 +50,7 @@ Everything here uses the default. Add a setting below to change one.
 ### In effect here
 
 - Ping roles: (none) (default). Edit with {{<slashembed name="settings roles">}}
-- Sprint defaults: Length 15 min, start 1 min, bells -1, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
+- Sprint defaults: length 15 min, start 1 min, bells off, late 10 min (default). Edit with {{<slashembed name="settings sprint-defaults">}}
 - Emoji theme: Random emojis (default). Edit with {{<slashembed name="settings theme">}}
 More info: <https://sprintobot.com/docs/settings-admin/>
 
@@ -87,7 +87,7 @@ Pick `walltime` from the dropdown, click its button once to cycle it, and the sa
 ### In effect here
 
 - Ping roles: (none) (default). Edit with {{<slashembed name="settings roles">}}
-- Sprint defaults: Length 15 min, start 1 min, bells -1, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
+- Sprint defaults: length 15 min, start 1 min, bells off, late 10 min (default). Edit with {{<slashembed name="settings sprint-defaults">}}
 - Emoji theme: Random emojis (default). Edit with {{<slashembed name="settings theme">}}
 More info: <https://sprintobot.com/docs/settings-admin/>
 
@@ -105,6 +105,9 @@ More info: <https://sprintobot.com/docs/settings-admin/>
 {{<buttons>}}
 {{<button "Wall time: Static timer (classic)" "primary">}}
 {{<button "✕">}}
+{{</buttons>}}
+
+{{<buttons>}}
 {{<select "Add a setting">}}
 {{</buttons>}}
 
@@ -128,7 +131,7 @@ Everything here uses the default. Add a setting below to change one.
 
 - Sprint channels: #writing-sprints, #sprint-marathon. Edit with {{<slashembed name="settings sprint-channels">}}
 - Ping roles: {{<role "@Sprinters">}}. Edit with {{<slashembed name="settings roles">}}
-- Sprint defaults: Length 20 min, start 1-2 min, bells -1, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
+- Sprint defaults: length 20 min, start 1-2 min, bells off, late 10 min. Edit with {{<slashembed name="settings sprint-defaults">}}
 - Emoji theme: Random emojis (default). Edit with {{<slashembed name="settings theme">}}
 More info: <https://sprintobot.com/docs/settings-admin/>
 {{</reply>}}
@@ -143,7 +146,7 @@ More info: <https://sprintobot.com/docs/settings-admin/>
 {{<select "Add a setting">}}
 {{</buttons>}}
 
-That server has never changed a toggle, so the panel itself is still empty, but it has picked sprint channels, a ping role and a 20 minute default. `bells -1` means one bell, one minute before the end. `late 10 min` is how long after time's up word counts are still accepted. Read the sprint channels line as "sprints run only in these two", and see [Allowed channels]({{<relref "whitelist" >}}).
+That server has never changed a toggle, so the panel itself is still empty, but it has picked sprint channels, a ping role and a 20 minute default. `bells off` means nothing rings unless a sprint asks for it. `late 10 min` is how long after time's up word counts are still accepted. Read the sprint channels line as "sprints run only in these two", and see [Allowed channels]({{<relref "whitelist" >}}).
 
 #### When the channel panel says sprints don't run here
 
@@ -187,7 +190,7 @@ Pick which channels sprints are allowed in. An empty list, which is the default,
 
 {{<slash name="settings sprint-defaults" >}}
 
-This channel's default sprint: how long it runs, how long it waits before starting, and its bells. Out of the box that's 15 minutes long, a 1 minute join window and one bell a minute before the end. The bell buttons offer 🔔 1 minute, 🔔 50% and 🔔 1 minute, or 🔕 No chime. Anything else, including the late window, goes in through **Edit text**.
+This channel's default sprint: how long it runs, how long it waits before starting, and its bells. Out of the box that's 15 minutes long, a 1 minute join window and no bell. The bell buttons offer 🔔 1 minute, 🔔 50% and 🔔 1 minute, or 🔕 No chime, which is the one you start on. Anything else, including the late window, goes in through **Edit text**.
 
 ### settings theme
 

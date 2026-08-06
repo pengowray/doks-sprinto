@@ -16,15 +16,15 @@ See also: [Starting a sprint]({{<relref "basics" >}}), and [full list of Sprint 
 {{<slash name="words" key0="count" val0="final">}}
 {{</alts>}}
 
-Finalize your word count so Sprinto won't wait for you to update it later. Can be used during a sprint or when time's up and Sprinto is waiting for final word counts.
+Finalize your word count so Sprinto won't wait for you to update it later. Sprinto answers `Marked done.` and reads your count back. It works any time from the join window until the scoreboard posts, so somebody who knows they'll be away can say so before the sprint even starts.
 
 ### Final _count_
 
 {{<slash name="final" key0="count" val0="_count_">}}
 
-Finalize your word count with _count_ words. If you haven't joined the sprint yet, this joins you and locks that count in at the same time.
+Finalize your word count with _count_ words. If you haven't joined the sprint yet, this joins you and marks you done at the same time.
 
-A bare {{<slashembed name="final" >}} won't do that: for that one you have to be in the sprint already, or Sprinto just tells you that you haven't joined.
+A bare {{<slashembed name="final" >}} does the same on zero: `You have joined with 0 starting words and marked done.`
 
 For example, to finalize with 1200 total words:
 
@@ -53,7 +53,7 @@ An X (❌) next to a Sprinter's name indicates they've voted to {{<slashembed na
 _During a sprint,_ change your starting word count without changing your total. You have to have joined already; this won't join you.
 
 | Command | Your total | Your starting count |
-|---|---|---|
+| --- | --- | --- |
 | {{<slashembed name="words" key0="count" val0="1200" >}} | set to 1,200 | unchanged |
 | {{<slashembed name="join" key0="word-count" val0="1200" >}} | set to 1,200 | set to 1,200 |
 | {{<atsprintoembed "tare 1200" >}} | unchanged | set to 1,200 |

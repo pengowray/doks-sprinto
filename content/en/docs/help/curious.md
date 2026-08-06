@@ -91,12 +91,12 @@ In the old days, Sprinto would respond to messages in chat which started with an
 {{<atsprinto "sprint preview for 20 in 5" >}}
 {{</alts>}}
 
-Put `explain`, `timeline`, or `preview` in front of any {{<slashembed name="sprint" >}} command to see how Sprinto would schedule it, a dry run, without actually starting anything. The keyword only works there, as the first thing after `sprint`.
+Put `explain`, `timeline`, `preview` or `peek` in front of any {{<slashembed name="sprint" >}} command to see how Sprinto would schedule it, a dry run, without actually starting anything. They all mean the same thing, and only work there, as the first thing after `sprint`.
 
 {{<slash name="sprint" key0="options" val0="peek for 20 in 5">}}
 {{<atsprinto "sprint peek for 20 in 5" >}}
 
-`peek`, `me` and `private` all say the same thing: on the slash command the answer goes to you alone. `public` shows it to the room, and an @Sprinto version lands there whatever you say.
+On the slash command only you see the answer, and `me` or `private` after the keyword still work and change nothing. `public` shows it to the room, and an @Sprinto version lands there whatever you say.
 
 {{<slash name="explain" key0="sprint-options" val0="30 in 5 bell -1" >}}
 
@@ -110,7 +110,7 @@ There's a command of its own too. Choose which sprint (the one running, a new on
 {{<button "Post to channel">}}
 {{</buttons>}}
 
-Two controls sit under the answer. **Show more or less** switches between *Just the settings*, *Each setting and where it's from*, *Minute-by-minute timeline* and *Everything*. **Post to channel** puts a copy where the room can read it, then greys out.
+Two controls sit under the answer. **Show more or less** switches between _Just the settings_, _Each setting and where it's from_, _Minute-by-minute timeline_ and _Everything_. **Post to channel** puts a copy where the room can read it, then greys out.
 
 ## See also
 

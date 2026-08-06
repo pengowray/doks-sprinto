@@ -117,7 +117,7 @@ Three six-sided dice thrown and added up, so a length of 3 to 18 minutes that la
 
 {{<slash name="go" >}}
 
-Don't wait out the rest of the join window. The sprint starts now and keeps the length you chose. Only the person who started it, or a {{<role "@Sprint MC">}}, can do this. In a chain it skips the break and starts the next round.
+Don't wait out the rest of the join window. The sprint starts now and keeps the length you chose, or the ending time if you set one with `until`. Only the person who started it, or a {{<role "@Sprint MC">}}, can do this. In a chain it skips the break and starts the next round.
 
 {{<slash name="sprint" key0="options" val0="for 20 join 1000" >}}
 

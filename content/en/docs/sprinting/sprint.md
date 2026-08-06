@@ -61,7 +61,7 @@ A sprint of 15, 16, 17, 18, 19 or 20 minutes, picked at random. The bare form (`
 
 The roll lands on whole minutes if both ends are whole minutes; on 30 second steps if both ends sit on a half minute (`for 10m to 12m30s`); otherwise on exact seconds (`for 9m01s to 12m55s`).
 
-If the second number is a clock time it's read as an ending time instead, so `20 to :30` still runs _until_ half past.
+If the second number is a clock time it's read as an ending time instead, and the first is the minute to start on, so `20 to :30` runs from :20 until half past.
 
 ## Dice
 
@@ -718,7 +718,7 @@ Put `explain` at the front of any sprint command and Sprinto tells you what it w
 
 It's a dry run against the clock right now, so a random length gets rolled for the example only.
 
-On the slash command the answer goes to you alone. `peek`, `me` and `private` say the same thing. `public` is the word that shows it to the room:
+On the slash command only you see the answer, and `me` or `private` after the keyword still work and change nothing. `public` is the word that shows it to the room:
 
 {{<slash name="sprint" key0="options" val0="explain public marathon" >}}
 {{<alts "Synonyms" >}}

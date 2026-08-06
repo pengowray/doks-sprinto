@@ -23,7 +23,7 @@ That's a 15 minute sprint, starting in 1 minute. The minute before the start is 
 
 You have to join your own sprint. Sprinto doesn't add you automatically, and it's the single most common thing new sprinters get caught by. If you're partway through a document already, join with the count you're starting from and Sprinto will subtract it later: {{<slashembed name="join" key0="word-count" val0="10000" >}}
 
-**3. Write.** Sprinto announces the start, and announces when time's up. A bell rings in the channel a minute before the end. If you want that bell to ping you as well, set your chimes to 1 or more under {{<slashembed name="settings me" >}}.
+**3. Write.** Sprinto announces the start, and announces when time's up. Nothing rings in between unless you ask: add `chime -1` for a bell a minute before the end. To have bells ping you as well, set your chimes to 1 or more under {{<slashembed name="settings me" >}}.
 
 **4. Report.**
 

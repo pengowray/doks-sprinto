@@ -27,7 +27,7 @@ The panel only opens from the slash command. {{<atsprintoembed "pets" >}} just p
 {{< button "🪑 seat" >}}
 {{< /buttons >}}
 
-One button per pet, and the tick is on the one that's currently sprinting with you. Press a pet to open it. The card shows when you adopted it, how many sprints it has joined, its lifetime words and its best single sprint. Renaming or restyling keeps those numbers, and a carried-over pet keeps its history from the old bot.
+One button per pet. The tick is on the one that sprints with you, and a 🪶 joins it while a sprint is running. Press a pet to open it. The card shows when you adopted it, how many sprints it has joined, its lifetime words and its best single sprint. Renaming or restyling keeps those numbers, and a carried-over pet keeps its history from the old bot.
 
 Nobody else in the channel sees the panel, and the `<3` button on a pet is private too: the thought bubble stays on the card. To pet your companion where the channel can see it, type it instead:
 
@@ -37,9 +37,9 @@ Nobody else in the channel sees the panel, and the `<3` button on a pet is priva
 🐢 Nugget ｡oO(💓)
 {{< /reply >}}
 
-Until you have a pet or a seat there's nothing to press. The panel tells you there's no sprint seat right now, so your companions are resting, and links back to this page.
+Until you have a pet or a seat there's nothing to press, just a link back to this page. With pets but no seat, the panel says they aren't joining sprints.
 
-The pet currently sprinting with you is your **companion**, and it occupies your **sprint seat**. You can only have one companion at a time, and you can't swap it out mid-sprint since the scoreboard's already running by then.
+The pet that sprints with you is your **companion**, and it occupies your **sprint seat**. You can only have one companion at a time, and you can't swap it out mid-sprint since the scoreboard's already running by then.
 
 Supporting Sprinto is what gets you a seat, and the seat is held for two weeks after your support ends. Without one your pets stay in your collection but none of them sprint, and renaming or restyling waits until you have a seat again.
 

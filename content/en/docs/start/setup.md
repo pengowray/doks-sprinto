@@ -74,7 +74,7 @@ Opens Discord's role picker. If people on your server can self-assign a role lik
 
 {{< slash name="settings sprint-defaults" >}}
 
-Sets the default length, start time and bell for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute, with one bell a minute before the end. A long-form channel might prefer 30 minutes starting in 5.
+Sets the default length, start time and bell for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute, with no bell. A long-form channel might prefer 30 minutes starting in 5.
 
 It opens on the server default, and on a new server it looks like this:
 
@@ -82,9 +82,13 @@ It opens on the server default, and on a new server it looks like this:
 
 ## Sprint defaults: Server default
 
-These apply when someone runs `/sprint` with no options in this server, unless a channel overrides them. Green shows what's in effect; a check marks a server default (click it again to clear).
-Length 15 min, start 1 min, bells -1, late 10 min.
-No default sprint options set. Using Sprinto's original default (for 15 mins in 1 min).
+Nothing is set for this server, so a plain `/sprint` uses the bot's defaults:
+
+* Start: **in 1 min**
+* Length: **15 min**
+* Late edits: allowed for **10 min** after time's up
+
+No channel or server default is set. The buttons below set one for this channel.
 {{</reply>}}
 
 {{<buttons>}}
@@ -95,6 +99,12 @@ No default sprint options set. Using Sprinto's original default (for 15 mins in 
 {{</buttons>}}
 
 {{<buttons>}}
+{{<button "in 1 min" "success">}}
+{{<button "in 1-2 min">}}
+{{<button "in 2-3 min">}}
+{{</buttons>}}
+
+{{<buttons>}}
 {{<button "15" "success">}}
 {{<button "20">}}
 {{<button "30">}}
@@ -102,20 +112,14 @@ No default sprint options set. Using Sprinto's original default (for 15 mins in 
 {{</buttons>}}
 
 {{<buttons>}}
-{{<button "in 1 min" "success">}}
-{{<button "in 1-2 min">}}
-{{<button "in 2-3 min">}}
-{{</buttons>}}
-
-{{<buttons>}}
-{{<button "🔔 1 minute" "success">}}
+{{<button "🔔 1 minute">}}
 {{<button "🔔 50% and 🔔 1 minute">}}
-{{<button "🔕 No chime">}}
+{{<button "🔕 No chime" "success">}}
 {{</buttons>}}
 
-Click **This channel** first if you only want to change this one channel. Green marks the length, start and bell in effect right now; clicking one pins it at the scope you're on and a check appears next to it, and clicking a checked one clears it again. On a new server **Reset to built-in** is greyed out, because there is nothing set to clear.
+Click **This channel** first if you only want to change this one channel. Green marks the start, length and bell in effect right now; clicking one pins it at the scope you're on and a check appears next to it, and clicking a checked one clears it again. On a new server **Reset to built-in** is greyed out, because there is nothing set to clear.
 
-The bell buttons mean one bell a minute before the end, which is what you get out of the box; a bell at halfway as well; or no bell at all. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so a 5 minute start delay or a bell the buttons don't offer goes in there. Fixed clock times like `at :30` are refused, because a default has to work at any hour.
+The bell buttons mean one bell a minute before the end; a bell at halfway as well; or no bell at all, which is what you get out of the box. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so a 5 minute start delay or a bell the buttons don't offer goes in there. A clock time has to give more than one time, so `at :00/:30` works and `at :30` doesn't. An `until` also needs the shortest sprint it may leave you: `until :00/:30 for at least 10`.
 
 ### Make announcements screen reader friendly
 
