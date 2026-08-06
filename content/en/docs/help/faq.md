@@ -23,6 +23,18 @@ I've written up a troubleshooting guide here:
 
 - [Troubleshooting]({{<relref "troubleshooting" >}})
 
+## What happens if Sprinto goes offline during my sprint?
+
+A restart doesn't lose your sprint. Sprinto picks it up where it got to.
+
+If he missed time's up, he posts it late and says how late he was. You get the full word count window from that moment.
+
+If he missed the ending altogether, you get one wrap-up post with the results, not the whole sprint replayed. That board is final: `/late` won't change it.
+
+If he was away for more than two hours past the end, the sprint is dropped and nothing is posted.
+
+Bells that came due while he was away don't ring afterwards.
+
 ## Why do I need to join my own sprint? Shouldn't I join automatically?
 
 1. Sprinto doesn't know your starting word count and doesn't want to guess.

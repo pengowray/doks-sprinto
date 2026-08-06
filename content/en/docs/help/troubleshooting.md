@@ -33,6 +33,12 @@ If you're having trouble, here are some tips. The first few are for users; the l
 
 {{<atsprinto "hello sprinto" >}}
 
+{{< reply >}}
+A star shines on the hour of our meeting.
+{{< /reply >}}
+
+No reply usually means you tagged the role.
+
 - If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. There's more admin tips below under "For admins".
 
 ### 2) Make sure you're actually sending a slash command

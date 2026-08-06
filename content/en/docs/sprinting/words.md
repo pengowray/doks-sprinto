@@ -48,6 +48,23 @@ Please give your final word count with `/words`. You have 3 minutes.
 
 The three minutes is how long you have to report. It's worked out from the length of the sprint, 3 minutes for a 15 minute sprint and up to 10 for a very long one, unless the host set it with `endtime`. Since names lose their count once they've reported, the Participants line here doubles as the list of who Sprinto is still waiting on.
 
+**Everyone's in.**
+
+{{< reply >}}
+All word counts are in! Results shortly.
+{{< /reply >}}
+
+Once everyone still in the sprint has reported or locked their count in, Sprinto stops waiting and posts the scoreboard a few seconds later. Someone using {{<slashembed name="leave" >}} settles up too, so a room waiting on one person who then leaves gets its results straight away. A sprint started with `noff` waits out the full window instead. See [sprint flags]({{<relref "sprint" >}}#sprint-flags).
+
+**Nobody in it.**
+
+{{< reply >}}
+🏆 **CONGRATS EVERYONE!**
+That's all, folks. /sprint to start another. (No one joined)
+{{< /reply >}}
+
+What a sprint ends with when there's no one in it at the end, whether nobody joined or everybody left. There's no scoreboard. `That's all, folks.` is picked at random from a handful of sign-offs.
+
 ## Cancel
 
 Oops! Made a mistake? You can cancel a sprint with:
@@ -56,6 +73,21 @@ Oops! Made a mistake? You can cancel a sprint with:
 <br>
 
 If Sprinto didn't understand your {{< slashembed name="sprint" >}} command you can cancel it and start over. Note that if others have joined your sprint, you might need them to {{< slashembed name="cancel" >}} too.
+
+{{< reply >}}
+**The sprint has been called off.** 😢
+📣 Participants: {{< mention "alex" >}}, {{< mention "sam" >}}
+{{< /reply >}}
+
+Everyone who was in it is tagged, and the countdown is edited to read `Time's up! ⏳ (Canceled)`. The sad face is picked at random.
+
+With other people in the sprint, one {{< slashembed name="cancel" >}} is a vote rather than an ending:
+
+{{< reply >}}
+Sorry, can't cancel an active sprint when it has other participants. It will be cancelled if the remaining 2 of 3 sprinters also `/cancel`, or if you say `/cancelplease`.
+{{< /reply >}}
+
+Your vote stands, and {{<atsprintoembed "who" >}} marks the sprinters who have voted with an ❌.
 
 ## Force cancel
 
@@ -194,6 +226,8 @@ The `↳` line is the correction: it's the command Sprinto ran on your behalf. I
 The scoreboard isn't set in stone the moment it's posted. For 10 minutes after time's up you can still put your number in, or fix one you got wrong, with {{<slashembed name="late">}}. The scoreboard updates in place.
 
 Starting another sprint in the channel cuts that window short: the old board stops taking updates a minute before the new sprint's writing ends, and closes for good once the new sprint reaches its own time's up.
+
+In a [chain]({{<relref "sprint" >}}#chains), each block's scoreboard takes late updates of its own, so a count you missed in the first block can still go on its board while the next one runs. {{<slashembed name="late">}} goes to the older board, {{<slashembed name="words">}} to the block you're in. The older window shuts a minute before the next block's writing ends, so only one board is ever open.
 
 It takes the same sorts of counts as {{<slashembed name="words">}}, so {{<slashembed name="late" key0="count" val0="+250" >}} and {{<slashembed name="late" key0="count" val0="300 new" >}} both work.
 

@@ -63,6 +63,29 @@ The roll lands on whole minutes if both ends are whole minutes; on 30 second ste
 
 If the second number is a clock time it's read as an ending time instead, so `20 to :30` still runs _until_ half past.
 
+## Dice
+
+{{<tag-duration>}} {{<tag-random>}}
+
+{{<slash name="sprint" key0="options" val0="3d6" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="for 3d6" >}}
+{{<slash name="sprint" key0="options" val0="roll 3d6" >}}
+{{<atsprinto "sprint 3d6" >}}
+{{</alts>}}
+
+Three six-sided dice, thrown separately and added up for a length in minutes: 3 to 18, most often 10 or 11. Unlike `for 3 to 18`, the middle is far likelier than the ends.
+
+| You write | You get |
+| --- | --- |
+| `d20` | one die, so 1 to 20 minutes |
+| `3d6+10` | 3d6, plus 10 minutes |
+| `3d6-2` | 3d6, less 2 minutes |
+| `2d6 + d20 + 10` | everything added up |
+| `2d12 + 30s` | other units work too |
+
+Up to 100 dice, up to 1,000 sides each, and up to 12 things added together. Anything that isn't dice by those rules is read as an ordinary length, so `3d5h` is still three days and five hours.
+
 ## "until"
 
 {{<tag-duration>}} {{<tag-time>}}
@@ -90,11 +113,31 @@ You can list more than one mark with a slash, and Sprinto takes whichever comes 
 
 Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere else with a half-hour difference from everyone else, you'll have to adjust.
 
+### for at least, for at most
+
+{{<tag-duration>}} {{<tag-minutes>}}
+
+{{<slash name="sprint" key0="options" val0="until :00/30 for at least 10" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="until :00/30 at least 10" >}}
+{{<slash name="sprint" key0="options" val0="until :00/30 no shorter than 10" >}}
+{{</alts>}}
+
+The shortest sprint a clock ending may give you. Run to the next `:00` or `:30`, but skip a mark less than 10 minutes off and take the one after it.
+
+{{<slash name="sprint" key0="options" val0="until :00/30 for at least 10 for at most 35" >}}
+
+`for at most` is the other end. If no mark falls between the two, the clock ending is dropped and you get an ordinary 15 minute sprint.
+
+Both only shape an ending given as a clock time. A channel's default sprint that uses `until` has to have a `for at least`.
+
 ## Random duration options
 
 Undecided? You can choose a random length for your sprints.
 
 Each wheel has its own list of lengths and picks one at random. A length listed twice comes up twice as often.
+
+`random` in front of anything else that rolls just means "pick one": {{<slashembed name="sprint" key0="options" val0="random 5 to 9" >}}, {{<slashembed name="sprint" key0="options" val0="roll micro" >}}, {{<slashembed name="sprint" key0="options" val0="rng 3d6" >}}. On its own it spins the [however long](#however-long) wheel.
 
 ### Burst sprint
 
@@ -296,6 +339,23 @@ You can offer more than one mark with a slash and Sprinto takes whichever comes 
 
 {{<slash name="sprint" key0="options" val0="at :00/15/30/45" >}}
 
+Two marks with `to` between them set the start and the end at once:
+
+{{<slash name="sprint" key0="options" val0="at :10 to :35" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="at 10 to 35" >}}
+{{<slash name="sprint" key0="options" val0="at 10-35" >}}
+{{<slash name="sprint" key0="options" val0="from 10 to 35" >}}
+{{</alts>}}
+
+Ten past to twenty-five to, a 25 minute sprint. Drop the `at` and it's a [rolled length](#for-x-to-y-a-rolled-length) instead.
+
+A bare number in front of an ending time is the minute to start on:
+
+{{<slash name="sprint" key0="options" val0="15 til 45" >}}
+
+Quarter past to quarter to. Put the number after the word and it's the wait again, so `til 45 15` starts in fifteen minutes.
+
 ### Clock idioms
 
 {{<tag-when>}} {{<tag-time>}}
@@ -352,6 +412,10 @@ A "grace" period can also be given to prevent "next" from starting too soon. For
 
 This will start at the next 10 minute boundary, but not for at least 2 minutes.
 
+`in at least` means the same thing, and is how Sprinto writes it back to you:
+
+{{< slash name="sprint" key0="options" val0="next 10 in at least 2" >}}
+
 These kinds of settings might be useful for setting a default sprint starting time.
 
 ### in (minutes) to (minutes)
@@ -400,8 +464,8 @@ Convenient ways to start a sprint.
 | {{<slashembed name="sprint" key0="options" val0="dream" >}} | for 10m, starting on the next 5 minute mark | `dreamy`, `dreamily` |
 | {{<slashembed name="sprint" key0="options" val0="pomo" >}} | for 25m (chain them with `pomo x4`) | `pomodoro` |
 | {{<slashembed name="sprint" key0="options" val0="long" >}} | for 30 in 2.5 to 7.5 mins | `longer`, `slow` |
-| {{<slashembed name="sprint" key0="options" val0="marathon" >}} | for 60 in 7.5 to 13 mins endtime 10, with a halfway bell as well as the usual one-minute warning | `for a marathon` |
-| {{<slashembed name="sprint" key0="options" val0="megathon" >}} | for 120 in 7.5 to 13 mins endtime 10, with a halfway bell as well as the usual one-minute warning | `for ages` |
+| {{<slashembed name="sprint" key0="options" val0="marathon" >}} | for 60 in 7.5 to 13 mins endtime 10, with a halfway bell | `for a marathon` |
+| {{<slashembed name="sprint" key0="options" val0="megathon" >}} | for 120 in 7.5 to 13 mins endtime 10, with a halfway bell | `for ages` |
 
 <!-- | `just` | `/sprint now` | -->
 
@@ -470,6 +534,20 @@ After the scoreboard is posted, people can still fix their number with {{<slashe
 
 Turn late edits off for this sprint, so the scoreboard is final as soon as it's posted. `late 0` and `late off` do the same thing.
 
+## join
+
+{{<slash name="sprint" key0="options" val0="for 20 join" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="for 20 wc 1000" >}}
+{{<atsprinto "sprint 20 join 1000" >}}
+{{</alts>}}
+
+Start the sprint and be in it, in one command. A number after `join` is your starting word count, the same as {{<slashembed name="join" key0="word-count" val0="1000" >}}. If the sprint doesn't start, you aren't joined to anything.
+
+Say it once, and put it at the end. It works on a repeat too: {{<slashembed name="sprint" key0="options" val0="again join same" >}}.
+
+`wc time 10` still means [endtime](#endtime), not a word count.
+
 ## Sprint flags
 
 | Keyword | Meaning |
@@ -497,7 +575,7 @@ Run a 90 minute sprint in 5 minutes
 
 {{<tag-minutes>}}
 
-A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. Every sprint gets one by default, a minute before time's up. A sprint of a minute or less doesn't get one.
+A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. There are none unless somebody asks for one: your command, this channel's default sprint, or a preset that sets its own.
 
 {{<slash name="sprint" key0="options" val0="for 40 chime -10" >}}
 {{<alts "Synonyms" >}}
@@ -521,7 +599,7 @@ You can ask for several, separated by commas or spaces, and they can mix forms:
 
 {{<slash name="sprint" key0="options" val0="for 60 chime -50%, -10, -1" >}}
 
-Up to 5 chimes per sprint, and they have to be at least a minute apart. Any of yours that land outside the writing time are dropped, and the start message says how many. `marathon` and `megathon` come with a halfway bell already, on top of the one minute warning.
+Up to 5 chimes per sprint, and they have to be at least a minute apart. Any of yours that land outside the writing time are dropped, and the start message says how many. `marathon` and `megathon` set a halfway bell of their own, and nothing else.
 
 {{<slash name="sprint" key0="options" val0="for 30 no bell" >}}
 
@@ -560,6 +638,32 @@ Add `identical` (or `exact`) and blocks using the same wheel share one spin, ins
 {{<slash name="sprint" key0="options" val0="nl x3 identical" >}}
 
 Three sprints of the same randomly chosen length, rather than three different ones.
+
+### Joining each round
+
+The break between blocks is the next block's join window, so every round posts its own invitation, start, time's-up and scoreboard, marked `Round n of N`. Nobody carries over: everyone joins again each round, from zero unless they give a starting count. The last round's scoreboard adds the whole chain up.
+
+To be in for the rest of the chain without catching each join window, add `all`:
+
+{{<slash name="join" key0="word-count" val0="all" >}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "join every sprint" >}}
+{{<atsprinto "join all in the chain" >}}
+{{</alts>}}
+
+A bare `all` starts you from zero each round. Give a count as well and your total carries forward instead: {{<slashembed name="join" key0="word-count" val0="all 1000" >}}. Already in this round? Add `all` to your word count and it signs you up for the rest too: {{<slashembed name="words" key0="count" val0="1200 all" >}}. {{<slashembed name="leave" >}} takes it back.
+
+### Stopping a chain early
+
+{{<slash name="sprint" key0="options" val0="last one" >}}
+{{<alts "Synonyms" >}}
+{{<atsprinto "no more" >}}
+{{<atsprinto "stop after this" >}}
+{{<atsprinto "wrap up" >}}
+{{<atsprinto "end chain" >}}
+{{</alts>}}
+
+The round that's running finishes as usual and the rest of the chain is dropped. Only the sprinter who started the chain, or a {{<role "@Sprint MC">}}, can do it. To stop the round that's running as well, use {{<slashembed name="cancel" >}}.
 
 ## `again` and `identical`
 
@@ -605,21 +709,54 @@ The memory is per channel, so `again` in one channel doesn't pick up another cha
 
 {{<slash name="sprint" key0="options" val0="explain for 25 in 5 chime -5" >}}
 {{<alts "Synonyms" >}}
-{{<slash name="sprint" key0="options" val0="timeline for 25 in 5" >}}
+{{<slash name="sprint" key0="options" val0="peek for 25 in 5" >}}
 {{<slash name="sprint" key0="options" val0="preview for 25 in 5" >}}
 {{<atsprinto "sprint dry-run for 25 in 5" >}}
 {{</alts>}}
 
-Put `explain` at the front of any sprint command and Sprinto tells you what it would do, minute by minute, without starting anything. It shows what came from your command, what came from this channel's defaults, and what's just his built-in default, which makes it the fastest way to find out why a sprint isn't behaving the way you expected.
+Put `explain` at the front of any sprint command and Sprinto tells you what it would do without starting anything. It shows what came from your command, what came from this channel's defaults, and what's just his built-in default, which makes it the fastest way to find out why a sprint isn't behaving the way you expected.
 
 It's a dry run against the clock right now, so a random length gets rolled for the example only.
 
-{{<slash name="sprint" key0="options" val0="peek for 25 in 5" >}}
+On the slash command the answer goes to you alone. `peek`, `me` and `private` say the same thing. `public` is the word that shows it to the room:
 
-`peek` is the same thing, shown only to you. You can also add `me` or `private` after any of the other keywords:
+{{<slash name="sprint" key0="options" val0="explain public marathon" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="explain aloud marathon" >}}
+{{<slash name="sprint" key0="options" val0="explain everyone marathon" >}}
+{{</alts>}}
 
-{{<slash name="sprint" key0="options" val0="explain me marathon" >}}
-{{<slash name="sprint" key0="options" val0="timeline private pomo x4" >}}
+An @Sprinto `explain` lands in the channel whatever you say.
+
+Two more choices go in front of the sprint options. Which sprint to describe:
+
+| Word | What it explains |
+| --- | --- |
+| `running` | the sprint going on now |
+| `here` | a new sprint in this channel |
+| `plain` | a new sprint with the channel and server defaults left out |
+
+And how much of it:
+
+| Word | What you get |
+| --- | --- |
+| `brief` | the settings only |
+| `sources` | each setting and where it came from. This is what you get by default |
+| `timeline` | minute by minute |
+| `full` | everything above |
+
+{{<slash name="sprint" key0="options" val0="explain full plain pomo x4" >}}
+
+### `/explain` on its own
+
+{{<slash name="explain" >}}
+{{<atsprinto "explain" >}}
+
+`explain` is a command in its own right too. Run it bare and it describes the sprint running here; if none is running, it describes what a new sprint in this channel would do.
+
+{{<slash name="explain" key0="what" val0="A new sprint in this channel" key1="detail" val1="Minute-by-minute timeline" >}}
+
+`what` and `detail` are the two lists above, on a menu. `sprint-options` takes a sprint command to try out, and `post` shows the answer to the channel. Otherwise only you see it, with a dropdown to change the detail and a **Post to channel** button.
 
 ## Limits
 

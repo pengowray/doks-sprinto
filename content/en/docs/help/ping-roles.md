@@ -14,6 +14,10 @@ That opens a native Discord role picker. Tick the roles you want mentioned at th
 
 Anyone can open it and read the list. Changing it needs an {{<tag-admin>}}, that is a {{<role "@Sprint Admin">}}, a server administrator, or the server owner.
 
+Above the picker Sprinto lists the {{<role "@Active Sprinters">}}, {{<role "@Sprint MC">}} and {{<role "@Sprint Admin">}} roles it has matched by name on your server, or `not found` for any that don't exist. That part is read only.
+
+Once a channel has picked roles of its own, a **Reset to server default** button appears under the picker.
+
 ## Notes
 
 * Ping roles are **per channel**. If you want the same role pinged in three sprint channels, run {{<slashembed name="settings roles">}} in each of them.

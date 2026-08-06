@@ -222,7 +222,7 @@ In effect: **Random emojis** (default)
 {{<select "Choose an emoji theme">}}
 {{</buttons>}}
 
-Click **This channel** first if you only want to change this one channel; a channel that has no theme of its own follows the server. **Reset to built-in** is greyed out until something is set. Anyone can open it and read what's in effect; only an {{<tag-admin>}} gets the buttons and the dropdown. There is no personal version of this setting: the theme belongs to the channel.
+Click **This channel** first if you only want to change this one channel; a channel that has no theme of its own follows the server. **Reset to built-in** is greyed out until something is set, and reads **Clear channel override** while you're on **This channel**. Anyone can open it and read what's in effect; only an {{<tag-admin>}} gets the buttons and the dropdown. There is no personal version of this setting: the theme belongs to the channel.
 
 ## The text form
 
@@ -233,6 +233,8 @@ If you'd rather type than click, every setting works as text too:
 {{<atsprinto "settings" >}}
 
 The text form always changes this channel. Server defaults are set from the panel, with {{<slashembed name="settings server">}}.
+
+{{<atsprintoembed "settings show" >}} lists the settings as plain text, with `(server default)` or `(default)` marking the ones this channel isn't setting itself.
 
 Values are forgiving. `on`, `off`, `yes`, `no`, `true`, `false` and similar all land where you'd expect, as does `default` (which means "go back to inheriting"). Keys are forgiving too. Every name in the table below works as written, with or without its hyphens, and a few have spares: `clean` for `family-friendly`, `tidy` or `autodelete` for `tidy-sprints`, `emoji` for `theme`.
 
@@ -246,15 +248,16 @@ Channel and server scope. Anyone can view, {{<tag-admin>}} to change.
 | --- | --- | --- |
 | `walltime` | on | How the start message shows the end of the sprint. `on` adds a live countdown that ticks in each reader's own client, plus the end time in their own timezone on sprints of 2 minutes or more. `sometimes` drops the countdown and gives the older static end minute instead, e.g. "Duration: 15 minutes (until ⏰ :16).", also only on sprints of 2 minutes or more; when the end doesn't land on a whole minute it reads "(until ⏰ :16 +30s)". `off` shows the duration only. |
 | `theme` | random | Which emoji decorate sprint announcements, and how they read aloud. `random` rolls a fresh trio every sprint; `screen-reader` uses a fixed, named set and plainer wording, and is covered under [settings theme](#settings-theme) above. Typed, `off` means "stop varying the emoji", so it picks `screen-reader`. The dropdown at {{<slashembed name="settings theme">}} is easier. |
-| `show-ps` | on | The post-sprint text: quotes, combined word counts, updates, `/forgetme` help, everything below the scoreboard. Turning this off hides all of it, including anything the settings below would have shown. |
+| `show-ps` | on | The post-sprint text: quotes, combined word counts, updates, `/forgetme` help, everything below the scoreboard. Turning this off hides all of it, including anything the settings below would have shown. The panel lists Quotes, Family-friendly and Patreon requests underneath this row, struck through while it's off. |
 | `show-quotes` | on | Quotes at the end of sprints, on every second sprint in the channel. Each channel takes its own turns, so a busy one doesn't use up another's. They're meant to provoke a bit of thought and discussion. If that's not what your group is there for, turn them off. |
 | `family-friendly` | on | Filters out the occasional crass quotes and replies. On by default, so a new server never sees them. Turn it off to leave them in. |
 | `show-patreon` | on | Occasional requests to support Sprinto through Patreon, Ko-fi or merch. There aren't many, and one may still slip through if it's part of a news update. |
-| `auto-pings` | on | Whether joining a sprint signs you up to be pinged at the start of the next few. With this off, joining never touches anyone's ping settings, and people who want pings use {{<slashembed name="pingme">}} themselves. Ping roles are still honoured either way. |
+| `auto-pings` | on | Whether joining a sprint signs you up to be pinged at the start of the next few. With this off, joining never touches anyone's ping settings, and people who want pings use {{<slashembed name="pingme">}} themselves. Ping roles are still honoured either way. The panel writes this row's on value as **3**, the number of sprints one join signs you up for. |
 | `carl` | off | Lets a feeder bot such as Carl-bot start sprints here. Sprinto ignores other bots unless you turn this on. See [Carl-bot x Sprinto]({{<relref "carlbot" >}}). |
 | `shuffle-leaderboard` | off | Lists the scoreboard in a stable random order with no rank numbers instead of ranking it, with pets at the bottom. Some groups find this takes the edge off the competition. |
 | `tidy-sprints` | off | Sprinto deletes its own join and word-count confirmations 45 seconds after posting, to stop a busy sprint burying the channel. It only ever removes its own confirmations, never anything you typed. |
 | `preset` | none | The channel's default sprint, written the same way you'd write it after {{<slashembed name="sprint">}}. For example `20 iab` for a 20 minute sprint starting in a bit. Someone typing a bare {{<slashembed name="sprint">}} gets this. |
+| `max-sprint` | 2 hours | Caps how long a sprint can be here, anywhere from 15 minutes to 2 hours. A longer one is refused, and `please` doesn't get past it. It's the only setting a channel can't loosen: set on both the channel and the server, the smaller one wins. The panel calls this row **Longest sprint allowed**. |
 
 Your own scope, under {{<slashembed name="settings me">}}. Neither of these is a `settings` key: to change chimes by text, type {{<atsprintoembed "chimes 2">}} on its own.
 

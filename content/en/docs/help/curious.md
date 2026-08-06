@@ -4,7 +4,7 @@ description:
 lead: 
 # identifier: "less-used"
 # url: "docs/less-used"
-keywords: ["parse", "dare", "invite", "sprintmc", "refresh active role", "prefix"]
+keywords: ["parse", "dare", "roll", "dice", "invite", "donate", "merch", "sprintmc", "refresh active role", "prefix", "explain"]
 ---
 
 These commands are documented here mostly for curiousity's sake. You don't need any of them, and they're largely not useful, but they're documented here all the same.
@@ -23,11 +23,43 @@ Hands out one writing dare, and nothing else. The dares are pulled from the now-
 
 There's no slash command for this, so you have to @Sprinto or send him a DM. `dare`, `dare me` and `give me a dare` all work.
 
+### roll
+
+{{< atsprinto "roll 2d6 + d20 + 10" >}}
+
+{{< reply >}}
+🎲 You rolled **29**. (2d6: 4, 4 · 1d20: 11 · +10)
+{{< /reply >}}
+
+Throws the dice and gives you the total and what each die showed. A bare `roll` throws one six-sided die.
+
+There's no slash command for this, so you have to @Sprinto or send him a DM. Type it exactly: Sprinto's typo correction skips this one.
+
+Sprint lengths take the same expressions, so {{<slashembed name="sprint" key0="options" val0="3d6" >}} rolls a length.
+
+### i love you / i hate you
+
+{{< atsprinto "i love you" >}}
+{{< atsprinto "i hate you" >}}
+
+Sprinto has something to say to both, and a DM works too. He has to be addressed for it, so two writers saying it to each other in the channel are left alone.
+
+About one declaration of love in 55 is turned down instead. The `family-friendly` setting, on by default, keeps the crasser replies out. See [Settings]({{<relref "settings" >}}).
+
 ### invite
 
 {{< atsprinto "invite" >}}
 
 Create an invite link to take Sprinto to another server. Also gives a link to the support server.
+
+### support / vote / donate / merch
+
+{{< atsprinto "support" >}}
+{{< atsprinto "vote" >}}
+{{< atsprinto "donate" >}}
+{{< atsprinto "merch" >}}
+
+One link each: the Sprinto Planet support server, Sprinto's page on top.gg where you can vote for him, the Patreon, and the merch store. None of them are slash commands.
 
 ### sprintmc
 
@@ -64,7 +96,21 @@ Put `explain`, `timeline`, or `preview` in front of any {{<slashembed name="spri
 {{<slash name="sprint" key0="options" val0="peek for 20 in 5">}}
 {{<atsprinto "sprint peek for 20 in 5" >}}
 
-`peek` does the same thing, except only you see the reply. Add `me` or `private` right after any of the other keywords for the same effect, for example {{<atsprinto "sprint explain me for 20 in 5" >}}.
+`peek`, `me` and `private` all say the same thing: on the slash command the answer goes to you alone. `public` shows it to the room, and an @Sprinto version lands there whatever you say.
+
+{{<slash name="explain" key0="sprint-options" val0="30 in 5 bell -1" >}}
+
+There's a command of its own too. Choose which sprint (the one running, a new one here, or one that ignores the channel and server defaults) and how much to show. Only you see the reply, unless you set `post`.
+
+{{<buttons>}}
+{{<select "Show more or less">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<button "Post to channel">}}
+{{</buttons>}}
+
+Two controls sit under the answer. **Show more or less** switches between *Just the settings*, *Each setting and where it's from*, *Minute-by-minute timeline* and *Everything*. **Post to channel** puts a copy where the room can read it, then greys out.
 
 ## See also
 

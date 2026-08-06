@@ -52,6 +52,10 @@ The words-per-minute number divides your words by the **whole sprint length**, n
 
 If you deleted more than you wrote, Sprinto says so instead, without ranking you. Cutting words is still work. The percentage beside it is how much of your starting words you cut. It's left off when it would tell you nothing: a starting count under 20 words, or a cut of more than twenty times what you started with.
 
+Under the results there's usually one more line: a quote on every second sprint, and on the ones in between a note from Sprinto's developer, a reminder about {{<slashembed name="forgetme" >}}, or a nudge to start another. Some sprints get nothing.
+
+An admin can turn the quotes off with `show-quotes`, or the whole line off with `show-ps`. See [Settings]({{< relref "settings" >}}).
+
 ## If you forget to report
 
 You'll still show up on the scoreboard, on zero. It happens to everyone.

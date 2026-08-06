@@ -46,20 +46,23 @@ Lists active sprinters in the channel.
 
 An X (❌) next to a Sprinter's name indicates they've voted to {{<slashembed name="cancel" >}}.
 
-### starting (tare)
+### tare
 
-_This command is no longer available._ Take care with the `starting` form though: Sprinto now reads it as `start` and will try to start a sprint that's waiting to begin. `tare` does nothing at all.
-
-{{<atsprinto "starting _count_" >}}
-For example:
-{{<atsprinto "starting 1000" >}}
-{{<alts>}}
 {{<atsprinto "tare 1000" >}}
-{{</alts>}}
 
-_During a sprint,_ change your starting word count without changing your current word count. I'm not sure why you'd want to do this.
+_During a sprint,_ change your starting word count without changing your total. You have to have joined already; this won't join you.
 
-Instead of using this, you can {{<slashembed name="join" >}} again with a different starting word count, and then set your new word count with {{<slashembed name="words" >}}.
+| Command | Your total | Your starting count |
+|---|---|---|
+| {{<slashembed name="words" key0="count" val0="1200" >}} | set to 1,200 | unchanged |
+| {{<slashembed name="join" key0="word-count" val0="1200" >}} | set to 1,200 | set to 1,200 |
+| {{<atsprintoembed "tare 1200" >}} | unchanged | set to 1,200 |
+
+A sign moves it instead of setting it, so {{<atsprintoembed "tare -50" >}} takes fifty off. To give both numbers at once, {{<atsprintoembed "tare 1000 + 250" >}} means you started at 1,000 and have written 250 since.
+
+There's no slash command for this, so you have to @Sprinto.
+
+{{<atsprintoembed "starting" >}} won't do it. That could mean three things, so Sprinto lists them instead: start a sprint, join with a starting word count, or `tare`.
 
 ### rejoin
 

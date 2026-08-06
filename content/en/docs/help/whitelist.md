@@ -24,6 +24,10 @@ Alternatively you can use Discord's own permissions and stop Sprinto reading or 
 
 ## Text forms
 
+Anyone can ask which channels are on the list:
+
+{{<atsprinto "channels" >}}
+
 The old underscore commands still work if they're in your muscle memory or your server's pins:
 
 {{<atsprinto "set_sprinting_channel_here" >}}
