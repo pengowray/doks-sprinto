@@ -1,7 +1,7 @@
 ---
 title : "Sprint (all options)"
 description: The sprint command and all its options
-lead: 
+lead:
 weight: 20
 ---
 ## The Sprint Command in detail
@@ -44,47 +44,52 @@ How long to sprint for?
 {{</alts>}}
 Run a 20 minute sprint. Time is assumed to be in minutes unless you give another unit.
 
-## "for x to y" (a rolled length)
+## "random x to y"
 
 {{<tag-duration>}} {{<tag-random>}}
 
-Give two lengths and Sprinto rolls a random one between them.
+Give the shortest and longest possible durations you'd like for a sprint. Sprinto spins the wheel and picks a length at random from the range you give.
 
-{{<slash name="sprint" key0="options" val0="for 15 to 20" >}}
+{{<slash name="sprint" key0="options" val0="random 15 to 20" >}}
 {{<alts "Synonyms" >}}
+{{<atsprinto "sprint random 15 to 20" >}}
+{{<slash name="sprint" key0="options" val0="for 15 to 20" >}}
+{{<slash name="sprint" key0="options" val0="for 15-20" >}}
 {{<slash name="sprint" key0="options" val0="15 to 20" >}}
 {{<slash name="sprint" key0="options" val0="15-20" >}}
-{{<atsprinto "sprint 15-20" >}}
+{{<slash name="sprint" key0="options" val0="roll 1d6 + 14" >}}
 {{</alts>}}
 
-A sprint of 15, 16, 17, 18, 19 or 20 minutes, picked at random. The bare form (`15 to 20`, with no `for`) means the same thing.
+The above starts a sprint of 15, 16, 17, 18, 19 or 20 minutes, picked at random.
 
-The roll lands on whole minutes if both ends are whole minutes; on 30 second steps if both ends sit on a half minute (`for 10m to 12m30s`); otherwise on exact seconds (`for 9m01s to 12m55s`).
+You can also shorten it to just {{<slashembed name="sprint" key0="options" val0="15-20" >}} (see synonyms for more)
 
-If the second number is a clock time it's read as an ending time instead, and the first is the minute to start on, so `20 to :30` runs from :20 until half past.
+
+The roll lands on whole minutes if both ends are whole minutes; on 30 second steps if both are half minutes (`for 10m to 12m30s`); otherwise, for something like (`for 9m01s to 12m55s`), you get a sprint which starts on a random second between those.
+
+If the second number is a clock time it's no longer taken as random, but as an ending time instead, and the first is the minute to start on, so `20 to :30` runs from :20 until half past. (see “at” and “until”)
 
 ## Dice
 
 {{<tag-duration>}} {{<tag-random>}}
-
-{{<slash name="sprint" key0="options" val0="3d6" >}}
-{{<alts "Synonyms" >}}
-{{<slash name="sprint" key0="options" val0="for 3d6" >}}
 {{<slash name="sprint" key0="options" val0="roll 3d6" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="3d6" >}}
+{{<slash name="sprint" key0="options" val0="for 3d6" >}}
 {{<atsprinto "sprint 3d6" >}}
 {{</alts>}}
 
-Three six-sided dice, thrown separately and added up for a length in minutes: 3 to 18, most often 10 or 11. Unlike `for 3 to 18`, the middle is far likelier than the ends.
+Three six-sided dice, thrown separately and added up for a length in minutes: 3 to 18, most often 10 or 11. Unlike `random 3 to 18`, the middle range of sprint lengths is more likely than the extremes (because dice).
 
 | You write | You get |
 | --- | --- |
-| `d20` | one die, so 1 to 20 minutes |
+| `d20` | 1 to 20 minutes |
 | `3d6+10` | 3d6, plus 10 minutes |
 | `3d6-2` | 3d6, less 2 minutes |
-| `2d6 + d20 + 10` | everything added up |
+| `2d6 + d20 + 10` | 13 to 42 minutes (everything added up) |
 | `2d12 + 30s` | other units work too |
 
-Up to 100 dice, up to 1,000 sides each, and up to 12 things added together. Anything that isn't dice by those rules is read as an ordinary length, so `3d5h` is still three days and five hours.
+Limits: Up to 100 dice, up to 1,000 sides each, and up to 12 things added together. Dice are in minutes <!-- (TODO: I might add a multiplier if anyone asks) -->
 
 ## "until"
 
@@ -96,8 +101,11 @@ Example 1:
 {{< slash name="sprint" key0="options" val0="until :00" >}}
 {{< alts "Synonyms" >}}
 {{< atsprinto "sprint until :00" >}}
+{{< slash name="sprint" key0="options" val0="to :00" >}}
+Using `to` as a synonym for `until` works but is not particularly recommended as it changes its meaning in other contexts.
+
 {{</alts>}}
-Run a sprint until the end of the hour, starting in one minute.
+Run a sprint until the end of the hour, starting in one minute (the bot default).
 
 Example 2:
 {{< slash name="sprint" key0="options" val0="until :45 now" >}}
@@ -111,7 +119,9 @@ You can list more than one mark with a slash, and Sprinto takes whichever comes 
 
 {{<slash name="sprint" key0="options" val0="until :15/45" >}}
 
-Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere else with a half-hour difference from everyone else, you'll have to adjust.
+Including multiple marks like this is mainly useful for setting a default sprint, and then should be combined with `for at least` (below).
+
+Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere else with a half-hour difference from everyone else, you'll have to adjust for the difference for now.
 
 ### for at least, for at most
 
@@ -127,17 +137,26 @@ The shortest sprint a clock ending may give you. Run to the next `:00` or `:30`,
 
 {{<slash name="sprint" key0="options" val0="until :00/30 for at least 10 for at most 35" >}}
 
-`for at most` is the other end. If no mark falls between the two, the clock ending is dropped and you get an ordinary 15 minute sprint.
+`for at most` can be used to set an upper bound, but exists largely for completeness.
 
-Both only shape an ending given as a clock time. A channel's default sprint that uses `until` has to have a `for at least`.
+A channel's default sprint that uses `until` should have a `for at least`.
 
 ## Random duration options
 
 Undecided? You can choose a random length for your sprints.
 
-Each wheel has its own list of lengths and picks one at random. A length listed twice comes up twice as often.
+Each wheel has a set of different sprints, and one gets picked at random at the start of the sprint. The sprints are in minutes, and a length listed twice comes up twice as often.
 
-`random` in front of anything else that rolls just means "pick one": {{<slashembed name="sprint" key0="options" val0="random 5 to 9" >}}, {{<slashembed name="sprint" key0="options" val0="roll micro" >}}, {{<slashembed name="sprint" key0="options" val0="rng 3d6" >}}. On its own it spins the [however long](#however-long) wheel.
+`random` is optional in front of a wheel name or dice roll:
+
+- {{<slashembed name="sprint" key0="options" val0="random 10 to 20" >}} or {{<slashembed name="sprint" key0="options" val0="10-20" >}}
+
+- {{<slashembed name="sprint" key0="options" val0="random micro" >}} or {{<slashembed name="sprint" key0="options" val0="micro" >}}
+
+- {{<slashembed name="sprint" key0="options" val0="random 3d6" >}} or {{<slashembed name="sprint" key0="options" val0="3d6" >}}
+
+- But by itself {{<slashembed name="sprint" key0="options" val0="random" >}} spins the [however long](#however-long) wheel.
+
 
 ### Burst sprint
 
@@ -147,8 +166,14 @@ Each wheel has its own list of lengths and picks one at random. A length listed 
 {{<atsprinto "sprint burst" >}}
 
 A very quick sprint with a randomly chosen length from 35 to 150 seconds, usually around a minute and a half. It also opens with a short join window (30 to 60 seconds).
+
+As with all wheels, the join window can be overriden (changed), for example:
+
+{{<slashembed name="sprint" key0="options" val0="burst in 2" >}}
+
+
 {{<alts "Details">}}
-<p>The wheel's 14 slices: 35s, 45s ×2, 60s ×2, 75s ×2, 90s ×2, 100s, 105s, 120s, 135s, 150s.</p>
+<p>The burst wheel's 14 slices: 35s, 45s ×2, 60s ×2, 75s ×2, 90s ×2, 100s, 105s, 120s, 135s, 150s.</p>
 {{</alts>}}
 
 ### Micro sprint
@@ -158,6 +183,7 @@ A very quick sprint with a randomly chosen length from 35 to 150 seconds, usuall
 {{< slash name="sprint" key0="options" val0="micro" >}}
 {{< alts "Synonyms" >}}
 {{< atsprinto "sprint micro" >}}
+{{< slash name="sprint" key0="options" val0="random micro" >}}
 {{< slash name="sprint" key0="options" val0="μ" >}}
 {{</alts>}}
 
@@ -219,7 +245,7 @@ Spin the wheel and start a sprint that's between 5 and 20 minutes.
 {{<atsprinto "sprint spin the wheel" >}}
 {{</alts>}}
 
-The original random sprint. Spin the wheel and start a sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes
+The original Sprinto random sprint. Spin the wheel and start a sprint usually between 10 and 25 minutes, with a tiny chance of being around 5 or 40 minutes.
 {{<alts "Details">}}
 All 'however long' possibilities (minutes):
 <ul>
@@ -242,16 +268,18 @@ All 'however long' possibilities (minutes):
 
 Sprint between 1 and 60 minutes, with short sprints far more likely than long ones. A one-minute sprint is 60 times as likely as a 60 minute one.
 
-Roughly: a quarter of these land under 9 minutes, half land under 18 minutes, and a quarter run longer than 30 minutes.
+Roughly: a quarter of idk-sprints land under 9 minutes, half land under 18 minutes, and a quarter run longer than 30 minutes.
 
 `idk` can land on any whole minute from 1 to 60.
 
-You can still pin the length yourself and keep the rest: {{<slashembed name="sprint" key0="options" val0="idk 5 minutes" >}} gives you the 5 minutes you asked for.
+You can also say idk and still pick the length:
 
-{{<alts "How the idk wheel is weighted">}}
-<p>The wheel has 1,830 slices: 60 of them say one minute, 59 say two minutes, 58 say three, on down to a single slice saying sixty. So every extra minute of length is a little less likely than the one before it, and a 1 minute sprint is 60 times as likely as a 60 minute one.</p>
-<p>The idea is that if every length between 1 and 60 minutes were equally likely, then across many sprints you'd spend nearly all of your <em>time</em> inside the long ones and almost never be in a short one. Weighting the wheel toward short sprints evens that out, so at any given moment you're about as likely to be in a sprint of one length as another.</p>
-<p>I'm no mathematician though, so if you have a better idea about this kind of thing please leave feedback:</p>
+{{<slashembed name="sprint" key0="options" val0="idk 22 minutes" >}}
+
+{{<alts "Motivation and how the 'idk wheel' is weighted">}}
+<p>The idk wheel is divided into 1,830 slices: 60 of them say one minute, 59 say two minutes, 58 say three, on down to a single slice saying sixty. So every extra minute of length is a little less likely than the one before it, and a 1 minute sprint is 60 times as likely as a 60 minute one.</p>
+<p>The idea was that you spend longer in long sprints so there should be fewer of them to compensate. If every sprint length between 1 and 60 minutes were equally likely, then across many sprints you'd spend nearly all of your sprinting time doing the long ones and rarely short one. Weighting the wheel toward short sprints evens that out, so at any given moment you're about as likely to be in a sprint of one length as another.</p>
+<p>I'm no mathematician though, so the weighting is not that clever or correct to balance it out correctly. If you have a better idea about this kind of thing please feel free to leave feedback:</p>
 {{<slash name="feedback" key0="text" val0="I'm a mathematics professor at Brown University and I have an idea for improving and generalizing the sprint duration distributions of the IDK sprint wheel using a formula which takes account of... " >}}
 {{</alts>}}
 
@@ -285,7 +313,7 @@ Sprint for between 20 and 60 minutes, weighted toward the short end. Most spins 
 
 **Usually** is where about two thirds of spins land. The rest fall elsewhere inside the full range.
 
-`for x to y` creates a custom wheel: every step between the two lengths you give is equally likely. See [above](#for-x-to-y-a-rolled-length).
+`random x to y` creates a custom wheel: every step between the two lengths you give is equally likely. See [above](#random-x-to-y).
 
 ## When?
 
@@ -309,7 +337,7 @@ Sprint in 5 minutes (for the default of 15 minutes).
 {{< slash name="sprint" key0="options" val0="35 5" >}}
 {{< atsprinto "sprint 35 5" >}}
 
-Which will start a sprint for 35 minutes in 5 minutes
+This will start a sprint for 35 minutes in 5 minutes
 
 Note: Durations you can also use seconds or other units if you specify them, for example:
 
@@ -317,9 +345,9 @@ Note: Durations you can also use seconds or other units if you specify them, for
 {{<slash name="sprint" key0="options" val0="for .01 day in 0.9 minutes" >}}
 {{<slash name="sprint" key0="options" val0="for 10m30s in 1m10s" >}}
 
-Times are read by Sprinto's own time-span parser, a Rust port of [TimeSpanParser](https://github.com/pengowray/TimeSpanParser), which was written for Sprinto in the first place.
+Times are read by Sprinto's own time-span parser, a Rust port of [TimeSpanParser](https://github.com/pengowray/TimeSpanParser), which was originally created for Sprinto.
 
-### at
+### “at”
 
 {{<tag-when>}} {{<tag-time>}}
 
@@ -331,15 +359,25 @@ Times are read by Sprinto's own time-span parser, a Rust port of [TimeSpanParser
 {{<slash name="sprint" key0="options" val0="@ :30" >}}
 {{</alts>}}
 
-At half past the hour (for almost all timezones). You can leave off either the `:` or the word `at` (but not both).
+At half past the hour (for almost all timezones).
 
-Change `30` to the minutes of the time you want the sprint to start. :00 for on the hour, :15 for quarter past, etc.
+You can leave off either the `:` or the word `at` (but not both).
 
-You can offer more than one mark with a slash and Sprinto takes whichever comes first, which is handy when you don't mind waiting but don't want to wait long:
+Change `30` to the minute mark of the time you want the sprint to start. :00 for on the hour, :15 for quarter past, etc.
 
-{{<slash name="sprint" key0="options" val0="at :00/15/30/45" >}}
+Add `for x` to set the length of the sprint, for example:
 
-Two marks with `to` between them set the start and the end at once:
+{{<slash name="sprint" key0="options" val0="at :25 for 35" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0=":25 35" >}}
+{{<slash name="sprint" key0="options" val0="at 25 til 00" >}}
+{{<slash name="sprint" key0="options" val0=":25 to 00" >}}
+{{</alts>}}
+
+
+This runs a sprint from :25 to :00, for 35 minutes.
+
+A range can be used with `to`.
 
 {{<slash name="sprint" key0="options" val0="at :10 to :35" >}}
 {{<alts "Synonyms" >}}
@@ -355,6 +393,14 @@ A bare number in front of an ending time is the minute to start on:
 {{<slash name="sprint" key0="options" val0="15 til 45" >}}
 
 Quarter past to quarter to. Put the number after the word and it's the wait again, so `til 45 15` starts in fifteen minutes.
+
+You can offer more than one time, each minute mark separated by a slash. Sprinto takes whichever comes first. This is mostly useful for creating a default sprint and can be combined with `in at least` if you want to avoid starting too soon (see [in at least](#in-at-least)).
+
+{{<slash name="sprint" key0="options" val0="at :00/15/30/45 in at least 1" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="next 15 in at least 1" >}}
+{{</alts>}}
+
 
 ### Clock idioms
 
@@ -402,21 +448,24 @@ Use `next 15` to start at :00 :15 :30 :45
 
 For example, if the time right now is 11:32 pm in your time zone, then `next 5` will start the sprint at 11:35 pm; `next 10` will start at 11:40 pm; and `next 15` will start at 11:45pm
 
-### next, grace
+### "next" and "in at least"
 
 {{<tag-when>}} {{<tag-minutes>}} {{<tag-minutes>}}
 
-A "grace" period can also be given to prevent "next" from starting too soon. For example:
+A "grace" period can also be given to prevent "next" from starting too soon. For example make sure the sprint starts at least 2 minutes from now, but still on the next 10 minute mark:
 
+{{< slash name="sprint" key0="options" val0="next 10 in at least 2" >}}
+{{<alts "Synonyms" >}}
+{{< atsprinto "sprint next 10 in at least 2" >}}
 {{< slash name="sprint" key0="options" val0="next 10 grace 2" >}}
+{{< slash name="sprint" key0="options" val0="in 2 to 12" >}}
+{{</alts>}}
 
 This will start at the next 10 minute boundary, but not for at least 2 minutes.
 
-`in at least` means the same thing, and is how Sprinto writes it back to you:
+`in at least` and `grace` are synonyms.
 
-{{< slash name="sprint" key0="options" val0="next 10 in at least 2" >}}
-
-These kinds of settings might be useful for setting a default sprint starting time.
+Setting `in at least` is especially useful when setting a default sprint starting time for the channel or server.
 
 ### in (minutes) to (minutes)
 
@@ -457,15 +506,19 @@ Examples:
 
 Convenient ways to start a sprint.
 
+Can be started with a single word, for example:
+
+{{<slashembed name="sprint" key0="options" val0="marathon" >}}
+
 | Preset | Meaning | Also spelled |
 | --- | --- | --- |
-| {{<slashembed name="sprint" >}}  (default) | for 15m in 1m | |
-| {{<slashembed name="sprint" key0="options" val0="quick" >}} | for 5m in 30s endtime 90s | `quickie`, `fast`, `short`, `brief`, `briefly`, `quickly` |
-| {{<slashembed name="sprint" key0="options" val0="dream" >}} | for 10m, starting on the next 5 minute mark | `dreamy`, `dreamily` |
-| {{<slashembed name="sprint" key0="options" val0="pomo" >}} | for 25m (chain them with `pomo x4`) | `pomodoro` |
-| {{<slashembed name="sprint" key0="options" val0="long" >}} | for 30 in 2.5 to 7.5 mins | `longer`, `slow` |
-| {{<slashembed name="sprint" key0="options" val0="marathon" >}} | for 60 in 7.5 to 13 mins endtime 10, with a halfway bell | `for a marathon` |
-| {{<slashembed name="sprint" key0="options" val0="megathon" >}} | for 120 in 7.5 to 13 mins endtime 10, with a halfway bell | `for ages` |
+| (default) | for 15m in 1m | |
+| `quick` | for 5m in 30s endtime 90s | `quickie`, `fast`, `short`, `brief`, `briefly`, `quickly` |
+| `dream` | for 10m, starting on the next 5 minute mark | `dreamy`, `dreamily` |
+| `pomo` | for 25m (chain them with `pomo x4`) | `pomodoro` |
+| `long` | for 30 in 2.5 to 7.5 mins | `longer`, `slow` |
+| `marathon` | for 60 in 7.5 to 13 mins endtime 10, with a halfway bell | `for a marathon` |
+| `megathon` | for 120 in 7.5 to 13 mins endtime 10, with a halfway bell | `for ages` |
 
 <!-- | `just` | `/sprint now` | -->
 
@@ -509,13 +562,17 @@ Four 25 minute blocks, with 5 minute breaks in between. See [chains](#chains) fo
 {{<atsprinto "sprint wc time 10" >}}
 {{</alts>}}
 
-How long sprinters have to give their final word count, once the writing time is up.
+How long sprinters have to give their final word count, once the writing time is up. A 15 minute sprint defaults to 3 minutes endtime.
 
-If you don't set this, the default ranges from 2 to 10 minutes depending on the length of your sprint. A 15 minute sprint gets 3 minutes. How it's calculated: 1 minute 30 seconds, plus another 30 seconds per 5 minutes of sprint, and never less than 2 minutes. An hour-long sprint gets 7 minutes 30 seconds. It stops climbing at 10 minutes, and only a sprint of 85 minutes or more gets that far, which needs `please`. `marathon` and `megathon` set their endtime to 10 minutes themselves.
+It can be set anywhere from 30 seconds to 30 minutes, or up to an hour for a {{<role "@Sprint MC">}} using `please` (or `pls`).
 
-It can be set anywhere from 30 seconds to 30 minutes, or up to an hour for a {{<role "@Sprint MC">}} using `please`.
+If you don't set the endtime, the default ranges from 2 to 10 minutes depending on the length of your sprint.
 
-Use {{<atsprintoembed "status">}} to check the endtime duration for a currently running sprint.
+How the default is calculated: 1 minute 30 seconds, plus another 30 seconds per 5 minutes of sprint, and never less than 2 minutes. An hour-long sprint gets 7 minutes 30 seconds. It stops climbing at 10 minutes, and only a sprint of 85 minutes or more gets that far, which needs `please`.
+
+`marathon` and `megathon` include an endtime of 10 minutes as part of the preset, but you can change it by setting a different endtime.
+
+Use {{<atsprintoembed "explain">}} or {{<atsprintoembed "status">}} to check the endtime duration for a currently running sprint.
 
 ## late
 
@@ -528,25 +585,26 @@ Use {{<atsprintoembed "status">}} to check the endtime duration for a currently 
 {{<atsprinto "sprint late 20" >}}
 {{</alts>}}
 
-After the scoreboard is posted, people can still fix their number with {{<slashembed name="late" >}}. That window is normally 10 minutes long (counted from the moment writing time ended), and this option changes it. Anything up to an hour is allowed.
+After the scoreboard is posted, sprinters can still adjust their word count with {{<slashembed name="late" >}}. The default late window is normally 10 minutes long, counted from the moment writing time ends (not from when the scoreboard is shown). This option changes it to anything up to an hour, or down to zero to disable late entries.
 
 {{<slash name="sprint" key0="options" val0="late none" >}}
 
-Turn late edits off for this sprint, so the scoreboard is final as soon as it's posted. `late 0` and `late off` do the same thing.
+Turn late edits off for this sprint, so the scoreboard is final as soon as it's posted. `late 0` and `late off` do the same thing. This can be added to a channel's default sprint, but note that it can be overridden if the sprint specifies `late`.
 
 ## join
 
-{{<slash name="sprint" key0="options" val0="for 20 join" >}}
+{{<slash name="sprint" key0="options" val0="for 20 /join 1000" >}}
 {{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="for 20 join 1000" >}}
 {{<slash name="sprint" key0="options" val0="for 20 wc 1000" >}}
 {{<atsprinto "sprint 20 join 1000" >}}
 {{</alts>}}
 
-Start the sprint and be in it, in one command. A number after `join` is your starting word count, the same as {{<slashembed name="join" key0="word-count" val0="1000" >}}. If the sprint doesn't start, you aren't joined to anything.
+Start the sprint and join it in one command. A number after `join` is your starting word count, the same as {{<slashembed name="join" key0="word-count" val0="1000" >}}.
 
-Say it once, and put it at the end. It works on a repeat too: {{<slashembed name="sprint" key0="options" val0="again join same" >}}.
+Say it once, and put it at the end. It works on a repeated sprint too:
 
-`wc time 10` still means [endtime](#endtime), not a word count.
+{{<slash name="sprint" key0="options" val0="again /join same" >}}
 
 ## Sprint flags
 
@@ -575,21 +633,21 @@ Run a 90 minute sprint in 5 minutes
 
 {{<tag-minutes>}}
 
-A chime is a quiet bell part way through a sprint, so you know where you are without checking the clock. There are none unless somebody asks for one: your command, this channel's default sprint, or a preset that sets its own.
+Writes a message of how long to go into chat some way through the sprint.
 
-{{<slash name="sprint" key0="options" val0="for 40 chime -10" >}}
+{{<slash name="sprint" key0="options" val0="for 40 chime -1" >}}
 {{<alts "Synonyms" >}}
-{{<slash name="sprint" key0="options" val0="for 40 bell -10" >}}
-{{<atsprinto "sprint for 40 chimes -10" >}}
+{{<slash name="sprint" key0="options" val0="for 40 bell -1" >}}
+{{<atsprinto "sprint for 40 chimes -1" >}}
 {{</alts>}}
 
-Ring at 10 minutes remaining.
+The above runs a 40 minute sprint with a notification at one minutes remaining (`chime -1`).
 
-A minus sign counts back from the end, and a plain number counts forward from the start. Percentages work too:
+The minus sign means minutes from the end of the sprint, and a plain number is minutes after the start. Percentages work too:
 
 | You write | You get |
 | --- | --- |
-| `chime -5` | 5 minutes before the end |
+| `chime -2` | 2 minutes before the end |
 | `chime 5` | 5 minutes after the start |
 | `chime -25%` | a quarter of the sprint left to go |
 | `chime 50%` | halfway |
@@ -597,15 +655,23 @@ A minus sign counts back from the end, and a plain number counts forward from th
 
 You can ask for several, separated by commas or spaces, and they can mix forms:
 
+Chimes can be added to the channel or server defaults. Keep in mind if the Discord server notifies members for every message, as that impacts how noticeable (and annoying) the chime is.
+
+You can also choose specifically to receive notifications when there's a chime during a sprint. Check `/settings me` for more.
+
 {{<slash name="sprint" key0="options" val0="for 60 chime -50%, -10, -1" >}}
 
-Up to 5 chimes per sprint, and they have to be at least a minute apart. Any of yours that land outside the writing time are dropped, and the start message says how many. `marathon` and `megathon` set a halfway bell of their own, and nothing else.
+Up to 5 chimes are allowed per sprint, and they have to be at least a minute apart. Any you include that land outside the writing time are dropped. The sprint's start message says how many will occur.
+
+`marathon` and `megathon` set a halfway bell of their own.
 
 {{<slash name="sprint" key0="options" val0="for 30 no bell" >}}
 
-Silence, even if this channel normally sets one.
+This runs a 30 minute sprint with chimes off, even if this channel normally sets one.
 
-How many of those bells actually ping _you_ is your own setting, and out of the box none of them do: see {{<atsprintoembed "chimes">}}.
+{{<slash name="sprint" key0="options" val0="marathon no bell" >}}
+
+This runs a marathon sprint (60 minutes) with the half way chime silenced.
 
 ## Chains
 
@@ -651,7 +717,22 @@ To be in for the rest of the chain without catching each join window, add `all`:
 {{<atsprinto "join all in the chain" >}}
 {{</alts>}}
 
-A bare `all` starts you from zero each round. Give a count as well and your total carries forward instead: {{<slashembed name="join" key0="word-count" val0="all 1000" >}}. Already in this round? Add `all` to your word count and it signs you up for the rest too: {{<slashembed name="words" key0="count" val0="1200 all" >}}. {{<slashembed name="leave" >}} takes it back.
+A bare `all` starts you from zero each round.
+
+Give a count as well and your total carries forward instead:
+
+{{<slash name="join" key0="word-count" val0="all 1000" >}}
+
+Already in this round? Add `all` to your word count and it signs you up for the rest too:
+
+{{<slash name="words" key0="count" val0="1200 all" >}}
+
+You can {{<slashembed name="leave" >}} any time.
+
+Notes
+
+- Details of chain sprinting may change in future.
+- There's currently no automatical removal if you miss too many sprints in a chain.
 
 ### Stopping a chain early
 
@@ -665,7 +746,7 @@ A bare `all` starts you from zero each round. Give a count as well and your tota
 
 The round that's running finishes as usual and the rest of the chain is dropped. Only the sprinter who started the chain, or a {{<role "@Sprint MC">}}, can do it. To stop the round that's running as well, use {{<slashembed name="cancel" >}}.
 
-## `again` and `identical`
+## "again"
 
 Repeat the last sprint that ran in this channel.
 
@@ -677,7 +758,7 @@ Repeat the last sprint that ran in this channel.
 {{<atsprinto "sprint rerun" >}}
 {{</alts>}}
 
-Run the same command again. Anything random is decided fresh, so a wheel re-spins and a relative start time (`soon`, `in a bit`) is measured from now.
+Run the same sprint command again. Anything random is rolled fresh, so a wheel re-spins and a relative start time (`soon`, `in a bit`) is measured from now.
 
 {{<slash name="sprint" key0="options" val0="identical" >}}
 {{<alts "Synonyms" >}}
@@ -686,11 +767,15 @@ Run the same command again. Anything random is decided fresh, so a wheel re-spin
 {{<atsprinto "sprint dupe" >}}
 {{</alts>}}
 
+## "identical"
+
 Replay the exact lengths that were used last time, wheel spin and all.
 
-If the last sprint was pinned to a clock mark (`at :30`, `until :45`), `again` won't repeat it, since that moment has been and gone. It'll point you at `identical`, which replays the length instead.
+If the last sprint was pinned to a minute mark (`at :30`, `until :45`), `again` won't repeat it, since that moment has been and gone, while `identical` runs the sprint with the identical timings as last time.
 
-Both take overrides on the end, with an optional `but` to make it read like a sentence:
+## "again" and "identical"
+
+Both `again` and `identical` take overrides on the end, with an optional `but` to make it read like a sentence:
 
 {{<slash name="sprint" key0="options" val0="again for 30" >}}
 {{<slash name="sprint" key0="options" val0="identical but at :30" >}}
@@ -703,12 +788,13 @@ By default they repeat the _last block_, so after a chain you get the last sprin
 {{<slash name="sprint" key0="options" val0="identical chain" >}}
 {{</alts>}}
 
-The memory is per channel, so `again` in one channel doesn't pick up another channel's sprint. If Sprinto has restarted since, he rebuilds it from the channel's recent history; that gets the shape and the lengths back, but the original wheel spin isn't recorded, so an `identical` recalled that way behaves like an `again`.
+Memory for `again` is per channel. In some rare cases (like when Sprinto has a silent code update behind the scenes) wheel spin data can be lost, and in those cases an `identical` may sometimes behave like an `again`.
 
-## `explain` and `peek`
+## "explain"
 
-{{<slash name="sprint" key0="options" val0="explain for 25 in 5 chime -5" >}}
+{{<slash name="/explain" key0="sprint-options" val0="for 25 in 5 chime -5" >}}
 {{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="explain for 25 in 5 chime -5" >}}
 {{<slash name="sprint" key0="options" val0="peek for 25 in 5" >}}
 {{<slash name="sprint" key0="options" val0="preview for 25 in 5" >}}
 {{<atsprinto "sprint dry-run for 25 in 5" >}}
@@ -718,15 +804,16 @@ Put `explain` at the front of any sprint command and Sprinto tells you what it w
 
 It's a dry run against the clock right now, so a random length gets rolled for the example only.
 
-On the slash command only you see the answer, and `me` or `private` after the keyword still work and change nothing. `public` is the word that shows it to the room:
+<!-- On the slash command only you see the answer, and `me` or `private` after the keyword still work and change nothing. `public` is the word that shows it to the room:
 
 {{<slash name="sprint" key0="options" val0="explain public marathon" >}}
 {{<alts "Synonyms" >}}
 {{<slash name="sprint" key0="options" val0="explain aloud marathon" >}}
 {{<slash name="sprint" key0="options" val0="explain everyone marathon" >}}
 {{</alts>}}
+-->
 
-An @Sprinto `explain` lands in the channel whatever you say.
+The response to @Sprinto `explain` will always appear in the channel.
 
 Two more choices go in front of the sprint options. Which sprint to describe:
 
@@ -747,7 +834,7 @@ And how much of it:
 
 {{<slash name="sprint" key0="options" val0="explain full plain pomo x4" >}}
 
-### `/explain` on its own
+### "/explain" on its own
 
 {{<slash name="explain" >}}
 {{<atsprinto "explain" >}}
@@ -770,13 +857,16 @@ Sprinto will say no to some things, and `please` genuinely helps with a few of t
 | Chimes per sprint | 5, at least a minute apart | same |
 | Blocks in a chain | 8 | same |
 
+Exampple:
+{{<slash name="sprint" key0="options" val0="for 90 mins pls" >}}
+
 <!-- | `delay <minutes>` | (removed) Delay the opening of the sprint by this many minutes. I've effectively removed this feature as it didn't seem useful. I can enable it on your server if you really want but you'll have to let me know why you want it). If your start time is too far into the future, part of the time will be converted into a delay. | -->
 <!-- | `help` | Gives you a link to this wiki page | -->
 
 <!--
 ## `:<MM>`
 
-Where you see `:<MM>` it refers to a clock time without the hours. For example, to start a sprint at 7:35pm, you'd use `/sprint at :35`. There's no ambiguity because Sprinto can only start sprints less than an hour in advance. 
+Where you see `:<MM>` it refers to a clock time without the hours. For example, to start a sprint at 7:35pm, you'd use `/sprint at :35`. There's no ambiguity because Sprinto can only start sprints less than an hour in advance.
 
 Use `/sprint now` to start a sprint immediately. If you try to start a sprint `at :35` when it's currently 7:35, Sprinto will think you want to start in about an hour (because 7:35:00 has already passed, so 8:35:00 is the next match for `:35`).
 
@@ -786,7 +876,7 @@ Note you can leave off the colon (`:`) so long as you remember to include the ke
 
 Sprinto doesn't know your timezone, and assumes you have a more typical one:
 
-> Newfoundland, India, Iran, Afghanistan, Burma, Sri Lanka, the Marquesas, as well as parts of Australia use half-hour deviations from standard time, and some nations, such as Nepal, and some provinces, such as the Chatham Islands of New Zealand, use quarter-hour deviations. 
+> Newfoundland, India, Iran, Afghanistan, Burma, Sri Lanka, the Marquesas, as well as parts of Australia use half-hour deviations from standard time, and some nations, such as Nepal, and some provinces, such as the Chatham Islands of New Zealand, use quarter-hour deviations.
 > — via Wikipedia, "[Time zone](https://en.wikipedia.org/wiki/Time_zone)"
 
 Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour deviants, so if you are a timezone deviant please just pretend you're anywhere else in the world when using the `at :<MM>` and `until :<MM>` parameters. If this is an actual major issue for your Discord server, please let me know.
