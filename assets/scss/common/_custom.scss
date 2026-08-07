@@ -301,6 +301,62 @@
     background-color: #163851;
 }
 
+/* Tag colours follow the sprint's own traffic light: amber for when it starts,
+   green for how long it runs, red for what happens after writing time is up.
+   The emote is the same artwork the bot posts under the screen-reader theme
+   (res/emotes in the bot repo): soon, go, ding. */
+
+.tag-emote {
+    width: 13px;
+    height: 13px;
+    vertical-align: -2px;
+    margin-right: 3px;
+}
+
+.tag-when {
+    background-color: #fcf2d4;
+    color: #7f6205;
+}
+
+[data-bs-theme="dark"] .tag-when {
+    background-color: #4b483b;
+    color: #f1c40f;
+}
+
+.tag-duration {
+    background-color: #ddf1dc;
+    color: #2f6b34;
+}
+
+[data-bs-theme="dark"] .tag-duration {
+    background-color: #2f4536;
+    color: #7fd18a;
+}
+
+.tag-endtime,
+.tag-late {
+    background-color: #fbe1de;
+    color: #a4342a;
+}
+
+[data-bs-theme="dark"] .tag-endtime,
+[data-bs-theme="dark"] .tag-late {
+    background-color: #4b3230;
+    color: #f08a7e;
+}
+
+.tag-time,
+.tag-random {
+    background-color: #dbe9f8;
+    color: #1f5484;
+}
+
+[data-bs-theme="dark"] .tag-time,
+[data-bs-theme="dark"] .tag-random {
+    background-color: #2b3b4b;
+    color: #7fbdf0;
+}
+
 /* Tooltip container */
 .tooltip2 {
     position: relative;
