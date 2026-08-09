@@ -1,0 +1,4 @@
+<div class="eg">
+    <div class="eg-cmds">{{ .Inner | safeHTML }}</div>
+    {{ with .Get "caption" }}<div class="eg-caption">{{ . | markdownify }}</div>{{ end }}
+</div>

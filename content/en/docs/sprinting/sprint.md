@@ -21,8 +21,10 @@ You can change (override) the the {{<param-duration "duration">}} or the  {{<par
 
 
 
+{{<example caption="Sprint for 20 minutes, starting in 2 minutes.">}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `for 20 minutes`>}} {{<param-when `in 2 min`>}}" >}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `20`>}} {{<param-when `2`>}}" >}}
+{{</example>}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `until 1:30`>}} {{<param-when `now`>}}" >}}
 {{<slash name="sprint" key0="options" val0="{{<param-when `now`>}} {{<param-duration `until 1:30`>}}" >}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `15`>}} {{<param-when `at 1:45`>}}" >}}

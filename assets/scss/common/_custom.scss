@@ -35,7 +35,6 @@
     line-height: 22px;
     margin-top: 6px;
     max-width: calc(100% - 30px);
-    overflow: hidden;
     padding: 0;
 }
 
@@ -286,8 +285,9 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 1;
-    display: inline-block;
-    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 6px;
     border-radius: 3px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -309,7 +309,7 @@
 .tag-emote {
     width: 13px;
     height: 13px;
-    vertical-align: -2px;
+    flex: none;
     margin-right: 3px;
 }
 
@@ -413,6 +413,41 @@
 .tooltip2:hover .tooltiptext2 {
     visibility: visible;
     opacity: 1;
+}
+
+/* A worked example: one command, or several that do the same thing separated
+   by "or", with a caption saying what they do. */
+
+.eg {
+    margin: 20px 0;
+}
+
+.eg .gg {
+    position: relative;
+    margin: 0 14px;
+}
+
+.eg-cmds .gg + .gg {
+    margin-top: 28px;
+}
+
+.eg-cmds .gg + .gg::before {
+    content: "or";
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.eg-caption {
+    margin: 10px 18px 0;
+    font-size: 0.9375rem;
+    opacity: 0.85;
 }
 
 /* Parameters shown inside a command's option value. Same text as the plain
