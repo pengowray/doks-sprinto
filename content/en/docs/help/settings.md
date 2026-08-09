@@ -10,7 +10,7 @@ Everything Sprinto can be told to do differently lives under one command: {{<sla
 Sprinto configures nothing when it joins your server. No channel, no role, no saved settings. It works straight away in every channel it can post in, and you only come here if you want something changed.
 
 {{<alts "Where did setup-set-show-quotes and friends go?">}}
-The old `setup-set-*` commands (`setup-set-allowed-channel`, `setup-pingroles-set`, `setup-set-show-quotes`, `setup-set-show-ps`, `setup-set-show-patreon-requests`, `setup-set-autoping`, `setup-set-walltime`, `setup-set-listen-to-carl`, `setup-set-default`, `setup-show-default` and the rest) have all been removed. There were about ten of them and they all did nearly the same thing. They're now the one `/settings` command below. If an old pin or an old link sent you here, that's why.
+The old `setup-set-*` commands (`setup-set-allowed-channel`, `setup-pingroles-set`, `setup-set-show-quotes`, `setup-set-show-ps`, `setup-set-show-patreon-requests`, `setup-set-autoping`, `setup-set-walltime`, `setup-set-listen-to-carl`, `setup-set-default`, `setup-show-default` and the rest) have all been removed. They're now the one `/settings` command below.
 {{</alts>}}
 
 ## The seven subcommands
@@ -19,9 +19,11 @@ The old `setup-set-*` commands (`setup-set-allowed-channel`, `setup-pingroles-se
 
 {{<slash name="settings me" >}}
 
-Your own settings, and only yours. **Max chimes** is how many of a sprint's bells @ you. It starts at 0, so you're never pinged unless you ask; the bells ring in the channel either way. There's also a link through to your {{<slashembed name="pets">}} panel.
+Your personal settings.
 
-Nobody else's settings are affected, on any server.
+**Max chimes** is how many of a sprint's chimes @ you, that is if chimes are enabled on the sprint. Max chimes starts at 0, so you're not pinged at all unless you ask. The one-minute remaining message appears in the channel either way, if it's been enabled for a sprint.
+
+There's also a link through to your {{<slashembed name="pets">}} panel.
 
 ### settings channel
 

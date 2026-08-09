@@ -1,5 +1,5 @@
 <span class="tag tag-when">
-    <img class="tag-emote" src="/images/emotes/soon.svg" alt="" width="16" height="16">
+    {{ if not (.Get 0) }}<img class="tag-emote" src="/images/emotes/soon.svg" alt="" width="16" height="16">{{ end }}
     <span class="tooltip2">{{ if (.Get 0) }}{{ .Get 0 | markdownify }}{{ else }}when{{ end }}
         <span class="tooltiptext2">Specifies when the sprint will start.</span>
     </span>

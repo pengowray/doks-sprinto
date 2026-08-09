@@ -415,6 +415,47 @@
     opacity: 1;
 }
 
+/* Parameters shown inside a command's option value. Same text as the plain
+   version, with a faint tint and a dotted underline in the same traffic-light
+   colours as the tags above. */
+
+.param.tooltip2 {
+    padding: 0 2px;
+    border-radius: 3px;
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+}
+
+.param-duration.tooltip2 {
+    background-color: #ecf7ea;
+    border-bottom-color: #24702c;
+}
+
+[data-bs-theme="dark"] .param-duration.tooltip2 {
+    background-color: rgba(127, 209, 138, 0.13);
+    border-bottom-color: #74d581;
+}
+
+.param-when.tooltip2 {
+    background-color: #fdf6e3;
+    border-bottom-color: #8a6a00;
+}
+
+[data-bs-theme="dark"] .param-when.tooltip2 {
+    background-color: rgba(241, 196, 15, 0.13);
+    border-bottom-color: #edbe0a;
+}
+
+.param-endtime.tooltip2 {
+    background-color: #fdeeeb;
+    border-bottom-color: #ab3427;
+}
+
+[data-bs-theme="dark"] .param-endtime.tooltip2 {
+    background-color: rgba(240, 138, 126, 0.13);
+    border-bottom-color: #f4796b;
+}
+
 /* Docs next/previous navigation readability in dark mode */
 [data-bs-theme="dark"] body .docs-navigation a {
     color: #dee2e6;

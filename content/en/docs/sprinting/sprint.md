@@ -6,20 +6,29 @@ weight: 20
 ---
 ## The Sprint Command in detail
 
-{{<slash name="sprint" key0="options" val0="_duration_ _when_ " >}}
+{{<slash name="sprint" >}}
+
+Without any options, the default sprint is for 15 minutes in 1 minute: The same as entering:
+{{<slash name="sprint" key0="options" val0="for 15 minutes in 1 minute" >}}
+
+
+<!-- {{<slash name="sprint" key0="options" val0="{{<tag-duration `for 15 minutes`>}} {{<tag-when `in 1 minute`>}} {{<tag-endtime `end 3 minute`>}}" >}} -->
+
+You can change (override) the the {{<param-duration "duration">}} or the  {{<param-when "when">}} parameter or both, for example:
+{{<slash name="sprint" key0="options" val0="{{<tag-duration>}} {{<tag-when>}}" >}}
+
 <!-- {{< atsprinto "sprint `duration` `when` `preset` `other`" >}} -->
 
-You can optionally include a "duration" and a "when" parameter, for example:
 
-{{<slash name="sprint" key0="options" val0="for 10 minutes in 2 min" >}}
-{{<slash name="sprint" key0="options" val0="until :30 now" >}}
-{{<slash name="sprint" key0="options" val0="for 25 at :15 " >}}
-{{<slash name="sprint" key0="options" val0="for however long in a bit" >}}
+
+{{<slash name="sprint" key0="options" val0="{{<param-duration `for 20 minutes`>}} {{<param-when `in 2 min`>}}" >}}
+{{<slash name="sprint" key0="options" val0="{{<param-duration `20`>}} {{<param-when `2`>}}" >}}
+{{<slash name="sprint" key0="options" val0="{{<param-duration `until 1:30`>}} {{<param-when `now`>}}" >}}
+{{<slash name="sprint" key0="options" val0="{{<param-when `now`>}} {{<param-duration `until 1:30`>}}" >}}
+{{<slash name="sprint" key0="options" val0="{{<param-duration `15`>}} {{<param-when `at 1:45`>}}" >}}
+{{<slash name="sprint" key0="options" val0="{{<param-duration `for random 20-30`>}} {{<param-when `in 1-2 minutes`>}}" >}}
 
 The parameters are all optional and can be in any order.
-
-{{<slash name="sprint" >}}
-Without any options, the default sprint is for 15 minutes in 1 minute.
 
 There's also presets (which set both the duration and when the sprint starts); flags such as _quietly_ (which prevents people getting pinged when the sprint is announced); and "endtime", which explicitly sets how long sprinters have to give their final tally.
 
@@ -27,11 +36,13 @@ A few things on this page are new in this release: [chains](#chains) (several sp
 
 ## "for"
 
-{{<tag-duration>}} {{<tag-minutes>}}
+{{<tag-duration>}}
 
 How long to sprint for?
 
 {{<slash name="sprint" key0="options" val0="for 20" >}}
+{{<slash name="sprint" key0="options" val0="for {{<tag-minutes>}}" >}}
+
 {{<atsprinto "sprint for 20" >}}
 {{<alts "Synonyms" >}}
 {{<slash name="sprint" key0="options" val0="20" >}}
@@ -43,6 +54,9 @@ How long to sprint for?
 {{<atsprinto "_sprint 20" >}}
 {{</alts>}}
 Run a 20 minute sprint. Time is assumed to be in minutes unless you give another unit.
+
+More timings:
+{{<slash name="sprint" key0="options" val0="{{<tag-duration `for 15 minutes`>}} {{<tag-when `in 1 min`>}} {{<tag-endtime `end 3.5 min`>}} {{<tag-endtime `late 10 min`>}}" >}}
 
 ## Random lengths
 

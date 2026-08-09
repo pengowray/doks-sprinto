@@ -1,5 +1,5 @@
 <span class="tag tag-endtime">
-    <img class="tag-emote" src="/images/emotes/ding.svg" alt="" width="16" height="16">
+    {{ if not (.Get 0) }}<img class="tag-emote" src="/images/emotes/ding.svg" alt="" width="16" height="16">{{ end }}
     <span class="tooltip2">{{ if (.Get 0) }}{{ .Get 0 | markdownify }}{{ else }}endtime{{ end }}
         <span class="tooltiptext2">Applies after writing time is up, not during the sprint.</span>
     </span>
