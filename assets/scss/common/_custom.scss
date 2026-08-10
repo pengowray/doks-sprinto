@@ -155,6 +155,21 @@
     margin-bottom: 0;
 }
 
+/* Chat-message spacing is tighter than the docs' default prose. */
+.gg-msg-body p {
+    margin: 0 0 8px;
+}
+
+.gg-msg-body ul,
+.gg-msg-body ol {
+    margin: 0 0 8px;
+    padding-left: 24px;
+}
+
+.gg-msg-body li {
+    margin: 0;
+}
+
 /* Discord renders `##` as a header inside a message, so mock-ups keep it.
    Scale it back to message size and drop the permalink anchor the docs
    theme adds, which makes no sense inside a pretend chat message. */

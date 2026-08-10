@@ -29,7 +29,10 @@
       <span class="gg-msg-name">{{ $name }}</span>
       {{- if $isApp }}<span class="gg-app">App</span>{{ end -}}
     </div>
-    <div class="gg-msg-body">{{ .Inner | markdownify }}</div>
+    {{- /* The body keeps single newlines via `white-space: pre-line`, so strip
+   the newlines markdownify leaves between HTML tags or they render as
+   extra blank lines. Newlines inside text (Discord soft breaks) stay. */ -}}
+    <div class="gg-msg-body">{{ .Inner | markdownify | chomp | replaceRE ">(\r?\n)+<" "><" | safeHTML }}</div>
     {{- if eq (.Get "ephemeral") "1" }}
     <div class="gg-eph">Only you can see this</div>
     {{- end }}
