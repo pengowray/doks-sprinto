@@ -6,9 +6,9 @@ lead: Commands for once the sprint's started
 
 ## What Sprinto posts
 
-Sprinto posts three announcements over the course of a sprint: one when the sprint is booked, one when it starts, and one when time is up. Each has a banner, a line or two of detail, and a list of who's involved. If the sprint has a bell, there's also a short reminder partway through.
+Sprinto posts three announcements over the course of a sprint: one when the sprint is created, one when it starts, and one when time is up. Each has a banner, a line or two of detail, and a list of who's involved. If the sprint has a bell, there's also a short reminder partway through.
 
-**The join window.** The sprint is booked but hasn't started, so there's still time to get in:
+**The join window.** The sprint is created but hasn't started. The ideal time to join:
 
 {{< reply >}}
 🍋🍋🍋 **JOIN THE SPRINT** 🍋🍋🍋
@@ -17,9 +17,13 @@ The next sprint runs for 15 minutes and will begin in 60 seconds.
 📢 Pings: {{< mention "alex" >}} (not joined)
 {{< /reply >}}
 
-The fruit emoji changes from sprint to sprint and doesn't mean anything. 📢 Pings lists everyone Sprinto is calling in: people who asked to be pinged, any ping role, and the person who started the sprint if they still haven't joined it, as above. From two minutes out the message also shows the start time, like `in 5 minutes (at 10:05)`, in your own timezone.
+Notes:
 
-**The start.**
+- 📢 Pings lists everyone Sprinto is calling in: people who asked to be pinged, any ping role, and the person who started the sprint if they still haven't joined it, as above.
+- If it starts in more than two minutes, the message also shows the start time, like `in 5 minutes (at 10:05)`, in your own timezone.
+- The fruit emoji changes from sprint to sprint and doesn't mean anything.
+
+### The start.
 
 {{< reply >}}
 🍏🍏🍏 **THE SPRINT BEGINS: FIFTEEN MINUTES** 🍏🍏🍏
@@ -28,17 +32,27 @@ Duration: 15 minutes (until ⏰ 10:45).
 📣 Participants: {{< mention "alex" >}} (1,200), {{< mention "sam" >}} (0)
 {{< /reply >}}
 
-The banner says how long you're writing for. A whole number of minutes or hours is spelled out ("FIFTEEN MINUTES", "ONE HOUR"), and a length within a few seconds of a whole number counts as whole, so a 38m02s sprint reads "THIRTY-EIGHT MINUTES". Anything further off keeps its digits, like "3 MINUTES 30 SECONDS", and under two minutes it's shown in seconds, like "90 SECONDS". The end time is in your own timezone, and the "in 15 minutes" countdown updates by itself while you write. A sprint with bells adds `🔔 at 60s remaining.` to that line. 📣 Participants lists who's in the sprint. The number after each name is the count they joined with; it changes to something like `(1,200+300)` when they report progress, and disappears once their final count is in.
+Notes:
 
-**The bell.**
+- How long the sprint goes for is shown a few times so you don't miss it.
+- A sprint with bells adds `🔔 at 60s remaining.` or similar to that line.
+
+📣 Participants:
+
+- Lists who's in the sprint.
+- The number after each name is the count they joined with; it changes to something like `(1,200+300)` when they report progress, and disappears once their final count is in.
+
+### The bell.
 
 {{< reply >}}
 🔔 **60 seconds remaining**
 {{< /reply >}}
 
-The bell only appears if the sprint was set up with one: in your command, in the channel's default sprint, or through a preset like `marathon`. A bell doesn't @ anyone unless they asked for that, and it never shows word counts. See [chimes]({{<relref "sprint" >}}#chimes).
+> For more, see [chimes]({{<relref "sprint" >}}#chimes).
 
-**Time's up.**
+The bell only appears if the sprint was set up with one: in your command, in the channel's default sprint, or through a preset like `marathon`. A bell doesn't @ anyone unless they asked to be @'d, which you can change in "/settings me".
+
+### **Time's up.**
 
 {{< reply >}}
 🛑🛑🛑 **TIME'S UP** 🛑🛑🛑
@@ -48,7 +62,7 @@ Please give your final word count with `/words`. You have 3 minutes.
 
 The three minutes is how long you have to report. It's worked out from the length of the sprint, 3 minutes for a 15 minute sprint and up to 10 for a very long one, unless the host set it with `endtime`. A name's count disappears once they've reported, so anyone still shown with a number here is someone Sprinto is waiting on.
 
-**Everyone's in.**
+### Everyone's in.
 
 {{< reply >}}
 All word counts are in! Results shortly.
@@ -56,7 +70,8 @@ All word counts are in! Results shortly.
 
 Once everyone still in the sprint has reported or locked their count in, Sprinto stops waiting and posts the scoreboard a few seconds later. {{<slashembed name="leave" >}} counts as done too, so if the last person Sprinto was waiting on leaves instead of reporting, the results post straight away. A sprint started with `noff` waits out the full window instead. See [sprint flags]({{<relref "sprint" >}}#sprint-flags).
 
-**Nobody in it.**
+<!--
+### Nobody in it.
 
 {{< reply >}}
 🏆 **CONGRATS EVERYONE!**
@@ -64,6 +79,19 @@ That's all, folks. /sprint to start another. (No one joined)
 {{< /reply >}}
 
 This is how a sprint ends when there's no one in it at the end, whether nobody joined or everybody left. There's no scoreboard. `That's all, folks.` is one of a handful of sign-offs, picked at random.
+-->
+
+### The scoreboard.
+
+{{< reply >}}
+🏆 **Congrats everyone!**
+{{< /reply >}}
+
+Notes:
+
+- Your word counts are self-reported, on the honesty system.
+- It's all about the writing, writing with others to keep yourself accountable, and challenging yourself.
+- The admin can change the scoreboard to shuffle the results.
 
 ## Cancel
 
@@ -225,16 +253,19 @@ The `↳` line is the correction: it's the command Sprinto ran on your behalf. I
 {{<atsprinto "latewc 10150" >}}
 {{</alts>}}
 
-The scoreboard can still change after it's posted. For 10 minutes after time's up you can add a count you missed, or fix one you got wrong, with {{<slashembed name="late">}}. The scoreboard updates in place.
+The scoreboard can still change after it's posted. For 10 minutes after "time's up" you can squeeze in your word count or fix it with {{<slashembed name="late">}}. The scoreboard updates in place.
 
-Starting another sprint in the channel cuts that window short: the old board stops taking updates a minute before the new sprint's writing ends, and closes for good once the new sprint reaches its own time's up.
+In some cases the 10 minute window can be cut short. When a new (very short) sprint in the same channel is a minute from finishing, the previous window closes. The late window can also be adjusted or turned off either in the sprint command or the channel's custom sprint defaults.
+<!-- In a [chain sprint]({{<relref "sprint" >}}#chains), each round's scoreboard takes late updates of its own, so a count you missed in the first block can still go on its board while the next one runs. {{<slashembed name="late">}} goes to the older board, {{<slashembed name="words">}} to the block you're in. The older window shuts a minute before the next block's writing ends, so only one board is ever open. -->
+The "/late" command accepts the same sorts of counts as {{<slashembed name="words">}}, so:
 
-In a [chain]({{<relref "sprint" >}}#chains), each block's scoreboard takes late updates of its own, so a count you missed in the first block can still go on its board while the next one runs. {{<slashembed name="late">}} goes to the older board, {{<slashembed name="words">}} to the block you're in. The older window shuts a minute before the next block's writing ends, so only one board is ever open.
+-  {{<slashembed name="late" key0="count" val0="+250" >}} and
 
-It takes the same sorts of counts as {{<slashembed name="words">}}, so {{<slashembed name="late" key0="count" val0="+250" >}} and {{<slashembed name="late" key0="count" val0="300 new" >}} both work.
+- {{<slashembed name="late" key0="count" val0="300 new" >}} both work.
 
 The host can change that window when starting the sprint, with `late 20` for longer or `late none` to turn it off. See [Sprint (all options)]({{<relref "sprint" >}}).
 
+<!--
 ## Undo
 
 {{<slash name="undo" >}}
@@ -250,6 +281,7 @@ Take back your last word count.
 Put it back again.
 
 Both step through your own reports one at a time, up to 100 of them, so you can undo your way out of a bad number without cancelling anything.
+-->
 
 ## More sprint-related commands
 
@@ -283,12 +315,6 @@ Cancel the active sprint.
 {{<atsprinto "begin">}}
 {{</alts>}}
 Don't wait out the rest of the join window, start the sprint now. Only the person who started it, or a {{<role "@Sprint MC">}}, can do this.
-
-{{<atsprinto "nudge" >}}
-{{<alts>}}
-{{<atsprinto "results">}}
-{{</alts>}}
-If a sprint looks stuck waiting on someone's word count, this asks Sprinto to move it along. There's no slash command for this, so you have to @Sprinto. To move a sprint on whether it's stuck or not, {{<role "@Sprint MC">}}s can use {{<slashembed name="nudge-please" >}}.
 
 {{<atsprinto "who" >}}
 Who's in the current sprint.
