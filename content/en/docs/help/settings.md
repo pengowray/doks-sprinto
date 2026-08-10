@@ -271,14 +271,14 @@ Your own scope, under {{<slashembed name="settings me">}}. Neither of these is a
 | `chimes` | 0 | How many of a sprint's bells @ you, counting back from the last one. Anything from 0 to 5, and 0 means none. The bells ring in the channel either way. The panel calls this row **Max chimes**. |
 | Sprint companion | | Not a setting. Shows which pet is sprinting with you, or `No pet`. Change it in {{<slashembed name="pets">}}, which the panel links to. |
 
-## Removing or reporting a quote
+## Reporting a quote
 
 If a quote is a problem, or just annoyingly prescriptive, tell me and I'll take it out. Use {{<slashembed name="feedback">}} and include the quote itself, or come and say so on the Sprinto Planet Discord server.
-
+<!--
 An {{<tag-admin>}} doesn't have to wait. Right-click the sprint results the quote is on (long-press on mobile), choose **Apps → Clean up these results**, then press **Remove the quote**. Sprinto edits it out of the message that's already posted and won't show that quote in your server again. Only you see the panel. Discord puts that right-click entry in front of server administrators only; to give it to another role as well, use Server Settings → Integrations.
 
 That covers your own server only, so the panel then offers **Report it too**. It asks why (offensive, wrongly attributed, wrong, not right for this server, or something else) and takes a note if you want to add one. Reports come to me and I read them by hand.
-
+-->
 ## See also
 
 - [Setup]({{< relref "setup" >}}) (setting up Sprinto)
