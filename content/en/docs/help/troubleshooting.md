@@ -29,7 +29,7 @@ If you're having trouble, here are some tips. The first few are for users; the l
 
 - If there's a Discord role named `@Sprinto` you might accidentally mention it instead of `@Sprinto` the bot. Check you didn't mention a role.
 
-- To be really sure which one you're picking, look at the autocomplete list that pops up as you type `@Sprinto`. The bot is tagged **APP** (or **BOT**) next to its name; the role has no such tag and is just plain text. Pick the one with the tag.
+- To be sure which one you're picking, look at the autocomplete list that pops up as you type `@Sprinto`. The bot has a profile picture.
 
 {{<atsprinto "hello sprinto" >}}
 
@@ -39,7 +39,7 @@ A star shines on the hour of our meeting.
 
 No reply usually means you tagged the role.
 
-- If you're an admin, please rename the `@Sprinto` role to another name such as `@RoleForSprinto` so sprinters can **@Sprinto** more easily. There's more admin tips below under "For admins".
+- If you're an admin, please rename the {{<role "@Sprinto">}} role to another name such as {{<role "@Bot role: Sprinto">}} so sprinters can **@Sprinto** more easily. There's more admin tips below under "For admins".
 
 ### 2) Make sure you're actually sending a slash command
 
@@ -65,7 +65,7 @@ Tips:
 
 - Discord is bad at copy-pasting slash commands, so avoid that if you can. It's also bad at copy-pasting `@Sprinto` (it might switch to @'ing the role).
 
-- Ask for help or report strange Sprinto behavior with `/feedback`, or come to the Sprinto Planet Discord for support. Your report is posted anonymously on Sprinto Planet, and if the developer answers it, the reply arrives in the channel you sent it from, so you don't have to join anything to hear back.
+- Ask for help or report strange Sprinto behavior with `/feedback`, or come to the Sprinto Planet Discord for support. Your report is posted anonymously on Sprinto Planet, and if the developer answers it, the reply arrives in the channel you sent it from, so you no longer need to  join Sprinto Planet to hear back.
 
 ### 3) Check “Legacy chat input” (it breaks slash commands)
 
@@ -75,7 +75,7 @@ Tips:
 
 ## For admins
 
-- Some of Sprinto's permissions were reset in early September 2022. Try re-adding Sprinto to your server to fix permission problems (you do **not** need to kick him first). From Sprinto's profile, click **Add App**.
+- Some of Sprinto's permissions have been reset in the past (eg early September 2022). Try re-adding Sprinto to your server to fix permission problems (you do **not** need to kick him first). From Sprinto's profile, click **Add App**.
 
 - If Sprinto isn't starting sprints, make sure he has permission to send messages in your sprinting channel. `/sprint` will warn you if Sprinto does not have **Send Messages** permission (but `@Sprinto sprint` can't).
 
@@ -85,7 +85,7 @@ Tips:
 
 - Sprinto's commands also have permissions under **Server Settings > Integrations > Sprinto > Manage**.
 
-- For completeness: under **Server Settings > Roles**, there are also permissions under **Sprinto's role** (“This role is managed by an integration: Sprinto”). Sprinto doesn't need special role permissions, except it needs **Manage Roles** if you're using an `@Active Sprinters` role (set up with `/create-active-role`, kept in sync with `/refresh-active-role`) that you want Sprinto to manage.
+- For completeness: under **Server Settings > Roles**, there are also permissions under **Sprinto's role** (“This role is managed by an integration: Sprinto”). Sprinto doesn't need special role permissions, except it needs **Manage Roles** if you're using an {{<role "@Active Sprinters">}} role (set up with `/create-active-role`<!--, kept in sync with `/refresh-active-role`-->) that you want Sprinto to manage.
 
 Thanks for your patience and support.
 

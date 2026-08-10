@@ -1,7 +1,7 @@
 ---
 title : "Voice"
 description: Using Sprinto in a voice channel
-lead: 
+lead:
 ---
 ## Sprinto Talks (paused for now)
 
@@ -10,6 +10,10 @@ Voice is off at launch of the Rust rewrite. It's built, but it hasn't been verif
 ## What it does
 
 When it's on, Sprinto joins a voice channel and plays a bell at the start of a sprint, and another when time's up. That's the whole feature: a couple of audio cues so people who aren't watching the text channel still know when to start writing and when to stop.
+
+## Feedback
+
+If you're keen to have Sprinto join voice channels again, leave `/feedback` with the feedback command.
 
 ## See also
 
