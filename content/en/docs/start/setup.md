@@ -117,9 +117,9 @@ No channel or server default is set. The buttons below set one for this channel.
 {{<button "🔕 No chime" "success">}}
 {{</buttons>}}
 
-Click **This channel** first if you only want to change this one channel. Green marks the start, length and bell in effect right now; clicking one pins it at the scope you're on and a check appears next to it, and clicking a checked one clears it again. On a new server **Reset to built-in** is greyed out, because there is nothing set to clear.
+Click **This channel** first if you only want to change this one channel. Green marks the start, length and bell in effect right now; clicking one of these buttons selects it and adds it to your default sprint. Clicking a checked one clears it again. On a new server **Reset to built-in** is greyed out, because there is nothing set to clear.
 
-The bell buttons mean one bell a minute before the end; a bell at halfway as well; or no bell at all, which is what you get out of the box. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so an `in 5 minutes` start delay or anything else the buttons don't offer goes in there.
+With **"Edit text"** you can edit the default sprint for your selected scope (server or channel). The text takes most of what you could type after {{<slashembed name="sprint">}}, such as `in 5 minutes` or `random 10-20` or anything else.
 <!--
 A clock time has to give more than one time, so `at :00/:30` works and `at :30` doesn't. An `until` also needs the shortest sprint it may leave you: `until :00/:30 for at least 10`.
 -->
