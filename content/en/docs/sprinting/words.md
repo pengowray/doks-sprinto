@@ -1,6 +1,6 @@
 ---
 title : "During the sprint"
-description: 
+description:
 lead: Commands for once the sprint's started
 ---
 
