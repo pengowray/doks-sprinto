@@ -174,7 +174,7 @@ The old bot had about ten near-identical commands for this: `setup-set-allowed-c
 
 {{<slash name="settings sprint-defaults" >}} new: give this channel its own default sprint length, start time, bells and late window, so a bare {{<slashembed name="sprint" >}} does whatever your room actually likes. It can be a clock time, so a room always sprints to the half hour: `until :00/:30 for at least 5`. An end time needs that `for at least`, the shortest sprint it's allowed to leave you with. {{<tag-admin>}} to change.
 
-{{<slash name="settings theme" >}} new: which emoji decorate the sprint announcements. Pick **Screen reader friendly** and Sprinto uses the same four named emoji every sprint instead of a fresh random trio, and stops shouting its headings, which is a good deal easier to listen to. {{<tag-admin>}} to change.
+{{<slash name="settings theme" >}} new: pick the emoji used in sprint announcements. Pick **Screen reader friendly** and Sprinto uses the same four named emoji every sprint instead of a fresh random trio, and stops shouting its headings, which is a good deal easier to listen to. {{<tag-admin>}} to change.
 
 There's a text form too, `settings <key> <value>`, and it's forgiving: on, off, sometimes, default and their obvious synonyms all work. Give a value it doesn't recognise and it shows you the current one rather than scolding you. Give a key it doesn't recognise and it lists the keys.
 

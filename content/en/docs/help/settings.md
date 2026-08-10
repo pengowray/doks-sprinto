@@ -198,7 +198,7 @@ This channel's default sprint: how long it runs, how long it waits before starti
 
 {{<slash name="settings theme" >}}
 
-Which emoji decorate sprint announcements, and how those announcements read aloud. Two choices:
+Which emoji appear in sprint announcements, and how those announcements read aloud. Two choices:
 
 - **Random emojis**, the default. A different set every sprint: one emoji rolled from each of Sprinto's red, green and yellow pools, for the join window, the start and time's up.
 - **Screen reader friendly.** The same four emoji every sprint, each named for what it means in the sprint: `soon` while the join window is open, `go` at the start, `ding` at time's up, `horrah` on the scoreboard. A screen reader reads a custom emoji by its name, so it says "soon soon soon" rather than "sunflower sunflower sunflower".
@@ -213,7 +213,7 @@ It opens on the server default, and on a new server it looks like this:
 
 ## Emoji theme: Server default
 
-Which emoji decorate the sprint announcements across this server, unless a channel overrides it.
+Emoji theme for sprint announcements across this server. Can be overridden by a channel's settings.
 In effect: **Random emojis** (default)
 {{</reply>}}
 
@@ -252,7 +252,7 @@ Channel and server scope. Anyone can view, {{<tag-admin>}} to change.
 | Key | Default | What it does |
 | --- | --- | --- |
 | `walltime` | on | How the start message shows the end of the sprint. `on` adds a live countdown that ticks in each reader's own client, plus the end time in their own timezone on sprints of 2 minutes or more. `sometimes` drops the countdown and gives the older static end minute instead, e.g. "Duration: 15 minutes (until ⏰ :16).", also only on sprints of 2 minutes or more; when the end doesn't land on a whole minute it reads "(until ⏰ :16 +30s)". `off` shows the duration only. |
-| `theme` | random | Which emoji decorate sprint announcements, and how they read aloud. `random` rolls a fresh trio every sprint; `screen-reader` uses a fixed, named set and plainer wording, and is covered under [settings theme](#settings-theme) above. Typed, `off` means "stop varying the emoji", so it picks `screen-reader`. The dropdown at {{<slashembed name="settings theme">}} is easier. |
+| `theme` | random | Which emoji appear in sprint announcements, and how they read aloud. `random` rolls a fresh trio every sprint; `screen-reader` uses a fixed, named set and plainer wording, and is covered under [settings theme](#settings-theme) above. Typed, `off` means "stop varying the emoji", so it picks `screen-reader`. The dropdown at {{<slashembed name="settings theme">}} is easier. |
 | `show-ps` | on | The post-sprint text: quotes, combined word counts, updates, `/forgetme` help, everything below the scoreboard. Turning this off hides all of it, including anything the settings below would have shown. The panel lists Quotes, Family-friendly and Patreon requests underneath this row, struck through while it's off. |
 | `show-quotes` | on | Quotes at the end of sprints, on every second sprint in the channel. Each channel takes its own turns, so a busy one doesn't use up another's. They're meant to provoke a bit of thought and discussion. If that's not what your group is there for, turn them off. |
 | `family-friendly` | on | Filters out the occasional crass quotes and replies. On by default, so a new server never sees them. Turn it off to leave them in. |
