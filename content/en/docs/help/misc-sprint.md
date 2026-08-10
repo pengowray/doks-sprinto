@@ -1,10 +1,12 @@
 ---
 title : "Less used"
-description: 
+description:
 lead: "Less used sprint commands (Miscellaneous commands)"
 identifier: "misc-sprint"
 url: "docs/misc-sprint"
 ---
+Less used sprint commands (Miscellaneous commands) are documented here.
+
 See also: [Starting a sprint]({{<relref "basics" >}}), and [full list of Sprint commands]({{<relref "sprint" >}}).
 
 ### Final
@@ -16,15 +18,13 @@ See also: [Starting a sprint]({{<relref "basics" >}}), and [full list of Sprint 
 {{<slash name="words" key0="count" val0="final">}}
 {{</alts>}}
 
-Finalize your word count so Sprinto won't wait for you to update it later. Sprinto answers `Marked done.` and reads your count back. It works any time from the join window until the scoreboard posts, so somebody who knows they'll be away can say so before the sprint even starts.
+Finalize your word count so Sprinto won't wait for you to update it again when it's time to enter your final word count at the end of the sprint. Sprinto answers `Marked done.` when you finalize.
 
 ### Final _count_
 
 {{<slash name="final" key0="count" val0="_count_">}}
 
-Finalize your word count with _count_ words. If you haven't joined the sprint yet, this joins you and marks you done at the same time.
-
-A bare {{<slashembed name="final" >}} does the same on zero: `You have joined with 0 starting words and marked done.`
+Finalize your word count with _count_ words.
 
 For example, to finalize with 1200 total words:
 
@@ -62,14 +62,16 @@ A sign moves it instead of setting it, so {{<atsprintoembed "tare -50" >}} takes
 
 There's no slash command for this, so you have to @Sprinto.
 
-{{<atsprintoembed "starting" >}} won't do it. That could mean three things, so Sprinto lists them instead: start a sprint, join with a starting word count, or `tare`.
-
 ### rejoin
 
 {{<atsprinto "rejoin" >}}
-Rejoin a sprint you left with {{<slashembed name="leave" >}}. You can also just use {{<slashembed name="join" >}} again.
+Rejoin a sprint you left with {{<slashembed name="leave" >}}.
 
-This command used to restore your previous word count. I might bring back that functionality one day if I'm really bored.
+You can also just use {{<slashembed name="join" >}} again.
+
+To restore your previous word count when rejoining:
+
+{{<slash name="join" key0="word-count" val0="same" >}}
 
 ### status
 
@@ -90,7 +92,7 @@ These will tell you to use another command such as /cancel or /leave instead bec
 End the sprint for everyone (if everyone agrees)
 
 {{<tag-mc>}}
-{{< slash name="cancelplease" >}}
+{{< slash name="cancel-please" >}}
 End the sprint for everyone regardless, no vote needed. (Requires you have a {{<role "@Sprint MC">}} or {{<role "@Sprint Admin">}} role, or be an admin on the Discord server.)
 
 {{<slash name="leave" >}}
@@ -120,7 +122,7 @@ Don't ever ping me about future sprints in this channel, even if I join one late
 {{<atsprinto "wc_redo" >}}
 {{</alts>}}
 
-Undo or redo your last `/words`, `/join` or other command that changed your word count or sprint status. It reaches back up to 100 steps, per person, but only within the sprint you're in. If a word count was refused, undoing past that error costs you nothing, and redo brings back your number, not the error.
+Undo or redo your last `/words`, `/join` or other command that changed your word count or sprint status. <!-- Both step through your own reports one at a time, up to 100 of them, so you can undo your way out of a bad number without cancelling anything. -->
 
 Once the scoreboard is posted there's nothing left to undo. Use {{<slashembed name="late" >}} to fix your number then.
 

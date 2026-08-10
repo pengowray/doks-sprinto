@@ -10,13 +10,13 @@ Joining a sprint signs you up for pings at the start of the next 3 sprints in th
 
 If you miss three sprints, or use {{<slashembed name="forgetme" >}} or {{<slashembed name="sneak-away" >}}, the pings will stop.
 
-The 📢 Pings line at the start of a sprint lists the people closest to running out first, and marks someone's last remaining ping `(last ping)`. Any ping role, and the person who started the sprint if they haven't joined it, come before them.
+When sprints are announced, Sprinto gives 📢 Pings to previous sprinters. This also includes people who have opted in to always get pings.
 
-Use {{<slashembed name="pingme" >}} to be mentioned when the next sprint starts, even if you haven't sprinted recently (or to change your mind after {{<slashembed name="forgetme" >}} or setting yourself to never).
+Use {{<slashembed name="pingme" >}} to be mentioned when the next sprint starts, even if you haven't sprinted recently (or to change your mind after {{<slashembed name="forgetme" >}} or setting yourself to "never").
 
 You can also choose to never or always receive pings at the start of sprints in this channel, with {{<slashembed name="pings-never" >}} and {{<slashembed name="pings-always" >}}.
 
-If you leave the server, Sprinto now stops pinging you too. That didn't used to work.
+Pings are only for the one channel.
 
 ## Commands
 
@@ -75,11 +75,24 @@ I'll ping you at the start of the next 3 sprint(s) here.
 
 The other answers you can get are `your pings are off`, `I'll ping you at the start of every sprint here.` if you've set yourself to always, and `I've stopped pinging you at the start of sprints. Join a sprint to re-arm them.` once your three have run out. After {{<slashembed name="forgetme" >}} it tells you both halves, the state now and the state you'd go back to, like `Your pings are off until you join a sprint; then: I'll ping you at the start of the next 3 sprint(s) here.`
 
+## Regular pings by humans
+
+Separate to Sprinto, servers often have a self-service @sprinters role to announce upcoming sprints. This can be more friendly and organic than relying on Sprinto's pings.
+
+However you can also have Sprinto always ping a role at the start of sprints in a channel with ping roles. (see below)
+
+## Starting a sprint without pinging anyone
+
+{{<slash name="sprint" key0="options" val0="for 20 quietly" >}}
+{{<atsprinto "sprint for 5 quiet" >}}
+
+Add `quietly` or `noping` and the sprint starts without mentioning any role or any user. Handy for testing a command, or for sprinting quietly by yourself while everyone else is asleep. Anyone can use it.
+
 ## Sprint MC-only commands
 
 {{<tag-mc>}}
 
-### forgetuser
+### forget-user
 
 {{<slash name="admin-forget-user" key0="user" val0="_user_" >}}
 {{<atsprinto "forgetuser _user_" >}}
@@ -88,7 +101,7 @@ Replace _user_ with a mention of them, or their Discord user ID. A plain usernam
 
 If you can't see someone's user ID, turn on "Developer Mode" in Discord's settings, then "Copy ID" will appear when you right-click their name.
 
-### pinguser
+### ping-user
 
 {{<atsprinto "pinguser _user_ _number_" >}}
 
@@ -97,7 +110,7 @@ This one isn't a slash command; mention Sprinto to use it.
 Replace _user_ with a mention of them, or their Discord user ID. A plain username won't work. Replace _number_ with the number of sprints; default is 3, use `0` for never, `1000` for always.
 
 Example:
-{{<atsprinto "pinguser <@221579760545955840> 3" >}}
+{{<atsprinto "pinguser <@1234567890> 3" >}}
 
 Turns pings on for that person, as if they'd used {{<slashembed name="pingme" >}} themselves.
 
@@ -105,7 +118,39 @@ Turns pings on for that person, as if they'd used {{<slashembed name="pingme" >}
 
 {{<tag-admin>}}
 
-Always pinging a role at the start of sprints, rather than individual people, is part of {{<slash name="settings roles" >}}, a native Discord picker. The typed commands still work: {{<atsprintoembed "pingroles" >}} lists the roles, and `pingroles add @role`, `pingroles remove @role` and `pingroles reset` change them. See [Ping roles]({{<relref "ping-roles" >}}) for the full picture.
+You can set your server or channel to always ping a role at the start of sprints with:
+
+ {{<slash name="settings roles" >}}
+
+{{<alts "Synonyms" >}}
+The typed commands still work: {{<atsprintoembed "pingroles" >}} lists the roles, and `pingroles add @role`, `pingroles remove @role` and `pingroles reset` change them.
+{{</alts>}}
+
+Ping roles notes
+
+* Ping roles are **per channel**. If you want the same role pinged in three sprint channels, run {{<slashembed name="settings roles">}} in each of them.
+* You can pick several roles, and different channels can use different combinations.
+* Sprinto doesn't give these roles to anyone. It only mentions roles that already exist. Setting up a self-assignable {{<role "@Sprinters">}} role is a job for Discord or another bot.
+* This is only about the mention at the *start* of a sprint. Anyone who has joined a sprint gets mentioned by name during that sprint.
+
+If you'd rather the ping roles were the only thing pinged, turn off `auto-pings` for the channel, so joining a sprint no longer signs anyone up for future pings:
+
+{{<atsprinto "settings auto-pings off" >}}
+
+That's also available in the panel under {{<slashembed name="settings channel">}}. See [Settings]({{<relref "settings" >}}).
+
+Turning `auto-pings` off doesn't clear the pings people have gained or set up already. To wipe those, as if everyone in the channel had typed {{<slashembed name="forgetme">}}:
+
+{{<slash name="admin-forget-all-users" >}} {{<tag-admin>}}
+{{<alts>}}
+{{<atsprinto "forget_all_users" >}}
+{{</alts>}}
+
+Individual sprinters can still opt in for themselves at any time with {{<slashembed name="pingme">}}, whatever `auto-pings` is set to, and ping roles are honoured either way.
+
+## Feedback
+
+- If you'd like to see Sprinto's pings get a revamp, send your suggestions with `/feedback`
 
 ## See also
 

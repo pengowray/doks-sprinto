@@ -265,24 +265,6 @@ The "/late" command accepts the same sorts of counts as {{<slashembed name="word
 
 The host can change that window when starting the sprint, with `late 20` for longer or `late none` to turn it off. See [Sprint (all options)]({{<relref "sprint" >}}).
 
-<!--
-## Undo
-
-{{<slash name="undo" >}}
-{{<alts>}}
-{{<atsprinto "undo">}}
-{{</alts>}}
-Take back your last word count.
-
-{{<slash name="redo" >}}
-{{<alts>}}
-{{<atsprinto "redo">}}
-{{</alts>}}
-Put it back again.
-
-Both step through your own reports one at a time, up to 100 of them, so you can undo your way out of a bad number without cancelling anything.
--->
-
 ## More sprint-related commands
 
 {{<slash name="words" >}}

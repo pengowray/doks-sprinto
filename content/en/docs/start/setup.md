@@ -1,31 +1,31 @@
 ---
 title : "Setting up Sprinto"
-description: 
-lead: 
+description:
+lead:
 ---
 ## The short version
 
-Invite Sprinto, then run {{<slashembed name="sprint">}}. That's genuinely it.
+Invite Sprinto, then run {{<slashembed name="sprint">}}. That's it. A sprint is running, waiting for you and others to join.
 
 Sprinto sets nothing up when he joins. He doesn't create a channel, he doesn't create a role, he doesn't write any settings. He just works, straight away, in every channel he can see. If you never touch a single option on this page your sprints will still run.
 
-Everything below is optional. The first section is the part most servers are glad they did.
+Everything below is optional. I've tried to put more useful stuff first.
 
-## Worth doing first (about five minutes)
+## Worth doing first
 
 ### Make a dedicated sprint channel (or two)
 
 Sprinto usage can quickly overwhelm any chat room, so almost all servers create a dedicated sprint channel with a name like `#writing-sprints`, `#sprints-and-excerpts` or something thematically appropriate for their server like `#sprinting_dojo`.
 
-Sprinto often fails to see any usage when he has to share a general `#bots` channel. Some servers even have two sprint channels, one for short spontaneous sprints (perhaps 15 or 30 minutes) and one for longer, pre-planned sprints (up to an hour).
+Sprinto generally fails to see any usage when he has to share a general `#bots` channel with general bot spam. Some servers add multiple sprint channels, for example one for short spontaneous sprints (`#sprints-10-to-20-min`) and one for longer sprints (`#sprints-21-to-45-minutes`). Some servers add and remove sprinting channels as demand goes.
 
 Sprints started in different channels run independently. You cannot run more than one simultaneous sprint in a channel.
 
 ### Rename the @Sprinto role
 
-Rename the {{<role "@Sprinto">}} role to {{<role "@Role for Sprinto">}} to make it easier to use Sprinto.
+Rename the {{<role "@Sprinto">}} role to {{<role "@Bot role: Sprinto">}} to make it easier to use Sprinto. You can also make it unmentionable by regular users.
 
-Why is this necessary? Sprinto accepts commands in two ways, either as slash commands such as {{<slashembed name="time">}} or as commands which start by mentioning Sprinto, for example: {{<atsprintoembed "time">}}. Bots on Discord, including Sprinto, automatically create a "role" with their own name ({{<role "@Sprinto">}}) which can be mentioned in an almost identical way to mentioning Sprinto the bot ({{<atsprintoembed>}}). If someone mentions Sprinto the role instead of Sprinto the bot, then their command is confusingly ignored. Renaming the role prevents this.
+Why is this necessary? Sprinto accepts commands in two ways, either as slash commands such as {{<slashembed name="time">}} or as commands which start by mentioning Sprinto, for example: {{<atsprintoembed "time">}}. Bots on Discord, including Sprinto, automatically create a "role" with their own name ({{<role "@Sprinto">}}) which can be mentioned in an almost identical way to mentioning Sprinto the bot ({{<atsprintoembed>}}). If someone accidentally mentions Sprinto the role instead of Sprinto the bot, their command is confusingly ignored. Renaming the role prevents this.
 
 ### Check Sprinto can actually post
 
@@ -56,27 +56,27 @@ All of these are optional and all of them can be changed later.
 
 {{< slash name="settings sprint-channels" >}}
 
-Opens Discord's own channel picker. Choose the channels where sprints are allowed.
+On a large server with many users, you might want to restrict where sprints can be run.
 
-An empty list means sprints work anywhere, and that's the default. DMs always work regardless. More at [Allowed channels]({{< relref "whitelist" >}}).
+An empty list means sprints work anywhere, which is the default. More at [Allowed channels]({{< relref "whitelist" >}}).
 
-### Ping a role when a sprint starts
+### Ping people who are interested in sprints when sprints are happening
 
-{{<tag-admin>}}
+Set up a self-assigned role like {{<role "@Sprinters">}}, so you can ping people who are interested in sprinting and let them know sprints are starting.
 
-{{< slash name="settings roles" >}}
+Sprinto autopings people who were in a recent sprint, but it's a very simple system. It's bnest to have another way to ping people who have said they're interested in sprinting.
 
-Opens Discord's role picker. If people on your server can self-assign a role like {{<role "@Sprinters">}}, pick it here and Sprinto will mention it whenever a sprint starts in this channel. More at [Ping roles]({{< relref "ping-roles" >}}).
-
-### Set this channel's default sprint
+### Set each channel's default sprint
 
 {{<tag-admin>}}
 
 {{< slash name="settings sprint-defaults" >}}
 
-Sets the default length, start time and bell for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants. Out of the box that's 15 minutes, starting in 1 minute, with no bell. A long-form channel might prefer 30 minutes starting in 5.
+Sets the default length, start time and bell for sprints in this channel, so a bare {{<slashembed name="sprint">}} does what your server actually wants.
 
-It opens on the server default, and on a new server it looks like this:
+Out of the box that's 15 minutes, starting in 1 minute, with no bell. A long-form channel might prefer `for 30 minutes in 1-2 minutes`.
+
+Opening `/settings sprint-defaults` starts on the server default, and on a new server it looks something like this:
 
 {{<reply ephemeral="1">}}
 
@@ -119,17 +119,19 @@ No channel or server default is set. The buttons below set one for this channel.
 
 Click **This channel** first if you only want to change this one channel. Green marks the start, length and bell in effect right now; clicking one pins it at the scope you're on and a check appears next to it, and clicking a checked one clears it again. On a new server **Reset to built-in** is greyed out, because there is nothing set to clear.
 
-The bell buttons mean one bell a minute before the end; a bell at halfway as well; or no bell at all, which is what you get out of the box. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so a 5 minute start delay or a bell the buttons don't offer goes in there. A clock time has to give more than one time, so `at :00/:30` works and `at :30` doesn't. An `until` also needs the shortest sprint it may leave you: `until :00/:30 for at least 10`.
-
+The bell buttons mean one bell a minute before the end; a bell at halfway as well; or no bell at all, which is what you get out of the box. **Edit text** takes most of what you could type after {{<slashembed name="sprint">}}, so an `in 5 minutes` start delay or anything else the buttons don't offer goes in there.
+<!--
+A clock time has to give more than one time, so `at :00/:30` works and `at :30` doesn't. An `until` also needs the shortest sprint it may leave you: `until :00/:30 for at least 10`.
+-->
 ### Make announcements screen reader friendly
 
 {{<tag-admin>}}
 
 {{< slash name="settings theme" >}}
 
-Pick **Screen reader friendly** from the dropdown and the sprint announcements switch to a fixed set of four emoji named for what they mean, `soon`, `go`, `ding` and `horrah`, instead of a fresh random trio each time. A screen reader then reads out "soon soon soon, Join the sprint" rather than "sunflower sunflower sunflower, JOIN THE SPRINT". The wording changes with it: headings come out of capitals, the bell line says `60 seconds` rather than `60s`, and the Pings and Participants labels drop their emoji.
+Consider turning on the **Screen reader friendly** theme if there's anyone around it might assist.
 
-It opens on the server default; click **This channel** to set one channel only. Servers start on **Random emojis**. Sprints run exactly the same either way. More at [Settings]({{< relref "settings" >}}).
+More at [Settings]({{< relref "settings" >}}).
 
 ### Everything else
 
@@ -137,10 +139,6 @@ It opens on the server default; click **This channel** to set one channel only. 
 
 {{< slash name="settings channel" >}}
 {{< slash name="settings server" >}}
-
-`channel` covers this one channel; `server` sets the default for every channel that hasn't been given its own answer. Anyone can look; you need to be an admin to change anything.
-
-Both open an add/remove panel that **only lists what differs from the defaults**. On a freshly invited Sprinto that panel is nearly empty. That's the point, not a fault: you're looking at your changes, not at a wall of options you never touched. Add a setting and it appears; remove it and it goes back to the default and disappears again.
 
 See [Settings]({{< relref "settings" >}}) for the full list of keys.
 
@@ -167,7 +165,7 @@ Set any of them with {{<slashembed name="settings channel">}} or {{<slashembed n
 * **Rename Sprinto.** Give him a thematically suitable nickname on your server, such as Sir Sprinto Esquire. (Right-click on Sprinto and "Change Nickname".) He may occasionally still refer to himself as "Sprinto".
 * **Move him up the members list.** Server Settings > Roles > drag the _Sprinto_ role up as high as you're comfortable, so people can find him.
 * **Keep other bots out of the sprint channel.** If other bots have similar commands which may confuse or trip up sprinters, remove their permissions in your sprinting channels. You can do the reverse too, and remove permission to use Sprinto's commands elsewhere.
-* **Plug your writing server** on #plug-your-writing-server on Sprinto's [support server](https://discord.gg/TZJ8YVU).
+* **Plug your writing server** on #plug-your-writing-server on Sprinto's [support server](https://discord.gg/TZJ8YVU). Remember to use a permalink if you want people to find your server.
 
 ## See also
 
