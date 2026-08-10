@@ -715,7 +715,7 @@ Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour 
 - [During the sprint]({{<relref "words" >}}) — join, leave, cancel, and setting your word count — commands to use once the sprint has started
 - [Sprint (admin)]({{<relref "admin-sprint" >}}) — the few sprint options and commands only available to Sprint MCs and admins
 - [Allowed channels (admin)]({{<relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
-- [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+- [Ping me]({{<relref "pingme" >}}) — who gets @mentioned at sprint start, and how admins set a role to always be pinged
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
 - [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints
 - [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.

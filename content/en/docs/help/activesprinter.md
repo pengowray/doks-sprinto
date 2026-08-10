@@ -62,5 +62,5 @@ The role's color, badge, position in the members list, and mentionability are al
 ## See also
 
 * [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
-* [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+* [Ping me (admin section)]({{<relref "pingme#ping-roles" >}}) — set a role to always be pinged at sprint start
 * [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings

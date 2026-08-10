@@ -1,6 +1,7 @@
 ---
 title : "Ping me"
 description: "Commands to get mentioned or not at the start of sprints"
+aliases: ["/docs/ping-roles/"]
 lead: "After a sprint, participants will be tagged (@mentioned) at the start of three future sprints. Use /pingme and /forgetme to turn pings on and off."
 ---
 
@@ -154,4 +155,4 @@ Individual sprinters can still opt in for themselves at any time with {{<slashem
 
 ## See also
 
-- [Ping roles (admin)]({{<relref "ping-roles" >}}) — Set up a role to always be pinged
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings, including `auto-pings`

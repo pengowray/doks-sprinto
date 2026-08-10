@@ -26,7 +26,7 @@ Use the these buttons as "Tabs" to look through settings which apply only to you
 
 {{<slash name="settings roles" >}}
 
-Pick the roles Sprinto mentions when a sprint starts here. It's a native Discord role picker. See [Ping roles]({{<relref "ping-roles" >}}).
+Pick the roles Sprinto mentions when a sprint starts here. It's a native Discord role picker. See [Ping me]({{<relref "pingme#ping-roles" >}}).
 
 ### settings sprint-channels
 
@@ -94,6 +94,6 @@ That covers your own server only, so the panel then offers **Report it too**. It
 
 - [Setup]({{< relref "setup" >}}) (setting up Sprinto)
 - [Allowed channels]({{<relref "whitelist" >}}): keeping sprints out of channels they don't belong in
-- [Ping roles]({{<relref "ping-roles" >}}): a role to mention at every sprint start
+- [Ping me]({{<relref "pingme" >}}): who gets @mentioned at sprint start, including roles
 - [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
 - [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)

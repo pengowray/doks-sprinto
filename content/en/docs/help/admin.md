@@ -35,7 +35,7 @@ More fine grained control of Sprinto privileges is not available. If you need a 
 * [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
 * [Allowed channels (admin)]({{<relref "whitelist" >}}) — commands to prevent users running sprints where they're not supposed to
 * [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
-* [Ping roles (admin)]({{<relref "ping-roles" >}})  — Set up a role to always be pinged
+* [Ping me (admin section)]({{<relref "pingme#ping-roles" >}}) — set a role to always be pinged at sprint start
 * [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
 * [Sprint (admin)]({{<relref "admin-sprint" >}}) — the few sprint options and commands only available to Sprint MCs
 * [Voice]({{<relref "voice" >}}) — Experimental voice channel support

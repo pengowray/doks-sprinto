@@ -28,7 +28,7 @@ Write with your friends! Run a sprint and compete with your writing group! Focus
 - [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
 - [Settings]({{<relref "settings" >}}): one command for everything you can configure
 - [Sprint channels]({{<relref "whitelist" >}}): choosing which channels sprints can run in
-- [Ping roles]({{<relref "ping-roles" >}}): set up a role to always be pinged
+- [Ping me (admin section)]({{<relref "pingme#ping-roles" >}}): set a role to always be pinged at sprint start
 - [Active Sprinter role]({{<relref "activesprinter" >}}): setting up a role named {{<role "@Active Sprinters">}}
 - [Sprint (admin)]({{<relref "admin-sprint" >}}): the few sprint options and commands only available to Sprint MCs
 
