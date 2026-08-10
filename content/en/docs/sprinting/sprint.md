@@ -14,23 +14,28 @@ Without any options, the default sprint is for 15 minutes in 1 minute: The same 
 
 <!-- {{<slash name="sprint" key0="options" val0="{{<tag-duration `for 15 minutes`>}} {{<tag-when `in 1 minute`>}} {{<tag-endtime `end 3 minute`>}}" >}} -->
 
-You can change (override) the the {{<param-duration "duration">}} or the  {{<param-when "when">}} parameter or both, for example:
+You can change (override) the the {{<param-duration "duration">}} or the  {{<param-when "when">}} parameter or both.
 {{<slash name="sprint" key0="options" val0="{{<tag-duration>}} {{<tag-when>}}" >}}
 
 <!-- {{< atsprinto "sprint `duration` `when` `preset` `other`" >}} -->
 
-
+Here's some examples:
 
 {{<example caption="Sprint for 20 minutes, starting in 2 minutes.">}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `for 20 minutes`>}} {{<param-when `in 2 min`>}}" >}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `20`>}} {{<param-when `2`>}}" >}}
 {{</example>}}
-{{<slash name="sprint" key0="options" val0="{{<param-duration `until 1:30`>}} {{<param-when `now`>}}" >}}
-{{<slash name="sprint" key0="options" val0="{{<param-when `now`>}} {{<param-duration `until 1:30`>}}" >}}
-{{<slash name="sprint" key0="options" val0="{{<param-duration `15`>}} {{<param-when `at 1:45`>}}" >}}
+{{<example caption="Sprint until 1:30pm, starting immediately. Even simpler, just write: {{<param-duration `until :30`>}} which will sprint {{<param-duration `until half past`>}} without needing to know your timezone">}}
+{{<slash name="sprint" key0="options" val0="{{<param-duration `until 1:30 pm`>}} {{<param-when `now`>}}" >}}
+{{</example>}}
+{{<example caption="Start your sprint at 1:45 in your set timezone. You can use {{<param-duration `at :45`>}} too.">}} <!-- tmi: {{<param-duration `for 15`>}} is optional because it's the bot's default."  -->
+{{<slash name="sprint" key0="options" val0="{{<param-when `at 1:45`>}} {{<param-duration `for 15`>}}" >}}
+{{</example>}}
+{{<example caption="Start a random sprint length, on the minute mark. These and more are explained in detail below. ">}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `for random 20-30`>}} {{<param-when `in 1-2 minutes`>}}" >}}
+{{</example>}}
 
-The parameters are all optional and can be in any order.
+Parameters like the above and below are all optional and can be in any order.
 
 There's also presets (which set both the duration and when the sprint starts); flags such as _quietly_ (which prevents people getting pinged when the sprint is announced); and "endtime", which explicitly sets how long sprinters have to give their final tally.
 
@@ -58,7 +63,7 @@ How long to sprint for?
 Run a 20 minute sprint. Time is assumed to be in minutes unless you give another unit.
 
 More timings:
-{{<slash name="sprint" key0="options" val0="{{<tag-duration `for 15 minutes`>}} {{<tag-when `in 1 min`>}} {{<tag-endtime `end 3.5 min`>}} {{<tag-endtime `late 10 min`>}}" >}}
+{{<slash name="sprint" key0="options" val0="{{<tag-duration `for 15 minutes`>}} {{<tag-when `in 1 min`>}} {{<tag-endtime `end 3 min`>}} {{<tag-endtime `late 10 min`>}}" >}}
 
 ## Random lengths
 
@@ -98,11 +103,11 @@ Run a sprint from the start time until quarter-to, starting immediately.
 
 You can list more than one mark with a slash, and Sprinto takes whichever comes first:
 
+{{<example caption="Runs a sprint until :15 or :45, whichever comes first. For example, if the time is 11:32, it will run a sprint until 11:45.">}}
 {{<slash name="sprint" key0="options" val0="until :15/45" >}}
+{{</example>}}
 
 Including multiple marks like this is mainly useful for setting a default sprint, and then should be combined with `for at least` (below).
-
-Sprinto assumes you're in a common time zone. If you're in Adelaide or somewhere else with a half-hour difference from everyone else, you'll have to adjust for the difference for now.
 
 ### for at least, for at most
 
@@ -121,6 +126,19 @@ The shortest sprint a clock ending may give you. Run to the next `:00` or `:30`,
 `for at most` can be used to set an upper bound, but exists largely for completeness.
 
 A channel's default sprint that uses `until` should have a `for at least`.
+
+## Time zones
+
+You can use {{<slashembed name="timezone">}} to set your time zone. If you're in Adelaide or anywhere else with a half-hour difference from everyone else in the world, be sure to set your timezone to make "until" and "at" work as expected.
+
+Note that for custom default sprint settings for your channel or server, the common timezone is still used (that is, without any half-hour or quarter-hour offset from UTC).
+
+
+{{<example caption="Setting your timezone to Adelaide, Australia, to make {{<param-when `at :15`>}} and {{<param-duration `until :45`>}} work as expected.">}}
+{{<slash name="timezone" key0="place" val0="Australia/Adelaide" >}}
+{{</example>}}
+
+
 
 ## When?
 
