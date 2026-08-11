@@ -71,9 +71,11 @@ Repeat a block with `x` (or `times`), and set the gap between blocks with `break
 {{<slash name="sprint" key0="options" val0="25 break 7 x3" >}}
 {{<slash name="sprint" key0="options" val0="pomo x4" >}}
 
-`pomo` is a 25 minute block on the pomodoro rhythm, with a longer break after every fourth one. `dream` is a preset too.
+`pomo` is a 25 minute block on the pomodoro rhythm, with a longer break every four blocks. `dream` is a preset too.
 
-The break between blocks is the next block's join window, so every round invites the room again and nobody is carried over. Say `all` once and you're in for the rest of the chain:
+In a chain, a round's stated length includes the few minutes for collecting counts, so `pomo x4` sits on an exact 30 minute grid: write for about 21 of each 25, and every round's start time is announced up front and holds. See [Chain timing]({{<relref "chain-timing" >}}) for diagrams.
+
+Nobody is carried over between rounds automatically. Report your count with `next` to stay in for the coming round, or say `all` once and you're in for the rest of the chain:
 
 {{<slash name="join" key0="word-count" val0="all" >}}
 

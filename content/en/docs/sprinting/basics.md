@@ -142,7 +142,7 @@ Sprinto picks the length for you, usually 10 to 25 minutes, with a small chance 
 {{<atsprinto "sprint pomo" >}}
 {{<slash name="sprint" key0="options" val0="pomodoro" >}}
 {{</alts>}}
-A 25 minute block. Add a repeat to get the real rhythm: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four of them with five minute breaks in between. Ask for more than four and the break after the fourth block is a longer one, 15 minutes.
+A 25 minute block. Add a repeat to get the real rhythm: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four of them with five minute breaks in between, one round every half hour. Longer chains get a longer break, 15 minutes, every four blocks. More at [Chain sprints]({{< relref "chains" >}}).
 
 ### Marathon
 

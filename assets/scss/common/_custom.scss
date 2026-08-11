@@ -520,3 +520,61 @@
 [data-bs-theme="dark"] body .docs-navigation .card {
     color: inherit;
 }
+
+/* Timeline diagrams (chain sprint docs). One shared vocabulary across all
+   diagrams: writing / collection / break / get-ready. */
+.tl-diagram {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+.tl-diagram .tl-write   { fill: #4d84d1; }
+.tl-diagram .tl-collect { fill: #e8b64c; }
+.tl-diagram .tl-break   { fill: #5cb87a; }
+.tl-diagram .tl-hatchbase { fill: #5cb87a; }
+.tl-diagram .tl-hatchline { stroke: #2e7d4f; stroke-width: 2; }
+.tl-diagram .tl-wait    { fill: #c9ced6; }
+.tl-diagram .tl-text    { fill: #212529; font-family: var(--bs-body-font-family, sans-serif); font-size: 13px; }
+.tl-diagram .tl-text-sm { fill: #495057; font-family: var(--bs-body-font-family, sans-serif); font-size: 11.5px; }
+.tl-diagram .tl-text-onbar { fill: #ffffff; font-family: var(--bs-body-font-family, sans-serif); font-size: 13px; font-weight: 600; }
+.tl-diagram .tl-axis    { stroke: #adb5bd; stroke-width: 1; }
+.tl-diagram .tl-tick    { stroke: #adb5bd; stroke-width: 1; }
+.tl-diagram .tl-marker  { stroke: #d6336c; stroke-width: 2; stroke-dasharray: 4 3; }
+.tl-diagram .tl-marker-text { fill: #d6336c; font-family: var(--bs-body-font-family, sans-serif); font-size: 11.5px; font-weight: 600; }
+.tl-diagram .tl-bar-outline { fill: none; stroke: rgba(0, 0, 0, 0.25); stroke-width: 1; }
+
+[data-bs-theme="dark"] .tl-diagram .tl-write   { fill: #5b93e0; }
+[data-bs-theme="dark"] .tl-diagram .tl-collect { fill: #d9a63c; }
+[data-bs-theme="dark"] .tl-diagram .tl-break   { fill: #4d9c67; }
+[data-bs-theme="dark"] .tl-diagram .tl-hatchbase { fill: #4d9c67; }
+[data-bs-theme="dark"] .tl-diagram .tl-hatchline { stroke: #8fd6ab; }
+[data-bs-theme="dark"] .tl-diagram .tl-wait    { fill: #4a4f57; }
+[data-bs-theme="dark"] .tl-diagram .tl-text    { fill: #dee2e6; }
+[data-bs-theme="dark"] .tl-diagram .tl-text-sm { fill: #adb5bd; }
+[data-bs-theme="dark"] .tl-diagram .tl-text-onbar { fill: #111214; }
+[data-bs-theme="dark"] .tl-diagram .tl-axis    { stroke: #6c757d; }
+[data-bs-theme="dark"] .tl-diagram .tl-tick    { stroke: #6c757d; }
+[data-bs-theme="dark"] .tl-diagram .tl-marker  { stroke: #f06595; }
+[data-bs-theme="dark"] .tl-diagram .tl-marker-text { fill: #f06595; }
+[data-bs-theme="dark"] .tl-diagram .tl-bar-outline { stroke: rgba(255, 255, 255, 0.25); }
+
+.tl-diagram .tl-text-onlight { fill: #212529; font-family: var(--bs-body-font-family, sans-serif); font-size: 12px; font-weight: 600; }
+[data-bs-theme="dark"] .tl-diagram .tl-text-onlight { fill: #111214; }
+
+/* Inline legend chips for the timeline diagrams */
+.tl-chip {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 2px;
+    vertical-align: baseline;
+    margin: 0 0.15em;
+}
+.tl-chip-write   { background-color: #4d84d1; }
+.tl-chip-collect { background-color: #e8b64c; }
+.tl-chip-break   { background-color: #5cb87a; }
+[data-bs-theme="dark"] .tl-chip-write   { background-color: #5b93e0; }
+[data-bs-theme="dark"] .tl-chip-collect { background-color: #d9a63c; }
+[data-bs-theme="dark"] .tl-chip-break   { background-color: #4d9c67; }

@@ -518,7 +518,9 @@ And set the gap between blocks with `break` (or `rest`):
 
 {{<slash name="sprint" key0="options" val0="for 25 x4 break 5" >}}
 
-The gap is 5 minutes if you don't say otherwise, and a chain can be at most 8 blocks long. In a `pomo` chain the break after every fourth block is 15 minutes, whatever you set here.
+The gap is 5 minutes if you don't say otherwise, and a chain can be at most 8 blocks long. In a `pomo` chain the break before every fourth block is at least 15 minutes.
+
+In a chain, a round's stated length includes the count-collection window: `pomo x4` is four 25 minute rounds that each write for about 21 minutes and fit a 30 minute grid. Add `focus` for full writing minutes instead. See [Chain timing]({{< relref "chain-timing" >}}) for diagrams, and [Chain sprints]({{< relref "chains" >}}) for a walkthrough.
 
 Anything you set before the first `then` (other than the length and the start time) carries across the whole chain, so you only have to say `quietly` or `chime -1` once:
 
@@ -532,7 +534,7 @@ Three sprints of the same randomly chosen length, rather than three different on
 
 ### Joining each round
 
-The break between blocks is the next block's join window, so every round posts its own invitation, start, time's-up and scoreboard, marked `Round n of N`. Nobody carries over: everyone joins again each round, from zero unless they give a starting count. The last round's scoreboard adds the whole chain up.
+Every round posts its own start, time's-up and scoreboard, marked `Round n of N`, and the last round's scoreboard adds the whole chain up. Nobody carries over automatically: report with `next` (`/words 1234 next`) to stay in for the coming round, or use `all` to stay in for the whole chain. You can join at any point during the break; the invitation to join appears in the break's last minute.
 
 To be in for the rest of the chain without catching each join window, add `all`:
 

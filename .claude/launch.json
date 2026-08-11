@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "hugo",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "start"],
-      "port": 1313
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["hugo", "server", "--bind=0.0.0.0", "--disableFastRender", "--noHTTPCache", "--port", "$PORT"],
+      "autoPort": true
     }
   ]
 }
