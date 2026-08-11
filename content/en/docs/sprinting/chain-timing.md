@@ -31,22 +31,21 @@ In a **chain**, a round's stated length includes the count-collection window. In
   <text class="tl-text-onbar" x="303" y="47" text-anchor="middle">writing (25 min)</text>
   <text class="tl-text-onbar" x="608" y="47" text-anchor="middle">counts</text>
   <path class="tl-dim" d="M 41 66 l 0 7 l 525 0 l 0 -7"/>
-  <text class="tl-text-sm" x="303" y="88" text-anchor="middle">25 minutes of focus time</text>
+  <text class="tl-text-sm" x="303" y="88" text-anchor="middle">Focus time: 25 minutes</text>
   <text class="tl-text-sm" x="572" y="88">+ 4 min for counts</text>
   <text class="tl-text" x="20" y="120">Chain: <tspan font-weight="600">sprint 25 x3</tspan></text>
   <rect fill="url(#hatch-one25)" x="20" y="128" width="21" height="32"/>
   <rect class="tl-write" x="41" y="128" width="441" height="32"/>
   <rect class="tl-collect" x="482" y="128" width="84" height="32"/>
   <rect class="tl-break" x="566" y="128" width="105" height="32"/>
-  <rect fill="url(#hatch-one25)" x="650" y="128" width="21" height="32"/>
   <rect class="tl-bar-outline" x="20" y="128" width="651" height="32"/>
   <path class="tl-write" d="M 671 128 L 698 128 L 705 134 L 697 140 L 705 146 L 697 152 L 705 158 L 698 160 L 671 160 Z"/>
-  <text class="tl-text-onbar" x="261" y="149" text-anchor="middle">Round 1: writing (21 mins)</text>
+  <text class="tl-text-onbar" x="261" y="149" text-anchor="middle">writing (21 min)</text>
   <text class="tl-text-onbar" x="524" y="149" text-anchor="middle">counts</text>
   <text class="tl-text-onbar" x="618" y="149" text-anchor="middle">break</text>
   <path class="tl-dim" d="M 41 168 l 0 7 l 525 0 l 0 -7"/>
-  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">a 25 minute round</text>
-  <text class="tl-text-sm" x="572" y="190">round 2 at 10:30</text>
+  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">Round 1: 25 minutes</text>
+  <text class="tl-text-sm" x="706" y="190" text-anchor="end">round 2 &#8594;</text>
   <line class="tl-guide" x1="566" y1="22" x2="566" y2="218"/>
   <line class="tl-axis" x1="20" y1="218" x2="706" y2="218"/>
   <line class="tl-tick" x1="41" y1="218" x2="41" y2="224"/>
