@@ -1,7 +1,7 @@
 ---
 title : "Curious commands"
-description: 
-lead: 
+description:
+lead:
 # identifier: "less-used"
 # url: "docs/less-used"
 keywords: ["parse", "dare", "roll", "dice", "invite", "donate", "merch", "sprintmc", "refresh active role", "prefix", "explain"]
@@ -11,17 +11,19 @@ These commands are documented here mostly for curiousity's sake. You don't need 
 
 ### parse
 
-_This command didn't make it into the rewrite._
+Sprinto lets you try parsing a time span directly, just to see how it reads it.
 
-Sprinto used to let you try parsing a time span directly, just to see how it read it. See [pengowray/TimeSpanParser](https://github.com/pengowray/TimeSpanParser) on github for more about the open source TimeSpanParser library Pengo Wray wrote for the old version of Sprinto.
+See [pengowray/TimeSpanParser](https://github.com/pengowray/TimeSpanParser) on github for more about the open source TimeSpanParser library written for the old version of Sprinto. The new version of Sprinto will eventually be on par.
 
 ### dare
 
 {{< atsprinto "dare me" >}}
 
-Hands out one writing dare, and nothing else. The dares are pulled from the now-deleted nanowrimo.org [word_sprints](https://nanowrimo.org/word_sprints) page.
+Hands out one writing dare. The dares are pulled from the longer deleted nanowrimo.org [word_sprints](https://nanowrimo.org/word_sprints) page, which appeared circa 2016.
 
-There's no slash command for this, so you have to @Sprinto or send him a DM. `dare`, `dare me` and `give me a dare` all work.
+There's no slash command for this, so you have to @Sprinto.
+
+`dare`, `dare me` and `give me a dare` all work.
 
 ### roll
 
@@ -37,15 +39,6 @@ There's no slash command for this, so you have to @Sprinto or send him a DM. Typ
 
 Sprint lengths take the same expressions, so {{<slashembed name="sprint" key0="options" val0="3d6" >}} rolls a length.
 
-### i love you / i hate you
-
-{{< atsprinto "i love you" >}}
-{{< atsprinto "i hate you" >}}
-
-Sprinto has something to say to both, and a DM works too. He has to be addressed for it, so two writers saying it to each other in the channel are left alone.
-
-About one declaration of love in 55 is turned down instead. The `family-friendly` setting, on by default, keeps the crasser replies out. See [Settings]({{<relref "settings" >}}).
-
 ### invite
 
 {{< atsprinto "invite" >}}
@@ -54,12 +47,11 @@ Create an invite link to take Sprinto to another server. Also gives a link to th
 
 ### support / vote / donate / merch
 
+{{< atsprinto "donate" >}}
 {{< atsprinto "support" >}}
 {{< atsprinto "vote" >}}
-{{< atsprinto "donate" >}}
-{{< atsprinto "merch" >}}
 
-One link each: the Sprinto Planet support server, Sprinto's page on top.gg where you can vote for him, the Patreon, and the merch store. None of them are slash commands.
+One link each: the Patreon, the Sprinto Planet support server, Sprinto's page on top.gg where you can vote for bot. None of them are slash commands.
 
 ### sprintmc
 
@@ -81,36 +73,6 @@ Show Sprinto's prefix on your server, which is now always slash (`/`). Unfortuna
 {{<alts "Why though?">}}
 In the old days, Sprinto would respond to messages in chat which started with an underscore prefix (_). You can still add this prefix when you @Sprinto, but there's no need for it. For example: {{< atsprinto "_time" >}} Maybe some day, you'll be able to leave off the "@Sprinto" part again.
 {{</alts>}}
-
-### explain / timeline / preview / peek
-
-{{<slash name="sprint" key0="options" val0="explain for 20 in 5">}}
-{{<alts>}}
-{{<atsprinto "sprint explain for 20 in 5" >}}
-{{<atsprinto "sprint timeline for 20 in 5" >}}
-{{<atsprinto "sprint preview for 20 in 5" >}}
-{{</alts>}}
-
-Put `explain`, `timeline`, `preview` or `peek` in front of any {{<slashembed name="sprint" >}} command to see how Sprinto would schedule it, a dry run, without actually starting anything. They all mean the same thing, and only work there, as the first thing after `sprint`.
-
-{{<slash name="sprint" key0="options" val0="peek for 20 in 5">}}
-{{<atsprinto "sprint peek for 20 in 5" >}}
-
-On the slash command only you see the answer, and `me` or `private` after the keyword still work and change nothing. `public` shows it to the room, and an @Sprinto version lands there whatever you say.
-
-{{<slash name="explain" key0="sprint-options" val0="30 in 5 bell -1" >}}
-
-There's a command of its own too. Choose which sprint (the one running, a new one here, or one that ignores the channel and server defaults) and how much to show. Only you see the reply, unless you set `post`.
-
-{{<buttons>}}
-{{<select "Show more or less">}}
-{{</buttons>}}
-
-{{<buttons>}}
-{{<button "Post to channel">}}
-{{</buttons>}}
-
-Two controls sit under the answer. **Show more or less** switches between _Just the settings_, _Each setting and where it's from_, _Minute-by-minute timeline_ and _Everything_. **Post to channel** puts a copy where the room can read it, then greys out.
 
 ## See also
 

@@ -74,13 +74,17 @@ Check your ping status. The answer is for the channel you ask in, and only you s
 I'll ping you at the start of the next 3 sprint(s) here.
 {{< /reply >}}
 
-The other answers you can get are `your pings are off`, `I'll ping you at the start of every sprint here.` if you've set yourself to always, and `I've stopped pinging you at the start of sprints. Join a sprint to re-arm them.` once your three have run out. After {{<slashembed name="forgetme" >}} it tells you both halves, the state now and the state you'd go back to, like `Your pings are off until you join a sprint; then: I'll ping you at the start of the next 3 sprint(s) here.`
+<!--The other answers you can get are `your pings are off`, `I'll ping you at the start of every sprint here.` if you've set yourself to always, and `I've stopped pinging you at the start of sprints. Join a sprint to re-arm them.` once your three have run out. After {{<slashembed name="forgetme" >}} it tells you both halves, the state now and the state you'd go back to, like `Your pings are off until you join a sprint; then: I'll ping you at the start of the next 3 sprint(s) here.` -->
 
-## Regular pings by humans
+## Let people who are interested in sprinting know about sprints
 
-Separate to Sprinto, servers often have a self-service @sprinters role to announce upcoming sprints. This can be more friendly and organic than relying on Sprinto's pings.
+If you're hosting a series of sprints, make sure you have a way to ping people and let them know.
 
-However you can also have Sprinto always ping a role at the start of sprints in a channel with ping roles. (see below)
+Servers often have a self-service {{<role "@sprinters">}} role so people interested in sprinting can be pinged by anyone hosting sprints. A role like this can be set up without the help of Sprinto.
+
+Sprinto automatically pings people who were in the last 3 sprints (by default), but will miss others who are interested in joining, so let them know.
+
+If you're looking for a way to have Sprinto always automatically ping a role at the start of every sprint, you can set it up with "ping roles" (see below).
 
 ## Starting a sprint without pinging anyone
 
@@ -131,8 +135,9 @@ Ping roles notes
 
 * Ping roles are **per channel**. If you want the same role pinged in three sprint channels, run {{<slashembed name="settings roles">}} in each of them.
 * You can pick several roles, and different channels can use different combinations.
-* Sprinto doesn't give these roles to anyone. It only mentions roles that already exist. Setting up a self-assignable {{<role "@Sprinters">}} role is a job for Discord or another bot.
+* Sprinto doesn't give these roles to anyone. It only mentions roles that already exist. Setting up a self-assignable {{<role "@AlwaysPingMe">}} role is a job for Discord or another bot.
 * This is only about the mention at the *start* of a sprint. Anyone who has joined a sprint gets mentioned by name during that sprint.
+* Note that sprinters can already set `/pingme-always` in a sprinting channel without this role, so it has more niche utility.
 
 If you'd rather the ping roles were the only thing pinged, turn off `auto-pings` for the channel, so joining a sprint no longer signs anyone up for future pings:
 
