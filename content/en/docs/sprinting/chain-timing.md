@@ -12,9 +12,9 @@ Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> 
 
 ## One "25", two meanings
 
-In a **single sprint**, `sprint 25` means 25 minutes of writing. The window for reporting word counts is added on top, so the whole thing ends a few minutes after the 25.
+In a **single sprint**, `sprint 25` means 25 minutes of writing, followed by time to report your ffinal word count.
 
-In a **chain**, a round's stated length includes the count-collection window. In `sprint 25 x3`, each round is 25 minutes total: about 21 minutes of writing, then counts, everything wrapped by the 25 minute mark. Add the 5 minute break and each round takes exactly 30 minutes. (`pomo x4` works the same way; `pomo` is a 25 minute round.)
+In a **chain sprints**, you give the length of a round, which includes the count-collection window. In `sprint 25 x3`, each round is 25 minutes total: 21 minutes of writing, then counts, everything wrapped by the 25 minute mark. Plus a 5 minute break between rounds.
 
 <svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars, each opening with a one minute join window and starting to write at 10:00, with a bracket marking the 25 minutes that was asked for. Single sprint 25: the bracket covers 25 minutes of writing, ending at 10:25, and the counts window sticks out past it, until 10:29. Chain round of sprint 25 x3: the bracket covers writing until 10:21 plus counts until 10:25 together, so the counts come out of the 25, the break runs to 10:30, and round 2's writing carries on past the edge of the diagram.">
   <defs>
@@ -44,7 +44,7 @@ In a **chain**, a round's stated length includes the count-collection window. In
   <text class="tl-text-onbar" x="524" y="149" text-anchor="middle">counts</text>
   <text class="tl-text-onbar" x="618" y="149" text-anchor="middle">break</text>
   <path class="tl-dim" d="M 41 168 l 0 7 l 525 0 l 0 -7"/>
-  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">Round 1: 25 minutes</text>
+  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">Round One: 25 minutes</text>
   <text class="tl-text-sm" x="706" y="190" text-anchor="end">round 2 &#8594;</text>
   <line class="tl-guide" x1="566" y1="22" x2="566" y2="218"/>
   <line class="tl-axis" x1="20" y1="218" x2="706" y2="218"/>
