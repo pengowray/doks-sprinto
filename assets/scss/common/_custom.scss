@@ -532,7 +532,7 @@
 
 .tl-diagram .tl-write   { fill: #46945c; }
 .tl-diagram .tl-collect { fill: #cf5f50; }
-.tl-diagram .tl-break   { fill: #9c7a5b; }
+.tl-diagram .tl-break   { fill: #5f87c6; }
 .tl-diagram .tl-hatchbase { fill: #e8c25e; }
 .tl-diagram .tl-hatchline { stroke: #a3821f; stroke-width: 2; }
 .tl-diagram .tl-wait    { fill: #c9ced6; }
@@ -547,7 +547,7 @@
 
 [data-bs-theme="dark"] .tl-diagram .tl-write   { fill: #4d9c67; }
 [data-bs-theme="dark"] .tl-diagram .tl-collect { fill: #c25e50; }
-[data-bs-theme="dark"] .tl-diagram .tl-break   { fill: #8a6d52; }
+[data-bs-theme="dark"] .tl-diagram .tl-break   { fill: #5579b1; }
 [data-bs-theme="dark"] .tl-diagram .tl-hatchbase { fill: #d1a943; }
 [data-bs-theme="dark"] .tl-diagram .tl-hatchline { stroke: #8a6d17; }
 [data-bs-theme="dark"] .tl-diagram .tl-wait    { fill: #4a4f57; }
@@ -574,10 +574,10 @@
 }
 .tl-chip-write   { background-color: #46945c; }
 .tl-chip-collect { background-color: #cf5f50; }
-.tl-chip-break   { background-color: #9c7a5b; }
+.tl-chip-break   { background-color: #5f87c6; }
 [data-bs-theme="dark"] .tl-chip-write   { background-color: #4d9c67; }
 [data-bs-theme="dark"] .tl-chip-collect { background-color: #c25e50; }
-[data-bs-theme="dark"] .tl-chip-break   { background-color: #8a6d52; }
+[data-bs-theme="dark"] .tl-chip-break   { background-color: #5579b1; }
 
 .tl-diagram .tl-dim { fill: none; stroke: #868e96; stroke-width: 1.5; }
 .tl-diagram .tl-guide { stroke: #868e96; stroke-width: 1; stroke-dasharray: 3 4; }
