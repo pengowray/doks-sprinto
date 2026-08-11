@@ -8,57 +8,60 @@ keywords: ["chain", "timing", "round", "focus", "asap", "inclusive", "break", "p
 
 A single sprint and a chain round read the same number two different ways. This page shows the difference in diagrams, and covers the keywords that switch between the two readings.
 
-Every diagram uses the same colours: <span class="tl-chip tl-chip-write"></span> writing, <span class="tl-chip tl-chip-collect"></span> collecting word counts, <span class="tl-chip tl-chip-break"></span> break, with the break's striped tail being the get-ready minute, when Sprinto invites the room to join the next round.
+Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> the join window before the start, <span class="tl-chip tl-chip-write"></span> writing, <span class="tl-chip tl-chip-collect"></span> collecting word counts, <span class="tl-chip tl-chip-break"></span> break, with the break's striped tail being the get-ready minute, when Sprinto invites the room to join the next round.
 
 ## One "25", two meanings
 
 In a **single sprint**, `sprint 25` means 25 minutes of writing. The window for reporting word counts is added on top, so the whole thing ends a few minutes after the 25.
 
-In a **chain**, a round's stated length includes the count-collection window. A `pomo` round is 25 minutes total: about 21 minutes of writing, then counts, everything wrapped by the 25 minute mark. Add the 5 minute break and each round takes exactly 30 minutes.
+In a **chain**, a round's stated length includes the count-collection window. In `sprint 25 x3`, each round is 25 minutes total: about 21 minutes of writing, then counts, everything wrapped by the 25 minute mark. Add the 5 minute break and each round takes exactly 30 minutes. (`pomo x4` works the same way; `pomo` is a 25 minute round.)
 
-<svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars starting at 10:00, each with a bracket marking the 25 minutes that was asked for. Single sprint 25: the bracket covers 25 minutes of writing, ending at 10:25, and the counts window sticks out past it, until 10:29. Chain round: the bracket covers writing until 10:21 plus counts until 10:25 together, so the counts come out of the 25, and the break runs to the next round at 10:30.">
+<svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars, each opening with a one minute join window and starting to write at 10:00, with a bracket marking the 25 minutes that was asked for. Single sprint 25: the bracket covers 25 minutes of writing, ending at 10:25, and the counts window sticks out past it, until 10:29. Chain round of sprint 25 x3: the bracket covers writing until 10:21 plus counts until 10:25 together, so the counts come out of the 25, the break runs to 10:30, and round 2's writing carries on past the edge of the diagram.">
   <defs>
     <pattern id="hatch-one25" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
       <rect class="tl-hatchbase" width="7" height="7"/>
       <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
     </pattern>
   </defs>
-  <text class="tl-text" x="25" y="18">Single sprint: <tspan font-weight="600">sprint 25</tspan></text>
-  <rect class="tl-write" x="25" y="26" width="550" height="32"/>
-  <rect class="tl-collect" x="575" y="26" width="88" height="32"/>
-  <rect class="tl-bar-outline" x="25" y="26" width="638" height="32"/>
-  <text class="tl-text-onbar" x="300" y="47" text-anchor="middle">writing (25 min)</text>
-  <text class="tl-text-onlight" x="619" y="47" text-anchor="middle">counts</text>
-  <path class="tl-dim" d="M 25 66 l 0 7 l 550 0 l 0 -7"/>
-  <text class="tl-text-sm" x="300" y="88" text-anchor="middle">the 25 you asked for, all writing</text>
-  <text class="tl-text-sm" x="581" y="88">+ 4 min for counts</text>
-  <text class="tl-text" x="25" y="120">Chain round: <tspan font-weight="600">pomo x4</tspan></text>
-  <rect class="tl-write" x="25" y="128" width="462" height="32"/>
-  <rect class="tl-collect" x="487" y="128" width="88" height="32"/>
-  <rect class="tl-break" x="575" y="128" width="110" height="32"/>
-  <rect fill="url(#hatch-one25)" x="663" y="128" width="22" height="32"/>
-  <rect class="tl-bar-outline" x="25" y="128" width="660" height="32"/>
-  <text class="tl-text-onbar" x="256" y="149" text-anchor="middle">writing (21 min)</text>
-  <text class="tl-text-onlight" x="531" y="149" text-anchor="middle">counts</text>
-  <text class="tl-text-onbar" x="620" y="149" text-anchor="middle">break</text>
-  <path class="tl-dim" d="M 25 168 l 0 7 l 550 0 l 0 -7"/>
-  <text class="tl-text-sm" x="300" y="190" text-anchor="middle">the same 25 = 21 writing + 4 for counts</text>
-  <text class="tl-text-sm" x="581" y="190">next round at 10:30</text>
-  <line class="tl-guide" x1="575" y1="22" x2="575" y2="218"/>
-  <line class="tl-axis" x1="25" y1="218" x2="685" y2="218"/>
-  <line class="tl-tick" x1="25" y1="218" x2="25" y2="224"/>
-  <line class="tl-tick" x1="245" y1="218" x2="245" y2="224"/>
-  <line class="tl-tick" x1="465" y1="218" x2="465" y2="224"/>
-  <line class="tl-tick" x1="575" y1="218" x2="575" y2="224"/>
-  <line class="tl-tick" x1="685" y1="218" x2="685" y2="224"/>
-  <text class="tl-text-sm" x="25" y="240" text-anchor="middle">10:00</text>
-  <text class="tl-text-sm" x="245" y="240" text-anchor="middle">10:10</text>
-  <text class="tl-text-sm" x="465" y="240" text-anchor="middle">10:20</text>
-  <text class="tl-text-sm" x="575" y="240" text-anchor="middle">10:25</text>
-  <text class="tl-text-sm" x="685" y="240" text-anchor="middle">10:30</text>
+  <text class="tl-text" x="20" y="18">Single sprint: <tspan font-weight="600">sprint 25</tspan></text>
+  <rect class="tl-wait" x="20" y="26" width="21" height="32"/>
+  <rect class="tl-write" x="41" y="26" width="525" height="32"/>
+  <rect class="tl-collect" x="566" y="26" width="84" height="32"/>
+  <rect class="tl-bar-outline" x="20" y="26" width="630" height="32"/>
+  <text class="tl-text-onbar" x="303" y="47" text-anchor="middle">writing (25 min)</text>
+  <text class="tl-text-onlight" x="608" y="47" text-anchor="middle">counts</text>
+  <path class="tl-dim" d="M 41 66 l 0 7 l 525 0 l 0 -7"/>
+  <text class="tl-text-sm" x="303" y="88" text-anchor="middle">25 minutes of focus time</text>
+  <text class="tl-text-sm" x="572" y="88">+ 4 min for counts</text>
+  <text class="tl-text" x="20" y="120">Chain: <tspan font-weight="600">sprint 25 x3</tspan> (round 1 shown)</text>
+  <rect class="tl-wait" x="20" y="128" width="21" height="32"/>
+  <rect class="tl-write" x="41" y="128" width="441" height="32"/>
+  <rect class="tl-collect" x="482" y="128" width="84" height="32"/>
+  <rect class="tl-break" x="566" y="128" width="105" height="32"/>
+  <rect fill="url(#hatch-one25)" x="650" y="128" width="21" height="32"/>
+  <rect class="tl-bar-outline" x="20" y="128" width="651" height="32"/>
+  <path class="tl-write" d="M 671 128 L 698 128 L 705 134 L 697 140 L 705 146 L 697 152 L 705 158 L 698 160 L 671 160 Z"/>
+  <text class="tl-text-onbar" x="261" y="149" text-anchor="middle">writing (21 min)</text>
+  <text class="tl-text-onlight" x="524" y="149" text-anchor="middle">counts</text>
+  <text class="tl-text-onbar" x="618" y="149" text-anchor="middle">break</text>
+  <path class="tl-dim" d="M 41 168 l 0 7 l 525 0 l 0 -7"/>
+  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">a 25 minute round = 21 focus + 4 for counts</text>
+  <text class="tl-text-sm" x="572" y="190">round 2 at 10:30</text>
+  <line class="tl-guide" x1="566" y1="22" x2="566" y2="218"/>
+  <line class="tl-axis" x1="20" y1="218" x2="706" y2="218"/>
+  <line class="tl-tick" x1="41" y1="218" x2="41" y2="224"/>
+  <line class="tl-tick" x1="251" y1="218" x2="251" y2="224"/>
+  <line class="tl-tick" x1="461" y1="218" x2="461" y2="224"/>
+  <line class="tl-tick" x1="566" y1="218" x2="566" y2="224"/>
+  <line class="tl-tick" x1="671" y1="218" x2="671" y2="224"/>
+  <text class="tl-text-sm" x="41" y="240" text-anchor="middle">10:00</text>
+  <text class="tl-text-sm" x="251" y="240" text-anchor="middle">10:10</text>
+  <text class="tl-text-sm" x="461" y="240" text-anchor="middle">10:20</text>
+  <text class="tl-text-sm" x="566" y="240" text-anchor="middle">10:25</text>
+  <text class="tl-text-sm" x="671" y="240" text-anchor="middle">10:30</text>
 </svg>
 
-*Both commands say 25, and the bracket under each bar is that 25. In the single sprint it's all writing, and the counts window is added past 10:25; in the chain round the counts are taken from inside it, so writing shortens to 21 minutes and the round still ends at 10:25 sharp.*
+*Both commands say 25, and the bracket under each bar is that 25. Each opens with a one minute join window, then writing starts at 10:00. In the single sprint the 25 is all writing, and the counts window is added past 10:25; in the chain round the counts are taken from inside it, so writing shortens to 21 minutes, the round ends at 10:25 sharp, and round 2 carries straight on from 10:30.*
 
 This is why chains land on neat clock times: the stated length plus the break is the whole distance to the next round, with nothing left over.
 
