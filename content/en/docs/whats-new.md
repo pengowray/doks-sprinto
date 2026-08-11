@@ -9,9 +9,9 @@ keywords: ["what's new", "changelog", "release notes", "rewrite"]
 
 Sprinto ran on the same code from March 2023 until June 2026. This release replaces all of it.
 
-The important thing first: **you don't have to relearn anything.** {{<slashembed name="sprint" >}}, {{<slashembed name="join" >}}, {{<slashembed name="words" >}} and the rest work exactly as they did, the replies read the same, and the defaults haven't moved (15 minute sprint, 1 minute join window, 3 more minutes to report your words before the scoreboard posts). Longer sprints get a longer reporting window, up to 10 minutes, and Sprinto says how long you have when time's up.
+You don't have to relearn anything. {{<slashembed name="sprint" >}}, {{<slashembed name="join" >}}, {{<slashembed name="words" >}} and the rest work exactly as they did, the replies read the same, and the defaults haven't moved: a 15 minute sprint, a 1 minute join window, 3 more minutes to report your words before the scoreboard posts. Longer sprints get a longer reporting window, up to 10 minutes, and Sprinto says how long you have when time's up.
 
-What changed is everything around that: word counts are harder to trip up, sprints can be repeated and chained, pets are a collection now, and the ten-odd `setup-set-something` commands have collapsed into one.
+What changed is everything around that. Word counts are harder to trip up, sprints can be repeated and chained, pets are a collection now, and the ten-odd `setup-set-something` commands have collapsed into one.
 
 Everything below is measured against the bot you were actually using. A few of these were fixed years ago in code that never made it to the live bot, so they're new to you even if they're old to me.
 
@@ -32,25 +32,21 @@ What didn't come across:
 - **Settings the old bot never had** start at their defaults rather than being pinned on your behalf: family-friendly on, tidy-sprints off, shuffle-leaderboard off, random emoji, longest sprint 2 hours.
 - **The channel default sprint**, which no channel on the old bot had set. Set one now with {{<slashembed name="settings sprint-defaults" >}}.
 
-**Ping lists get shorter over the first few sprints.** People who left your server years ago were still being tagged. Sprinto now checks a few each sprint and quietly drops the ones who've gone. If one of them comes back and joins a sprint, their old setting resumes.
+One change you'll see happen on its own: ping lists get shorter over the first few sprints. People who left your server years ago were still being tagged. Sprinto now checks a few each sprint and quietly drops the ones who've gone. If one of them comes back and joins a sprint, their old setting resumes.
 
 More at [Settings]({{<relref "settings" >}}).
 
 ## Word counts got smarter
 
-**`tare` is back.** {{<atsprintoembed "tare 1000" >}} says your document already had 1,000 words in it and leaves the total you've reported alone, so the words-written figure corrects itself. {{<slashembed name="words" >}} can only move the total and {{<slashembed name="join" >}} moves both. It last worked in 2019.
+**`tare` is back**, for the first time since 2019. {{<atsprintoembed "tare 1000" >}} says your document already had 1,000 words in it and leaves the total you've reported alone, so the words-written figure corrects itself. {{<slashembed name="words" >}} can only move the total and {{<slashembed name="join" >}} moves both.
 
 **The scoreboard isn't final the moment it's posted.** For 10 minutes after time's up, {{<slashembed name="late" key0="count" val0="442" >}} puts your count in or fixes one you got wrong, and Sprinto edits the board in place. The channel doesn't have to wait for you: the next sprint can start while the old board is still open. The host can set that window with `late 20`, or close it with `late none`.
 
-**Brackets holding nothing but a number are the count, not a comment.** {{<slashembed name="words" key0="count" val0="(350)" >}} reports 350. You can paste Sprinto's own reply straight back at him: {{<atsprintoembed "words 1,250 words (250 new)" >}} sets your total to 1,250 and your starting count to 1,000, so the "(250 new)" you sent is the answer you get.
+**Sprinto reads more of what people actually type.** Brackets holding nothing but a number are the count, not a comment, so {{<slashembed name="words" key0="count" val0="(350)" >}} reports 350. You can paste Sprinto's own reply straight back at him: {{<atsprintoembed "words 1,250 words (250 new)" >}} sets your total to 1,250 and your starting count to 1,000, so the "(250 new)" you sent is the answer you get. Spelled-out numbers work too; "for twenty" and "fifty new" parse the way you'd expect.
 
-**Obvious typos get fixed, and you can see what happened.** If your input is a clear slip, Sprinto takes the sensible reading and posts a small `↳` line showing the correction, so nothing is silently changed behind your back. When it genuinely can't tell what you meant, it now offers buttons with the totals already worked out instead of guessing at one.
+**When Sprinto isn't sure, he asks or shows his work.** If your input is a clear slip, he takes the sensible reading and posts a small `↳` line showing the correction, so nothing is silently changed behind your back. When he genuinely can't tell what you meant, he offers buttons with the totals already worked out instead of guessing at one. And if the total you gave would mean more new words than anyone could have typed in the time the sprint has run, he asks before filing it, with buttons for the readings he thinks you meant. One of them files the number exactly as you typed it, so nothing is off limits, and once you've confirmed a total that big he stops asking.
 
-**A total too big to have been written gets a second look.** If the total you gave would mean more new words than anyone could have typed in the time the sprint has run, Sprinto asks before filing it, with buttons for the readings it thinks you meant. One of them files the number exactly as you typed it, so nothing is off limits. Confirm a total that big once and it stops asking.
-
-**Spelled-out numbers work.** "for twenty" and "fifty new" parse the way you'd expect.
-
-**An error doesn't cost you your time.** If your first attempt at a word count comes back with an error, the grace window to try again is restored rather than eaten.
+An error doesn't cost you your time any more, either. If your first attempt at a word count comes back with an error, the grace window to try again is restored rather than eaten.
 
 See [During the sprint]({{<relref "words" >}}) for how word counts work generally.
 
@@ -105,7 +101,7 @@ The old bot said nothing between "go" and "time's up". Now a sprint can ring a b
 
 A minus counts back from the end and a plain number forward from the start, up to five per sprint. `no bell` silences a channel that sets one.
 
-The bell rings in the channel and pings nobody. Set `chimes` under {{<slashembed name="settings me" >}} to how many of a sprint's last bells should @ you, up to 5. It's 0 out of the box.
+The bell rings in the channel and pings nobody. To have some of a sprint's last bells @ you, set `chimes` under {{<slashembed name="settings me" >}} to how many, up to 5; the default is 0.
 
 ### Dice
 
@@ -125,7 +121,7 @@ Start the sprint and be in it, in one command. The number is your starting word 
 
 ### Dry runs
 
-Not sure what a command will do? Ask before you commit to it. Put `explain` in front of any sprint command and Sprinto shows you the schedule without scheduling anything, and says which parts came from your command, which from this channel's defaults, and which are his own.
+Put `explain` in front of any sprint command and Sprinto shows you the schedule without scheduling anything, and says which parts came from your command, which from this channel's defaults, and which are his own.
 
 {{<slash name="sprint" key0="options" val0="explain for 20 iab hel" >}}
 
@@ -178,7 +174,7 @@ The old bot had about ten near-identical commands for this: `setup-set-allowed-c
 
 There's a text form too, `settings <key> <value>`, and it's forgiving: on, off, sometimes, default and their obvious synonyms all work. Give a value it doesn't recognise and it shows you the current one rather than scolding you. Give a key it doesn't recognise and it lists the keys.
 
-**One thing that surprises admins:** the channel and server panels show only what you've changed from the defaults. A freshly set up server sees a nearly empty panel. That's not a bug and nothing is missing, it just means you're running on defaults.
+One thing that surprises admins: the channel and server panels show only what you've changed from the defaults. A freshly set up server sees a nearly empty panel. That's not a bug and nothing is missing, it just means you're running on defaults.
 
 Four settings are worth knowing about, since they're new or newly documented: `family-friendly` is **on** by default and keeps the sweary quotes and replies out; `tidy-sprints` is **off** by default and, when on, has Sprinto delete its own join and word-count confirmations to keep a busy channel readable; `shuffle-leaderboard` is **off** by default; and `max-sprint` caps how long a sprint may run here, **2 hours** to start with, which is as long as Sprinto goes. That last one is the only setting a channel can't loosen: set it on the server and the channel both and the smaller of the two wins, and `please` doesn't get past it.
 
@@ -186,13 +182,11 @@ More on all of this at [Settings]({{<relref "settings" >}}) and [Set up your ser
 
 ## Pings behave themselves
 
-`pinguser N` respects the number you gave it. Asking to ping someone for the next three sprints now pings them for three sprints.
+`pinguser N` respects the number you gave it. Asking to ping someone for the next three sprints now pings them for three sprints. And people who leave the server stop being pinged, which is one of those things that was supposed to work and never did.
 
 **Only people on the ping list get pinged.** The participant line at the start of a sprint still shows everyone who has joined, but the mentions are scoped, so it's a quiet list for anyone who isn't due a notification.
 
 **The ping list is ordered by who's about to run out.** `(last ping)` now comes at the head of the names instead of sitting somewhere in the middle of them. The `(always)` tag next to standing subscribers is gone: it said the same thing about the same people every sprint.
-
-**People who leave the server stop being pinged.** This is one of those things that was supposed to work and never did.
 
 **And you can stop pings for someone else.** {{<slashembed name="admin-forget-user" >}} stops pinging one writer in this channel, and takes a pasted user ID as well as a mention, so it still works once they've left the server ({{<tag-mc>}} or {{<tag-admin>}}). {{<slashembed name="admin-forget-all-users" >}} stops pinging everyone here ({{<tag-admin>}}). Both reply only to you.
 
@@ -202,10 +196,10 @@ See [pingme]({{<relref "pingme" >}}) for the whole set.
 
 - Feedback gets an answer. {{<slashembed name="feedback" >}} still posts anonymously to the support server, and if I reply, the reply comes back to you in the channel you sent it from. You don't have to join anything to hear back.
 - Notices from me can reach every server without an update. They turn up under the sprint results, in the same place as the quotes, and each server sees a given one once. The old bot had them written into its code, which is why the last of them expired in 2021.
-- Numbers hold together. `sprint 1,000` used to run for one minute. Commas, underscores and apostrophes now group digits in durations, word counts, `tare`, `pingme` and chimes alike.
+- `sprint 1,000` used to run for one minute. Commas, underscores and apostrophes now group digits in durations, word counts, `tare`, `pingme` and chimes alike.
 - `for 30 minutes starting in 8 min` used to be thrown out as an unknown option. It runs.
 - A message wrapped in underscores is writing, not a command, however many words are in it. `_takes a deep breath_` used to be read from its first word.
-- Typo correction is choosier. `spront` and `jion` still get fixed, but ordinary words said to Sprinto no longer turn into commands: `@Sprinto good luck!` could start the sprint early for everyone waiting. Anything that ends or resets something for other people has to be typed correctly now.
+- Typo correction is choosier. `spront` and `jion` still get fixed, but ordinary words said to Sprinto no longer turn into commands. `@Sprinto good luck!` could start the sprint early for everyone waiting; anything that ends or resets something for other people has to be typed correctly now.
 - The random phrases actually rotate. Cooldowns clean up properly and the weighted picks retry, so the variety works the way it was always meant to.
 - Sprinto owns up to downtime. If he was offline over a sprint, a missed time's-up reopens the word-count window from now with a "late by N" note, and a completely missed ending posts one wrap-up instead of replaying the whole sprint as though nothing had happened.
 
