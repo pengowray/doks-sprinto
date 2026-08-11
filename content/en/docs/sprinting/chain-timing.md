@@ -8,7 +8,7 @@ keywords: ["chain", "timing", "round", "focus", "asap", "inclusive", "break", "p
 
 A single sprint and a chain round read the same number two different ways. This page shows the difference in diagrams, and covers the keywords that switch between the two readings.
 
-Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> the join window before the start, <span class="tl-chip tl-chip-write"></span> writing, <span class="tl-chip tl-chip-collect"></span> collecting word counts, <span class="tl-chip tl-chip-break"></span> break, with the break's striped tail being the get-ready minute, when Sprinto invites the room to join the next round.
+Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> the join window, striped, <span class="tl-chip tl-chip-write"></span> writing, <span class="tl-chip tl-chip-collect"></span> collecting word counts, <span class="tl-chip tl-chip-break"></span> break. The join window reappears as the break's last minute, when Sprinto invites the room to join the next round.
 
 ## One "25", two meanings
 
@@ -24,28 +24,28 @@ In a **chain**, a round's stated length includes the count-collection window. In
     </pattern>
   </defs>
   <text class="tl-text" x="20" y="18">Single sprint: <tspan font-weight="600">sprint 25</tspan></text>
-  <rect class="tl-wait" x="20" y="26" width="21" height="32"/>
+  <rect fill="url(#hatch-one25)" x="20" y="26" width="21" height="32"/>
   <rect class="tl-write" x="41" y="26" width="525" height="32"/>
   <rect class="tl-collect" x="566" y="26" width="84" height="32"/>
   <rect class="tl-bar-outline" x="20" y="26" width="630" height="32"/>
   <text class="tl-text-onbar" x="303" y="47" text-anchor="middle">writing (25 min)</text>
-  <text class="tl-text-onlight" x="608" y="47" text-anchor="middle">counts</text>
+  <text class="tl-text-onbar" x="608" y="47" text-anchor="middle">counts</text>
   <path class="tl-dim" d="M 41 66 l 0 7 l 525 0 l 0 -7"/>
   <text class="tl-text-sm" x="303" y="88" text-anchor="middle">25 minutes of focus time</text>
   <text class="tl-text-sm" x="572" y="88">+ 4 min for counts</text>
-  <text class="tl-text" x="20" y="120">Chain: <tspan font-weight="600">sprint 25 x3</tspan> (round 1 shown)</text>
-  <rect class="tl-wait" x="20" y="128" width="21" height="32"/>
+  <text class="tl-text" x="20" y="120">Chain: <tspan font-weight="600">sprint 25 x3</tspan></text>
+  <rect fill="url(#hatch-one25)" x="20" y="128" width="21" height="32"/>
   <rect class="tl-write" x="41" y="128" width="441" height="32"/>
   <rect class="tl-collect" x="482" y="128" width="84" height="32"/>
   <rect class="tl-break" x="566" y="128" width="105" height="32"/>
   <rect fill="url(#hatch-one25)" x="650" y="128" width="21" height="32"/>
   <rect class="tl-bar-outline" x="20" y="128" width="651" height="32"/>
   <path class="tl-write" d="M 671 128 L 698 128 L 705 134 L 697 140 L 705 146 L 697 152 L 705 158 L 698 160 L 671 160 Z"/>
-  <text class="tl-text-onbar" x="261" y="149" text-anchor="middle">writing (21 min)</text>
-  <text class="tl-text-onlight" x="524" y="149" text-anchor="middle">counts</text>
+  <text class="tl-text-onbar" x="261" y="149" text-anchor="middle">Round 1: writing (21 mins)</text>
+  <text class="tl-text-onbar" x="524" y="149" text-anchor="middle">counts</text>
   <text class="tl-text-onbar" x="618" y="149" text-anchor="middle">break</text>
   <path class="tl-dim" d="M 41 168 l 0 7 l 525 0 l 0 -7"/>
-  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">a 25 minute round = 21 focus + 4 for counts</text>
+  <text class="tl-text-sm" x="303" y="190" text-anchor="middle">a 25 minute round</text>
   <text class="tl-text-sm" x="572" y="190">round 2 at 10:30</text>
   <line class="tl-guide" x1="566" y1="22" x2="566" y2="218"/>
   <line class="tl-axis" x1="20" y1="218" x2="706" y2="218"/>
@@ -82,7 +82,7 @@ Here is one `pomo` round from start to next start, with Sprinto's messages marke
   <rect fill="url(#hatch-anatomy)" x="663" y="30" width="22" height="32"/>
   <rect class="tl-bar-outline" x="25" y="30" width="660" height="32"/>
   <text class="tl-text-onbar" x="256" y="51" text-anchor="middle">writing (21 min)</text>
-  <text class="tl-text-onlight" x="531" y="51" text-anchor="middle">counts</text>
+  <text class="tl-text-onbar" x="531" y="51" text-anchor="middle">counts</text>
   <text class="tl-text-onbar" x="620" y="51" text-anchor="middle">break</text>
   <line class="tl-axis" x1="25" y1="76" x2="685" y2="76"/>
   <line class="tl-tick" x1="25" y1="76" x2="25" y2="82"/>
@@ -130,7 +130,7 @@ Each round writes for the full 10 minutes, and the count-collection window is ad
   <rect fill="url(#hatch-rf)" x="605" y="26" width="20" height="32"/>
   <rect class="tl-bar-outline" x="25" y="26" width="600" height="32"/>
   <text class="tl-text-onbar" x="235" y="47" text-anchor="middle">writing (21 min)</text>
-  <text class="tl-text-onlight" x="485" y="47" text-anchor="middle">counts</text>
+  <text class="tl-text-onbar" x="485" y="47" text-anchor="middle">counts</text>
   <text class="tl-text-onbar" x="575" y="47" text-anchor="middle">break</text>
   <path class="tl-dim" d="M 25 66 l 0 7 l 500 0 l 0 -7"/>
   <text class="tl-text-sm" x="275" y="88" text-anchor="middle">the 25 = 21 writing + 4 for counts</text>
@@ -142,7 +142,7 @@ Each round writes for the full 10 minutes, and the count-collection window is ad
   <rect fill="url(#hatch-rf)" x="685" y="128" width="20" height="32"/>
   <rect class="tl-bar-outline" x="25" y="128" width="680" height="32"/>
   <text class="tl-text-onbar" x="275" y="149" text-anchor="middle">writing (25 min)</text>
-  <text class="tl-text-onlight" x="565" y="149" text-anchor="middle">counts</text>
+  <text class="tl-text-onbar" x="565" y="149" text-anchor="middle">counts</text>
   <text class="tl-text-onbar" x="655" y="149" text-anchor="middle">break</text>
   <path class="tl-dim" d="M 25 168 l 0 7 l 500 0 l 0 -7"/>
   <text class="tl-text-sm" x="275" y="190" text-anchor="middle">the 25, all writing</text>
@@ -241,7 +241,7 @@ The time between writing and the next round has three phases, and you can join d
   <rect class="tl-break" x="225" y="44" width="280" height="34"/>
   <rect fill="url(#hatch-phases)" x="505" y="44" width="190" height="34"/>
   <rect class="tl-bar-outline" x="25" y="44" width="670" height="34"/>
-  <text class="tl-text-onlight" x="125" y="66" text-anchor="middle">1. collection</text>
+  <text class="tl-text-onbar" x="125" y="66" text-anchor="middle">1. collection</text>
   <text class="tl-text-onbar" x="365" y="66" text-anchor="middle">2. break</text>
   <text class="tl-text-onbar" x="600" y="66" text-anchor="middle">3. get ready</text>
   <image href="/images/emotes/ding.svg" x="25" y="88" width="15" height="15"/>
