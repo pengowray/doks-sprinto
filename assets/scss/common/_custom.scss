@@ -578,3 +578,8 @@
 [data-bs-theme="dark"] .tl-chip-write   { background-color: #5b93e0; }
 [data-bs-theme="dark"] .tl-chip-collect { background-color: #d9a63c; }
 [data-bs-theme="dark"] .tl-chip-break   { background-color: #4d9c67; }
+
+.tl-diagram .tl-dim { fill: none; stroke: #868e96; stroke-width: 1.5; }
+.tl-diagram .tl-guide { stroke: #868e96; stroke-width: 1; stroke-dasharray: 3 4; }
+[data-bs-theme="dark"] .tl-diagram .tl-dim { stroke: #9aa0a6; }
+[data-bs-theme="dark"] .tl-diagram .tl-guide { stroke: #9aa0a6; }
