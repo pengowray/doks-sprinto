@@ -64,6 +64,43 @@ In a **chain sprints**, you give the length of a round, which includes the count
 
 This is why chains land on neat clock times: the stated length plus the break is the whole distance to the next round, with nothing left over.
 
+Reporting early pays off. When everyone's counts are in before the window closes (a fast finish), the scoreboard posts straight away and the break starts early:
+
+<svg class="tl-diagram" viewBox="0 0 720 130" role="img" aria-label="The same chain round with a fast finish. Writing runs 10:00 to 10:21, all counts are in by 10:23, so the counts segment is shorter and the break starts at 10:23, before the 10:25 mark. The break grows to 7 minutes, still ends at 10:30, and round 2 carries on unchanged.">
+  <defs>
+    <pattern id="hatch-ff" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+      <rect class="tl-hatchbase" width="7" height="7"/>
+      <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
+    </pattern>
+  </defs>
+  <text class="tl-text" x="20" y="18">Fast finish: <tspan font-weight="600">sprint 25 x3</tspan>, round 1, everyone reports early</text>
+  <rect fill="url(#hatch-ff)" x="20" y="26" width="21" height="32"/>
+  <rect class="tl-write" x="41" y="26" width="441" height="32"/>
+  <rect class="tl-collect" x="482" y="26" width="42" height="32"/>
+  <rect class="tl-break" x="524" y="26" width="147" height="32"/>
+  <rect class="tl-bar-outline" x="20" y="26" width="651" height="32"/>
+  <path class="tl-write" d="M 671 26 L 698 26 L 705 32 L 697 38 L 705 44 L 697 50 L 705 56 L 698 58 L 671 58 Z"/>
+  <text class="tl-text-onbar" x="261" y="47" text-anchor="middle">writing (21 min)</text>
+  <text class="tl-text-onbar" x="597" y="47" text-anchor="middle">break (7 min)</text>
+  <line class="tl-marker" x1="524" y1="22" x2="524" y2="70"/>
+  <text class="tl-marker-text" x="518" y="82" text-anchor="end">all counts in by 10:23</text>
+  <text class="tl-text-sm" x="572" y="82">still ends at 10:30</text>
+  <line class="tl-guide" x1="566" y1="22" x2="566" y2="96"/>
+  <line class="tl-axis" x1="20" y1="96" x2="706" y2="96"/>
+  <line class="tl-tick" x1="41" y1="96" x2="41" y2="102"/>
+  <line class="tl-tick" x1="251" y1="96" x2="251" y2="102"/>
+  <line class="tl-tick" x1="461" y1="96" x2="461" y2="102"/>
+  <line class="tl-tick" x1="566" y1="96" x2="566" y2="102"/>
+  <line class="tl-tick" x1="671" y1="96" x2="671" y2="102"/>
+  <text class="tl-text-sm" x="41" y="118" text-anchor="middle">10:00</text>
+  <text class="tl-text-sm" x="251" y="118" text-anchor="middle">10:10</text>
+  <text class="tl-text-sm" x="461" y="118" text-anchor="middle">10:20</text>
+  <text class="tl-text-sm" x="566" y="118" text-anchor="middle">10:25</text>
+  <text class="tl-text-sm" x="671" y="118" text-anchor="middle">10:30</text>
+</svg>
+
+*The same round with a fast finish: the last count is in by 10:23, so the scoreboard posts and the break begins early, slipping in ahead of the 10:25 mark. The break grows to 7 minutes, still ends at 10:30, and round 2 doesn't move.*
+
 ## The anatomy of one round
 
 Here is one `pomo` round from start to next start, with Sprinto's messages marked:
@@ -104,8 +141,6 @@ Here is one `pomo` round from start to next start, with Sprinto's messages marke
 </svg>
 
 *One round of `pomo x4`: writing ends at 10:21, counts are collected until 10:25, the break runs to 10:30, and the invitation to join round 2 only appears in the break's last minute.*
-
-If everyone reports before 10:25, the scoreboard posts as soon as the last count is in and the break simply starts early. The next round still starts at 10:30.
 
 ## Full writing minutes in a chain: `focus`
 
