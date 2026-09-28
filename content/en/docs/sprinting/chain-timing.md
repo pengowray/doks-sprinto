@@ -45,7 +45,7 @@ In a **chain sprints**, you give the length of a round, which includes the count
   <text class="tl-text-onbar" x="618" y="149" text-anchor="middle">break 5</text>
   <path class="tl-dim" d="M 41 168 l 0 7 l 525 0 l 0 -7"/>
   <text class="tl-text-sm" x="303" y="190" text-anchor="middle">Round One: 25 minutes</text>
-  <text class="tl-text-sm" x="706" y="190" text-anchor="end">round 2 &#8594;</text>
+  <text class="tl-text-sm" x="706" y="190" text-anchor="end">Round Two &#8594;</text>
   <line class="tl-guide" x1="566" y1="22" x2="566" y2="218"/>
   <line class="tl-axis" x1="20" y1="218" x2="706" y2="218"/>
   <line class="tl-tick" x1="41" y1="218" x2="41" y2="224"/>
@@ -60,7 +60,7 @@ In a **chain sprints**, you give the length of a round, which includes the count
   <text class="tl-text-sm" x="671" y="240" text-anchor="middle">10:30</text>
 </svg>
 
-*Both commands say 25, and the bracket under each bar is that 25. Each opens with a one minute join window, then writing starts at 10:00. In the single sprint the 25 is all writing, and the counts window is added past 10:25; in the chain round the counts are taken from inside it, so writing shortens to 21 minutes, the round ends at 10:25 sharp, and round 2 carries straight on from 10:30.*
+*Both commands are "for 25 minutes". Each opens with a one minute join window, then writing starts at 10:00. For single sprints, for 25 means 25 minutes of focus time, and then a window to give your counts afterwards (from 10:25). For chain sprints, the 25 minutes means for both sprinting and reporting, so focus time shortens to 21 minutes, followed by reporting time. This leaves 5 minutes for a break between rounds, or more if the word counts come in early. Round 2 begins from 10:30.*
 
 This is why chains land on neat clock times: the stated length plus the break is the whole distance to the next round, with nothing left over.
 

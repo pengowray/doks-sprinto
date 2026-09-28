@@ -313,8 +313,8 @@ Find a nice "round" time to start between these times.
 | --- | --- |
 | `now` | in 0s |
 | `real soon` or `in a few ticks` | in 30s to 60s |
-| `shortly` | in 1 to 2 minutes |
-| `soon` | in 2 to 3 minutes |
+| `soon` | in 1 to 2 minutes |
+| `shortly` | in 2 to 3 minutes |
 | `iaf` or `in a few` | in 3 to 5 mins |
 | `iab` or `in a bit` | in 2½ to 7½ mins |
 | `aab` or `after a bit` | in 7½ to 12½ mins |
