@@ -3,6 +3,7 @@ title : "Ping me"
 description: "Commands to get mentioned or not at the start of sprints"
 aliases: ["/docs/ping-roles/"]
 lead: "After a sprint, participants will be tagged (@mentioned) at the start of three future sprints. Use /pingme and /forgetme to turn pings on and off."
+url: "docs/ping-me"
 ---
 
 ## Overview

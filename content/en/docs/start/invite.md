@@ -2,6 +2,7 @@
 title : "Invite Sprinto"
 description:
 lead:
+url: "docs/invite-sprinto"
 ---
 ## Inviting Sprinto!
 

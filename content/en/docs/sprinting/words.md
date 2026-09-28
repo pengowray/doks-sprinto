@@ -2,6 +2,7 @@
 title : "During the sprint"
 description:
 lead: Commands for once the sprint's started
+url: "docs/during-the-sprint"
 ---
 
 ## What Sprinto posts

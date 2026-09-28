@@ -3,6 +3,7 @@ title : "Sprint (all options)"
 description: The sprint command and all its options
 lead:
 weight: 20
+url: "docs/sprint-all-options"
 ---
 ## The Sprint Command in detail
 
