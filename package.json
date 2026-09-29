@@ -66,5 +66,8 @@
     "micromatch": "4.0.8",
     "minimatch": "^10.2.2",
     "semver": "7.7.3"
+  },
+  "allowScripts": {
+    "hugo-bin": true
   }
 }
