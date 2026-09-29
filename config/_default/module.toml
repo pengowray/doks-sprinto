@@ -78,9 +78,9 @@
   target = "assets"
 
 [[mounts]]
-  # js/search-modal.js is excluded so the project copy in assets/js is the one
-  # that gets built. See the comment at the top of that file for why it exists.
-  excludeFiles = ["js/search-modal.js"]
+  # These files are excluded so the project copies in assets/ are the ones that
+  # get built. The comment at the top of each copy says why it exists.
+  files = ["! js/search-modal.js", "! scss/components/_forms.scss"]
   source = "node_modules/@thulite/doks-core/assets"
   target = "assets"
 

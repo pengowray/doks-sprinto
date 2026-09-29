@@ -1,0 +1,30 @@
+{{- /*
+  Overrides layouts/_partials/head/body-class.html from @thulite/core 2.0.3
+  with the file from @thulite/core 1.5.9 (thulite 2), unchanged.
+  Why: doks-core 1.9.3's SCSS styles pages by these body classes, for example
+  .docs .content, .blog.list .card and .error404. core 2 renamed them
+  (section-docs, error-404, and a docs page gets its file name in place of
+  "section docs"), so those rules stopped matching and PurgeCSS dropped them.
+  Drop this copy once doks-core is updated for core 2's class names.
+*/ -}}
+{{- $template := "" -}}
+{{- if or (eq .Kind "404") (eq .Kind "page") (eq .Kind "home") -}}
+  {{ $template = "single" -}}
+{{- else if or (eq .Kind "section") (eq .Kind "taxonomy") (eq .Kind "term") -}}
+  {{ $template = "list" -}}
+{{- end -}}
+{{- $name := "" -}}
+{{- if eq .Kind "taxonomy" -}}
+  {{- $name = printf "taxonomy %s" .Data.Plural -}}
+{{- else if eq .Kind "term" -}}
+  {{- $name = printf "term %s" .Section -}}
+{{- else if .Section -}}
+  {{- $name = printf "section %s" .Section -}}
+{{- else if eq .Kind "page" -}}
+  {{- $name = .File.ContentBaseName -}}
+{{- else if eq .Kind "home" -}}
+  {{- $name = "home" -}}
+{{- else if eq .Kind "404" -}}
+  {{- $name = "error404" -}}
+{{- end -}}
+{{- .Scratch.Set "class" (slice $template $name) -}}

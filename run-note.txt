@@ -3,6 +3,10 @@ npm install
 
 npm run start
 
+Needs npm 11.13 or later (Node 24 ships with it). With older npm, Hugo stops
+with "unexpected EOF when executing sass": older npm links
+node_modules/.bin/sass to the pure-JS `sass` package, not to sass-embedded.
+
 Note: npm audit is clean (0 vulnerabilities) since Hugo moved to hugo-bin, so
 there is nothing to fix. Don't run `npm audit fix --force`. If audit ever does
 flag something, check what --force would actually do first: last time it

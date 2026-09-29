@@ -3,7 +3,8 @@
   "description": "Doks child theme",
   "version": "0.5.0",
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=22.13.0",
+    "npm": ">=11.13.0"
   },
   "browserslist": [
     "defaults"
@@ -40,8 +41,8 @@
     "@thulite/doks-core": "^1.9.3",
     "@thulite/images": "^3.3.4",
     "@thulite/inline-svg": "^1.2.2",
-    "@thulite/seo": "2.4.3",
-    "thulite": "^2.6.5"
+    "@thulite/seo": "^2.4.4",
+    "thulite": "^3.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -50,20 +51,24 @@
     "auto-changelog": "^2.7.0",
     "eslint": "^10.11.0",
     "globals": "^17.12.0",
-    "hugo-bin": "^0.161.0",
+    "hugo-bin": "^0.165.0",
     "markdownlint-cli2": "^0.23.3",
+    "sass-embedded": "^1.105.0",
     "shx": "^0.4.0",
     "stylelint": "^17.15.0",
     "stylelint-config-standard-scss": "^17.0.0"
   },
   "hugo-bin": {
     "buildTags": "extended",
-    "version": "0.155.3"
+    "version": "0.167.0"
   },
   "overrides": {
     "glob": "^13.0.6",
     "micromatch": "4.0.8",
     "minimatch": "^10.2.2",
     "semver": "7.7.3"
+  },
+  "allowScripts": {
+    "hugo-bin": true
   }
 }

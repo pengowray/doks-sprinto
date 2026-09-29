@@ -1,0 +1,40 @@
+{{- /*
+  Overrides layouts/_partials/head/head.html from @thulite/doks-core 1.9.3.
+  Changed: the stylesheet partial runs inside templates.Defer, and is called
+  with partial in place of partialCached, because Hugo refuses
+  templates.Defer inside partialCached.
+  Why: the head/dartsass.html partial runs PostCSS, and PurgeCSS in
+  config/postcss.config.js reads hugo_stats.json. Hugo writes that file only
+  after every page is rendered. Without the defer, a clean checkout fails to
+  build because the file doesn't exist yet, and a rebuild purges against the
+  previous build's file. thulite 2 did this with resources.PostProcess, which
+  Hugo deprecated in 0.164 in favour of templates.Defer. The "global" key makes
+  the stylesheet build once for the whole site.
+*/ -}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- if templates.Exists "_partials/head/resource-hints.html" }}
+    {{- partial "head/resource-hints" . }}
+  {{- end }}
+  {{- if templates.Exists "_partials/head/script-header-priority.html" }}
+    {{- partial "head/script-header-priority" . }}
+  {{- end }}
+  {{- if templates.Exists "_partials/head/stylesheet.html" }}
+    {{- with (templates.Defer (dict "key" "global")) }}
+      {{- partial "head/stylesheet" . }}
+    {{- end }}
+  {{- end }}
+  {{- if templates.Exists "_partials/head/seo.html" }}
+    {{- partial "head/seo" . }}
+  {{- else if templates.Exists "_partials/head/seo-default.html" }}
+    {{- partial "head/seo-default" . }}
+  {{- end }}
+  {{- if templates.Exists "_partials/head/script-header.html" }}
+    {{- partial "head/script-header" . }}
+  {{- end }}
+  {{- if templates.Exists "_partials/head/custom-head.html" }}
+    {{- partial "head/custom-head" . }}
+  {{- end }}
+</head>
