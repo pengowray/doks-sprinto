@@ -1,19 +1,29 @@
 ---
 title : "Voice"
 description: Using Sprinto in a voice channel
-lead:
+lead: "Voice is paused: Sprinto doesn't join voice channels at the moment."
 ---
-## Sprinto Talks (paused for now)
+<!-- TODO owner: confirm voice status before release -->
 
-Voice is off at launch of the Rust rewrite. It's built, but it hasn't been verified in a real call yet, so it isn't switched on for any server right now. There's no date for turning it back on. It was live in the old bot from 2023 to 2026, but only ever enabled for around 32 servers, so this won't be a big change for most people.
+## Voice is paused
 
-## What it does
+Voice is paused and not available at the moment: Sprinto doesn't join voice channels on any server. There's no date for turning it back on.
 
-When it's on, Sprinto joins a voice channel and plays a bell at the start of a sprint, and another when time's up. That's the whole feature: a couple of audio cues so people who aren't watching the text channel still know when to start writing and when to stop.
+Voice was live in the old bot from 2023 to 2026, but only ever enabled for around 32 servers, so this won't be a big change for most people. Servers that had voice in the old bot were carried over to the new bot.
+
+## What voice does
+
+When voice is on for a server, Sprinto joins the voice channel set for that server when writing starts, without playing a sound. It plays a short sound at each [chime]({{<relref "words" >}}#chimes) and a time's-up sound when time's up, then leaves about 6 seconds later. Most sprints have no chimes, so the only sound is at time's up.
+
+Sprinto joins deafened, so it never listens. If Sprinto can't join, the sprint runs as normal.
+
+Only Sprinto's owner can switch voice on for a server and set its voice channel. There's no command or setting for it.
+
+To keep Sprinto out of the voice channel for one sprint, add `novc` (or `no vc`) to the sprint command, such as `/sprint 20 novc`. `quiet` turns off voice as well as pings.
 
 ## Feedback
 
-If you're keen to have Sprinto join voice channels again, leave `/feedback` with the feedback command.
+If you'd like voice back, tell the developer with {{<slashembed name="feedback" >}}.
 
 ## See also
 
