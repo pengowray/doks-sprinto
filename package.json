@@ -3,7 +3,7 @@
   "description": "Doks child theme",
   "version": "0.5.0",
   "engines": {
-    "node": ">=20.11.0"
+    "node": ">=22.13.0"
   },
   "browserslist": [
     "defaults"
@@ -36,7 +36,7 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@tabler/icons": "^3.36.1",
+    "@tabler/icons": "^3.48.0",
     "@thulite/doks-core": "^1.9.3",
     "@thulite/images": "^3.3.4",
     "@thulite/inline-svg": "^1.2.2",
@@ -44,13 +44,17 @@
     "thulite": "^2.6.5"
   },
   "devDependencies": {
-    "auto-changelog": "^2.5.0",
-    "eslint": "^8.57.1",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@stylistic/stylelint-plugin": "^5.3.0",
+    "auto-changelog": "^2.7.0",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
     "hugo-bin": "^0.161.0",
-    "markdownlint-cli2": "^0.23.1",
+    "markdownlint-cli2": "^0.23.3",
     "shx": "^0.4.0",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard-scss": "^4.0"
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard-scss": "^17.0.0"
   },
   "hugo-bin": {
     "buildTags": "extended",
