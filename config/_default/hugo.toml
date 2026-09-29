@@ -25,7 +25,7 @@ disableLanguages = ["de", "nl"]
 
 [outputs]
 home = ["html", "rss", "sitemap", "searchIndex", "llms"]
-page = ["html", "markdown"]
+page = ["html"]
 section = ["html", "rss", "sitemap"]
 
 # add output format for the FlexSearch index
@@ -34,13 +34,6 @@ mediaType = "application/json"
 baseName = "search-index"
 isPlainText = true
 notAlternative = true
-
-# add output format for the "copy as Markdown" buttons
-[outputFormats.markdown]
-baseName = "index"
-isHTML = false
-isPlainText = true
-mediaType = "text/markdown"
 
 # add output format for llms.txt
 [outputFormats.llms]
