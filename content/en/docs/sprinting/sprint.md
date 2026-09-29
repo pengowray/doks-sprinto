@@ -27,7 +27,7 @@ Some examples:
 {{<slash name="sprint" key0="options" val0="{{<param-duration `for 20 minutes`>}} {{<param-when `in 2 min`>}}" >}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `20`>}} {{<param-when `2`>}}" >}}
 {{</example>}}
-{{<example caption="Write until 1:30 pm, starting now. A time of day like `1:30 pm` needs your time zone: see [Time zones](#time-zones). {{<param-duration `until :30`>}} ends at the next half past the hour and works without a time zone.">}}
+{{<example caption="Write until 1:30 pm, starting now. A time of day like `1:30 pm` needs your time zone: see [Time zones](/docs/sprint-all-options/#time-zones). {{<param-duration `until :30`>}} ends at the next half past the hour and works without a time zone.">}}
 {{<slash name="sprint" key0="options" val0="{{<param-duration `until 1:30 pm`>}} {{<param-when `now`>}}" >}}
 {{</example>}}
 {{<example caption="Start at 1:45 by the clock in your time zone. {{<param-when `at :45`>}} starts at the next :45 and works without a time zone.">}} <!-- tmi: {{<param-duration `for 15`>}} is optional because it's the bot's default."  -->
