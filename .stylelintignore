@@ -1,3 +1,5 @@
 assets/scss/components/_syntax.scss
 assets/scss/vendor
 node_modules
+# Copy of a doks-core file, kept as close to upstream as possible. Its header says what changed.
+assets/scss/components/_forms.scss

@@ -7,10 +7,11 @@ export default {
         '@stylistic/indentation': 4,
         '@stylistic/string-quotes': 'double',
 
-        // doks-core compiles this SCSS with LibSass, which predates CSS Color 4.
-        // It fails the build on rgb() with space-separated values or with a
-        // fourth (alpha) argument, and passes a percentage alpha through as
-        // plain text. Colours stay in rgb(r, g, b) / rgba(r, g, b, 0.5) form.
+        // These were turned off while this SCSS was compiled with LibSass,
+        // which failed the build on rgb() with space-separated values or with
+        // a fourth (alpha) argument. Since thulite 3 it is compiled with Dart
+        // Sass, which accepts the CSS Color 4 forms, so these rules can be
+        // turned back on once the colours in _custom.scss are rewritten.
         'color-function-notation': null,
         'color-function-alias-notation': null,
         'alpha-value-notation': null,

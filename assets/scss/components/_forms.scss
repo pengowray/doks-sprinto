@@ -1,0 +1,25 @@
+// Overrides assets/scss/components/_forms.scss from @thulite/doks-core 1.9.3.
+// Changed: `@extend .form-group` is now `@extend .form-group !optional`.
+// Bootstrap 5 has no .form-group class. LibSass skipped the missing selector
+// without a word; Dart Sass stops the build. `!optional` keeps the LibSass
+// result: the rule extends nothing. Everything else is the upstream file.
+
+/** Search form */
+.search-form {
+    @extend .form-inline !optional;
+}
+
+.search-form label {
+    @extend .form-group !optional;
+
+    font-weight: normal;
+}
+
+.search-form .search-field {
+    @extend .form-control;
+}
+
+.search-form .search-submit {
+    @extend .btn;
+    @extend .btn-secondary;
+}

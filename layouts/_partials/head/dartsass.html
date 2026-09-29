@@ -1,0 +1,39 @@
+{{- /*
+  Overrides layouts/_partials/head/dartsass.html from @thulite/core 2.0.3.
+  Changed: two css.Sass options added. Everything else is the upstream file.
+  - targetPath "main.css" keeps the stylesheet at /main.<hash>.css, where
+    thulite 2 put it. Upstream writes /scss/app.<hash>.css.
+  - silenceDeprecations hides the four Dart Sass deprecations that Bootstrap
+    5.3 and doks-core 1.9.3 trigger: import, global-builtin, color-functions
+    and if-function. Our own SCSS in assets/scss/common/ triggers none of them.
+    Any other deprecation still prints. silenceDependencyDeprecations is left
+    off on purpose: Hugo loads every imported file through its own importer,
+    so Dart Sass counts our files as dependencies too, and that option would
+    hide their warnings as well.
+*/ -}}
+{{- /* Transpile SCSS to CSS with environment-aware options
+  * Uses Dart Sass for modern Sass language features
+  * Development: source maps enabled, expanded output for debugging
+  * Production: minified output, PostCSS processed, then fingerprinted with integrity hash
+  * IMPORTANT: PostCSS must run before fingerprint to ensure integrity hash matches final output
+  * Reference: https://gohugo.io/functions/css/sass/
+*/ -}}
+{{ with resources.Get . -}}
+  {{ $opts := dict
+    "enableSourceMap" hugo.IsDevelopment
+    "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
+    "transpiler" "dartsass"
+    "includePaths" (slice "node_modules")
+    "targetPath" "main.css"
+    "silenceDeprecations" (slice "import" "global-builtin" "color-functions" "if-function")
+  -}}
+  {{ with . | css.Sass $opts -}}
+    {{ if hugo.IsDevelopment -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else -}}
+      {{ with . | postCSS (dict "config" "config/postcss.config.js") | fingerprint -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end -}}
+    {{ end -}}
+  {{ end -}}
+{{ end -}}
