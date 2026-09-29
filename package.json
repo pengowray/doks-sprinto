@@ -50,7 +50,7 @@
     "auto-changelog": "^2.7.0",
     "eslint": "^10.11.0",
     "globals": "^17.12.0",
-    "hugo-bin": "^0.161.0",
+    "hugo-bin": "^0.165.0",
     "markdownlint-cli2": "^0.23.3",
     "shx": "^0.4.0",
     "stylelint": "^17.15.0",
@@ -58,7 +58,7 @@
   },
   "hugo-bin": {
     "buildTags": "extended",
-    "version": "0.155.3"
+    "version": "0.167.0"
   },
   "overrides": {
     "glob": "^13.0.6",

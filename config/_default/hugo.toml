@@ -8,7 +8,7 @@ disableHugoGeneratorInject = true
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
-languageCode = "en-US"
+locale = "en-US"
 rssLimit = 10
 
 [pagination]
@@ -93,6 +93,9 @@ rel  = "sitemap"
 [imaging]
   anchor = "Center"
   bgColor = "#ffffff"
-  hint = "photo"
-  quality = 85
   resampleFilter = "Lanczos"
+  [imaging.jpeg]
+    quality = 85
+  [imaging.webp]
+    hint = "photo"
+    quality = 85
