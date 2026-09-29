@@ -37,7 +37,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          # Node 24 for npm 11.13 or later. Older npm also installs the pure-JS
+          # `sass` package and links node_modules/.bin/sass to it, and Hugo
+          # can't compile with that one. check-latest skips an older cached 24.x.
+          node-version: '24'
+          check-latest: true
           cache: 'npm'
 
       - name: Install dependencies
