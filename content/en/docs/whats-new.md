@@ -14,7 +14,6 @@ keywords: ["what's new", "changelog", "release notes", "rewrite"]
 - Setup is one command, {{<slashembed name="settings" >}}.
 - Pets are a collection now, managed with {{<slashembed name="pets" >}}.
 
-<!-- main only: cancel vote -->
 {{<slashembed name="cancel" >}} starts a vote when other people are in the sprint.
 
 A few of these were fixed years ago in code that never made it to the live bot, so they're new to you even if they're old to me.
@@ -29,7 +28,6 @@ The defaults haven't changed: a 15-minute sprint, a 1-minute join window, and 3 
 
 **The person starting a sprint can change the late window.** `late 20` makes the late window 20 minutes long. The late window can be up to 60 minutes. `late none` turns the late window off. To change the late window for every sprint in a channel, add the `late` option to the channel's default sprint.
 
-<!-- main only: over-long late window refused -->
 Asking for a late window over 60 minutes, such as `late 99`, is refused, and the reply names the maximum.
 
 **`tare` is back.** {{<atsprintoembed "tare 1000" >}} sets your starting count to 1,000 words and keeps your total, so the words you wrote this sprint are counted from 1,000. `tare +50` moves your starting count up 50 words, and `tare -10` moves it down 10 words. Use `tare` when the starting count you joined with was wrong; `/words` changes only your total. `tare` last worked in November 2019.
@@ -86,7 +84,6 @@ You can add options to either one, with an optional `but`:
 
 **`next 5` sets the whole gap between rounds**, word counts and break together, counted from when writing stops. `sprint 15 next 5 x3` starts a round every 20 minutes. The word counts are collected first, and the rest of the gap is the break. `gap`, `next in` and `next round in` mean the same as `next`.
 
-<!-- main only: break between rounds capped -->
 **A break between rounds is at most 1 hour, or 2 hours with `please`.** The limit applies however the break is written, such as `break 20`, `next 25` or `break until :30`. A longer break saved in a default sprint is cut to 1 hour.
 
 **The default sprint can include a gap between rounds**, with `settings preset 20 next 10` or `settings preset 20 break 7`. Setting a default gap replaces the default break, and setting a default break replaces the default gap. The default gap has no effect on a single sprint.
@@ -216,9 +213,6 @@ The old bot had about ten near-identical setup commands: `setup-set-allowed-chan
 
 {{<slash name="settings roles" >}} The roles pinged at sprint start, using Discord's own role picker. {{<tag-admin>}} to change.
 
-<!-- main only: Sprint MC and Admin role lists -->
-With `/settings roles`, an admin can also choose which roles count as Sprint MC and which count as Sprint Admin.
-
 {{<slash name="settings sprint-channels" >}} Which channels allow sprints, using Discord's own channel picker. An empty list means sprints work anywhere, which is the default. {{<tag-admin>}} to change. The typed command `channels` adds, removes and resets sprint channels, and lists them, for example `@Sprinto channels add`.
 
 {{<slash name="settings sprint-defaults" >}} New: give this channel its own default sprint, with its length, start time, chimes and late window, so a plain {{<slashembed name="sprint" >}} runs that sprint. The default can end on a minute mark. For example, to make every sprint in the channel end on the hour or half hour, use `until :00/:30 for at least 5`. A default with an end time also needs `for at least`, which sets the shortest sprint length allowed. {{<tag-admin>}} to change.
@@ -267,15 +261,12 @@ Sometimes slash commands stop working because of a problem at Discord. Sprinto n
 
 **{{<slashembed name="ping" >}} shows response times, with a chart.** It shows Sprinto's response time, Discord's published API response time and how response times vary across Sprinto's shards (its connections to Discord). It also shows which shard your server is on, and a chart of response times over the last two hours with Discord incidents marked. It lists the ping-list commands too, for anyone who meant {{<slashembed name="pingme" >}}. {{<atsprintoembed "ping" >}} shows the same.
 
-<!-- main only: /ping incident card -->
 When Discord has an incident open, `/ping` shows it on its own highlighted card. If Sprinto last checked Discord's status page more than a minute ago, `/ping` checks the page again first.
 
 **During a Discord incident, Sprinto's status reads "Listening to status.discord.com".** Sprinto's status is the line under his name in the member list. It shows this text while Discord's status page reports a problem.
 
-<!-- main only: status line switches sooner -->
 The status changes as soon as Discord's status page reports a problem, without waiting for commands to fail.
 
-<!-- main only: incident note after sprints -->
 **When Discord has an incident open, a sprint's results end with a one-line note about it.** The note replaces a tip or notice, but never a quote, and each server sees the note at most once a day.
 
 ## Smaller changes you might notice
@@ -294,7 +285,6 @@ The status changes as soon as Discord's status page reports a problem, without w
 
 If you used the old bot, these are the changes most likely to surprise you.
 
-<!-- main only: cancel vote -->
 **{{<slashembed name="cancel" >}} starts a 2-minute vote when other people are in the sprint.** The sprint is cancelled if the ✅ votes are at least twice the ❌ votes and come from at least a quarter of the sprinters; people who don't vote aren't counted on either side. A Sprint MC's ✅ cancels the sprint at once, and {{<slashembed name="cancel-please" >}} still cancels without a vote. Before the sprint starts, or if nobody else is in it, `/cancel` still ends it straight away.
 
 **On a single sprint, `next 5` is refused. Use `in next 5`.** In the old bot, `next 5` started the sprint on the next 5-minute mark. Now `next 5` sets the gap between rounds in a chain, so on a single sprint Sprinto refuses it and shows both meanings. `next 5 minute mark` and `at the next quarter` still start the sprint on a clock mark, and Sprinto writes `in next 5` itself when it repeats a sprint or saves a default.

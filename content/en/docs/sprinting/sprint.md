@@ -588,7 +588,6 @@ These options work on a single sprint and in a chain. [Chain timing]({{< relref 
 
 After the scoreboard is posted, sprinters can still change their word count with {{<slashembed name="late" >}} until the late window closes. The late window is 10 minutes by default, counted from when writing time ends, not from when the scoreboard is posted. `late 20` makes it 20 minutes. The longest late window is 1 hour.
 
-<!-- main only: late over an hour refused -->
 A `late` of more than an hour is refused: "Sorry, 90 minutes is too long to keep word counts open after the sprint. The maximum is 60 minutes."
 
 {{<slash name="sprint" key0="options" val0="late none" >}}
@@ -632,7 +631,7 @@ This works on a repeated sprint too:
 | `novc` | On servers in the voice beta, keep Sprinto out of [voice]({{<relref "voice" >}}) for this sprint. Synonyms: `no vc`, `shut up` |
 | `noff` | "No fast finish" — wait the full `endtime` for final word counts before posting the scoreboard, even if everyone has reported. Synonyms: `no ff`, `no fast finish` |
 | `ff` | Allow the fast finish, even if this channel's settings turn it off: the scoreboard is posted soon after everyone has reported. Synonym: `fast finish` |
-| <!-- TODO owner: nops does nothing in the bot now; restore if fixed --> `no bell` | Turn off all chimes for this sprint. See [chimes](#chimes). Synonyms: almost any way of saying it, such as `no chime`, `no bells`, `nobell`, `zero chimes`, `without any bells`, `chime none`, `chime off`. `chime 0` also turns chimes off. |
+| `no bell` | Turn off all chimes for this sprint. See [chimes](#chimes). Synonyms: almost any way of saying it, such as `no chime`, `no bells`, `nobell`, `zero chimes`, `without any bells`, `chime none`, `chime off`. `chime 0` also turns chimes off. |
 | `please` | Raise some of Sprinto's limits, such as the longest sprint (up to 2 hours). See [Limits](#limits). Synonyms: `pls`, `thanks`, `danke`, and a long list of other polite (and impolite) phrasings |
 | `lock` | Lock the sprint, so only a Sprint MC can cancel it. Only a Sprint MC can use `lock`. Synonyms: `locked`, `nocancel`, `no cancel`, `uncancellable`. See: [sprint admin commands]({{< relref "admin-sprint" >}}) |
 | `clear defaults` | Leave out this channel's and server's default options. See [Channel and server defaults](#channel-and-server-defaults). Synonyms: `no defaults`, `ignore defaults`, `without defaults` |
@@ -726,7 +725,6 @@ Anything you set before the first `then`, other than the length and the start ti
 
 {{<slash name="sprint" key0="options" val0="for 20 quietly chime -5 then for 30 then for 10" >}}
 
-<!-- main only: quietly and lock chain-wide -->
 `quietly` and `lock` apply to every round wherever you type them, even after a `then`.
 
 Add `identical` (or `exact`), and rounds that use the same wheel share one spin:
@@ -926,7 +924,7 @@ Sprinto refuses some commands, and `please` raises a few of the limits.
 | How far ahead a sprint can start | 1 hour (50 minutes for a clock mark like `at :30`, a time of day, or `in next`) | 90 minutes, or 2 hours for a {{<role "@Sprint MC">}} |
 | endtime | 30 seconds to 30 minutes | up to 1 hour for a {{<role "@Sprint MC">}} |
 | Late window (`late`) | up to 1 hour; `late 0` turns it off | same |
-| <!-- main only: break limit --> Break between chained rounds | up to 1 hour | up to 2 hours |
+| Break between chained rounds | up to 1 hour | up to 2 hours |
 | Chimes per sprint | 5, at least a minute apart | same |
 | Rounds in a chain | 8 | same |
 
@@ -947,7 +945,6 @@ Other refusals:
 - endtime: "Sorry, that's too short for final word counts. The minimum is 30 seconds." or "Sorry, that's too long to wait for final word counts. The maximum is 30 minutes."
 - Rounds in a chain: "Sorry, that's too many sprints in a row. I can chain up to 8 at once."
 
-<!-- main only: break over the limit refused -->
 A break over the limit is refused, with a button that runs the suggested command: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 5 x2 break 90 please`." A channel or server default with a break or late window over the limit is cut to the limit.
 
 <!-- | `delay <minutes>` | (removed) Delay the opening of the sprint by this many minutes. I've effectively removed this feature as it didn't seem useful. I can enable it on your server if you really want but you'll have to let me know why you want it). If your start time is too far into the future, part of the time will be converted into a delay. | -->

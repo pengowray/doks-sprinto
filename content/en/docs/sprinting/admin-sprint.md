@@ -24,7 +24,6 @@ Start a 30-minute locked sprint in 5 minutes, with 10 minutes at the end to give
 
 If anyone else tries to cancel a locked sprint, Sprinto replies `Sorry, only an administrator or Sprint MC can cancel this sprint.` For a locked sprint, {{<atsprintoembed "status" >}} shows `Cannot be cancelled.`
 
-<!-- main only: locked sprint vote buttons -->
 In a vote to cancel a locked sprint, people who aren't Sprint MCs can press ❌ but not ✅.
 
 See [Sprint (all options)]({{<relref "sprint" >}}) for the other options you can add to a `/sprint`.
@@ -43,7 +42,6 @@ A start given as a clock time (`at 14:30`, `at :30`) or with `next` (`in next 15
 
 `please` can't raise a sprint's length past the longest sprint set in the channel's or server's settings, which can be lower than 2 hours. `megathon`, a 2-hour sprint, includes `please` automatically.
 
-<!-- main only: chain break cap -->
 The break between rounds of a chain can be up to 60 minutes, or 120 minutes with `please`.
 
 `please` is a check against starting a long sprint by mistake, not a politeness rule. Other words that count as `please` include `pls`, `plz`, `thanks`, `ty`, `cheers`, `merci`, `danke`, `gracias`, `could you` and `sudo`.
@@ -73,17 +71,13 @@ End the sprint at once, with no vote, however many people have joined.
 
 Once writing has started and other people are in the sprint, only a Sprint MC can use `/cancel-please`. Before writing starts, or when nobody else is in the sprint, anyone can use it, and a plain {{<slashembed name="cancel" >}} also ends the sprint at once.
 
-<!-- main only: cancel vote -->
 ### Vote to cancel
 
-<!-- main only: cancel vote -->
 Once writing has started and other people are in the sprint, {{<slashembed name="cancel" >}} starts a 2-minute vote with ✅ and ❌ buttons. The full rules are in [Vote to cancel]({{<relref "words" >}}#vote-to-cancel). A Sprint MC can decide the vote, even if they aren't in the sprint:
 
-<!-- main only: cancel vote -->
 - Press ✅ to cancel the sprint at once. The vote message then reads `@alex asked to cancel the sprint. Sprint MC @kit cancelled the sprint.`
 - Press ❌ to end the vote. The sprint continues, and the vote message then reads `@alex asked to cancel the sprint. Sprint MC @kit ended the vote, so the sprint continues.`
 
-<!-- main only: cancel vote -->
 A Sprint MC's own `/cancel` starts or joins a vote like anyone else's. To skip the vote, use `/cancel-please`. After a vote fails, nobody can start another vote for 5 minutes, but a Sprint MC can still use `/cancel-please`.
 
 ### go
@@ -160,12 +154,6 @@ What each role can do:
 - **Sprint Admin**: everything a Sprint MC can do, and change Sprinto's settings for the server.
 
 The server owner and members with the Administrator or Manage Server permission are always Sprint Admins. Anyone with a role named Sprint MC or Sprint Admin also counts. See [Admin commands]({{<relref "admin" >}}).
-
-<!-- main only: choose MC and Admin roles -->
-{{<slash name="settings roles" >}}
-
-<!-- main only: choose MC and Admin roles -->
-A Sprint Admin can also choose existing roles to count as Sprint MC or Sprint Admin, in `/settings roles`. A dropdown chooses which list to show. `@everyone` can't be chosen.
 
 ## See also
 

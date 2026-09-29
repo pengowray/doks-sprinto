@@ -19,7 +19,6 @@ https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&perm
 3. Click the link in the message.
 4. Choose the server and click **Continue**.
 
-<!-- TODO owner: screenshot out of date: shows a "✓ BOT" badge next to Sprinto; Discord now labels apps "APP" -->
 ![Image](/images/sprinto-invite-dialog.png)
 
 You can also open the link in a web browser. Sign in at [discord.com/login](https://discord.com/login) in that browser first.

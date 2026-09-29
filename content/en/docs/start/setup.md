@@ -62,7 +62,6 @@ Sprinto never creates these roles. You make them yourself, like any other Discor
 
 The server owner and anyone with the Administrator or Manage Server permission are already Sprint Admins, and so Sprint MCs too. On a small server you may not need either role at all.
 
-<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 Full detail is on the [Admin commands]({{< relref "admin" >}}) page.
 

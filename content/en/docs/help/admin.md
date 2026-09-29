@@ -10,7 +10,6 @@ Some of Sprinto's commands need a Sprint MC {{<tag-mc>}} or a Sprint Admin {{<ta
 * **Sprint Admin** {{<tag-admin>}}: the server owner, anyone with the Administrator or Manage Server permission, or anyone with a role named {{<role "@Sprint Admin">}}.
 * **Sprint MC** {{<tag-mc>}}: anyone with a role named {{<role "@Sprint MC">}}, and every Sprint Admin.
 
-<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 ### Role names Sprinto accepts
 
@@ -31,7 +30,7 @@ To see which roles Sprinto found on your server, run {{<slashembed name="setting
 | {{<slashembed name="nudge-please">}} | Move a stuck sprint on to its next step. |
 | {{<slashembed name="go">}} | Start the waiting sprint now. The person who started the sprint can do this too. |
 | `lock` | Add `lock` to a `/sprint` to start a locked sprint, which only a Sprint MC can cancel. |
-| <!-- main only: MC vote on /cancel --> ✅ or ❌ in a vote to cancel | A Sprint MC's ✅ cancels the sprint straight away, and their ❌ ends the vote. |
+| ✅ or ❌ in a vote to cancel | A Sprint MC's ✅ cancels the sprint straight away, and their ❌ ends the vote. |
 | {{<slashembed name="admin-forget-user">}} | Stop pinging one person at the start of sprints in this channel. |
 | `@Sprinto pinguser` | Turn on pings for one person. |
 
@@ -58,7 +57,6 @@ Everything a Sprint MC can do, and also:
 
 Sprinto never creates the {{<role "@Sprint MC">}} or {{<role "@Sprint Admin">}} roles. Create them in Discord the same way as any other role, and give them to the people you choose.
 
-<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 Both roles are optional: sprints run without anyone holding either role. On a small server you might create the {{<role "@Sprint MC">}} role and give it to everyone, so everyone can cancel sprints.
 

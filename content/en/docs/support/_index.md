@@ -73,10 +73,6 @@ Your pets are resting. A companion seat lets one sit with you and appear on the 
 - Codes come from the developer. Capital letters and spaces in a code don't matter.
 - Only you see the reply. {{<slashembed name="redeem">}} also works in a direct message to Sprinto.
 
-
-
--->
-
 ## Other ways to help
 
 - Vote for Sprinto on [top.gg](https://top.gg/bot/421646775749967872/vote) to help other people find Sprinto. {{<atsprintoembed "vote">}} gives the same link.

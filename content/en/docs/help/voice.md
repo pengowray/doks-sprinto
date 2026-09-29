@@ -3,7 +3,6 @@ title : "Voice"
 description: Using Sprinto in a voice channel
 lead: "Voice is paused: Sprinto doesn't join voice channels at the moment."
 ---
-<!-- TODO owner: confirm voice status before release -->
 
 ## Voice is paused
 

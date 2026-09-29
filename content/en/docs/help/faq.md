@@ -61,7 +61,6 @@ Yes. `/sprint` runs chains directly. Put any of these in its `options`:
 
 A chain can have up to 8 rounds. If you don't set a break, each break is 5 minutes, and it starts after the round's word counts are in. In a `pomo` chain of more than 4 rounds, the break after every 4th round is at least 15 minutes.
 
-<!-- main only: chain break limit -->
 A break between rounds can be at most 1 hour, or 2 hours with `please`.
 
 To skip the rest of a break, the person who started the chain, or a Sprint MC, can start the next round early with `/go`. The round still finishes at its planned time, so it runs longer, and the rest of the chain keeps its timetable:

@@ -18,7 +18,6 @@ All of Sprinto's settings are under {{<slashembed name="settings">}}. The comman
 | [`/settings theme`](#emoji-theme) | The emoji in sprint announcements |
 
 Anyone can open these panels and see the settings. To change anything except your own settings, you need to be a Sprint Admin {{<tag-admin>}}: the server owner, anyone with the Administrator or Manage Server permission, or anyone with a role named {{<role "@Sprint Admin">}}.
-<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 Sprinto sets nothing up when it joins your server: no channel, no role and no saved settings. It works straight away in every channel it can post in, and you only need these panels to change something.
 
@@ -83,7 +82,7 @@ The first column gives each setting's name as the panel shows it. Use the text k
 | **Wall time** | `walltime` | Dynamic timestamps | How the start message shows when the sprint ends. **Dynamic timestamps** (`on`): a live countdown that updates in each reader's Discord app and, on sprints of 2 minutes or more, the end time in each reader's own time zone. **Static timer (classic)** (`sometimes`): on sprints of 2 minutes or more, the minute the sprint ends, for example "Duration: 15 minutes (until ⏰ :16).", or "(until ⏰ :16 +30s)" when the end isn't on a whole minute. The minute is in UTC, so in a time zone with a half-hour offset, such as India or Adelaide, the minute shown is 30 minutes off. **Off** (`off`): the length of the sprint only. |
 | **Post-sprint text** | `show-ps` | On | Add one extra line under the scoreboard: a quote, a news update, a reminder about `/forgetme`, a tip to upvote Sprinto on top.gg, "`/sprint` to start another", or a note about a Discord incident. With it off, the "Combined word count" line still shows when 3 or more people have a word count above 0. While it's off, the panel shows Quotes and Family-friendly struck through. |
 | **Quotes** | `show-quotes` | On | Show a quote under the scoreboard on every second sprint in the channel. When an urgent news item is shown in a quote's place, the quote is shown on the next sprint instead. It's unlikely you'll agree with every quote. They're there to provoke thought and discussion. If that's not what your group is there for, turn them off. |
-| **Family-friendly** | `family-friendly` | On | Filter out the occasional crass quote or reply. You'll rarely see a difference with it off. <!-- TODO owner: show-patreon controls nothing in the bot now; restore if it is wired up --> |
+| **Family-friendly** | `family-friendly` | On | Filter out the occasional crass quote or reply. You'll rarely see a difference with it off. |
 | **Auto pings** | `auto-pings` | On (shown as **3**) | Sign up everyone who joins a sprint to be pinged at the start of the next 3 sprints in the channel. With it off, sprinters sign up with {{<slashembed name="pingme">}}. Ping roles are pinged either way. See [Ping me]({{<relref "pingme" >}}). |
 | **Listen to Carl-bot** | `carl` | Off | Let a feeder bot such as Carl-bot start sprints here. Sprinto ignores other bots unless this is on. See [Carl-bot x Sprinto]({{<relref "carlbot" >}}). |
 | **Shuffled leaderboard** | `shuffle-leaderboard` | Off | List the scoreboard in a random order with no rank numbers. Word counts are still shown, and pets are listed last. This takes the edge off the competition and lets sprinters work at their own pace. |
@@ -141,7 +140,6 @@ OK, I'll notify you on the last 2 chime(s) of each sprint.
 
 {{<slash name="settings roles" >}}
 
-<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 This panel shows the roles Sprinto uses. The first list, "Roles detected by name (view only):", shows the Active Sprinters, Sprint MC and Sprint Admin roles Sprinto found on the server by their names, or "not found" for a role Sprinto didn't find. To change these, create or rename the roles in Discord. See [Admin commands]({{<relref "admin" >}}) and [Active Sprinter role]({{<relref "activesprinter" >}}).
 
@@ -187,7 +185,6 @@ A default can include most of what you can type after {{<slashembed name="sprint
 
 * **Gap between chain rounds:** `20 next 10` starts each new round 10 minutes after the previous round's writing time ends. The 10 minutes include the time for word counts. `20 break 7` gives a 7-minute break after the word counts are in. Setting `next` replaces any `break`, and setting `break` replaces any `next`. On a sprint without rounds, `next` and `break` have no effect. See [Chain sprints]({{<relref "chains" >}}).
 * **Clock times:** a default needs more than one time, so `at :00/:30` works and `at :30` doesn't. A default with `until` also needs `for at least`, which sets the shortest sprint: `until :00/:30 for at least 10`.
-  <!-- main only: default break and late limits -->
 * **Limits:** a default with a break longer than 1 hour, or a `late` window longer than 60 minutes, is refused.
 
 ## Emoji theme
@@ -199,7 +196,7 @@ Choose which emoji appear in sprint announcements. The panel opens on **Server d
 | Theme | What you get |
 | --- | --- |
 | **Random emojis** (default) | A different set every sprint: one emoji from each of Sprinto's yellow, green and red sets. Yellow is for the join window, green for the start, and red for time's up. |
-| **Screen reader friendly** | Announcements that read better with a screen reader: the same four emoji every sprint (join window, start, time's up and results), each with a short name, and plainer wording. <!-- TODO owner: confirm the theme's emotes are uploaded on the live bot --> |
+| **Screen reader friendly** | Announcements that read better with a screen reader: the same four emoji every sprint (join window, start, time's up and results), each with a short name, and plainer wording. |
 
 **Reset to built-in** (on the server) or **Clear channel override** (in a channel) removes the theme set for the server or channel you selected. Everyone except a Sprint Admin sees the text only.
 

@@ -305,7 +305,6 @@ The break is 5 minutes unless you set another. In this table, a round ends when 
 | `break 5-10`, `break 5 to 10` | at the tidiest clock time 5 to 10 minutes after the previous round ends |
 | `break 0` | as soon as the previous round ends |
 
-<!-- main only: 1-hour break limit -->
 A break can be at most 60 minutes, or 120 minutes if the command includes `please`. The limit applies however the break is set: with `break`, `next`, `break until`, or a start time on a later round. A longer break is refused: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 20 x3 break 90 please`." A break from the room's default settings is cut to 60 minutes.
 
 ## Word counts inside the length: `round`

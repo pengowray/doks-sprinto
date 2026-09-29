@@ -28,7 +28,6 @@ To turn the feature off, delete the {{<role "@Active Sprinters">}} role in Disco
 
 To run either command, you need the **Manage Roles** permission or to be a Sprint Admin {{<tag-admin>}}: the server owner, anyone with the Administrator or Manage Server permission, or anyone with a role named {{<role "@Sprint Admin">}}. Both are slash commands only: mentioning Sprinto won't work for them. Only you see the replies.
 
-<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 Anyone else gets this reply:
 
@@ -85,7 +84,6 @@ The role's color, badge, position in the members list, and mentionability are al
    * {{<role "@active sprinters are the best">}}
 
    If more than one role matches, Sprinto uses the oldest one. To check that Sprinto recognizes the role, run {{<slashembed name="settings roles">}}: under "Roles detected by name (view only):" it shows "Active Sprinters: @Active Sprinters", or "not found".
-   <!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
 3. **Position on the members list**: this is what makes sprinting visible. A Discord member shows the color and badge of their *highest* role, so {{<role "@Active Sprinters">}} needs to be above the other roles your members usually have. Drag Sprinto's own role near the top of **Server Settings > Roles**, then drag {{<role "@Active Sprinters">}} just below it. A bot can't manage roles above its own highest role, so if Sprinto doesn't have a role of its own up there yet, give it one, or [re-invite Sprinto]({{<relref "invite" >}}) with the right permissions. After moving things around, join a sprint and check the members list to see that it works.
 

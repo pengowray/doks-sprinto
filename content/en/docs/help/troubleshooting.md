@@ -12,7 +12,6 @@ If you're having trouble, here are some tips. Sections 1 to 3 are for everyone. 
 
 ### 1) @Sprinto the role vs @Sprinto the bot
 
-<!-- TODO owner: screenshot out of date: shows the old "✓ BOT" badge (Discord now shows "APP"), an old-style "9 minutes 54 seconds remaining" reply, and the typo "a roll called sprinto" -->
 ![@Sprinto role vs bot](/images/help/troubleshooting/01-role-vs-bot.png)
 
 **Spot the difference: The @Sprinto role can't run commands. Discord creates this role with the same name as the bot and it's a usability nightmare. The color and formatting of the role and bot may also be very similar, depending on Discord server settings.**
@@ -58,7 +57,6 @@ In a server, Sprinto only reads messages that start with `@Sprinto`, because Dis
 
 How to tell if you're sending a chat message instead of a slash command:
 
-<!-- TODO owner: screenshot out of date: shows a separate "Sprint created." reply, which no longer exists (/sprint answers with the join message), and older join text -->
 ![Slash commands that fail vs succeed](/images/help/troubleshooting/03-sprinto-help-get-sprinting.png)
 
 **Slash commands that fail vs succeed**
@@ -116,7 +114,6 @@ Sprinto's status appears under its name in the member list:
 | Listening to @Sprinto sprint | Slash commands aren't reaching Sprinto, but `@Sprinto` messages are. |
 | Listening to status.discord.com | Discord's status page reports an incident. |
 
-<!-- main only: Discord status after results -->
 While Discord's status page reports an incident, Sprinto may add a line under a sprint's results, at most once a day per server:
 
 {{< reply >}}
@@ -134,7 +131,6 @@ While Discord's status page reports an incident, Sprinto may add a line under a 
 - Any incident open on Discord's status page.
 - Links to the ping commands, in case you meant `/pingme`: "Change your pings: /pingme /forgetme /pings-status /sneak-away" and "Always or never: /pings-always /pings-never".
 
-<!-- main only: /ping answered count period -->
 The count of answered and missed commands covers the last 2 hours if Sprinto missed any in that time, otherwise the last day, otherwise the last week.
 
 ## For admins

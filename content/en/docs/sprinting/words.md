@@ -59,7 +59,6 @@ You can join after time's up. The reply says how long is left for word counts:
 You have joined after time is up with 100 starting words. 2m12s remaining for final word counts.
 {{< /reply >}}
 
-<!-- TODO later pass: task sprints (closed beta) -->
 
 ## Give your word count
 
@@ -125,7 +124,6 @@ If you had already given a word count in this sprint, a third button keeps the c
 
 If the number is right, add `please`: {{<slashembed name="words" key0="count" val0="50000 please" >}}.
 
-<!-- main only: words 0 reply wording -->
 `/words 0` is read as "no change" when your starting count is 50 words or more and you have no new words yet. Sprinto replies `Word count kept the same: 1,200 words`, with a `/words 0 please` button in case you really did delete everything.
 
 ### Other ways to write a count
@@ -196,7 +194,6 @@ If another sprint starts in the same channel, the late window closes at whicheve
 
 To change the late window, add `late 20` (20 minutes) or `late none` (no late window) to the sprint command, or to the channel's default sprint. `late 0` does the same as `late none`. The late window can be up to 60 minutes. See [Sprint (all options)]({{<relref "sprint" >}}).
 
-<!-- main only: late over 60 refused -->
 A sprint command with a late window over 60 minutes is refused: `Sorry, 90 minutes is too long to keep word counts open after the sprint. The maximum is 60 minutes.`
 
 ## Cancel
@@ -211,7 +208,6 @@ A sprint command with a late window over 60 minutes is refused: `Sorry, 90 minut
 - before writing starts (during the join window, or during a break in a chain), even if other people have joined
 - after writing starts, if nobody else is in the sprint
 
-<!-- main only: cancel vote -->
 Once writing has started and other people are in the sprint, `/cancel` starts a vote. See [Vote to cancel](#vote-to-cancel).
 
 If Sprinto misread your {{< slashembed name="sprint" >}} command, cancel the sprint and start again.
@@ -225,13 +221,10 @@ Sprinto tags everyone who was in the sprint and changes the countdown to `Time's
 
 On a [locked sprint]({{<relref "admin-sprint" >}}#sprint-lock), only a {{<role "@Sprint MC">}} can cancel.
 
-<!-- main only: cancel vote -->
 ### Vote to cancel
 
-<!-- main only: cancel vote -->
 Once writing has started and other people are in the sprint, `/cancel` starts a 2-minute vote. Sprinto posts a vote message with ✅ and ❌ buttons, and your `/cancel` counts as the first ✅. The message names you but doesn't ping anyone.
 
-<!-- main only: cancel vote -->
 {{< reply >}}
 {{< mention "alex" >}} wants to cancel the sprint. Voting closes in 2 minutes.
 {{< /reply >}}
@@ -240,17 +233,13 @@ Once writing has started and other people are in the sprint, `/cancel` starts a 
 {{< button "❌ 0" >}}
 {{< /buttons >}}
 
-<!-- main only: cancel vote -->
 The sprint is cancelled if both of these are true when the vote closes:
 
-<!-- main only: cancel vote -->
 - There are at least twice as many ✅ votes as ❌ votes.
 - At least a quarter of the people in the sprint voted ✅ (rounded up, and at least 1 person).
 
-<!-- main only: cancel vote -->
 People who don't vote aren't counted for either side. For example, in a sprint of 8 people, 2 ✅ and 1 ❌ passes, but 3 ✅ and 2 ❌ doesn't.
 
-<!-- main only: cancel vote -->
 - The vote closes after 2 minutes, or as soon as everyone in the sprint has voted.
 - Only people in the sprint can vote. If you leave the sprint, your vote is removed.
 - If you use `/cancel` again while the vote is open, it counts as ✅, or changes your ❌ to ✅. Only you see the reply.
@@ -258,10 +247,8 @@ People who don't vote aren't counted for either side. For example, in a sprint o
 - After a vote fails, nobody can start another vote for 5 minutes. A Sprint MC can still use [/cancel-please](#force-cancel).
 - If the sprint or chain round ends before the vote closes, the vote closes too.
 
-<!-- main only: cancel vote -->
 When the vote closes, the vote message changes to show the result:
 
-<!-- main only: cancel vote -->
 | Result | The vote message then reads |
 | --- | --- |
 | Passed | `@alex asked to cancel the sprint. The vote passed. ✅ 3 ❌ 1` |
@@ -270,7 +257,6 @@ When the vote closes, the vote message changes to show the result:
 | A Sprint MC pressed ❌ | `@alex asked to cancel the sprint. Sprint MC @kit ended the vote, so the sprint continues.` |
 | The sprint ended first | `@alex asked to cancel the sprint. The sprint ended before the vote closed.` |
 
-<!-- main only: cancel vote -->
 In {{<atsprintoembed "who" >}}, a ❌ after a name means that person has voted ✅ to cancel in the open vote.
 
 ## Force cancel
@@ -391,10 +377,8 @@ Notes:
 - It's all about the writing, writing with others to keep yourself accountable, and challenging yourself.
 - An admin can turn on the `shuffle-leaderboard` setting, which lists the scoreboard in a random order with no rank numbers. See [Settings (admin)]({{<relref "settings" >}}).
 
-<!-- main only: Discord status note -->
 If Discord's status page shows an open incident, Sprinto adds a one-line note under the scoreboard, at most once a day in each server:
 
-<!-- main only: Discord status note -->
 {{< reply >}}
 **Discord status:** "Elevated API errors". More at <https://status.discord.com>
 {{< /reply >}}

@@ -56,7 +56,6 @@ List the people in the sprint in this channel. The reply uses display names, so 
 Currently sprinting: Alice, Bob ❌
 {{< /reply >}}
 
-<!-- main only: cancel vote who marker -->
 A ❌ after a name means that person has voted ✅ to cancel the sprint in the vote that's open now. See [Vote to cancel]({{<relref "words" >}}#vote-to-cancel).
 
 If nobody has joined, Sprinto replies `No one has joined the sprint.`
@@ -142,7 +141,6 @@ Sorry, please use `/cancel` to call off a sprint. `/leave` to unjoin the sprint.
 {{<alts "Commands to use instead">}}
 {{<slash name="cancel" >}}
 End the sprint for everyone.
-<!-- main only: cancel vote -->
 Once writing has started and other people are in the sprint, {{<slashembed name="cancel" >}} starts a vote.
 
 {{<tag-mc>}}
@@ -182,7 +180,6 @@ Undo or redo your last change in this sprint: a word count, a join, or a leave. 
 
 You can undo up to 100 of your own changes in the sprint, one at a time. Making a new change clears anything you could have redone. {{<slashembed name="undo" >}} straight after {{<slashembed name="leave" >}} puts you back in the sprint.
 
-<!-- main only: vote kept after undo -->
 Undoing a word count doesn't withdraw a vote to cancel.
 
 After the scoreboard is posted, `/undo` can't change that sprint. To fix your count then, use {{<slashembed name="late" >}}. If a new sprint or the next round of a chain is running, `/undo` acts on that one.

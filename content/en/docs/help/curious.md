@@ -23,12 +23,10 @@ Check how quickly Sprinto and Discord are responding. `/ping` shows a card that 
 - How many commands and button clicks Sprinto answered and missed, such as `Commands and clicks in the last 2 hours: 1,204 answered, 3 missed (0.2%).`
 - The commands for changing your pings, such as {{<slashembed name="pingme" >}} and {{<slashembed name="forgetme" >}}, for anyone who typed `/ping` looking for `/pingme`.
 
-<!-- main only: ping missed-command window -->
 The count of missed commands covers the last 2 hours if anything was missed in them. Otherwise it covers the last day if anything was missed that day, and otherwise the last week.
 
 When Discord's status page reports an incident, the card also says so, such as `Discord is reporting an issue: "Elevated API errors". More at https://status.discord.com`
 
-<!-- main only: ping incident card -->
 The incident has its own highlighted card, and `/ping` checks Discord's status page again if the last check is more than a minute old.
 
 {{<atsprintoembed "ping" >}} posts the same readings and chart in the channel as plain text. Use it when slash commands aren't getting through. Type `ping` exactly: `pings` and `pingme` are different commands.
@@ -39,7 +37,6 @@ Under Sprinto's name in the member list, the status line usually reads `Listenin
 
 When slash commands aren't reaching Sprinto but mentions are, the status line reads `Listening to @Sprinto sprint`. Use `@Sprinto` commands until it changes back.
 
-<!-- main only: status line on any incident -->
 While Discord's status page reports an incident, the status line reads `Listening to status.discord.com`.
 
 The dot next to Sprinto's name stays green in every case. See also [Troubleshooting]({{<relref "troubleshooting" >}}).
@@ -114,9 +111,6 @@ Get instructions for setting up the {{< role "@Sprint MC" >}} role:
 {{< reply >}}
 To give someone sprint-MC powers (like `lock`), create a role named exactly `Sprint MC` and assign it to them. `Sprint Admin` works the same way for settings powers.
 {{< /reply >}}
-
-<!-- main only: choose MC and Admin roles -->
-A Sprint Admin can also choose existing roles to count as Sprint MC or Sprint Admin, in `/settings roles`. See [Sprint (admin)]({{<relref "admin-sprint" >}}#sprint-mc-and-sprint-admin-roles).
 
 For more, see [Admin commands]({{<relref "admin" >}}).
 

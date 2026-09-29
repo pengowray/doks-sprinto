@@ -81,12 +81,10 @@ To start rounds at regular clock times, use `next` or `gap`. For example, {{<sla
 
 [Chain timing]({{< relref "chain-timing" >}}) has more ways to set the break, such as `break until :30`, and explains what happens when `next` and `break` conflict.
 
-<!-- main only: 1-hour break limit -->
 A break can be at most 60 minutes, or 120 minutes if the command includes `please`. The limit applies however the break is set, including with `next`. A longer break is refused: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 20 x3 break 90 please`."
 
 A room can set its own default gap (with `next`) or default break (with `break`) for chains, for example {{<atsprintoembed "settings preset for 20 next 10" >}} or {{<atsprintoembed "settings preset for 20 break 7" >}}. Setting a default gap replaces the room's default break, and setting a default break replaces the room's default gap. A default gap has no effect on a single sprint.
 
-<!-- main only: 1-hour break limit -->
 A room's default break can be at most 60 minutes too. A longer default break is refused when someone tries to set it.
 
 ## What a round looks like
@@ -189,7 +187,6 @@ The final scoreboard then says "🙂 Last one: The chain sprints have been stopp
 
 To stop the round that is running as well, use {{<slashembed name="cancel" >}}. `/cancel` ends the whole chain. Before a round starts, during a break, or when nobody else is writing, `/cancel` ends the chain at once.
 
-<!-- main only: cancel vote -->
 During a round with other people in it, `/cancel` starts a 2-minute vote. See [During the sprint]({{< relref "words" >}}) for how cancelling works when other people are in the sprint.
 
 A chain also stops if nobody joins. Sprinto posts no scoreboard for a round nobody joined, and the chain goes on. After two empty rounds in a row, the chain ends:
@@ -206,7 +203,6 @@ Anything you set before the first `then`, except the length and the start time, 
 
 This includes `round`. In `round 20 then 25`, the `round` applies to the second round too, so the second round's 25 minutes include the word counts. To make a later round's length writing time only, add `focus` to that round: `round 20 then 25 focus`.
 
-<!-- main only: flags typed after then -->
 `quiet`, `noping` and `lock` apply to every round wherever you type them. `ff`, `noff`, `vff` and `nops` work differently: the first of these four flags in the command also applies to every round that has none of the four. A round with its own flag keeps that flag. So `25 then 50 noff` turns fast finish off for both rounds. [Sprint (all options)]({{< relref "sprint" >}}) explains each flag.
 
 `in 5` or a clock time at the start of the command sets when the first round starts. Every later round starts at its time on the chain's timetable.
