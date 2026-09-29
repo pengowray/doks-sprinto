@@ -1,13 +1,7 @@
 ---
 title : "Troubleshooting"
-identifier: "troubleshooting"
 description: "What to check when Sprinto doesn't respond to a command, and what Sprinto does when Discord is having problems"
 lead: "What to check when Sprinto doesn't respond to a command, and what Sprinto does when Discord is having problems."
-menu:
-  docs:
-    parent: "docshelp"
-    weight: 640
-toc: true
 keywords: ["troubleshooting", "faq", "not responding", "commands", "permissions", "outage", "ping"]
 ---
 ## Sprinto isn't responding to my commands

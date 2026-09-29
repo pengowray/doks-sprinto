@@ -2,8 +2,6 @@
 title : "Curious commands"
 description: "Commands you don't need for sprinting: response times, dice, writing dares, and links."
 lead: "Commands you don't need for sprinting, such as Sprinto's response time, dice rolls and writing dares."
-# identifier: "less-used"
-# url: "docs/less-used"
 keywords: ["ping", "latency", "parse", "dare", "roll", "dice", "invite", "donate", "support", "vote", "merch", "sprintmc", "refresh active role", "prefix"]
 ---
 

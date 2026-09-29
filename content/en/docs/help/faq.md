@@ -1,18 +1,7 @@
 ---
 title : "FAQ"
-identifier: "faq"
-description:
+description: "Answers to frequently asked questions about Sprinto"
 lead: Answers to frequently asked questions about Sprinto
-menu:
-  docs:
-    parent: "docshelp"
-    weight: 630
-    #identifier: "faq"
-    #title: "FAQ"
-    #url: "/docs/faq/"
-#  main:
-#    parent: "mainhelp"
-toc: true
 keywords: ["chain wars", "programming language", "Doks", "Hugo", "TimeSpanParser", "pronouns", "Streamling"]
 ---
 ## Sprinto isn't responding to my commands

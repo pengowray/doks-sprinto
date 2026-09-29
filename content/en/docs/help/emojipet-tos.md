@@ -2,7 +2,6 @@
 title : "Emoji Pets TOS"
 description: "Terms of Service for Emoji Pets"
 lead: 
-identifier: "emoji-pets-tos"
 ---
 ## Disclaimer / Terms of Service
 

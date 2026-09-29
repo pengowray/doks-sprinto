@@ -2,7 +2,6 @@
 title : "Carl-bot x Sprinto"
 description: "Chaining sprints, and scheduling them further ahead with Carl-bot"
 lead:
-identifier: "carlbot"
 ---
 
 ## Scheduling further ahead with Carl-bot
