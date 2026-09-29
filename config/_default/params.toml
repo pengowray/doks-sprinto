@@ -17,7 +17,7 @@ googleAnalytics = 'G-KJELGBPRHT'
   twitter = "sprintobot"
 
 # Footer
-footer = """<a class=\"text-muted\" href=\"https://discord.gg/7ZSuEgM\">Join Sprinto's Support Server</a>
+footer = """<a class=\"text-muted\" href=\"https://discord.gg/TZJ8YVU\">Join Sprinto's Support Server</a>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJELGBPRHT"></script>
 <script>
