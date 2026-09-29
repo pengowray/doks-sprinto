@@ -23,7 +23,7 @@ Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> 
       <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
     </pattern>
   </defs>
-  <text class="tl-text" x="20" y="18">A. <tspan font-weight="600">for 25 x3</tspan>: the break comes after the word counts</text>
+  <text class="tl-text" x="20" y="18">A.&#160;<tspan font-weight="600">for 25 x3</tspan>: the break comes after the word counts</text>
   <rect fill="url(#hatch-one25)" x="20" y="26" width="18" height="32"/>
   <rect class="tl-write" x="38" y="26" width="450" height="32"/>
   <rect class="tl-collect" x="488" y="26" width="72" height="32"/>
@@ -38,7 +38,7 @@ Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> 
   <text class="tl-text-sm" x="262" y="88" text-anchor="middle">Writing: 25 minutes</text>
   <path class="tl-dim" d="M 490 66 l 0 7 l 160 0 l 0 -7"/>
   <text class="tl-text-sm" x="570" y="88" text-anchor="middle">9 minutes until round 2</text>
-  <text class="tl-text" x="20" y="120">B. <tspan font-weight="600">pomo x3</tspan>, the same as <tspan font-weight="600">for 25 next 5 x3</tspan></text>
+  <text class="tl-text" x="20" y="120">B.&#160;<tspan font-weight="600">pomo x3</tspan>, the same as&#160;<tspan font-weight="600">for 25 next 5 x3</tspan></text>
   <rect fill="url(#hatch-one25)" x="20" y="128" width="18" height="32"/>
   <rect class="tl-write" x="38" y="128" width="450" height="32"/>
   <rect class="tl-collect" x="488" y="128" width="72" height="32"/>
@@ -197,7 +197,7 @@ When everyone in the round has given a final word count (a fast finish), Sprinto
       <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
     </pattern>
   </defs>
-  <text class="tl-text" x="20" y="18">Fast finish: <tspan font-weight="600">pomo x3</tspan>, round 1, everyone reports early</text>
+  <text class="tl-text" x="20" y="18">Fast finish:&#160;<tspan font-weight="600">pomo x3</tspan>, round 1, everyone reports early</text>
   <rect fill="url(#hatch-ff)" x="20" y="26" width="21" height="32"/>
   <rect class="tl-write" x="41" y="26" width="525" height="32"/>
   <rect class="tl-collect" x="566" y="26" width="42" height="32"/>
@@ -331,7 +331,7 @@ A break can be at most 60 minutes, or 120 minutes if the command includes `pleas
   <path class="tl-dim" d="M 25 66 l 0 7 l 500 0 l 0 -7"/>
   <text class="tl-text-sm" x="275" y="88" text-anchor="middle">25 minutes: 21 of writing + 4 for word counts</text>
   <text class="tl-text-sm" x="531" y="88">next round at minute 30</text>
-  <text class="tl-text" x="25" y="120"><tspan font-weight="600">for 25</tspan>, the same as <tspan font-weight="600">focus 25</tspan></text>
+  <text class="tl-text" x="25" y="120"><tspan font-weight="600">for 25</tspan>, the same as&#160;<tspan font-weight="600">focus 25</tspan></text>
   <rect class="tl-write" x="25" y="128" width="500" height="32"/>
   <rect class="tl-collect" x="525" y="128" width="80" height="32"/>
   <rect class="tl-break" x="605" y="128" width="100" height="32"/>
