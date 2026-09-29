@@ -28,7 +28,7 @@
     display: inline-flex;
     align-items: center;
     border-color: rgb(0, 120, 215);
-    border-width: 0.733333px;
+    border-width: 0.7333px;
     background-color: rgb(237, 239, 232);
     border-radius: 4px;
     border-style: solid;
@@ -530,20 +530,78 @@
     margin: 1rem 0;
 }
 
-.tl-diagram .tl-write   { fill: #46945c; }
-.tl-diagram .tl-collect { fill: #cf5f50; }
-.tl-diagram .tl-break   { fill: #5f87c6; }
-.tl-diagram .tl-hatchbase { fill: #e8c25e; }
-.tl-diagram .tl-hatchline { stroke: #a3821f; stroke-width: 2; }
-.tl-diagram .tl-wait    { fill: #c9ced6; }
-.tl-diagram .tl-text    { fill: #212529; font-family: var(--bs-body-font-family, sans-serif); font-size: 14px; }
-.tl-diagram .tl-text-sm { fill: #495057; font-family: var(--bs-body-font-family, sans-serif); font-size: 13px; }
-.tl-diagram .tl-text-onbar { fill: #ffffff; font-family: var(--bs-body-font-family, sans-serif); font-size: 14px; font-weight: 600; }
-.tl-diagram .tl-axis    { stroke: #adb5bd; stroke-width: 1; }
-.tl-diagram .tl-tick    { stroke: #adb5bd; stroke-width: 1; }
-.tl-diagram .tl-marker  { stroke: #d6336c; stroke-width: 2; stroke-dasharray: 4 3; }
-.tl-diagram .tl-marker-text { fill: #d6336c; font-family: var(--bs-body-font-family, sans-serif); font-size: 13px; font-weight: 600; }
-.tl-diagram .tl-bar-outline { fill: none; stroke: rgba(0, 0, 0, 0.25); stroke-width: 1; }
+.tl-diagram .tl-write {
+    fill: #46945c;
+}
+
+.tl-diagram .tl-collect {
+    fill: #cf5f50;
+}
+
+.tl-diagram .tl-break {
+    fill: #5f87c6;
+}
+
+.tl-diagram .tl-hatchbase {
+    fill: #e8c25e;
+}
+
+.tl-diagram .tl-hatchline {
+    stroke: #a3821f;
+    stroke-width: 2;
+}
+
+.tl-diagram .tl-wait {
+    fill: #c9ced6;
+}
+
+.tl-diagram .tl-text {
+    fill: #212529;
+    font-family: var(--bs-body-font-family, sans-serif);
+    font-size: 14px;
+}
+
+.tl-diagram .tl-text-sm {
+    fill: #495057;
+    font-family: var(--bs-body-font-family, sans-serif);
+    font-size: 13px;
+}
+
+.tl-diagram .tl-text-onbar {
+    fill: #fff;
+    font-family: var(--bs-body-font-family, sans-serif);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tl-diagram .tl-axis {
+    stroke: #adb5bd;
+    stroke-width: 1;
+}
+
+.tl-diagram .tl-tick {
+    stroke: #adb5bd;
+    stroke-width: 1;
+}
+
+.tl-diagram .tl-marker {
+    stroke: #d6336c;
+    stroke-width: 2;
+    stroke-dasharray: 4 3;
+}
+
+.tl-diagram .tl-marker-text {
+    fill: #d6336c;
+    font-family: var(--bs-body-font-family, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tl-diagram .tl-bar-outline {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.25);
+    stroke-width: 1;
+}
 
 [data-bs-theme="dark"] .tl-diagram .tl-write   { fill: #4d9c67; }
 [data-bs-theme="dark"] .tl-diagram .tl-collect { fill: #c25e50; }
@@ -553,14 +611,20 @@
 [data-bs-theme="dark"] .tl-diagram .tl-wait    { fill: #4a4f57; }
 [data-bs-theme="dark"] .tl-diagram .tl-text    { fill: #dee2e6; }
 [data-bs-theme="dark"] .tl-diagram .tl-text-sm { fill: #adb5bd; }
-[data-bs-theme="dark"] .tl-diagram .tl-text-onbar { fill: #ffffff; }
+[data-bs-theme="dark"] .tl-diagram .tl-text-onbar { fill: #fff; }
 [data-bs-theme="dark"] .tl-diagram .tl-axis    { stroke: #6c757d; }
 [data-bs-theme="dark"] .tl-diagram .tl-tick    { stroke: #6c757d; }
 [data-bs-theme="dark"] .tl-diagram .tl-marker  { stroke: #f06595; }
 [data-bs-theme="dark"] .tl-diagram .tl-marker-text { fill: #f06595; }
 [data-bs-theme="dark"] .tl-diagram .tl-bar-outline { stroke: rgba(255, 255, 255, 0.25); }
 
-.tl-diagram .tl-text-onlight { fill: #212529; font-family: var(--bs-body-font-family, sans-serif); font-size: 13px; font-weight: 600; }
+.tl-diagram .tl-text-onlight {
+    fill: #212529;
+    font-family: var(--bs-body-font-family, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+}
+
 [data-bs-theme="dark"] .tl-diagram .tl-text-onlight { fill: #111214; }
 
 /* Inline legend chips for the timeline diagrams */
@@ -579,8 +643,18 @@
 [data-bs-theme="dark"] .tl-chip-collect { background-color: #c25e50; }
 [data-bs-theme="dark"] .tl-chip-break   { background-color: #5579b1; }
 
-.tl-diagram .tl-dim { fill: none; stroke: #868e96; stroke-width: 1.5; }
-.tl-diagram .tl-guide { stroke: #868e96; stroke-width: 1; stroke-dasharray: 3 4; }
+.tl-diagram .tl-dim {
+    fill: none;
+    stroke: #868e96;
+    stroke-width: 1.5;
+}
+
+.tl-diagram .tl-guide {
+    stroke: #868e96;
+    stroke-width: 1;
+    stroke-dasharray: 3 4;
+}
+
 [data-bs-theme="dark"] .tl-diagram .tl-dim { stroke: #9aa0a6; }
 [data-bs-theme="dark"] .tl-diagram .tl-guide { stroke: #9aa0a6; }
 
