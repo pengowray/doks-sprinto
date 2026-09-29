@@ -36,6 +36,18 @@ Some top supporters have received a Pixel Pet already but I haven't told them, s
 
 {{<slashembed name="pets" >}} opens a panel headed "Your pets and items". Only you can see it. Typing `@Sprinto pets` gets the answer "Please use the /pets slash command to open this."
 
+{{< reply ephemeral="1" >}}
+## Your pets and items
+Click a pet, egg or seat to view details.
+Some pets allow you to change their name and appearance. If a pet is seated (activated), they will join you in sprints.
+{{< /reply >}}
+{{< buttons >}}
+{{< button "🐢 Nugget ✓" >}}
+{{< button "🐭 Biscuit" >}}
+{{< button "🥚" >}}
+{{< button "companion seat" >}}
+{{< /buttons >}}
+
 The panel has a button for each pet, with the pet's picture and name:
 
 - Your companion has a ✓ after their name, and ✓✓ while they're in a sprint that's running now.
