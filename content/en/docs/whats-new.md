@@ -23,27 +23,6 @@ Basic sprinting is the same: {{<slashembed name="sprint" >}}, {{<slashembed name
 
 The defaults haven't changed: a 15-minute sprint, a 1-minute join window, and 3 minutes after time's up to report your word count before the scoreboard posts. Longer sprints get a longer word-count window, up to 10 minutes. When time's up, Sprinto says how long you have to report your word count.
 
-## What works differently
-
-If you used the old bot, these are the changes most likely to surprise you.
-
-<!-- main only: cancel vote -->
-**{{<slashembed name="cancel" >}} starts a 2-minute vote when other people are in the sprint.** The sprint is cancelled if the ✅ votes are at least twice the ❌ votes and come from at least a quarter of the sprinters; people who don't vote aren't counted on either side. A Sprint MC's ✅ cancels the sprint at once, and {{<slashembed name="cancel-please" >}} still cancels without a vote. Before the sprint starts, or if nobody else is in it, `/cancel` still ends it straight away.
-
-**On a single sprint, `next 5` is refused. Use `in next 5`.** In the old bot, `next 5` started the sprint on the next 5-minute mark. Now `next 5` sets the gap between rounds in a chain, so on a single sprint Sprinto refuses it and shows both meanings. `next 5 minute mark` and `at the next quarter` still start the sprint on a clock mark, and Sprinto writes `in next 5` itself when it repeats a sprint or saves a default.
-
-**Three commands are read differently.**
-
-| Command | Old bot | Now |
-|---|---|---|
-| `at 00 to 35` | A random length of up to 35 minutes | Starts at :00 and ends at :35 |
-| `15 til 45` | Waited 15 minutes | Starts at :15 |
-| `sprint 3 to 10` | Ran until the next :10 | A random length from 3 to 10 minutes |
-
-**Commas group digits.** `sprint 1,000` used to run for 1 minute. Commas, underscores and apostrophes now group digits in durations, word counts, `tare`, `pingme` and chimes.
-
-**Typo correction is stricter.** `spront` and `jion` are still corrected, but ordinary words said to Sprinto are no longer read as commands. In the old bot, `@Sprinto good luck!` could start the sprint early for everyone waiting. A command that ends or resets something for other people must now be typed correctly.
-
 ## Word counts
 
 **You can report or fix a word count after the scoreboard posts.** For 10 minutes after time's up, {{<slashembed name="late" key0="count" val0="442" >}} adds your word count or corrects it, and Sprinto edits the scoreboard. The next sprint can start while this late window is still open.
@@ -310,6 +289,27 @@ The status changes as soon as Discord's status page reports a problem, without w
 - **The vote link points at [top.gg](https://top.gg/bot/421646775749967872/vote).** The old discordbots.org link still redirects.
 - **Help links point here**, at sprintobot.com, instead of the old GitHub wiki.
 - **The big-number easter egg now cites The Lord of the Rings** (about 481,103 words).
+
+## What works differently
+
+If you used the old bot, these are the changes most likely to surprise you.
+
+<!-- main only: cancel vote -->
+**{{<slashembed name="cancel" >}} starts a 2-minute vote when other people are in the sprint.** The sprint is cancelled if the ✅ votes are at least twice the ❌ votes and come from at least a quarter of the sprinters; people who don't vote aren't counted on either side. A Sprint MC's ✅ cancels the sprint at once, and {{<slashembed name="cancel-please" >}} still cancels without a vote. Before the sprint starts, or if nobody else is in it, `/cancel` still ends it straight away.
+
+**On a single sprint, `next 5` is refused. Use `in next 5`.** In the old bot, `next 5` started the sprint on the next 5-minute mark. Now `next 5` sets the gap between rounds in a chain, so on a single sprint Sprinto refuses it and shows both meanings. `next 5 minute mark` and `at the next quarter` still start the sprint on a clock mark, and Sprinto writes `in next 5` itself when it repeats a sprint or saves a default.
+
+**Three commands are read differently.**
+
+| Command | Old bot | Now |
+|---|---|---|
+| `at 00 to 35` | A random length of up to 35 minutes | Starts at :00 and ends at :35 |
+| `15 til 45` | Waited 15 minutes | Starts at :15 |
+| `sprint 3 to 10` | Ran until the next :10 | A random length from 3 to 10 minutes |
+
+**Commas group digits.** `sprint 1,000` used to run for 1 minute. Commas, underscores and apostrophes now group digits in durations, word counts, `tare`, `pingme` and chimes.
+
+**Typo correction is stricter.** `spront` and `jion` are still corrected, but ordinary words said to Sprinto are no longer read as commands. In the old bot, `@Sprinto good luck!` could start the sprint early for everyone waiting. A command that ends or resets something for other people must now be typed correctly.
 
 ## Not in this release
 
