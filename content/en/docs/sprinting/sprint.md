@@ -299,7 +299,7 @@ If you'd rather say it in words:
 
 {{<slash name="sprint" key0="options" val0="for 20 at half past" >}}
 
-`next five` and `next ten` are the same as `next 5` and `next 10`, which set the time between rounds in a [chain](#chains). They don't set a start time.
+`next five` and `next ten` are the same as `next 5` and `next 10`, which are other ways to write `gap 5` and `gap 10`. They set the time between rounds in a [chain](#chains), and don't set a start time.
 
 ### Now
 
@@ -346,7 +346,7 @@ For example, if the time is 11:32 pm in your time zone, `in next 5` starts the s
 
 `in the next 5 minutes` also means the next 5-minute mark, not any time within the next five minutes.
 
-Without `in`, `next 5` sets the time between rounds in a [chain](#chains). On a single sprint, such as `/sprint 20 next 5`, Sprinto refuses and suggests the start options:
+Without `in`, `next 5` is the same as `gap 5`, which sets the time between rounds in a [chain](#chains). On a single sprint, such as `/sprint 20 next 5`, Sprinto refuses and suggests the start options:
 
 {{< reply >}}
 `next 5` sets the gap before the next round, and this sprint doesn't have one. Add rounds with `x3`. To start at the next 5-minute mark instead, write it as `in next 5`, `in 0-5` or `in 1-6` (or press the button below).
@@ -486,7 +486,7 @@ Start a sprint with a single word, for example:
 | (default) | 15 minutes | in 1 minute | | |
 | `quick` | 5 minutes | in 30 seconds | `endtime 90s` | `quickie`, `fast`, `short`, `brief`, `briefly`, `quickly` |
 | `dream` | 10 minutes | on the next 5-minute mark | | `dreamy`, `dreamily` |
-| `pomo` | 25 minutes | in 1 minute (the default) | in a chain, 5 minutes from the end of writing to the next round | `pomodoro` |
+| `pomo` | 25 minutes | in 1 minute (the default) | `gap 5`: in a chain, 5 minutes from the end of writing to the next round | `pomodoro` |
 | `long` | 30 minutes | in 2½ to 7½ minutes | | `longer`, `slow` |
 | `marathon` | 60 minutes | in 7½ to 13 minutes | `endtime 10`, a chime at halfway | `for a marathon` |
 | `megathon` | 120 minutes | in 7½ to 13 minutes | `endtime 10`, a chime at halfway, `please` | `for ages` |
@@ -517,7 +517,7 @@ On its own, `pomo` is a 25-minute sprint, with the usual 1-minute join window an
 {{<slash name="sprint" key0="options" val0="pomo x4" >}}
 {{<atsprinto "sprint pomo x4" >}}
 
-Four 25-minute rounds, starting 30 minutes apart. Each round is 25 minutes of writing, then 5 minutes before the next round starts: 4 minutes to post word counts, then a 1-minute break.
+Four rounds of 25 minutes of writing, starting 30 minutes apart. `pomo` is short for `for 25 gap 5`, so the next round starts 5 minutes after each round's writing ends: 4 minutes to post word counts, then a 1-minute break.
 
 With five to eight rounds (`pomo x5` to `pomo x8`), the break after round 4 is at least 15 minutes, counted from when round 4's word counts close. A chain has at most 8 rounds, so this long break happens once at most.
 
@@ -710,15 +710,15 @@ Run several sprints in a row from one command. Each sprint in a chain is a round
 | `for 20 then for 10` | a 20-minute round, then a 10-minute round |
 | `for 20 x3` or `for 20 times 3` | three 20-minute rounds |
 | `for 25 x4 break 10` | four 25-minute rounds, with a 10-minute break after each round's word counts |
-| `20 next 5 x3` | three 20-minute rounds, starting 25 minutes apart |
+| `20 gap 5 x3` | three 20-minute rounds, starting 25 minutes apart |
 | `pomo x4` | four 25-minute rounds, starting 30 minutes apart (see [Pomodoro](#pomodoro)) |
 | `round 25 x4` | four rounds, each 25 minutes long including word counts |
 
-A length is always writing time, in a chain too. After each round's writing comes the time to post word counts, then the break.
+A length is always writing time, in a chain too. Each round has three parts: writing, then time to post word counts, then the break.
 
+- `gap 5` sets the whole time from the end of one round's writing to the start of the next round's writing, word counts and break together. Also `next`, `next in`, `next round in` and `next focus in`.
 - `break 10` sets the break: the time from the word counts closing to the next round starting. The break is 5 minutes unless you set it. Also `rest`, `breaks`, `take`, `pause` and `smoko`.
-- `next 5` sets the whole time from the end of one round's writing to the start of the next round's writing, word counts and break together. Also `gap`, `next in` and `next round in`.
-- `round` fits each round's word counts inside its length: see [end -5, round and done by](#end--5-round-and-done-by).
+- `round` puts each round's word counts inside its length: see [end -5, round and done by](#end--5-round-and-done-by).
 - A chain has at most 8 rounds.
 
 Anything you set before the first `then`, other than the length and the start time, applies to every round, so you only have to say `quietly` or `chime -1` once:

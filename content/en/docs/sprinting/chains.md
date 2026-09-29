@@ -34,30 +34,51 @@ To see a chain's timetable before you start it, use {{<slashembed name="explain"
 
 ## How long each round is
 
-The length you give is writing time, the same as in a single sprint. After each round's writing time, there are a few minutes to give your word count, then the break, then the next round starts.
+Each round has three parts, one after the other:
 
-For example, `for 25 x3` is three rounds of 25 minutes of writing. After each round's writing there are 4 minutes for word counts and a 5-minute break, so a new round starts every 34 minutes.
+1. **Writing**, for the length you give. This is the same as in a single sprint.
+2. **Word-count window**, for giving your word count. It is 3 minutes after 15 minutes of writing, and 4 minutes after 25 minutes.
+3. **Break**, 5 minutes unless you set another length.
 
-This table shows four chains and how often each one starts a new round. The notes under the table explain `pomo`, `next` and `round`.
+The next round starts when the break ends. For example, `for 25 x3` starts a new round every 34 minutes: 25 minutes of writing, 4 minutes for word counts, and a 5-minute break.
+
+Three options change these parts:
+
+- `gap 10` sets the word-count window and the break together: 10 minutes from the end of one round's writing to the start of the next round's writing. The word counts come out of the 10 minutes first, and the break is what's left. See [Set the time between rounds](#set-the-time-between-rounds).
+- `break 7` sets the break to 7 minutes.
+- `round 25` sets the writing and the word-count window together: 21 minutes of writing, then 4 minutes for word counts. The break comes after the 25 minutes.
+
+This table shows common chains and how often each one starts a new round:
 
 | Command | Writing | Word-count window | Break | A new round every |
 | --- | --- | --- | --- | --- |
 | `for 25 x3` | 25 min | 4 min | 5 min | 34 min |
-| `pomo x3` | 25 min | 4 min | 1 min | 30 min |
-| `for 20 next 10 x3` | 20 min | 3 min 30 s | 6 min 30 s | 30 min |
+| `for 20 gap 10 x3` | 20 min | 3 min 30 s | 6 min 30 s | 30 min |
+| `pomo x3`, short for `for 25 gap 5 x3` | 25 min | 4 min | 1 min | 30 min |
+| `for 25 break 7 x3` | 25 min | 4 min | 7 min | 36 min |
 | `round 25 x3` | 21 min | 4 min | 5 min | 30 min |
 
-- `pomo` is short for `for 25 next 5`. `next 5` sets the whole time from the end of one round's writing to the start of the next round's writing. The word-count window takes 4 of those 5 minutes, and the break is the remaining 1 minute.
-- `next 10` works the same way, with 10 minutes from the end of one round's writing to the start of the next round's writing. See [Set the time between rounds](#set-the-time-between-rounds).
-- `round 25` makes 25 minutes the length of the whole round: 21 minutes of writing, then 4 minutes for word counts.
-
-[Chain timing]({{< relref "chain-timing" >}}) has diagrams of these four chains, and lists how long the word-count window is for other lengths.
+[Chain timing]({{< relref "chain-timing" >}}) has diagrams of the default timing, `gap` and `round`, and lists how long the word-count window is for other lengths.
 
 In a `pomo` chain, the break after round 4 is at least 15 minutes, counted from the end of the word-count window. So in `pomo x5`, round 5 starts 44 minutes after round 4 starts: 25 minutes of writing, 4 minutes for word counts, and the 15-minute break. `pomo x4` has no long break.
 
 ## Set the time between rounds
 
-The break starts after the word-count window, and is 5 minutes unless you set another length. To set the length of the break, use `break`:
+To set the whole time from the end of one round's writing to the start of the next round's writing, use `gap`. The word counts come out of the gap first, and the break is what's left:
+
+{{<slash name="sprint" key0="options" val0="for 20 gap 10 x3" >}}
+{{<alts "Synonyms" >}}
+{{<slash name="sprint" key0="options" val0="for 20 next 10 x3" >}}
+{{<slash name="sprint" key0="options" val0="for 20 next in 10 x3" >}}
+{{<slash name="sprint" key0="options" val0="for 20 next round in 10 x3" >}}
+{{<slash name="sprint" key0="options" val0="for 20 next focus in 10 x3" >}}
+{{</alts>}}
+
+Each round of `for 20 gap 10 x3` has 20 minutes of writing, then 3 minutes 30 seconds for word counts and a 6 minute 30 second break, so a new round starts every 30 minutes. Sprinto writes `gap 10` back as `next 10`, for example in `/explain`.
+
+To start rounds at regular clock times, use `gap`. For example, {{<slashembed name="sprint" key0="options" val0="at :15 for 20 gap 10 x3" >}} typed at 10:05 starts its three rounds at 10:15, 10:45 and 11:15.
+
+To set only the break, use `break`. The break starts after the word-count window, and is 5 minutes unless you set another length:
 
 {{<slash name="sprint" key0="options" val0="for 25 x3 break 7" >}}
 {{<alts "Synonyms" >}}
@@ -69,21 +90,13 @@ The break starts after the word-count window, and is 5 minutes unless you set an
 
 Each round of `for 25 x3 break 7` has 25 minutes of writing, 4 minutes for word counts, then a 7-minute break.
 
-To set the whole time from the end of one round's writing to the start of the next round's writing, use `next`. The word-count window comes out of that time first, and the break is whatever is left:
+On a single sprint (a sprint that isn't a chain), `gap 5` and `next 5` are refused. To start a single sprint at the next 5-minute mark on the clock, use `in next 5`.
 
-{{<slash name="sprint" key0="options" val0="for 20 next 10 x3" >}}
+[Chain timing]({{< relref "chain-timing" >}}) has more ways to set the break, such as `break until :30`, and the rules for using `gap` and `break` in the same command.
 
-Each round of `for 20 next 10 x3` has 20 minutes of writing, 3 minutes 30 seconds for word counts and a 6 minute 30 second break, so a new round starts every half hour. `gap 10`, `next in 10` and `next round in 10` mean the same as `next 10`.
+A break can be at most 60 minutes, or 120 minutes if the command includes `please`. The limit applies however the break is set, including with `gap`. A longer break is refused: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 20 x3 break 90 please`."
 
-To start rounds at regular clock times, use `next` or `gap`. For example, {{<slashembed name="sprint" key0="options" val0="at :15 for 20 gap 10 x3" >}} typed at 10:05 starts its three rounds at 10:15, 10:45 and 11:15.
-
-`next 5` is refused on a single sprint (a sprint that isn't a chain). To start a single sprint at the next 5-minute mark on the clock, use `in next 5`.
-
-[Chain timing]({{< relref "chain-timing" >}}) has more ways to set the break, such as `break until :30`, and explains what happens when `next` and `break` conflict.
-
-A break can be at most 60 minutes, or 120 minutes if the command includes `please`. The limit applies however the break is set, including with `next`. A longer break is refused: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 20 x3 break 90 please`."
-
-A room can set its own default gap (with `next`) or default break (with `break`) for chains, for example {{<atsprintoembed "settings preset for 20 next 10" >}} or {{<atsprintoembed "settings preset for 20 break 7" >}}. Setting a default gap replaces the room's default break, and setting a default break replaces the room's default gap. A default gap has no effect on a single sprint.
+A room can set its own default gap or default break for chains, for example {{<atsprintoembed "settings preset 20 gap 10" >}} or {{<atsprintoembed "settings preset 20 break 7" >}}. Setting a default gap replaces the room's default break, and setting a default break replaces the room's default gap. On a single sprint, a default gap or break has no effect.
 
 A room's default break can be at most 60 minutes too. A longer default break is refused when someone tries to set it.
 
@@ -209,6 +222,6 @@ This includes `round`. In `round 20 then 25`, the `round` applies to the second 
 
 ## See also
 
-- [Chain timing]({{< relref "chain-timing" >}}) — diagrams of each round's writing, word counts and break, with `next`, `round`, `asap`, and the fixed timetable
+- [Chain timing]({{< relref "chain-timing" >}}) — diagrams of each round's writing, word counts and break, with `gap`, `round`, `asap`, and the fixed timetable
 - [Sprint (all options)]({{< relref "sprint" >}}) — the full grammar
 - [During the sprint]({{< relref "words" >}}) — word counts, joining, leaving

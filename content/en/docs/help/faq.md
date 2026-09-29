@@ -55,8 +55,8 @@ Each scoreboard can show a total for the room: "Combined word count: 1,234 words
 Yes. `/sprint` runs chains directly. Put any of these in its `options`:
 
 - `25 then 50 then 15` runs three sprints in a row.
-- `pomo x4` runs four 25-minute rounds and starts a new round every half hour. Word counts are collected in the 5 minutes between rounds.
-- `25 next 10 x3` runs three 25-minute rounds and starts a new round every 35 minutes. Word counts are collected in the 10 minutes between rounds.
+- `pomo x4` runs four 25-minute rounds and starts a new round every half hour. `pomo` is short for `for 25 gap 5`, so word counts are collected in the 5 minutes between rounds.
+- `25 gap 10 x3` runs three 25-minute rounds and starts a new round every 35 minutes. Word counts are collected in the 10-minute gap, and the rest of the gap is the break.
 - `25 break 7 x3` runs three 25-minute rounds with a 7-minute break after each round's word counts are in. The rounds start about 36 minutes apart: 25 minutes of writing, 4 minutes to report word counts, then the 7-minute break.
 
 A chain can have up to 8 rounds. If you don't set a break, each break is 5 minutes, and it starts after the round's word counts are in. In a `pomo` chain of more than 4 rounds, the break after every 4th round is at least 15 minutes.

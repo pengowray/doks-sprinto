@@ -28,7 +28,6 @@ To turn the feature off, delete the {{<role "@Active Sprinters">}} role in Disco
 
 To run either command, you need the **Manage Roles** permission or to be a Sprint Admin {{<tag-admin>}}: the server owner, anyone with the Administrator or Manage Server permission, or anyone with a role named {{<role "@Sprint Admin">}}. Both are slash commands only: mentioning Sprinto won't work for them. Only you see the replies.
 
-
 Anyone else gets this reply:
 
 {{< reply ephemeral="1" >}}

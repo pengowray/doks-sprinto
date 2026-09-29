@@ -140,7 +140,6 @@ OK, I'll notify you on the last 2 chime(s) of each sprint.
 
 {{<slash name="settings roles" >}}
 
-
 This panel shows the roles Sprinto uses. The first list, "Roles detected by name (view only):", shows the Active Sprinters, Sprint MC and Sprint Admin roles Sprinto found on the server by their names, or "not found" for a role Sprinto didn't find. To change these, create or rename the roles in Discord. See [Admin commands]({{<relref "admin" >}}) and [Active Sprinter role]({{<relref "activesprinter" >}}).
 
 Below that are the roles Sprinto pings when a sprint starts in this channel, for example "Roles to always mention at the start of sprints in this channel: @Sprinters". A Sprint Admin also gets a role picker to change them. The picker takes up to 25 roles, and the list is saved when you close the picker. Everyone else sees the text only. See [Ping roles]({{<relref "pingme#ping-roles" >}}).
@@ -183,7 +182,7 @@ This command sets the channel's default to `20 iab`, a 20-minute sprint starting
 
 A default can include most of what you can type after {{<slashembed name="sprint">}}. A few options have extra rules:
 
-* **Gap between chain rounds:** `20 next 10` starts each new round 10 minutes after the previous round's writing time ends. The 10 minutes include the time for word counts. `20 break 7` gives a 7-minute break after the word counts are in. Setting `next` replaces any `break`, and setting `break` replaces any `next`. On a sprint without rounds, `next` and `break` have no effect. See [Chain sprints]({{<relref "chains" >}}).
+* **Gap between chain rounds:** `20 gap 10` starts each new round 10 minutes after the previous round's writing time ends. The 10 minutes include the time for word counts. `20 break 7` gives a 7-minute break after the word counts are in. Setting `gap` replaces any `break`, and setting `break` replaces any `gap`. On a sprint without rounds, `gap` and `break` have no effect. Sprinto writes a saved gap back as `next`, for example `next 10`. See [Chain sprints]({{<relref "chains" >}}).
 * **Clock times:** a default needs more than one time, so `at :00/:30` works and `at :30` doesn't. A default with `until` also needs `for at least`, which sets the shortest sprint: `until :00/:30 for at least 10`.
 * **Limits:** a default with a break longer than 1 hour, or a `late` window longer than 60 minutes, is refused.
 

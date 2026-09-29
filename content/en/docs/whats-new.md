@@ -78,15 +78,15 @@ You can add options to either one, with an optional `but`:
 
 **The length you give is writing time, in a chain or not.** `for 20 x3` is three rounds of 20 minutes' writing each. To make each round take exactly 20 minutes with the word counts inside it, use `round 20 x3`.
 
-**`pomo` is 25 minutes of writing, then 5 minutes until the next round starts.** The word counts are collected inside those 5 minutes, so `pomo x4` starts a round every half hour. In a chain of 5 or more rounds, the break after round 4 is at least 15 minutes, counted from when the word counts close. Another preset, `dream`, runs a 10-minute sprint that starts on the next 5-minute mark.
+**`pomo` is 25 minutes of writing, then 5 minutes until the next round starts.** `pomo` is short for `for 25 gap 5`. The word counts are collected inside those 5 minutes, so `pomo x4` starts a round every half hour. In a chain of 5 or more rounds, the break after round 4 is at least 15 minutes, counted from when the word counts close. Another preset, `dream`, runs a 10-minute sprint that starts on the next 5-minute mark.
 
-**The break comes after the word counts.** Unless you set a break length, each round's word-count window is followed by a 5-minute break, so the gap between rounds is the word-count window plus 5 minutes. Set a different break with `break 7`; `rest`, `smoko` and `take` also mean `break`.
+**The break comes after the word counts.** Unless you set a break length, each round's word-count window is followed by a 5-minute break, so the next round starts 5 minutes after the word-count window closes. Set a different break with `break 7`; `rest`, `smoko` and `take` also mean `break`.
 
-**`next 5` sets the whole gap between rounds**, word counts and break together, counted from when writing stops. `sprint 15 next 5 x3` starts a round every 20 minutes. The word counts are collected first, and the rest of the gap is the break. `gap`, `next in` and `next round in` mean the same as `next`.
+**`gap 5` sets the whole time between rounds**, word counts and break together, counted from when writing stops. `sprint 15 gap 5 x3` starts a round every 20 minutes. The word counts are collected first, and the rest of the gap is the break. `next 5`, `next in 5`, `next round in 5` and `next focus in 5` mean the same as `gap 5`, and Sprinto writes a gap back as `next`, for example in `/explain`.
 
-**A break between rounds is at most 1 hour, or 2 hours with `please`.** The limit applies however the break is written, such as `break 20`, `next 25` or `break until :30`. A longer break saved in a default sprint is cut to 1 hour.
+**A break between rounds is at most 1 hour, or 2 hours with `please`.** The limit applies however the break is written, such as `break 20`, `gap 25` or `break until :30`. A longer break saved in a default sprint is cut to 1 hour.
 
-**The default sprint can include a gap between rounds**, with `settings preset 20 next 10` or `settings preset 20 break 7`. Setting a default gap replaces the default break, and setting a default break replaces the default gap. The default gap has no effect on a single sprint.
+**The default sprint can include a gap between rounds**, with `settings preset 20 gap 10` or `settings preset 20 break 7`. Setting a default gap replaces the default break, and setting a default break replaces the default gap. The default gap has no effect on a single sprint.
 
 **To stay in for the next round, report your count with `next`.** Or say `all` once to stay in for the rest of the chain:
 
@@ -287,7 +287,7 @@ If you used the old bot, these are the changes most likely to surprise you.
 
 **{{<slashembed name="cancel" >}} starts a 2-minute vote when other people are in the sprint.** The sprint is cancelled if the ✅ votes are at least twice the ❌ votes and come from at least a quarter of the sprinters; people who don't vote aren't counted on either side. A Sprint MC's ✅ cancels the sprint at once, and {{<slashembed name="cancel-please" >}} still cancels without a vote. Before the sprint starts, or if nobody else is in it, `/cancel` still ends it straight away.
 
-**On a single sprint, `next 5` is refused. Use `in next 5`.** In the old bot, `next 5` started the sprint on the next 5-minute mark. Now `next 5` sets the gap between rounds in a chain, so on a single sprint Sprinto refuses it and shows both meanings. `next 5 minute mark` and `at the next quarter` still start the sprint on a clock mark, and Sprinto writes `in next 5` itself when it repeats a sprint or saves a default.
+**On a single sprint, `next 5` is refused. Use `in next 5`.** In the old bot, `next 5` started the sprint on the next 5-minute mark. Now `next 5` is the same as `gap 5`, which sets the time between rounds in a chain, so on a single sprint Sprinto refuses it and shows both meanings. `next 5 minute mark` and `at the next quarter` still start the sprint on a clock mark, and Sprinto writes `in next 5` itself when it repeats a sprint or saves a default.
 
 **Three commands are read differently.**
 

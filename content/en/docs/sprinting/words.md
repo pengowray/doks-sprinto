@@ -59,7 +59,6 @@ You can join after time's up. The reply says how long is left for word counts:
 You have joined after time is up with 100 starting words. 2m12s remaining for final word counts.
 {{< /reply >}}
 
-
 ## Give your word count
 
 {{< slash name="words" key0="count" val0="10150" >}}

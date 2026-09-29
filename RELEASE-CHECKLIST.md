@@ -105,7 +105,7 @@ These page passages describe behaviour that is on `main` but not in v1.64. Keep 
 - [ ] `docs/help/troubleshooting.md`: screenshot out of date: shows the old "✓ BOT" badge (Discord now shows "APP"), an old-style "9 minutes 54 seconds remaining" reply, and the typo "a roll called sprinto" (at "![@Sprinto role vs bot](/images/help/troubleshooting/01-role-vs-bot.png)")
 - [ ] `docs/help/troubleshooting.md`: screenshot out of date: shows a separate "Sprint created." reply, which no longer exists (/sprint answers with the join message), and older join text (at "![Slash commands that fail vs succeed](/images/help/troubleshooting/03-sprinto-help-get-sp")
 - [ ] `docs/help/voice.md`: confirm voice status before release (at "## Voice is paused")
-- [ ] `docs/sprinting/sprint.md`: nops does nothing in the bot now; restore if fixed (at "no bell Turn off all chimes for this sprint. See [chimes](#chimes). Synonyms: almost any w")
+- [ ] `docs/sprinting/sprint.md`: nops does nothing in the bot now; restore if fixed (at "no bell Turn off all chimes for this sprint. See chimes. Synonyms: almost any w")
 - [ ] `docs/start/invite.md`: screenshot out of date: shows a "✓ BOT" badge next to Sprinto; Discord now labels apps "APP" (at "![Image](/images/sprinto-invite-dialog.png)")
 
 ## Later pass (Focus Lounge, to-do, projects, scheduling)

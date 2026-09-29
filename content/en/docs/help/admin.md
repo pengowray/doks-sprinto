@@ -10,7 +10,6 @@ Some of Sprinto's commands need a Sprint MC {{<tag-mc>}} or a Sprint Admin {{<ta
 * **Sprint Admin** {{<tag-admin>}}: the server owner, anyone with the Administrator or Manage Server permission, or anyone with a role named {{<role "@Sprint Admin">}}.
 * **Sprint MC** {{<tag-mc>}}: anyone with a role named {{<role "@Sprint MC">}}, and every Sprint Admin.
 
-
 ### Role names Sprinto accepts
 
 Sprinto finds these roles by their names, in any capitalization. The name must be one of these:
@@ -56,7 +55,6 @@ Everything a Sprint MC can do, and also:
 ## Create the roles
 
 Sprinto never creates the {{<role "@Sprint MC">}} or {{<role "@Sprint Admin">}} roles. Create them in Discord the same way as any other role, and give them to the people you choose.
-
 
 Both roles are optional: sprints run without anyone holding either role. On a small server you might create the {{<role "@Sprint MC">}} role and give it to everyone, so everyone can cancel sprints.
 

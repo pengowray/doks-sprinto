@@ -6,17 +6,70 @@ weight: 16
 keywords: ["chain", "timing", "round", "next", "gap", "focus", "asap", "break", "pomodoro", "endtime"]
 ---
 
-Each round of a chain has three parts: writing, a window to give your word count, and a break. The length you give is the writing time, the same as in a single sprint. This page shows in diagrams how long each part is and when the next round starts, and the options that change these times.
+Each round of a chain has three parts: writing, a window to give your word count, and a break. The length you give is the writing time, the same as in a single sprint. This page shows in diagrams how long each part is, when the next round starts, and how the options `gap`, `break` and `round` change these times.
 
 Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> the join window, striped, <span class="tl-chip tl-chip-write"></span> writing, <span class="tl-chip tl-chip-collect"></span> collecting word counts, <span class="tl-chip tl-chip-break"></span> break. The stripes also mark the break's last minute, when Sprinto invites the room to join the next round.
 
 ## When the next round starts
 
-`for 25 x3` writes for 25 minutes in each round. The 4-minute word-count window comes after the writing, then the 5-minute break, so a new round starts every 34 minutes.
+The three parts of a round come one after the other, and the next round starts when the break ends. `for 25 x3` starts a new round every 34 minutes: 25 minutes of writing, then 4 minutes for word counts, then a 5-minute break.
 
-`pomo x3` also writes for 25 minutes, but starts a new round every 30 minutes. `pomo` sets the whole time between rounds to 5 minutes, and those 5 minutes are made up of the 4-minute word-count window and a 1-minute break.
+<svg class="tl-diagram" viewBox="0 0 720 150" role="img" aria-label="One time bar: for 25 x3. A one-minute join window from 9:59, writing from 10:00 to 10:25, word counts until 10:29, then a 5-minute break. The last minute of the break, from 10:33, is the join invitation, and round 2 starts at 10:34.">
+  <defs>
+    <pattern id="hatch-default" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+      <rect class="tl-hatchbase" width="7" height="7"/>
+      <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
+    </pattern>
+  </defs>
+  <text class="tl-text" x="20" y="18"><tspan font-weight="600">for 25 x3</tspan>: writing, then word counts, then the break</text>
+  <rect fill="url(#hatch-default)" x="20" y="26" width="18" height="32"/>
+  <rect class="tl-write" x="38" y="26" width="450" height="32"/>
+  <rect class="tl-collect" x="488" y="26" width="72" height="32"/>
+  <rect class="tl-break" x="560" y="26" width="72" height="32"/>
+  <rect fill="url(#hatch-default)" x="632" y="26" width="18" height="32"/>
+  <rect class="tl-bar-outline" x="20" y="26" width="630" height="32"/>
+  <path class="tl-write" d="M 650 26 L 677 26 L 684 32 L 676 38 L 684 44 L 676 50 L 684 56 L 677 58 L 650 58 Z"/>
+  <text class="tl-text-onbar" x="263" y="47" text-anchor="middle">writing 25</text>
+  <text class="tl-text-onbar" x="524" y="47" text-anchor="middle">counts 4</text>
+  <text class="tl-text-onbar" x="596" y="47" text-anchor="middle">break 5</text>
+  <path class="tl-dim" d="M 38 66 l 0 7 l 448 0 l 0 -7"/>
+  <text class="tl-text-sm" x="262" y="88" text-anchor="middle">Writing: 25 minutes</text>
+  <path class="tl-dim" d="M 490 66 l 0 7 l 160 0 l 0 -7"/>
+  <text class="tl-text-sm" x="570" y="88" text-anchor="middle">9 minutes until round 2</text>
+  <line class="tl-axis" x1="20" y1="116" x2="706" y2="116"/>
+  <line class="tl-tick" x1="38" y1="116" x2="38" y2="122"/>
+  <line class="tl-tick" x1="218" y1="116" x2="218" y2="122"/>
+  <line class="tl-tick" x1="398" y1="116" x2="398" y2="122"/>
+  <line class="tl-tick" x1="488" y1="116" x2="488" y2="122"/>
+  <line class="tl-tick" x1="560" y1="116" x2="560" y2="122"/>
+  <line class="tl-tick" x1="650" y1="116" x2="650" y2="122"/>
+  <text class="tl-text-sm" x="38" y="138" text-anchor="middle">10:00</text>
+  <text class="tl-text-sm" x="218" y="138" text-anchor="middle">10:10</text>
+  <text class="tl-text-sm" x="398" y="138" text-anchor="middle">10:20</text>
+  <text class="tl-text-sm" x="488" y="138" text-anchor="middle">10:25</text>
+  <text class="tl-text-sm" x="560" y="138" text-anchor="middle">10:29</text>
+  <text class="tl-text-sm" x="650" y="138" text-anchor="middle">10:34</text>
+</svg>
 
-<svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars on the same clock. Both open with a one-minute join window, write from 10:00 to 10:25, and collect word counts until 10:29. A, for 25 x3: a 5-minute break follows, and round 2 starts at 10:34. B, pomo x3: a 1-minute break follows, and round 2 starts at 10:30.">
+*`for 25 x3` opens with a one-minute join window from 9:59. Writing runs from 10:00 to 10:25, word counts from 10:25 to 10:29, and the 5-minute break from 10:29 to 10:34, when round 2 starts. The striped last minute of the break, from 10:33, is when Sprinto invites the room to join round 2.*
+
+The word-count window is longer for longer rounds: 3 minutes after 15 minutes of writing, 3 minutes 30 seconds after 20 minutes, and 4 minutes after 25 minutes. [How long the word-count window is](#how-long-the-word-count-window-is) has the full table.
+
+Three options change the parts of a round:
+
+| Option | What it sets |
+| --- | --- |
+| [`gap 10`](#set-the-time-between-rounds-with-gap) | The word-count window and the break together: 10 minutes from the end of one round's writing to the start of the next round's writing |
+| [`break 7`](#other-ways-to-set-the-break) | The break: 7 minutes, starting after the word-count window |
+| [`round 25`](#word-counts-inside-the-length-round) | The writing and the word-count window together: 21 minutes of writing and 4 minutes for word counts, with the break after them |
+
+## Set the time between rounds with `gap`
+
+`gap` sets the whole time from the end of one round's writing to the start of the next round's writing. The word counts come out of the gap first, and the break is what's left. `next 10`, `next in 10`, `next round in 10` and `next focus in 10` mean the same as `gap 10`. Sprinto writes a gap back as `next`, for example `next 10` in `/explain`.
+
+This diagram compares the default timing of `for 25 x3` with `for 25 gap 5 x3`, which is the same as `pomo x3`:
+
+<svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars on the same clock. Both open with a one-minute join window, write from 10:00 to 10:25, and collect word counts until 10:29. A, for 25 x3: a 5-minute break follows, and round 2 starts at 10:34. B, for 25 gap 5 x3, the same as pomo x3: a 1-minute break follows, and round 2 starts at 10:30, 5 minutes after the writing ends.">
   <defs>
     <pattern id="hatch-one25" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
       <rect class="tl-hatchbase" width="7" height="7"/>
@@ -38,7 +91,7 @@ Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> 
   <text class="tl-text-sm" x="262" y="88" text-anchor="middle">Writing: 25 minutes</text>
   <path class="tl-dim" d="M 490 66 l 0 7 l 160 0 l 0 -7"/>
   <text class="tl-text-sm" x="570" y="88" text-anchor="middle">9 minutes until round 2</text>
-  <text class="tl-text" x="20" y="120">B.&#160;<tspan font-weight="600">pomo x3</tspan>, the same as&#160;<tspan font-weight="600">for 25 next 5 x3</tspan></text>
+  <text class="tl-text" x="20" y="120">B.&#160;<tspan font-weight="600">for 25 gap 5 x3</tspan>, the same as&#160;<tspan font-weight="600">pomo x3</tspan></text>
   <rect fill="url(#hatch-one25)" x="20" y="128" width="18" height="32"/>
   <rect class="tl-write" x="38" y="128" width="450" height="32"/>
   <rect class="tl-collect" x="488" y="128" width="72" height="32"/>
@@ -66,38 +119,36 @@ Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> 
   <text class="tl-text-sm" x="650" y="240" text-anchor="middle">10:34</text>
 </svg>
 
-*Both chains start with a one-minute join window, write from 10:00 to 10:25, then collect word counts for 4 minutes, until 10:29. In A, `for 25 x3`, the 5-minute break comes after the word counts, so round 2 starts at 10:34. In B, `pomo x3` sets the whole time between rounds to 5 minutes: the 4 minutes of word counts and a 1-minute break, so round 2 starts at 10:30. The striped last minute of each break is when Sprinto invites the room to join round 2.*
+*Both chains start with a one-minute join window, write from 10:00 to 10:25, then collect word counts for 4 minutes, until 10:29. In A, `for 25 x3`, the 5-minute break comes after the word counts, so round 2 starts at 10:34. In B, `for 25 gap 5 x3`, round 2 starts 5 minutes after the writing ends, at 10:30. Those 5 minutes are the 4 minutes of word counts and a 1-minute break. `pomo x3` is the same as B. The striped last minute of each break is when Sprinto invites the room to join round 2.*
 
-## Set the time between rounds with `next`
-
-`next` sets the time from the end of one round's writing to the start of the next round's writing. The word-count window comes out of that time first, and the break is whatever is left. `gap 10`, `next in 10` and `next round in 10` mean the same as `next 10`.
+This table shows how a gap is split between the word-count window and the break in more chains:
 
 | Command | Writing | Word-count window | Break | A new round every |
 | --- | --- | --- | --- | --- |
-| `for 15 next 5 x3` | 15 min | 3 min | 2 min | 20 min |
-| `for 20 next 10 x3` | 20 min | 3 min 30 s | 6 min 30 s | 30 min |
-| `for 20 endtime 2 next 10 x3` | 20 min | 2 min | 8 min | 30 min |
-| `pomo x3`, the same as `for 25 next 5 x3` | 25 min | 4 min | 1 min | 30 min |
-| `round 25 next 5 x3` | 21 min | 4 min | 1 min | 26 min |
+| `for 15 gap 5 x3` | 15 min | 3 min | 2 min | 20 min |
+| `for 20 gap 10 x3` | 20 min | 3 min 30 s | 6 min 30 s | 30 min |
+| `for 20 endtime 2 gap 10 x3` | 20 min | 2 min | 8 min | 30 min |
+| `pomo x3`, the same as `for 25 gap 5 x3` | 25 min | 4 min | 1 min | 30 min |
+| `round 25 gap 5 x3` | 21 min | 4 min | 1 min | 26 min |
 
-To put rounds on tidy clock times, use `next`: `/sprint at :15 for 20 gap 10 x3` typed at 10:05 starts its three rounds at 10:15, 10:45 and 11:15.
+To put rounds on tidy clock times, use `gap`: `/sprint at :15 for 20 gap 10 x3` typed at 10:05 starts its three rounds at 10:15, 10:45 and 11:15.
 
 [`endtime 2`](#set-the-window-yourself) sets the word-count window to 2 minutes, and [`round`](#word-counts-inside-the-length-round) puts the word counts inside the length.
 
-`next` always counts from the end of the writing, even with `round`: `round 25 next 5` writes for 21 minutes, and the next round starts 5 minutes after the writing stops.
+`gap` always counts from the end of the writing, even with `round`: `round 25 gap 5` writes for 21 minutes, and the next round starts 5 minutes after the writing stops, so a new round starts every 26 minutes.
 
-The time's up message gives both the word-count window and the time until the next round. For `for 20 next 10 x3` it says "Please give your final word count with `/words`. You have 3 minutes 30 seconds." and "The next round begins in 10 minutes, and writes for 20 minutes."
+The time's up message gives both the word-count window and the time until the next round. For `for 20 gap 10 x3` it says "Please give your final word count with `/words`. You have 3 minutes 30 seconds." and "The next round begins in 10 minutes, and writes for 20 minutes."
 
-Rules for `next`:
+Rules for `gap`:
 
-- A `next` shorter than the usual word-count window makes the window shorter to fit, down to 30 seconds. A `next` under 30 seconds is refused: "Sorry, 20 seconds isn't long enough between rounds. Word counts are collected in that time first, and that needs 30 seconds."
-- `next` and `break` in the same command must add up. `next 10 break 8` works only when the word-count window is 2 minutes. Otherwise it is refused, for example: "Sorry, those don't add up: 10 minutes between rounds with 3 minutes 30 seconds for word counts leaves a break of 6 minutes 30 seconds, not 8 minutes."
-- `next` with `break until` or `break next` is refused, because `next` and the `break` option would both set the time between rounds.
-- On a sprint with no rounds, `next 5` is refused. To start a single sprint at the next 5-minute mark, use `in next 5`.
+- A gap shorter than the usual word-count window makes the window shorter to fit, down to 30 seconds. A gap under 30 seconds is refused: "Sorry, 20 seconds isn't long enough between rounds. Word counts are collected in that time first, and that needs 30 seconds."
+- `gap` and `break` in the same command must add up. `gap 10 break 8` works only when the word-count window is 2 minutes. Otherwise it is refused, for example: "Sorry, those don't add up: 10 minutes between rounds with 3 minutes 30 seconds for word counts leaves a break of 6 minutes 30 seconds, not 8 minutes."
+- `gap` with `break until` or `break next` is refused, because `gap` and the `break` option would both set the time between rounds.
+- On a sprint with no rounds, `gap 5` and `next 5` are refused. To start a single sprint at the next 5-minute mark, use `in next 5`.
 
 ### `pomo`
 
-`pomo` is short for `for 25 next 5`, and Sprinto writes it back that way. Each round has 25 minutes of writing, then the 4-minute word-count window, then a 1-minute break. That whole minute is the join invitation for the next round. `pomo x4` starts a round every 30 minutes.
+`pomo` is short for `for 25 gap 5`, and Sprinto writes it back as `for 25 next 5`. Each round has 25 minutes of writing, then the 4-minute word-count window, then a 1-minute break. That whole minute is the join invitation for the next round. `pomo x4` starts a round every 30 minutes.
 
 After round 4, the break is at least 15 minutes, counted from the end of the word-count window. So in `pomo x5`, round 5 starts 44 minutes after round 4 starts: 25 minutes of writing, 4 for word counts, and the 15-minute break. A chain has at most 8 rounds, so this is the only long break.
 
@@ -184,7 +235,7 @@ The time between one round's writing and the next round's writing has three part
 - With `break 0`, the next round starts as soon as the word-count window closes.
 - When the next round starts, the ☕ message is edited to one line, for example "**Round 2 of 3** ☕ 5 minute break". It always gives the planned break, even if a fast finish made the break longer.
 
-One thing to watch: a plain `/join` during the word-count window joins the round that just finished. To join the coming round instead, use `/join next`, or give your count with `/words 1234 next` to file this round's count and stay in. See [Chain sprints]({{< relref "chains" >}}) for `next` and `all`.
+One thing to watch: a plain `/join` during the word-count window joins the round that just finished. To join the coming round instead, use `/join next`, or give your count with `/words 1234 next` to file this round's count and stay in. See [Chain sprints]({{< relref "chains" >}}) for staying in with `next` and `all`.
 
 ## When everyone reports early
 
@@ -287,7 +338,7 @@ On an `asap` chain:
 ### More about the timetable
 
 - **`/go` keeps later rounds in place.** Starting a round early with {{<slashembed name="go" >}} makes that round longer: it starts now and still reaches time's up at its scheduled time. The round's start message says, for example, "Started 3 minutes early with `/go`, so this round runs 28 minutes and still finishes on schedule." On an `asap` chain, `/go` starts the round sooner. Only the sprinter who started the chain, or a {{<role "@Sprint MC">}}, can use `/go`. It is refused if the longer round, counting its writing, its word-count window and the minutes skipped, would be over the room's longest sprint, which is 120 minutes unless the server or channel set it lower: "Sorry, starting now would make this round 125 minutes, over this room's 120 minutes limit."
-- **Round start times are not rounded.** They fall wherever the lengths and breaks add up to. For neat clock times, ask for them: `next` (`for 20 next 10 x3` starts a round every half hour), `until :20`, `done by :30`, or `break until :30`. `break until :30` applies between every pair of rounds: each later round starts at the next :30 after the round before it ends, word counts included. So after the first break, rounds shorter than an hour start an hour apart. For example, `for 25 x3 break until :30` with round 1 at 10:00 starts round 2 at 10:30 and round 3 at 11:30. For a round every half hour, use `next`.
+- **Round start times are not rounded.** They fall wherever the lengths and breaks add up to. For neat clock times, ask for them: `gap` (`for 20 gap 10 x3` starts a round every half hour), `until :20`, `done by :30`, or `break until :30`. `break until :30` applies between every pair of rounds: each later round starts at the next :30 after the round before it ends, word counts included. So after the first break, rounds shorter than an hour start an hour apart. For example, `for 25 x3 break until :30` with round 1 at 10:00 starts round 2 at 10:30 and round 3 at 11:30. For a round every half hour, use `gap`.
 - **A start time on a later round.** `then at :30 for 10` sets when that round starts, and the break before it is whatever time is left. A minute mark like `:30` means the next :30 after the previous round ends, word counts included. A time of day that the previous round runs past is refused: "Sorry, round 1 doesn't end until about 15 minutes from now, so the next round can't start at `10:15`. Try a later time." Other start words work on a later round too: `then in 5` (5 minutes after the previous round ends), `then in next 10`, and `then now` (no break). A command with a start time on a later round can't also have `break` or `asap`: it is refused. The wait before that round counts toward the usual limits on how far ahead a sprint can start, so `then in 90 for 5` is refused.
 
 ## Other ways to set the break
@@ -298,18 +349,20 @@ The break is 5 minutes unless you set another. In this table, a round ends when 
 | --- | --- |
 | `break 7` | 7 minutes after the previous round ends |
 | `smoko 7`, `take 7`, `rest 7`, `pause 7` | the same as `break 7` |
-| `next 10`, `gap 10` | 10 minutes after the previous round's writing stops (see [`next`](#set-the-time-between-rounds-with-next)) |
+| `gap 10` | 10 minutes after the previous round's writing stops (see [`gap`](#set-the-time-between-rounds-with-gap)) |
 | `break until :30` | at the next :30 after the previous round ends, between every pair of rounds |
 | `break until 9pm` | at 9pm. Refused if any round runs past 9pm, so it suits only a two-round chain |
 | `break next 10` | at the next 10-minute mark of the hour after the previous round ends. `break next 10+2` keeps the break at least 2 minutes long |
 | `break 5-10`, `break 5 to 10` | at the tidiest clock time 5 to 10 minutes after the previous round ends |
 | `break 0` | as soon as the previous round ends |
 
-A break can be at most 60 minutes, or 120 minutes if the command includes `please`. The limit applies however the break is set: with `break`, `next`, `break until`, or a start time on a later round. A longer break is refused: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 20 x3 break 90 please`." A break from the room's default settings is cut to 60 minutes.
+A break can be at most 60 minutes, or 120 minutes if the command includes `please`. The limit applies however the break is set: with `break`, `gap`, `break until`, or a start time on a later round. A longer break is refused: "Sorry, a break of 90 minutes is too long. The longest break between rounds is 60 minutes. Adding `please` raises the limit a little. Try `for 20 x3 break 90 please`." A break from the room's default settings is cut to 60 minutes.
 
 ## Word counts inside the length: `round`
 
-`round 25` makes 25 minutes the length of the whole round: 21 minutes of writing, then word counts until the 25-minute mark, then the break. It works the same in a chain and in a single sprint. `block`, `total` and `dusted` mean the same as `round`.
+`round 25` puts the word counts inside the 25 minutes: 21 minutes of writing, then 4 minutes for word counts. The break comes after the 25 minutes, and is 5 minutes unless you set another length, so `round 25 x3` starts a new round every 30 minutes. `round` works the same in a chain and in a single sprint. `block`, `total` and `dusted` mean the same as `round`.
+
+This diagram compares `round 25` with the default, `for 25`:
 
 <svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two chain rounds compared, each with a bracket marking 25 minutes. round 25: the bracket covers 21 minutes of writing plus 4 minutes of word counts, and the break runs to minute 30. for 25: the bracket covers 25 minutes of writing, the word counts run past it to minute 29, and the break runs to minute 34.">
   <defs>
@@ -356,7 +409,7 @@ A break can be at most 60 minutes, or 120 minutes if the command includes `pleas
   <text class="tl-text-sm" x="625" y="240" text-anchor="middle">30 min</text>
 </svg>
 
-*The same "25" read two ways, in a chain with the default 5-minute break. With `round 25`, the word counts fit inside the 25 minutes: 21 minutes of writing and 4 of word counts, then the break, so a new round starts every 30 minutes. With `for 25`, all 25 minutes are writing, the 4 minutes of word counts come after them, and a new round starts every 34 minutes.*
+*`round 25` and `for 25` in a chain with the default 5-minute break. `round 25` puts the word counts inside the 25 minutes: 21 minutes of writing and 4 minutes for word counts, then the break, so a new round starts every 30 minutes. `for 25` is 25 minutes of writing, then 4 minutes for word counts and the break, so a new round starts every 34 minutes.*
 
 Other ways to fit the word counts inside a length:
 
