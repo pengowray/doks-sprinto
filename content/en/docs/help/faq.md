@@ -108,7 +108,7 @@ This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes
 
 ## Is Sprinto's source code available?
 
-I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for the old version of Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually. If you have a wonderfully compelling reason for me to move that up the priority list and have me spend time preparing it for public release, like if you're an experienced developer who wants to help, then please let me know.
+I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for the old version of Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually.
 
 ## How do I hide Sprinto from my @ mentions list?
 

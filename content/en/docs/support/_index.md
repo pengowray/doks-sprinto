@@ -73,8 +73,6 @@ Your pets are resting. A companion seat lets one sit with you and appear on the 
 - Codes come from the developer. Capital letters and spaces in a code don't matter.
 - Only you see the reply. {{<slashembed name="redeem">}} also works in a direct message to Sprinto.
 
-{{< reply ephemeral="1" >}}
-{{< /reply >}}
 
 
 -->

@@ -28,7 +28,6 @@ If you don't have permission to add bots to the server, send the link to the ser
 
 ## Add Sprinto from its profile
 
-<!-- TODO owner: screenshot out of date: shows the old Sprinto#2517 tag; Discord no longer shows the #number -->
 ![Image](/images/sprint-add-app.png)
 
 If you can see Sprinto on another server, click Sprinto or "View Profile", then click **Add App**.

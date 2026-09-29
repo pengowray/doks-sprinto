@@ -165,7 +165,6 @@ Sorry, I can't post in this channel. Please give me the **View Channel** and **S
 
 Thanks for your patience and support.
 
-<!-- TODO owner: screenshot out of date: shows Sprinto's profile with the old Sprinto#2517 tag; Discord no longer shows the #number -->
 ![Permission summary](/images/help/troubleshooting/06-permission-summary.png)
 
 - **Adding Sprinto to your server again (to a server he's already on) may fix permission problems.**
