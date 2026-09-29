@@ -232,7 +232,7 @@ With `/settings roles`, an admin can also choose which roles count as Sprint MC 
 **Some settings are new, or newly documented.** Here are their defaults:
 
 | Setting | Default | What it does |
-|---|---|---|
+| --- | --- | --- |
 | `family-friendly` | on | Keeps the sweary quotes and replies out. |
 | `tidy-sprints` | off | When on, Sprinto deletes its own join and word-count confirmations, to keep a busy channel readable. |
 | `shuffle-leaderboard` | off | When on, shuffles the order of the scoreboard. |
@@ -302,7 +302,7 @@ If you used the old bot, these are the changes most likely to surprise you.
 **Three commands are read differently.**
 
 | Command | Old bot | Now |
-|---|---|---|
+| --- | --- | --- |
 | `at 00 to 35` | A random length of up to 35 minutes | Starts at :00 and ends at :35 |
 | `15 til 45` | Waited 15 minutes | Starts at :15 |
 | `sprint 3 to 10` | Ran until the next :10 | A random length from 3 to 10 minutes |

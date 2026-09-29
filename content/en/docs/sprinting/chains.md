@@ -41,7 +41,7 @@ For example, `for 25 x3` is three rounds of 25 minutes of writing. After each ro
 This table shows four chains and how often each one starts a new round. The notes under the table explain `pomo`, `next` and `round`.
 
 | Command | Writing | Word-count window | Break | A new round every |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | `for 25 x3` | 25 min | 4 min | 5 min | 34 min |
 | `pomo x3` | 25 min | 4 min | 1 min | 30 min |
 | `for 20 next 10 x3` | 20 min | 3 min 30 s | 6 min 30 s | 30 min |
@@ -131,7 +131,7 @@ To join every round at once, use `all`:
 With `all`, each later round starts from the count you reached in the round before it, unless you ask for 0:
 
 | Command | Starting count for this round | Each later round starts from |
-|---|---|---|
+| --- | --- | --- |
 | `/join all` | 0 words, or your current count if you're already in the round | your count at the end of the round before |
 | `/join all 1000` | 1,000 words | your count at the end of the round before |
 | `/join all 0` | 0 words | 0 words |
@@ -154,7 +154,7 @@ Signing up with `/join next` also keeps the chain going. Two empty rounds in a r
 ## Leave a chain
 
 | Command | What it does |
-|---|---|
+| --- | --- |
 | {{<slashembed name="leave" >}} | Leave the round that is running and the rest of the chain. |
 | `leave next` | Cancel your sign-up for the next round. You stay in the round that is running. |
 | `leave all` | Cancel your sign-up for every round after this one. You stay in the round that is running. |

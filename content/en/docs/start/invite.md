@@ -41,7 +41,7 @@ The people who sprint need **Use Application Commands** in the channel, or Sprin
 The invite link asks for these permissions:
 
 | Permission | What Sprinto uses it for |
-|---|---|
+| --- | --- |
 | View Channel, Send Messages | Announcing sprints and answering commands. Sprinto needs both. |
 | Manage Roles | Only the {{<role "@Active Sprinters">}} role, set up with `/create-active-role`. See [Active Sprinter role]({{< relref "activesprinter" >}}). |
 | Read Message History | Showing Sprinto's answers to `@Sprinto` messages as Discord replies. Without it, each answer is posted as a plain message. |

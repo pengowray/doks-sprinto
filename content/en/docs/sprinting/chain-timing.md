@@ -73,7 +73,7 @@ Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> 
 `next` sets the time from the end of one round's writing to the start of the next round's writing. The word-count window comes out of that time first, and the break is whatever is left. `gap 10`, `next in 10` and `next round in 10` mean the same as `next 10`.
 
 | Command | Writing | Word-count window | Break | A new round every |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | `for 15 next 5 x3` | 15 min | 3 min | 2 min | 20 min |
 | `for 20 next 10 x3` | 20 min | 3 min 30 s | 6 min 30 s | 30 min |
 | `for 20 endtime 2 next 10 x3` | 20 min | 2 min | 8 min | 30 min |
@@ -295,7 +295,7 @@ On an `asap` chain:
 The break is 5 minutes unless you set another. In this table, a round ends when its word-count window closes.
 
 | Option | When the next round starts |
-|---|---|
+| --- | --- |
 | `break 7` | 7 minutes after the previous round ends |
 | `smoko 7`, `take 7`, `rest 7`, `pause 7` | the same as `break 7` |
 | `next 10`, `gap 10` | 10 minutes after the previous round's writing stops (see [`next`](#set-the-time-between-rounds-with-next)) |
@@ -376,7 +376,7 @@ A `round` must leave at least 30 seconds of writing. `round 3` works, with 1 min
 A single sprint and a chain round with a plain length get the same word-count window. It depends on the writing time: 1 minute 30 seconds, plus 30 seconds for each full 5 minutes of writing, and never less than 2 minutes or more than 10.
 
 | Writing time | Word-count window |
-|---|---|
+| --- | --- |
 | 5 min | 2 min |
 | 10 min | 2 min 30 s |
 | 15 min | 3 min |
@@ -389,7 +389,7 @@ A single sprint and a chain round with a plain length get the same word-count wi
 A `round` length uses a quicker window. The writing time and the word-count window add up to the length:
 
 | `round` length | Writing time | Word-count window |
-|---|---|---|
+| --- | --- | --- |
 | `round 7` | 5 min | 2 min |
 | `round 18` | 15 min | 3 min |
 | `round 20` | 17 min | 3 min |
@@ -407,7 +407,7 @@ There are also named windows, from quickest (`end a`) to most patient (`end e`).
 Each named window in minutes, by writing time:
 
 | Writing time | `end a` | `end b` | `end c` | `end d` | `end e` | `end o` |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | 5 min | 1 | 2 | 2 | 2 | 2 | 2 |
 | 10 min | 1 | 2 | 3 | 3 | 3 | 2½ |
 | 15 min | 2 | 3 | 3 | 3 | 3 | 3 |

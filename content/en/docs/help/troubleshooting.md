@@ -111,7 +111,7 @@ If Discord isn't delivering `@Sprinto` messages either, the note says:
 Sprinto's status appears under its name in the member list:
 
 | Status | Meaning |
-|---|---|
+| --- | --- |
 | Listening to /sprint | Normal. |
 | Listening to @Sprinto sprint | Slash commands aren't reaching Sprinto, but `@Sprinto` messages are. |
 | Listening to status.discord.com | Discord's status page reports an incident. |

@@ -29,7 +29,7 @@ Join the sprint with a starting count of 0 words. You have to join your own spri
 {{</alts>}}
 Join with a starting count of 10,000 words: the number of words already in your document. When you give your total at the end, Sprinto subtracts your starting count to work out your new words.
 
-Sprinto replies `You have joined with 10,000 starting words.`, or `You have rejoined with …` if you were already in the sprint. If you have a [companion pet]({{<relref "emojipet" >}}), the reply ends with your pet, such as ` — with 🐢 Nugget`.
+Sprinto replies `You have joined with 10,000 starting words.`, or `You have rejoined with …` if you were already in the sprint. If you have a [companion pet]({{<relref "emojipet" >}}), the reply ends with your pet, such as `— with 🐢 Nugget`.
 
 As you type in the `/join` box, Sprinto suggests `0` and the count you finished on last time.
 

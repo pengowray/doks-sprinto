@@ -119,7 +119,6 @@ To choose when the sprint starts, add `in`, as with any wheel:
 
 {{<slashembed name="sprint" key0="options" val0="burst in 2" >}}
 
-
 {{<alts "Details">}}
 <p>The burst wheel's 14 slices: 35s, 45s ×2, 60s ×2, 75s ×2, 90s ×2, 100s, 105s, 120s, 135s, 150s.</p>
 {{</alts>}}

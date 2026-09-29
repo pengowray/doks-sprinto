@@ -32,7 +32,7 @@ While your Patreon pledge is active, you keep your companion seat. Every Patreon
 Each Ko-fi payment gives you this much seat time:
 
 | Payment | Seat time |
-|---|---|
+| --- | --- |
 | $50 or more | 365 days |
 | $20 to $49.99 | 180 days |
 | $10 to $19.99 | 90 days |

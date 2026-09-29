@@ -169,12 +169,12 @@ A Sprint Admin can also choose existing roles to count as Sprint MC or Sprint Ad
 
 ## See also
 
-* [Setup]({{<relref "setup" >}}) (setting up Sprinto)
-* [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
+- [Setup]({{<relref "setup" >}}) (setting up Sprinto)
+- [Admin commands]({{<relref "admin" >}}) — about the {{<tag-admin>}} and {{<tag-mc>}} roles and commands
 
-* [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
-* [Allowed channels (admin)]({{<relref "whitelist" >}}) — commands to prevent users running sprints where they're not supposed to
-* [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
-* [Ping me (admin section)]({{<relref "pingme#ping-roles" >}}) — set a role to always be pinged at sprint start
-* [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
-* [Voice]({{<relref "voice" >}}): voice channel sounds, paused at the moment
+- [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
+- [Allowed channels (admin)]({{<relref "whitelist" >}}) — commands to prevent users running sprints where they're not supposed to
+- [Carl-bot x Sprinto]({{<relref "carlbot" >}}) — using carl-bot to schedule sprints.
+- [Ping me (admin section)]({{<relref "pingme#ping-roles" >}}) — set a role to always be pinged at sprint start
+- [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
+- [Voice]({{<relref "voice" >}}): voice channel sounds, paused at the moment

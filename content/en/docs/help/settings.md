@@ -223,8 +223,8 @@ Removing the quote this way covers only your server, so the panel then offers **
 
 ## See also
 
-- [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-- [Sprint channels]({{<relref "whitelist" >}}): keeping sprints to the channels you choose
-- [Ping me]({{<relref "pingme" >}}): who gets @mentioned at sprint start, including roles
-- [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
-- [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
+* [Setup]({{< relref "setup" >}}) (setting up Sprinto)
+* [Sprint channels]({{<relref "whitelist" >}}): keeping sprints to the channels you choose
+* [Ping me]({{<relref "pingme" >}}): who gets @mentioned at sprint start, including roles
+* [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
+* [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)

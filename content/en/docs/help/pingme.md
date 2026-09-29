@@ -219,9 +219,9 @@ Individual sprinters can still opt in for themselves at any time with {{<slashem
 
 ## Feedback
 
-- If you'd like to see Sprinto's pings get a revamp, send your suggestions with `/feedback`
+* If you'd like to see Sprinto's pings get a revamp, send your suggestions with `/feedback`
 
 ## See also
 
-- [Settings]({{<relref "settings" >}}) — every setting, including `auto-pings`
-- [Sprint channels]({{<relref "whitelist" >}}): choose which channels sprints and ping sign-ups work in
+* [Settings]({{<relref "settings" >}}) — every setting, including `auto-pings`
+* [Sprint channels]({{<relref "whitelist" >}}): choose which channels sprints and ping sign-ups work in

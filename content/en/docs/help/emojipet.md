@@ -37,7 +37,9 @@ Some top supporters have received a Pixel Pet already but I haven't told them, s
 {{<slashembed name="pets" >}} opens a panel headed "Your pets and items". Only you can see it. Typing `@Sprinto pets` gets the answer "Please use the /pets slash command to open this."
 
 {{< reply ephemeral="1" >}}
+
 ## Your pets and items
+
 Click a pet, egg or seat to view details.
 Some pets allow you to change their name and appearance. If a pet is seated (activated), they will join you in sprints.
 {{< /reply >}}
@@ -63,7 +65,7 @@ Click a pet to open their card: the pet's name and picture, then their kind and 
 Below the totals, one line in italics says whether this pet will sprint with you, such as "Nugget will join sprints with you." or "Activate to have Nugget join you in sprints."
 
 | Button | What it does |
-|---|---|
+| --- | --- |
 | **Activate** | Make this pet your companion. If another pet is your companion, this pet takes their place. |
 | **Remove from seat** | Shown on your companion instead of **Activate**. Take the pet out of your seat. No pet joins your sprints until you activate one. |
 | **<3** | Show an "Animal observation" card with the pet's thought bubble, such as "🐢 ｡oO(💓)". Only you see it. In the Noto_R style, about 85 of the animals have a moving picture in the bubble. Press **<3** again to close the card. |
@@ -80,7 +82,7 @@ When a pet's card is open, clicking that pet's button again also activates them,
 The kind is the first thing on a pet's card.
 
 | Kind | What it is |
-|---|---|
+| --- | --- |
 | Emoji pet | A pet given by the new Sprinto. |
 | Emoji pet (OG) | A pet from the old bot. |
 | Emoji pet (OG+) | A pet from the old bot with something the new Sprinto no longer allows: an emoji that isn't on the animal list, a name over 20 characters, or a name with an emoji in it. |
@@ -110,7 +112,7 @@ A pet can only change to a look from their own set. A Sprinto Pixel Pet picks fr
 Each emoji pet has their own art style, and switching styles is free and instant. **Art style…**, inside Appearance, shows the pet drawn in each style, with the current style highlighted.
 
 | Style | What it looks like |
-|---|---|
+| --- | --- |
 | Standard | Plain emoji, in each reader's own emoji font. For example, it looks different on an iPhone. |
 | Twemoji_R | Discord's emoji style, facing right. |
 | Noto_R | Noto Color Emoji, facing right. |
@@ -157,7 +159,7 @@ Sprinto posts your companion's thought bubble in the channel. If no pet is in yo
 **A Ko-fi one-off tip** gives you a companion seat for a number of days, counted from the day you tip:
 
 | Tip | Seat time |
-|---|---|
+| --- | --- |
 | Under $1 | 1 day |
 | $1 to $2.99 | 10 days for each whole dollar |
 | $3 to $4.99 | 30 days |
@@ -183,7 +185,7 @@ When your seat has 7 days or fewer left, the `/pets` panel says when the seat en
 Press the **companion seat** button in the `/pets` panel to see which pet is in your seat, such as "Sitting with you: 🐢 Nugget", and one line about the seat:
 
 | Line | Meaning |
-|---|---|
+| --- | --- |
 | "Supporter seat. For your ongoing support. Thank you!" | You're supporting Sprinto now. |
 | "Reserved seat: yours for good. Thank you for supporting Sprinto!" | A reserved seat, which never runs out. |
 | "Supporter seat, yours through 3 May 2027. Thank you for supporting Sprinto!" | You've stopped supporting, and the seat lasts until that date. |
@@ -195,11 +197,11 @@ Note (August 2026): Pets have changed a lot recently and there have been glitche
 
 ## Artwork credit
 
-* Sprinto Pixel Pet art was created for Sprinto by [Sambhur](https://bsky.app/profile/sambhur.bsky.social) (a human artist).
-* **Twemoji_R style, and the picture on a Standard pet's card:** [Twemoji](https://github.com/jdecked/twemoji) by jdecked, continuing Twitter's set, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified for Twemoji_R: mirrored so the animals face right.
-* **Noto_R style:** [Noto Emoji](https://github.com/googlefonts/noto-emoji) images by Google, used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Modified: mirrored so the animals face right.
-* **Moving pictures in the <3 bubble** (about 85 animals): [Noto Animated Emoji](https://googlefonts.github.io/noto-emoji-animation/) by Google, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Sprinto Pixel Pet art was created for Sprinto by [Sambhur](https://bsky.app/profile/sambhur.bsky.social) (a human artist).
+- **Twemoji_R style, and the picture on a Standard pet's card:** [Twemoji](https://github.com/jdecked/twemoji) by jdecked, continuing Twitter's set, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified for Twemoji_R: mirrored so the animals face right.
+- **Noto_R style:** [Noto Emoji](https://github.com/googlefonts/noto-emoji) images by Google, used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Modified: mirrored so the animals face right.
+- **Moving pictures in the <3 bubble** (about 85 animals): [Noto Animated Emoji](https://googlefonts.github.io/noto-emoji-animation/) by Google, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## TOS
 
-* [Terms of Service]({{<relref "emojipet-tos">}})
+- [Terms of Service]({{<relref "emojipet-tos">}})
