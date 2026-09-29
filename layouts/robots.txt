@@ -1,0 +1,10 @@
+{{- /*
+  Overrides layouts/robots.txt from @thulite/seo 2.4.4.
+  Changed: the Sitemap line points at /sitemap.xml, as it did in 2.4.3. 2.4.4
+  points at /sitemap-index.xml, which only exists when the home page has a
+  "sitemap-index" output format, and this site doesn't build one.
+  Drop this copy if that output format is added to config/_default/hugo.toml.
+*/ -}}
+User-agent: *
+Disallow: /admin/
+Sitemap: {{ "/sitemap.xml" | absURL }}
