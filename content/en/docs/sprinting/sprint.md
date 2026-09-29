@@ -981,7 +981,7 @@ Sorry, Sprinto can't adjust for Adelaidians and other half-hour or quarter-hour 
 - [Chain timing]({{<relref "chain-timing" >}}): how the time in each round of a chain is divided
 - [During the sprint]({{<relref "words" >}}) — join, leave, cancel, and setting your word count — commands to use once the sprint has started
 - [Sprint (admin)]({{<relref "admin-sprint" >}}) — the few sprint options and commands only available to Sprint MCs and admins
-- [Allowed channels (admin)]({{<relref "whitelist" >}}) — admin commands to prevent users running sprints where they're not supposed to.
+- [Sprint channels]({{<relref "whitelist" >}}) — choose which channels sprints can run in
 - [Ping me]({{<relref "pingme" >}}) — who gets @mentioned at sprint start, and how admins set a role to always be pinged
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
 - [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints

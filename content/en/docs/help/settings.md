@@ -1,18 +1,53 @@
 ---
 title : "Settings"
-description: "Settings"
-lead: "One command for everything you can configure"
+description: "The /settings command: your own settings, channel and server settings, ping roles, sprint channels, sprint defaults and the emoji theme"
+lead: "What each /settings panel shows, and how to change a setting"
 url: "docs/settings-admin"
 ---
 
-All of Sprinto's settings can be found via: {{<slashembed name="settings">}}.
+All of Sprinto's settings are under {{<slashembed name="settings">}}. Discord offers seven subcommands, one for each panel:
 
-Changing a channel or server setting needs an {{<tag-admin>}}, that is a {{<role "@Sprint Admin">}}, a server administrator, or the server owner. Viewing them is open to anyone.
+| Command | What it's for |
+| --- | --- |
+| [`/settings me`](#your-sprint-settings) | Your own settings: chimes, your sprint companion and your time zone |
+| [`/settings channel`](#channel-and-server-settings) | Settings for the channel you're in. They override the server's settings. |
+| [`/settings server`](#channel-and-server-settings) | Settings for every channel on the server |
+| [`/settings roles`](#roles) | The roles pinged when a sprint starts in this channel |
+| [`/settings sprint-channels`](#sprint-channels) | The channels sprints can run in |
+| [`/settings sprint-defaults`](#sprint-defaults) | The default start time, length and chimes for sprints |
+| [`/settings theme`](#emoji-theme) | The emoji in sprint announcements |
 
-Sprinto configures nothing when it joins your server. No channel, no role, no saved settings. It works straight away in every channel it can post in, and you only come here if you want something changed.
+Anyone can open these panels and see the settings. Changing anything except your own settings needs a Sprint Admin {{<tag-admin>}}: the server owner, anyone with the Administrator or Manage Server permission, or anyone with a role named {{<role "@Sprint Admin">}}.
+<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
-## Navigating settings
-Use the these buttons as "Tabs" to look through settings which apply only to you, to the channel you're in, or the whole server. In most cases, the channel settings will override the server settings (except for the maximum sprint length, which can only be reduced)
+Sprinto sets nothing up when it joins your server: no channel, no role and no saved settings. It works straight away in every channel it can post in, and you only need these panels to change something.
+
+## Channel and server settings
+
+{{<slash name="settings channel" >}}
+{{<slash name="settings server" >}}
+
+Server settings apply in every channel. A channel's settings override the server's, except for **Longest sprint allowed**: when both are set, the shorter one applies.
+
+A Sprint Admin sees only the settings that have been changed at that level, each as a button showing its value, with a ✕ beside it:
+
+{{<buttons>}}
+{{<button "Tidy sprints (autodelete joins & word counts): On">}}
+{{<button "✕">}}
+{{</buttons>}}
+
+{{<buttons>}}
+{{<select "Add a setting">}}
+{{</buttons>}}
+
+* Click a setting's button to switch it to its next value.
+* Click ✕ to remove the change. In a channel, the setting goes back to the server's value. On the server, it goes back to Sprinto's default.
+* To change any other setting, pick it from **Add a setting**. Each option shows its current value, marked "(default)" or "(server default)". Picking one adds it at its current value; then click its button to change it.
+* With many changes, **More...** and **Back** page through the buttons.
+
+If nothing has been changed, the panel says "Everything here uses the default. To change a setting, first add it below."
+
+A Sprint Admin can switch between panels with these buttons:
 
 {{<buttons>}}
 {{<button "You" "primary">}}
@@ -20,80 +55,176 @@ Use the these buttons as "Tabs" to look through settings which apply only to you
 {{<button "Server">}}
 {{</buttons>}}
 
+Everyone else sees the channel and server settings as text, with no buttons. Their own settings are under [`/settings me`](#your-sprint-settings).
 
+A change takes effect from the next command.
 
-### settings roles
+At the end of the panel, a list headed "In effect here" (or "In effect server-wide" on the server panel) shows the settings that have their own panels: ping roles, sprint defaults and the emoji theme, plus sprint channels on the server panel. Each line names the command that changes it, for example "Emoji theme: Random emojis (default). Edit with /settings theme".
+
+`/settings channel` also shows whether Sprinto can post in the channel. Under "**My permissions in this channel:**", View Channel and Send Messages are each marked ✅ or ❌. Anyone can see this.
+
+In a channel where sprints aren't allowed, `/settings channel` shows only the message below. A Sprint Admin also gets the **Allow sprints in this channel** button, which adds the channel to the [sprint channels](#sprint-channels) list.
+
+{{< reply >}}
+Sprints can't be run in this channel. Right now they run only in: #writing-sprints.
+To let sprints run here, use the button below, or manage the list with /settings sprint-channels.
+{{< /reply >}}
+
+{{<buttons>}}
+{{<button "Allow sprints in this channel" "success">}}
+{{</buttons>}}
+
+### Every setting
+
+The first column gives each setting's name as the panel shows it. Use the text key to [change a setting by typing](#change-a-setting-by-typing).
+
+| Setting | Text key | Default | What it does |
+| --- | --- | --- | --- |
+| **Wall time** | `walltime` | Dynamic timestamps | How the start message shows when the sprint ends. **Dynamic timestamps** (`on`): a live countdown that updates in each reader's Discord app and, on sprints of 2 minutes or more, the end time in each reader's own time zone. **Static timer (classic)** (`sometimes`): on sprints of 2 minutes or more, the minute the sprint ends, for example "Duration: 15 minutes (until ⏰ :16).", or "(until ⏰ :16 +30s)" when the end isn't on a whole minute. The minute is in UTC, so in a time zone with a half-hour offset, such as India or Adelaide, it's 30 minutes off. **Off** (`off`): the length of the sprint only. |
+| **Post-sprint text** | `show-ps` | On | Add one extra line under the scoreboard: a quote, a news update, a reminder about `/forgetme`, a tip to upvote Sprinto on top.gg, "`/sprint` to start another", or a note about a Discord incident. With it off, the "Combined word count" line still shows when 3 or more people have a word count above 0. While it's off, the panel shows Quotes and Family-friendly struck through. |
+| **Quotes** | `show-quotes` | On | Show a quote under the scoreboard on every second sprint in the channel. When an urgent news item takes a quote's turn, the quote comes on the next sprint. It's unlikely you'll agree with every quote. They're there to provoke thought and discussion. If that's not what your group is there for, turn them off. |
+| **Family-friendly** | `family-friendly` | On | Filter out the occasional crass quote or reply. You'll rarely see a difference with it off. <!-- TODO owner: show-patreon controls nothing in the bot now; restore if it is wired up --> |
+| **Auto pings** | `auto-pings` | On (shown as **3**) | Sign up everyone who joins a sprint to be pinged at the start of the next 3 sprints in the channel. With it off, sprinters sign up with {{<slashembed name="pingme">}}. Ping roles are pinged either way. See [Ping me]({{<relref "pingme" >}}). |
+| **Listen to Carl-bot** | `carl` | Off | Let a feeder bot such as Carl-bot start sprints here. Sprinto ignores other bots unless this is on. See [Carl-bot x Sprinto]({{<relref "carlbot" >}}). |
+| **Shuffled leaderboard** | `shuffle-leaderboard` | Off | List the scoreboard in a random order with no rank numbers. Word counts are still shown, and pets are listed last. Takes the edge off the competition and lets sprinters work at their own pace. |
+| **Tidy sprints (autodelete joins & word counts)** | `tidy-sprints` | Off | Delete Sprinto's own join and word-count confirmations 45 seconds after they're posted, so a busy sprint doesn't fill the channel with them. Only Sprinto's confirmations are deleted, never anything a person typed. |
+| **Longest sprint allowed** | `max-sprint` | 2 hours | The longest sprint anyone can start here, from 15 minutes to 2 hours. Longer sprints are refused, even with `please`. A channel can't raise it above the server's. To change it, click it and type a number of minutes, or for example `1.5 hours`. Leave the box blank to use the server's setting. |
+
+The emoji theme and the default sprint have their own panels: see [Emoji theme](#emoji-theme) and [Sprint defaults](#sprint-defaults).
+
+### Change a setting by typing
+
+{{<atsprinto "settings tidy-sprints on" >}}
+
+A typed setting changes **the channel you type it in**, and only that channel. To change a setting for the whole server, use {{<slashembed name="settings server">}}.
+
+* **Key:** any text key from the table. Hyphens, underscores and spaces in the key don't matter, so `show-quotes`, `show_quotes` and `showquotes` are the same key.
+* **Value:** `on` or `off` (also `yes`/`no`, `true`/`false`, `show`/`hide` and `allow`/`disallow`). Wall time also takes `sometimes`, and Longest sprint allowed takes a number of minutes, such as `settings max-sprint 90`.
+* `default` (or `reset`, `clear`) removes this channel's own value, so the server's value or Sprinto's default applies again.
+* Leave out the value to see the current one. `@Sprinto settings quotes` replies "OK. Quotes: On (default)".
+
+The reply names the setting and its new value, for example "OK. Family-friendly: Off". A value that isn't this channel's own has "(default)" or "(server default)" after it.
+
+`@Sprinto settings` on its own replies "Please use the /settings me slash command to open this."
+
+The old commands for single settings, such as `setShowQuotes`, `setListenToCarl` and the `/setup-set-...` slash commands, are gone. Typing one gets this reply:
+
+{{< reply >}}
+That command is gone. The settings are now in `/settings channel` for this channel, or `/settings server` for the whole server.
+{{< /reply >}}
+
+## Your sprint settings
+
+{{<slash name="settings me" >}}
+
+These are your own settings, and only you can change them. The panel has three rows.
+
+**Max chimes** (0 to 5, default 0): how many of a sprint's chimes mention you, counting back from the last chime. A chime is a message Sprinto posts in the channel during a sprint, saying how much time is left. It's posted whether or not anyone is mentioned, and it only mentions people who joined the sprint. With Max chimes at 2, the last 2 chimes of each sprint you join mention you. The dropdown's options read "0 - Don't @ me with time remaining", "1 - Notify me for the last 1 chime of a sprint", and so on up to 5. To add chimes to a sprint, see [Chimes]({{<relref "sprint#chimes" >}}).
+
+You can also type it. Numbers over 5 count as 5, and the setting applies in every server:
+
+{{<atsprinto "chimes 2" >}}
+
+{{< reply >}}
+OK, I'll notify you on the last 2 chime(s) of each sprint.
+{{< /reply >}}
+
+**Sprint companion**: the pet who sprints with you, or "No pet". Change it with {{<slashembed name="pets">}}. See [Pets]({{<relref "emojipet" >}}).
+
+**Your timezone**: your time zone and the time there now, for example "Australia/Brisbane, where it's 3:45 pm. Change it with /timezone". If you haven't set one, it reads "not set, so UTC is assumed, where it's 5:45 am. Set yours with /timezone". Sprinto needs your time zone for clock-time sprints such as `at 14:30`.
+
+* `/timezone` on its own shows your time zone.
+* `/timezone` followed by a city, country or clock name such as `PST` sets it. Discord suggests matches as you type.
+* `/timezone none` clears it.
+
+## Roles
 
 {{<slash name="settings roles" >}}
 
-Pick the roles Sprinto mentions when a sprint starts here. It's a native Discord role picker. See [Ping me]({{<relref "pingme#ping-roles" >}}).
+<!-- TODO later pass: /settings roles can pick the Sprint MC and Sprint Admin roles (main only) -->
 
-### settings sprint-channels
+Shows the roles Sprinto uses. The first list, "Roles detected by name (view only):", shows the Active Sprinters, Sprint MC and Sprint Admin roles Sprinto found on the server by their names, or "not found". To change these, create or rename the roles in Discord. See [Admin commands]({{<relref "admin" >}}) and [Active Sprinter role]({{<relref "activesprinter" >}}).
+
+Below that are the roles Sprinto pings when a sprint starts in this channel, for example "Roles to always mention at the start of sprints in this channel: @Sprinters". A Sprint Admin also gets a role picker to change them. The picker takes up to 25 roles, and the list is saved when you close it. Everyone else sees the text only. See [Ping roles]({{<relref "pingme#ping-roles" >}}).
+
+## Sprint channels
 
 {{<slash name="settings sprint-channels" >}}
 
-Pick which channels sprints are allowed in. An empty list, which is the default, means sprints work anywhere. See [Allowed channels]({{<relref "whitelist" >}}).
+Choose the channels sprints can run in. The list is saved when you close the channel picker, and holds up to 25 channels. An empty list, which is the default, means sprints can run in any channel. See [Sprint channels]({{<relref "whitelist" >}}).
 
-### settings sprint-defaults
+## Sprint defaults
 
 {{<slash name="settings sprint-defaults" >}}
 
-This channel's (or server's) default sprint. You can use the buttons to set it with presets, or edit the text of the sprint.
+Set the default sprint: its start time, length and chimes. The panel opens on **Server default**. Click **This channel** to set a default for the channel you're in. For a picture of the panel, see [Set the default sprint]({{<relref "setup#set-the-default-sprint" >}}).
 
-The channel's sprint defaults override the server's, sprint option by sprint option. The host of the sprint can then override any of those.
+A channel's default overrides the server's default, one sprint option at a time. Whatever someone types after {{<slashembed name="sprint">}} overrides both, again one option at a time. For example, with a default of `20 in 5`, `/sprint 30` starts a 30-minute sprint in 5 minutes.
 
-### settings theme
+A Sprint Admin gets these buttons:
+
+* Start time: **in 1 min**, **in 1-2 min**, **in 2-3 min**
+* Length: **15**, **20**, **30**, **40**
+* Chimes: **🔔 1 minute**, **🔔 50% and 🔔 1 minute**, **🔕 No chime**
+* **Edit text**: type the default sprint options, as you would after {{<slashembed name="sprint">}}.
+* **Reset to built-in** (on the server) or **Clear channel override** (in a channel): remove the default set at this level.
+
+Green buttons show what's in effect now. A ✓ on a button means it's set at this level; click it again to unset it. Everyone else sees the text only.
+
+### Set the default sprint by typing
+
+{{<atsprinto "settings preset 20 iab" >}}
+
+This sets the channel's default to `20 iab`, a 20-minute sprint starting in 2½ to 7½ minutes, and replies "OK. Default sprint options: `20 iab`".
+
+* `@Sprinto settings preset` shows the channel's default, or "No default sprint options set. Using Sprinto's original default (for 15 mins in 1 min)."
+* `@Sprinto settings preset none` sets no default for this channel and replies "OK. Default sprint options: (none)". The server's default then doesn't apply in this channel either.
+* A default Sprinto can't use is refused with "Error: Could not set default sprint options: " followed by the reason.
+
+### Rules for default sprints
+
+A default takes most of what you can type after {{<slashembed name="sprint">}}. A few options have extra rules:
+
+* **Gap between chain rounds:** `20 next 10` starts each new round 10 minutes after the previous round's writing time ends. The 10 minutes include the time for word counts. `20 break 7` gives a 7-minute break after the word counts are in. Setting one replaces the other. On a sprint without rounds, neither does anything. See [Chain sprints]({{<relref "chains" >}}).
+* **Clock times:** a default needs more than one time, so `at :00/:30` works and `at :30` doesn't. A default with `until` also needs `for at least`, which sets the shortest sprint: `until :00/:30 for at least 10`.
+  <!-- main only: default break and late limits -->
+* **Limits:** a default with a break longer than 1 hour, or a `late` window longer than 60 minutes, is refused.
+
+## Emoji theme
 
 {{<slash name="settings theme" >}}
 
-Which emoji appear in sprint announcements, and how those announcements read aloud. Currently just two choices:
+Choose which emoji appear in sprint announcements. The panel opens on **Server default**. Click **This channel** to set a theme for the channel you're in. Then pick a theme from **Choose an emoji theme**:
 
-- **Random emojis**, the default. A different set every sprint: one emoji rolled from each of Sprinto's red, green and yellow pools, for the join window, the start and time's up.
-- **Screen reader friendly.** The same four emoji every sprint, with shorter names to be read aloud in a less annoying way. There are also some screen reader friendly changes the wording.
+| Theme | What you get |
+| --- | --- |
+| **Random emojis** (default) | A different set every sprint: one emoji from each of Sprinto's yellow, green and red sets. Yellow is for the join window, green for the start, and red for time's up. |
+| **Screen reader friendly** | Announcements that read better with a screen reader: the same four emoji every sprint (join window, start, time's up and results), each with a short name, and plainer wording. <!-- TODO owner: confirm the theme's emotes are uploaded on the live bot --> |
 
-## Every setting
+**Reset to built-in** (on the server) or **Clear channel override** (in a channel) removes the theme set at this level. Everyone except a Sprint Admin sees the text only.
 
-Channel and server scope. Anyone can view, {{<tag-admin>}} to change.
+To set the theme for this channel by typing, use {{<atsprintoembed "settings theme screen-reader">}} or {{<atsprintoembed "settings theme random">}}.
 
-Set these via {{<slashembed name="settings">}} now.
+## Remove or report a quote
 
-| Key | Default | What it does |
-| --- | --- | --- |
-| `walltime` | on | How the start message shows the end of the sprint. `on` adds a live countdown that ticks in each reader's own client, plus the end time in their own timezone on sprints of 2 minutes or more. `sometimes` drops the countdown and gives the older static end minute instead, e.g. "Duration: 15 minutes (until ⏰ :16).", also only on sprints of 2 minutes or more; when the end doesn't land on a whole minute it reads "(until ⏰ :16 +30s)". `off` shows the duration only. |
-| `theme` | random | Which emoji appear in sprint announcements, and how they're read aloud. `random` rolls a fresh emojis every sprint; `screen-reader` uses a fixed emojis and plainer wording, and is covered under [settings theme](#settings-theme) above. |
-| `show-ps` | on | The post-sprint text: quotes, combined word counts, updates, `/forgetme` help, everything below the scoreboard. Turning this off hides all of it, including anything the settings below would have shown. The panel lists Quotes, Family-friendly and Patreon requests underneath this row, struck through while it's off. |
-| `show-quotes` | on | Quotes at the end of sprints, on every second sprint in the channel. It's unlikely you'll agree with every quote. They're there to provoke thought and discussion. If that's not what your group is there for, turn them off. |
-| `family-friendly` | on | Filters out the occasional crass quote or response. Filtering is on by default, but you'll rarely see a difference with it off. |
-| `show-patreon` | on | Allow occasional requests to support Sprinto through Patreon, Ko-fi or merch. There aren't many of these messages, and one may still slip through if it's part of a news update. |
-| `auto-pings` | on | Whether joining a sprint signs you up to be pinged at the start of the next (usually) 3 sprints. With this off, sprinters need to manually request to be pinged with {{<slashembed name="pingme">}}. Ping roles are still honoured either way. |
-| `carl` | off | Lets a feeder bot such as Carl-bot start sprints here. Sprinto ignores other bots unless you turn this on. See [Carl-bot x Sprinto]({{<relref "carlbot" >}}). |
-| `shuffle-leaderboard` | off | Lists the scoreboard in a stable random order with no rank numbers, with pets at the bottom. Takes the edge off the competition and let sprinters work at their own pace. |
-| `tidy-sprints` | off | Sprinto deletes its own join and word-count confirmations 45 seconds after posting, to stop a busy sprint burying the channel. It only ever removes its own confirmations, never anything you typed. |
-| `preset` | none | The channel's default sprint, written the same way you'd write it after {{<slashembed name="sprint">}}. For example `20 iab` for a 20 minute sprint starting in a bit. Someone typing a bare {{<slashembed name="sprint">}} gets this. |
-| `max-sprint` | 2 hours | Caps how long a sprint can be here, anywhere from 15 minutes to 2 hours. Attempts to start longer sprints are refused, and `please` doesn't get past it. It's the only setting a channel can't loosen: set on both the channel and the server, the smaller one wins. The settings panel calls this row **Longest sprint allowed**. |
+If a quote is a problem, or just annoyingly prescriptive, tell me and I'll remove it from the database. Use {{<slashembed name="feedback">}} and include the quote itself, and what's wrong with it (or the author).
 
-Your own settings are under {{<slashembed name="settings me">}}.
+An {{<tag-admin>}} doesn't have to wait, and can take a quote off results that are already posted:
 
-To change chimes by text, type {{<atsprintoembed "chimes 2">}}
+1. Right-click the sprint results the quote is on (long-press on mobile).
+2. Choose **Apps → Clean up these results**.
+3. Press **Remove the quote**.
 
-| Key | Default | What it does |
-| --- | --- | --- |
-| `chimes` | 0 | How many of a sprint's bells @ you, counting back from the last one. Anything from 0 to 5, and 0 means none. The bells ring in the channel either way. The panel calls this row **Max chimes**. |
+Sprinto edits the quote out of the posted results, and replies "Done. That quote won't be shown in this server again." Only you see the panel.
 
-## Reporting a quote
+That covers your server only, so the panel then offers **Report it too**. It asks why you're reporting the quote (Offensive or upsetting, Wrongly attributed, Wrong or misleading, Not right for this server, or Something else) and takes a note if you want to add one. Reports come to me and I read them by hand.
 
-If a quote is a problem, or just annoyingly prescriptive, tell me and I'll remove it from the database.
+**Clean up these results** works only for Sprint Admins. By default, Discord shows it only to members with the Administrator permission. To show it to your other Sprint Admins too, add their role in Server Settings → Integrations.
 
-Use {{<slashembed name="feedback">}} and include the quote itself, and what's wrong with it (or the author).
-<!--
-An {{<tag-admin>}} doesn't have to wait. Right-click the sprint results the quote is on (long-press on mobile), choose **Apps → Clean up these results**, then press **Remove the quote**. Sprinto edits it out of the message that's already posted and won't show that quote in your server again. Only you see the panel. Discord puts that right-click entry in front of server administrators only; to give it to another role as well, use Server Settings → Integrations.
-
-That covers your own server only, so the panel then offers **Report it too**. It asks why (offensive, wrongly attributed, wrong, not right for this server, or something else) and takes a note if you want to add one. Reports come to me and I read them by hand.
--->
 ## See also
 
 - [Setup]({{< relref "setup" >}}) (setting up Sprinto)
-- [Allowed channels]({{<relref "whitelist" >}}): keeping sprints out of channels they don't belong in
+- [Sprint channels]({{<relref "whitelist" >}}): keeping sprints to the channels you choose
 - [Ping me]({{<relref "pingme" >}}): who gets @mentioned at sprint start, including roles
 - [Admin commands]({{<relref "admin" >}}): about the {{<tag-admin>}} and {{<tag-mc>}} roles
 - [ActiveSprinter]({{<relref "activesprinter" >}}) (another role used by Sprinto)
