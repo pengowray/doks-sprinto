@@ -43,21 +43,13 @@ Each Ko-fi payment gives you this much seat time:
 
 - Amounts count as written, in any currency: €5 counts as $5.
 - Tips add up: the days from a new tip are added to the end of your current seat time. A new tip can extend your seat to at most 365 days after the date of that tip.
-- With a Ko-fi monthly membership, your seat lasts until 1 month and 7 days after your last monthly payment, or for the days in the table for that payment if that's longer. The 7 days cover a card payment that's late or bounced.
+- With a Ko-fi monthly membership, your seat lasts until 1 month and 7 days after your last monthly payment, or for the number of days the table gives for that payment amount, whichever is longer. The extra 7 days allow for a card payment that's late or bounced.
 
 ## Check your seat
 
-Open {{<slashembed name="pets">}}. It shows one of these lines:
+Press the **companion seat** button in {{<slashembed name="pets">}} to see which pet is in your seat and what kind of seat you have. The lines it shows are listed on the Pets page, under [Your seat's details]({{<relref "emojipet" >}}#your-seats-details).
 
-| Line in /pets | What it means |
-|---|---|
-| Supporter seat. For your ongoing support. Thank you! | You're supporting Sprinto now. |
-| Supporter seat, yours through 12 November. Thank you for supporting Sprinto! | Your seat lasts until the date shown, from support you've already given. |
-| Reserved seat: yours for good. Thank you for supporting Sprinto! | A permanent seat, given by the developer. |
-| Gift seat, with compliments. | A seat from a gift code. |
-| No companion seat, so your pets can't join sprints right now. | You don't have a seat. |
-
-In the last 7 days of your seat, the pet list also shows the date: "Your companion seat lasts until 12 November."
+In the last 7 days of your seat, the /pets panel also shows the date your seat ends: "Your companion seat lasts until 12 November."
 
 ## When your seat runs out
 
@@ -66,7 +58,7 @@ In the last 7 days of your seat, the pet list also shows the date: "Your compani
 - Renaming a pet or changing their look needs a seat. You can still choose your companion, and hibernate or revive pets.
 - If you support Sprinto again, your seat comes back and the same companion sprints with you again.
 
-Without a seat, {{<slashembed name="pets">}} shows:
+If you try to rename a pet or change their look without a seat, Sprinto replies:
 
 {{< reply ephemeral="1" >}}
 Your pets are resting. A companion seat lets one sit with you and appear on the scoreboard. You can still hibernate or revive them.
@@ -77,7 +69,7 @@ Your pets are resting. A companion seat lets one sit with you and appear on the 
 {{<slash name="redeem" key0="code" val0="L-XXXX">}}
 
 - An `L-` code links your Patreon or Ko-fi support to your Discord account.
-- A `G-` code claims a gift: some months of supporter status, or a gift pet with a seat.
+- Use a `G-` code to claim a gift: some months of supporter status, or a gift pet with a seat.
 - Codes come from the developer. Capital letters and spaces in a code don't matter.
 - Only you see the reply. {{<slashembed name="redeem">}} also works in a direct message to Sprinto.
 
@@ -89,5 +81,5 @@ Your pets are resting. A companion seat lets one sit with you and appear on the 
 
 ## Other ways to help
 
-- Vote for Sprinto on [top.gg](https://top.gg/bot/421646775749967872/vote) to help other people find it. {{<atsprintoembed "vote">}} gives the same link.
+- Vote for Sprinto on [top.gg](https://top.gg/bot/421646775749967872/vote) to help other people find Sprinto. {{<atsprintoembed "vote">}} gives the same link.
 - Buy something from the [Sprinto merch store](https://www.redbubble.com/shop/ap/61373209).

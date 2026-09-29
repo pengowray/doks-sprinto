@@ -7,7 +7,7 @@ url: "docs/during-the-sprint"
 
 Most sprints need only two commands:
 
-1. Join with {{<slashembed name="join" >}}. If your document already has words in it, add that number, such as {{<slashembed name="join" key0="word-count" val0="10000" >}}. This is your starting count.
+1. Join with {{<slashembed name="join" >}}. If your document already has words in it, add that number, such as {{<slashembed name="join" key0="word-count" val0="10000" >}}. That number is your starting count.
 2. When time's up, give the total word count of your document with {{<slashembed name="words" key0="count" val0="10150" >}}. Sprinto subtracts your starting count to work out your new words.
 
 The rest of this page covers other ways to join and give your count, fixing a count after the scoreboard, and cancelling a sprint.
@@ -72,7 +72,7 @@ Sprinto replies with your total and your new words:
 {{< mention "alex" >}}, Word count updated: 10,150 words (150 new)
 {{< /reply >}}
 
-If your starting count is 0, the reply has one number: `Word count updated: 150 words`. On a slash command, the reply starts with your name so the channel can see whose count it is, but it doesn't ping you. On an `@Sprinto` command, the reply is a Discord reply to your message.
+If your starting count is 0, the reply has one number: `Word count updated: 150 words`. When you use a slash command, Sprinto's reply starts with your name so the channel can see whose count it is, but the reply doesn't ping you. When you use an `@Sprinto` command, Sprinto answers with a Discord reply to your message.
 
 {{<slash name="words" key0="count" val0="150 new" >}}
 Give the number of new words you wrote in this sprint. This is useful if you changed documents or lost track of your starting count. {{< slashembed name="words" key0="count" val0="0 new" >}} sets your total back to your starting count.
@@ -90,7 +90,7 @@ Keep your word count as it is and mark yourself done, so Sprinto stops waiting f
 {{<alts>}}
 {{<slash name="final" key0="count" val0="10150" >}}
 {{</alts>}}
-Give your final word count before time's up. Sprinto then doesn't wait for another count from you at the end. See also [Final]({{<relref "misc-sprint" >}}#final).
+Give your final word count before time's up. At the end, Sprinto doesn't wait for another count from you. See also [Final]({{<relref "misc-sprint" >}}#final).
 
 {{<slash name="join" key0="word-count" val0="15000" >}}
 To change your starting count, join again with the new number, then give your total with {{<slashembed name="words">}}. To change your starting count and keep your total, use [tare]({{<relref "misc-sprint" >}}#tare).
@@ -98,7 +98,7 @@ To change your starting count, join again with the new number, then give your to
 ### If you forgot to join
 
 {{<slash name="join" key0="word-count" val0="just 200 final" >}}
-Join and give your new words in one command: this joins you with 200 new words and marks you done. It works only after the sprint has started.
+Join and give your new words in one command: this joins you with 200 new words and marks you done. This command works only after the sprint has started.
 
 If you haven't joined, a count you give with {{<slashembed name="words">}} or {{<slashembed name="final">}} joins you, and that number becomes your starting count, with 0 new words. For example, {{<slashembed name="words" key0="count" val0="500" >}} joins you with 500 starting words. To get credit for words you wrote, say they're new: {{<slashembed name="join" key0="word-count" val0="just 200 final" >}}, {{<slashembed name="words" key0="count" val0="200 new" >}} or {{<slashembed name="words" key0="count" val0="+200" >}}.
 
@@ -109,7 +109,7 @@ If you haven't joined, a count you give with {{<slashembed name="words">}} or {{
 Sprinto asks before it accepts a word count that looks like a mistake:
 
 - **Too many new words:** your total is higher than your current count by more than about 300 words for each minute of writing time so far. For example, 10 minutes into a sprint, Sprinto asks about a rise of more than 3,000 words. Sprinto never asks about a rise of 2,000 words or less.
-- **Too many words deleted:** your total is more than 20% below your starting count, when your starting count is 100 words or more. For a starting count of 50 to 99 words, Sprinto asks when your total is more than 80% below it. Sprinto never asks when your starting count is under 50 words.
+- **Too many words deleted:** your total is more than 20% below your starting count, when your starting count is 100 words or more. For a starting count of 50 to 99 words, Sprinto asks when your total is more than 80% below your starting count. Sprinto never asks when your starting count is under 50 words.
 
 Sprinto shows what the number would mean, with a button for each choice:
 
@@ -151,15 +151,15 @@ Anything in brackets is a comment for the room, not part of the command. Sprinto
 Word count updated: 850 words (150 new) **[brb tea]**
 {{< /reply >}}
 
-Round `(…)` and square `[…]` brackets both work, and you can use several in one line. If you leave out the closing bracket, the rest of the line is the comment. Comments work on {{<slashembed name="sprint">}} and {{<slashembed name="join">}} as well as the word count commands. On `/sprint`, the comment is shown on a line above the sprint announcement.
+Round `(…)` and square `[…]` brackets both work, and you can put several comments in one line. If you leave out the closing bracket, the rest of the line is the comment. Comments work on {{<slashembed name="sprint">}} and {{<slashembed name="join">}} as well as the word count commands. On `/sprint`, the comment is shown on a line above the sprint announcement.
 
-Brackets with only a number in them are the count: once the sprint has started, {{<slashembed name="words" key0="count" val0="(350)" >}} gives a count of 350.
+Brackets with only a number in them are read as your word count: once the sprint has started, {{<slashembed name="words" key0="count" val0="(350)" >}} gives a count of 350.
 
 You can also paste Sprinto's reply back as your count. {{<atsprintoembed "words 1,250 words (250 new)">}} sets your total to 1,250 and your starting count to 1,000, so Sprinto's reply shows the same 250 new words. Before the sprint starts, the same line joins you with 1,250 starting words.
 
-To give a large total without Sprinto asking about it, say how many of the words are new. {{<atsprintoembed "words 50,000 words (250 new)">}} is accepted as it is: 250 new words, and a starting count of 49,750. Sprinto then checks only the new words, so `100,000 words (50,000 new)` is still asked about.
+To give a large total without Sprinto asking about it, say how many of the words are new. {{<atsprintoembed "words 50,000 words (250 new)">}} is accepted as it is: 250 new words, and a starting count of 49,750. Sprinto then checks only the new words, so Sprinto still asks about `100,000 words (50,000 new)`.
 
-A `#` on its own starts a note to yourself. Sprinto ignores everything after it and doesn't repeat it. A `#` joined to a number, such as `#20`, isn't a note.
+A `#` on its own starts a note to yourself. Sprinto ignores everything after the `#` and doesn't repeat the note. A `#` joined to a number, such as `#20`, isn't a note.
 
 ## Typos
 
@@ -173,7 +173,7 @@ Sprinto corrects small typos in commands you type after `@Sprinto`. When Sprinto
 ↳ /words : Word count updated: 250 words
 {{< /reply >}}
 
-`↳ /words` is the command Sprinto ran. If no command is close enough to be sure, Sprinto doesn't reply. Slash commands are picked from Discord's menu, so they have no typos to correct.
+`↳ /words` is the command Sprinto ran. If Sprinto can't be sure which command you meant, Sprinto doesn't reply. Slash commands are picked from Discord's menu, so they have no typos to correct.
 
 Sprinto doesn't correct words of 3 letters or fewer, or a typo in the first letter. These commands are never corrected, so type them exactly: `go`, `ping`, `roll`, `parse`, `tare`, `starting`, `donate`, `cancelplease`, `nudgeplease` and `last one`.
 
@@ -186,13 +186,13 @@ Sprinto doesn't correct words of 3 letters or fewer, or a typo in the first lett
 {{<atsprinto "latewc 10150" >}}
 {{</alts>}}
 
-For 10 minutes after time's up, you can add or fix your word count with {{<slashembed name="late">}}. Sprinto updates the posted scoreboard.
+For 10 minutes after time's up (the late window), you can add or fix your word count with {{<slashembed name="late">}}. Sprinto updates the posted scoreboard.
 
 `/late` takes the same kinds of count as {{<slashembed name="words">}}, such as {{<slashembed name="late" key0="count" val0="+250" >}} or {{<slashembed name="late" key0="count" val0="300 new" >}}.
 
 If you use `/words` or `/same` just after a sprint ends, and you were in the sprint but hadn't given a count, Sprinto replies with a button that gives your count with `/late`.
 
-If another sprint starts in the same channel, the late window closes 1 minute before that sprint's writing time ends, if that comes first. In a [chain]({{<relref "chains" >}}), each round has its own late window: while the previous round's window is open, {{<slashembed name="late">}} goes to the previous round's scoreboard, and {{<slashembed name="words">}} goes to the round you're in.
+If another sprint starts in the same channel, the late window closes at whichever comes first: the late window's usual end, or 1 minute before the new sprint's writing time ends. In a [chain]({{<relref "chains" >}}), each round has its own late window: while the previous round's late window is open, {{<slashembed name="late">}} updates the previous round's scoreboard, and {{<slashembed name="words">}} gives your count for the round you're in.
 
 To change the late window, add `late 20` (20 minutes) or `late none` (no late window) to the sprint command, or to the channel's default sprint. `late 0` does the same as `late none`. The late window can be up to 60 minutes. See [Sprint (all options)]({{<relref "sprint" >}}).
 
@@ -206,7 +206,7 @@ A sprint command with a late window over 60 minutes is refused: `Sorry, 90 minut
 {{<atsprinto "cancel">}}
 {{</alts>}}
 
-`/cancel` ends the sprint at once:
+`/cancel` ends the sprint at once in these cases:
 
 - before writing starts (during the join window, or during a break in a chain), even if other people have joined
 - after writing starts, if nobody else is in the sprint
@@ -293,11 +293,11 @@ Before writing starts, or when nobody else is in the sprint, anyone can use `/ca
 
 Sprinto posts three announcements during a sprint: one when the join window opens, one when writing starts, and one when time's up. Each announcement has a title, a line or two of detail, and a list of names. If the sprint has chimes, Sprinto also posts a chime message partway through, saying how much time is left.
 
-The three emoji on each side of a title change from sprint to sprint, and they're often not fruit: stars, flowers, animals, boats and more. Their colours follow traffic lights: yellow on the join message, green at the start, and red at time's up. About 1 sprint in 50 uses a themed set instead, such as 🍎🍏🍋 or three hearts. The emoji have no other meaning. With the screen-reader emoji theme ({{<slashembed name="settings theme">}}), each message has one fixed emote instead, the same every sprint.
+The three emoji on each side of a title change from sprint to sprint. Some sprints get fruit, and others get stars, flowers, animals, boats and more. Their colours follow traffic lights: yellow on the join message, green at the start, and red at time's up. About 1 sprint in 50 uses a themed set instead, such as 🍎🍏🍋 or three hearts. The emoji have no other meaning. With the screen-reader emoji theme ({{<slashembed name="settings theme">}}), each message has one fixed emote instead, the same every sprint.
 
 ### The join window
 
-This message is posted when the sprint is announced, before writing starts. It's the time to join:
+This message is posted when the sprint is announced, at the start of the join window: the time to join before writing starts.
 
 {{< reply >}}
 🍋🍋🍋 **JOIN THE SPRINT** 🍋🍋🍋
@@ -328,7 +328,7 @@ Notes:
 📣 Participants:
 
 - Lists everyone in the sprint.
-- The number after each name is that person's starting count. When they give a word count during the sprint, it also shows their new words, such as `(1,200+300)`: 1,200 starting words and 300 new. The number disappears once they've given their final count or marked themselves done.
+- The number after each name is that person's starting count. When they give a word count during the sprint, the brackets also show their new words, such as `(1,200+300)`: 1,200 starting words and 300 new. The number disappears once they've given their final count or marked themselves done.
 - The list is on the join message while people join, on the start message while everyone writes, and on the time's-up message at the end.
 
 ### Chimes
@@ -337,11 +337,11 @@ Notes:
 🔔 **60 seconds remaining**
 {{< /reply >}}
 
-A chime is a message saying how much time is left in the sprint. A sprint has chimes only if they were asked for: in the sprint command, in the channel's default sprint, or with the `marathon` or `megathon` preset, which has one chime at the halfway point. A sprint can have up to 5 chimes, at least 60 seconds apart. To add chimes to a sprint, see [chimes]({{<relref "sprint" >}}#chimes).
+A chime is a message saying how much time is left in the sprint. A sprint has chimes only if someone asked for them: in the sprint command, in the channel's default sprint, or by using the `marathon` or `megathon` preset. Each of those two presets has one chime at the halfway point. A sprint can have up to 5 chimes, at least 60 seconds apart. To add chimes to a sprint, see [chimes]({{<relref "sprint" >}}#chimes).
 
 A chime set as a percentage of the sprint adds a note, such as `🔔 **30 minutes remaining** (~50% in)`.
 
-A chime pings only the people who asked for chime pings. The chime message lists them after another 🔔. To be pinged by the last 2 chimes of each sprint, type {{<atsprintoembed "chimes 2">}}. You can choose up to 5 chimes. {{<atsprintoembed "chimes off">}} or `chimes 0` stops chime pings, and 0 is the default. {{<atsprintoembed "chimes">}} on its own shows your setting. The same setting is **Max chimes** in {{<slashembed name="settings me">}}.
+A chime pings only the people who asked for chime pings. The chime message lists those people after a second 🔔. To be pinged by the last 2 chimes of each sprint, type {{<atsprintoembed "chimes 2">}}. You can choose up to 5 chimes. {{<atsprintoembed "chimes off">}} or `chimes 0` stops chime pings, and 0 is the default. {{<atsprintoembed "chimes">}} on its own shows your setting. The same setting is **Max chimes** in {{<slashembed name="settings me">}}.
 
 ### Time's up
 
@@ -363,7 +363,7 @@ If nobody is in the sprint, the message says `Please /join and then /words to gi
 All word counts are in! Results shortly.
 {{< /reply >}}
 
-Once everyone still in the sprint has given their count or marked themselves done, Sprinto stops waiting and posts the scoreboard about 12 seconds later. Leaving with {{<slashembed name="leave" >}} also counts as done, so if the last person Sprinto was waiting for leaves, the scoreboard follows. A sprint started with `noff` always waits the full time for word counts. See [sprint flags]({{<relref "sprint" >}}#sprint-flags).
+Once everyone still in the sprint has given their count or marked themselves done, Sprinto stops waiting and posts the scoreboard about 12 seconds later. Leaving with {{<slashembed name="leave" >}} also counts as done, so if the last person Sprinto was waiting for leaves, Sprinto posts the scoreboard. A sprint started with `noff` always waits the full time for word counts. See [sprint flags]({{<relref "sprint" >}}#sprint-flags).
 
 <!--
 ### Nobody in it.
@@ -387,8 +387,8 @@ For how to read the scoreboard, see [Sprint (basics)]({{<relref "basics" >}}).
 Notes:
 
 - With the screen-reader emoji theme, the title is `🏆 **Congrats everyone**`.
-- Word counts are self-reported, on the honesty system.
-- The scoreboard is about the writing: writing alongside others keeps you accountable and gives you a challenge.
+- Word counts are self-reported, on the honour system.
+- It's all about the writing, writing with others to keep yourself accountable, and challenging yourself.
 - An admin can turn on the `shuffle-leaderboard` setting, which lists the scoreboard in a random order with no rank numbers. See [Settings (admin)]({{<relref "settings" >}}).
 
 <!-- main only: Discord status note -->
@@ -454,7 +454,7 @@ Add a topic, and Sprinto replies with a link to the page on this site about it. 
 - `sprinto planet` or `support`: the invite to the Sprinto Planet support server.
 
 {{<atsprinto "longhelp" >}}
-Show longer help in the channel. It's still much less complete than the help here.
+Show longer help in the channel. The longer help is still much less complete than the help on this site.
 
 {{<atsprinto "invite" >}}
 Get a link to the [Invite Sprinto]({{<relref "invite" >}}) page on this site, which has the invite link and setup steps.
@@ -471,4 +471,4 @@ Give your suggestions and improvement ideas. A copy is posted anonymously on the
 - [Sprint (basics)]({{<relref "basics" >}}) — common ways to use `/sprint`
 - [Sprint (all options)]({{<relref "sprint" >}}) — complete sprint options guide
 - [Settings (admin)]({{<relref "settings" >}}) — Sprint channel settings
-- [Less used]({{<relref "misc-sprint" >}}) — commands you don't need but they're related to sprints
+- [Less used]({{<relref "misc-sprint" >}}) — less-used commands related to sprints

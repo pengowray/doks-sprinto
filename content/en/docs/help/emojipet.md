@@ -12,7 +12,7 @@ A pet is a small cosmetic companion that sprints alongside you and shows up on t
 
 ## The companion seat
 
-A **companion seat** lets one of your pets join your sprints. You get one by supporting Sprinto on Patreon or Ko-fi. The pet in your seat is your **companion**: they join every sprint you join and get their own line on the scoreboard. Anyone can sprint for free, with or without a seat.
+A **companion seat** lets one of your pets join your sprints. You get a companion seat by supporting Sprinto on Patreon or Ko-fi. The pet in your seat is your **companion**: they join every sprint you join and get their own line on the scoreboard. Anyone can sprint for free, with or without a seat.
 
 Without a seat, your pets stay in your collection, but they don't join sprints or appear on scoreboards. The `/pets` panel says "No companion seat, so Nugget can't join your sprints." You also can't rename your pets or change their look until you have a seat. Sprinto answers "Your pets are resting. A companion seat lets one sit with you and appear on the scoreboard. You can still hibernate or revive them."
 
@@ -20,9 +20,9 @@ For how long a seat lasts after a tip or a membership, see [How long your seat l
 
 ## Your first pet
 
-When you first get a companion seat and have no pets, Sprinto gives you one: a random animal with a random name, already in your seat as your companion. Only the first pet is given automatically. Some writers have more than one pet, from the old bot or given by me.
+When you first get a companion seat and have no pets, Sprinto gives you a pet: a random animal with a random name, already in your seat as your companion. Only the first pet is given automatically. Some writers have more than one pet, from the old bot or given by me.
 
-**Pets from the old bot came across.** If you had a pet in the old bot and were supporting when the new Sprinto took over, your pet is in `/pets`, marked "Emoji pet (OG)". If you weren't supporting then, your pet is kept hidden, and comes back with the same name and look the first time you get a companion seat again.
+**Pets from the old bot were carried over.** If you had a pet in the old bot and were supporting when the new Sprinto took over, your pet is in `/pets`, marked "Emoji pet (OG)". If you weren't supporting then, your pet is kept hidden, and comes back with the same name and look the first time you get a companion seat again.
 
 ## No loot boxes or "gacha"
 
@@ -54,14 +54,14 @@ Below the totals, one line in italics says whether this pet will sprint with you
 |---|---|
 | **Activate** | Make this pet your companion. If another pet is your companion, this pet takes their place. |
 | **Remove from seat** | Shown on your companion instead of **Activate**. Take the pet out of your seat. No pet joins your sprints until you activate one. |
-| **<3** | Show an "Animal observation" card with the pet's thought bubble, such as "🐢 ｡oO(💓)". Only you see it. In the Noto_R style, about 85 animals move in the bubble. Press **<3** again to close it. |
+| **<3** | Show an "Animal observation" card with the pet's thought bubble, such as "🐢 ｡oO(💓)". Only you see it. In the Noto_R style, about 85 of the animals have a moving picture in the bubble. Press **<3** again to close the card. |
 | **Appearance…** | Change the pet's look. See [Appearance](#appearance). |
 | **Rename…** | Change the pet's name. See [Names](#names). |
 | **Hibernate** | Turn the pet into an egg. See [Hibernate and eggs](#hibernate-and-eggs). |
 
 When a pet's card is open, clicking that pet's button again also activates them, or removes them from your seat if they're already your companion.
 
-**While you're in a sprint** that's running or collecting word counts, your companion's buttons are greyed out. If you try anyway, Sprinto answers "Not while you're sprinting. Your companion is on the board right now, so changes wait until the sprint wraps up." Your other pets can still be renamed or given a new look.
+**While you're in a sprint** that's running or collecting word counts, your companion's buttons are greyed out. If you try to change your companion anyway, Sprinto answers "Not while you're sprinting. Your companion is on the board right now, so changes wait until the sprint wraps up." Your other pets can still be renamed or given a new look.
 
 ### Kinds of pet
 
@@ -72,7 +72,7 @@ The kind is the first thing on a pet's card.
 | Emoji pet | A pet given by the new Sprinto. |
 | Emoji pet (OG) | A pet from the old bot. |
 | Emoji pet (OG+) | A pet from the old bot with something the new Sprinto no longer allows: an emoji that isn't on the animal list, a name over 20 characters, or a name with an emoji in it. |
-| Emoji pet (OG++) | An OG+ pet with both an emoji that isn't on the animal list and a name that can't be given today, so neither can change. |
+| Emoji pet (OG++) | An OG+ pet with both an emoji that isn't on the animal list and a name the new Sprinto no longer allows, so neither the emoji nor the name can be changed. |
 | Sprinto Pixel Pet | A pet from the pixel-art set by Sambhur. |
 
 Other one-off sets show their own name as the kind, such as "Special pet".
@@ -83,23 +83,23 @@ Other one-off sets show their own name as the kind, such as "Special pet".
 
 A new name can be up to 20 characters, and can't include an emoji.
 
-A pet from the old bot whose name is over 20 characters or has an emoji in it keeps that name for good, and has no **Rename…** button. Once renamed, the old name couldn't be typed back in.
+A pet from the old bot whose name is over 20 characters or has an emoji in it keeps that name for good, and has no **Rename…** button, because after a rename the old name couldn't be typed back in.
 
 ## Appearance
 
 **Appearance…** opens a picker with the pet's current picture, a **Browse a category** dropdown (dogs, cats, birds, sea life, bugs and more) and a grid of animals, drawn in the pet's art style. Click an animal to change the pet's look at once. **Roll** picks a random animal, and **‹ Prev** and **Next ›** page through the grid.
 
-**Type an emoji** accepts the emoji itself (🐼), a Discord shortcode (`:panda:`), the animal's name (`panda`) or a code point (`1F43C`). It must be one animal or creature from Sprinto's list of about 140: animals, birds, bugs, sea creatures, and mythical and prehistoric creatures. People, objects and food aren't on the list.
+**Type an emoji** accepts the emoji itself (🐼), a Discord shortcode (`:panda:`), the animal's name (`panda`) or a code point (`1F43C`). The emoji must be one animal or creature from Sprinto's animal list of about 140 emoji: animals, birds, bugs, sea creatures, and mythical and prehistoric creatures. People, objects and food aren't on the list.
 
-A pet only changes to looks from their own set. A Sprinto Pixel Pet picks from the pixel set, and has no **Type an emoji** button. An OG+ pet whose emoji is on the animal list can pick another animal. An OG+ pet whose emoji isn't on the list keeps their look, and has no **Appearance…** button.
+A pet can only change to a look from their own set. A Sprinto Pixel Pet picks from the pixel set, and has no **Type an emoji** button. An OG+ pet whose emoji is on the animal list can pick another animal. An OG+ pet whose emoji isn't on the list keeps their look, and has no **Appearance…** button.
 
 ### Art style
 
-Each emoji pet has their own art style, and switching is free and instant. **Art style…**, inside Appearance, shows the pet drawn in each style, with the current style highlighted.
+Each emoji pet has their own art style, and switching styles is free and instant. **Art style…**, inside Appearance, shows the pet drawn in each style, with the current style highlighted.
 
 | Style | What it looks like |
 |---|---|
-| Standard | Plain emoji, in each reader's own emoji font. It looks different on an iPhone. |
+| Standard | Plain emoji, in each reader's own emoji font. For example, it looks different on an iPhone. |
 | Twemoji_R | Discord's emoji style, facing right. |
 | Noto_R | Noto Color Emoji, facing right. |
 
@@ -126,7 +126,7 @@ Your companion gets a line of their own, ranked among the writers.
 
 Your companion's count is a small random number of words, never more than yours: usually 1 to 6, sometimes up to 12, rarely up to 20. If you wrote 0 words, your companion's count is 0 too. If your count went down, your companion's count goes down a little too. Each sprint's count is added to your companion's lifetime totals.
 
-On a tie, the pet comes after the person. If the channel shuffles its scoreboard, pets go at the bottom, shuffled.
+On a tie, the pet comes after the person. If the channel has **Shuffled leaderboard** turned on, pets go at the bottom, in a random order.
 
 When you join a sprint, the confirmation names your companion, for example "You have joined with 500 starting words — with 🐢 Nugget."
 
@@ -138,7 +138,7 @@ When you join a sprint, the confirmation names your companion, for example "You 
 🐢 Nugget ｡oO(💓)
 {{< /reply >}}
 
-Sprinto posts your companion's thought bubble in the channel, or your first awake pet's if no pet is in your seat. It works without a seat and pings nobody. `pet pat`, `pat pet`, `pet feed` and `pet hug` also work.
+Sprinto posts your companion's thought bubble in the channel. If no pet is in your seat, Sprinto posts the thought bubble of your first awake pet. The command works without a seat and pings nobody. `pet pat`, `pat pet`, `pet feed` and `pet hug` also work.
 
 ## How long your seat lasts
 
@@ -160,7 +160,7 @@ Tips add up: each new tip adds its days after the end of the seat time you alrea
 
 **If you stop supporting**, your seat stays until 7 days after your last month of support ends. If your last payment would buy more days as a tip (see the table), the seat lasts that long instead, counted from the day of the payment. For example, if you supported with $10 a month, your seat lasts 90 days from your last payment. While the seat lasts, your companion keeps sprinting, but you can't be given a new pet until you're supporting again. After the seat ends, your pets stay in your collection, but they don't join sprints.
 
-When your seat has 7 days or fewer left, the `/pets` panel says when it ends, for example "Your companion seat lasts until 3 May 2027."
+When your seat has 7 days or fewer left, the `/pets` panel says when the seat ends, for example "Your companion seat lasts until 3 May 2027."
 
 **A 7-day Patreon free trial** comes with a companion seat and a companion for the trial. The `/pets` panel shows when the trial ends. If the trial ends without a payment, your companion hibernates as an egg, and wakes up automatically if you start paying later.
 
@@ -168,7 +168,7 @@ When your seat has 7 days or fewer left, the `/pets` panel says when it ends, fo
 
 ### Your seat's details
 
-Press **companion seat** in the `/pets` panel to see which pet is in your seat, such as "Sitting with you: 🐢 Nugget", and one line about the seat:
+Press the **companion seat** button in the `/pets` panel to see which pet is in your seat, such as "Sitting with you: 🐢 Nugget", and one line about the seat:
 
 | Line | Meaning |
 |---|---|

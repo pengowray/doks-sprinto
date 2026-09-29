@@ -5,7 +5,7 @@ lead: "Start a sprint, join it, write, report your word count, and read the scor
 weight: 10
 ---
 
-A sprint is a shared timer. Someone starts one, anyone who wants in joins, and everybody writes until the time runs out. When it's over, you report how many words you wrote and Sprinto posts a scoreboard.
+A sprint is a shared timer. Someone starts a sprint, anyone who wants to take part joins it, and everybody writes until the time runs out. When the sprint is over, you report how many words you wrote and Sprinto posts a scoreboard.
 
 Word counts are on the honour system. You type in your own count, and Sprinto never sees your document.
 
@@ -29,9 +29,9 @@ Some channels and servers have their own default sprint, set by an admin, such a
 
 {{<slash name="join" >}}
 
-Join even if you started the sprint yourself. Sprinto adds only people who join, and forgetting to join your own sprint catches out most new sprinters at least once.
+Join even if you started the sprint yourself. Only people who join are added to the sprint, and most new sprinters forget to join their own sprint at least once.
 
-If your document already has words in it, give that count when you join. This is your starting count:
+If your document already has words in it, give that count when you join. That count is your starting count:
 
 {{<slash name="join" key0="word-count" val0="10000" >}}
 
@@ -41,7 +41,7 @@ To start a sprint and join it in one command, add `/join` to the options:
 
 {{<slash name="sprint" key0="options" val0="20 /join" >}}
 
-This starts a 20-minute sprint with you in it, with a starting count of 0. To join with a starting count, use `20 /join 1000`. To join with your last word count, use `20 /same`.
+This starts a 20-minute sprint with you in it, with a starting count of 0. To join with a starting count, use `20 /join 1000`. To join with your last word count as your starting count, use `20 /same`.
 
 ### Write
 
@@ -53,7 +53,7 @@ Chimes ping nobody by default. To be pinged by chimes, open {{<slashembed name="
 
 ### Report your word count
 
-When writing time ends, Sprinto asks for final counts:
+When writing time ends, Sprinto asks for final word counts:
 
 {{< reply >}}
 **TIME'S UP**
@@ -67,7 +67,7 @@ Report the number of words you wrote:
 
 If you joined with a starting count, give your new total instead, and Sprinto works out the difference.
 
-The time you have to report depends on the sprint length: 3 minutes for a 15-minute sprint. The time's-up message says how long. If everyone in the sprint reports before then, Sprinto posts "All word counts are in! Results shortly." and then the scoreboard.
+The time you have to report depends on the sprint length: 3 minutes for a 15-minute sprint. The time's-up message says how long you have. If everyone in the sprint reports before then, Sprinto posts "All word counts are in! Results shortly." and then the scoreboard.
 
 To update your count during the sprint, leave a sprint, or cancel one, see [During the sprint]({{< relref "words" >}}).
 
@@ -85,9 +85,9 @@ When the time to report runs out, or everyone has reported, Sprinto posts the re
 Combined word count: 1,120 words over 15 minutes.
 {{< /reply >}}
 
-Everyone who joined gets a line: their name, the words they wrote during the sprint, and their words per minute in brackets. Tied sprinters share a rank, marked with `=`. If three or more people wrote something, the combined word count for the whole sprint goes underneath.
+Everyone who joined gets a line: their name, the number of words they wrote during the sprint, and their words per minute in brackets. Tied sprinters share a rank, marked with `=`. If three or more people wrote something, the combined word count for the whole sprint is shown underneath.
 
-The words-per-minute figure divides your words by the **whole sprint length**, not by the time you were actually writing. If you join a 20-minute sprint 5 minutes late, your wpm looks low. This is on purpose, so the figure means the same thing for everybody on the board.
+Words per minute is the number of words you wrote divided by the **whole sprint length**, not by the time you were actually writing. If you join a 20-minute sprint 5 minutes late, your wpm looks low. This is on purpose, so the figure means the same thing for everybody on the scoreboard.
 
 If you deleted more words than you wrote, your line shows the number of words deleted, with no rank. The percentage beside it is how much of your starting count you deleted. The percentage is left off when:
 
@@ -96,9 +96,9 @@ If you deleted more words than you wrote, your line shows the number of words de
 - you deleted less than 1% of your starting count
 - you deleted more than 20 times your starting count
 
-If nobody wrote anything and three or more people deleted words, the deletions are combined instead: `Combined: 600 words deleted (10% of combined starting words).` If anyone started from 0 or deleted more than they started with, the line is `Combined: 600 words deleted.`
+If nobody wrote anything and three or more people deleted words, the combined line shows the total words deleted instead: `Combined: 600 words deleted (10% of combined starting words).` If anyone had a starting count of 0, or deleted more words than their starting count, the line is `Combined: 600 words deleted.`
 
-Under the results there's usually one more line. Every second sprint it's a quote. On the other sprints it can be news from Sprinto's developer, a reminder about {{<slashembed name="forgetme" >}}, a suggestion to start another sprint, a note that Discord is having problems, or, at the start of a month, a tip to vote for Sprinto on top.gg. Some sprints get no line. An admin can turn off the quotes with `show-quotes`, or the whole line with `show-ps`. See [Settings]({{< relref "settings" >}}).
+Under the results there's usually one more line. Every second sprint, the line is a quote. On the other sprints, the line can be news from Sprinto's developer, a reminder about {{<slashembed name="forgetme" >}}, a suggestion to start another sprint, a note that Discord is having problems, or, at the start of a month, a tip to vote for Sprinto on top.gg. Some sprints have no extra line. An admin can turn off the quotes with the `show-quotes` setting, or turn off the extra line completely with `show-ps`. See [Settings]({{< relref "settings" >}}).
 
 ## If you forget to report
 
@@ -118,7 +118,7 @@ The options box suggests options as you type. To have Sprinto explain the option
 
 ### Length and start time
 
-A number on its own is the length in minutes, from half a minute to 60 minutes. Add `please` for up to 2 hours. An admin can set a lower maximum for a channel or server, such as 90 minutes, and `please` can't go past it.
+In the sprint options, a number on its own is the sprint length in minutes, from half a minute to 60 minutes. Add `please` for up to 2 hours. An admin can set a lower maximum length for a channel or server, such as 90 minutes, and `please` can't go past the admin's maximum.
 
 {{<slash name="sprint" key0="options" val0="30" >}}
 {{<alts "Synonyms" >}}
@@ -154,9 +154,9 @@ To set both, give the length and the start. This is 20 minutes of writing, start
 {{</alts>}}
 This starts the sprint the next time the clock reaches :45. If it's 11:39 now, the sprint starts at 11:45. Start times on the clock are easier for everyone to keep track of.
 
-A minute mark like `:45` works without a time zone. To give a full clock time, such as `at 11:45` or `at 2:30pm`, first set your time zone with {{<slashembed name="timezone" >}}: type a city, country or time zone name, such as `Brisbane` or `PST`. You can also name the time zone in the command, as in `at 10:30 est`. Without a time zone, Sprinto refuses a full clock time and asks you to set one.
+A minute mark like `:45` works without a time zone. To give a full clock time, such as `at 11:45` or `at 2:30pm`, first set your time zone with {{<slashembed name="timezone" >}}: type a city, country or time zone name, such as `Brisbane` or `PST`. You can also name the time zone in the command, as in `at 10:30 est`. If you give a full clock time with no time zone, Sprinto refuses it and asks you to set a time zone.
 
-Tip: put a space after `:45` so Discord doesn't turn it into an emoji. If Discord turns it into a clock emoji anyway, Sprinto asks which command you meant, with a button for each likely one.
+Tip: put a space after `:45` so Discord doesn't turn `:45` into an emoji. If Discord turns it into a clock emoji anyway, Sprinto asks which command you meant, with a button for each likely command.
 
 ### In a bit
 
@@ -182,7 +182,7 @@ Sprinto picks a tidy start time 2½ to 7½ minutes from now.
 {{<atsprinto "sprint hel" >}}
 {{<slash name="sprint" key0="options" val0="for however long" >}}
 {{</alts>}}
-Sprinto picks the length for you, usually 10 to 25 minutes, with a small chance of 5, 5½ or 40 minutes. You can combine it with other options, for example {{<slashembed name="sprint" key0="options" val0="hel iab" >}}. For ranges, dice and the other random lengths, see [Random sprint lengths]({{< relref "random" >}}).
+Sprinto picks the length for you, usually 10 to 25 minutes, with a small chance of 5, 5½ or 40 minutes. You can combine `hel` with other options, for example {{<slashembed name="sprint" key0="options" val0="hel iab" >}}. For ranges, dice and the other random lengths, see [Random sprint lengths]({{< relref "random" >}}).
 
 ### Pomodoro
 
@@ -191,7 +191,7 @@ Sprinto picks the length for you, usually 10 to 25 minutes, with a small chance 
 {{<atsprinto "sprint pomo" >}}
 {{<slash name="sprint" key0="options" val0="pomodoro" >}}
 {{</alts>}}
-25 minutes of writing. To run several in a row, add a number of rounds: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four rounds. Each round starts 5 minutes after the previous round's writing time ends. Those 5 minutes are 4 minutes to report your word count and a 1-minute break, so a new round starts every half hour. In a `pomo` chain of five or more rounds, the break after round 4 is at least 15 minutes. More at [Chain sprints]({{< relref "chains" >}}).
+25 minutes of writing. To run several pomodoros in a row, add a number of rounds: {{<slashembed name="sprint" key0="options" val0="pomo x4" >}} runs four rounds. Each round starts 5 minutes after the previous round's writing time ends. Those 5 minutes are 4 minutes to report your word count and a 1-minute break, so a new round starts every half hour. In a `pomo` chain of five or more rounds, the break after round 4 is at least 15 minutes. More at [Chain sprints]({{< relref "chains" >}}).
 
 ### Marathon
 
@@ -211,11 +211,11 @@ To repeat the channel's last sprint, use `again` or `identical`.
 Runs the channel's last sprint again. Random lengths are picked again, and start times such as `in 5` or `iab` are worked out again from now.
 
 {{<slash name="sprint" key0="options" val0="identical" >}}
-Repeats the exact lengths of the last sprint. If a random length gave you 17 minutes, you get 17 minutes again.
+Repeats the exact lengths of the last sprint. If the last sprint had a random length of 17 minutes, `identical` gives you 17 minutes again.
 
 `again` refuses to repeat a sprint that was set to a clock time with `at` or `until`, and suggests `identical` instead.
 
-You can add changes after either one, with or without `but`:
+You can add changes after `again` or `identical`, with or without `but`:
 
 {{<slash name="sprint" key0="options" val0="identical but at :30 " >}}
 {{<slash name="sprint" key0="options" val0="again in 2" >}}
