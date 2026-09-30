@@ -660,3 +660,21 @@
 
 .tl-chip-wait { background: repeating-linear-gradient(45deg, #e8c25e, #e8c25e 3px, #a3821f 3px, #a3821f 4px); }
 [data-bs-theme="dark"] .tl-chip-wait { background: repeating-linear-gradient(45deg, #d1a943, #d1a943 3px, #8a6d17 3px, #8a6d17 4px); }
+
+/* Code in a heading (`gap`, `round`): keep the monospace face, but at the
+   heading's own size and colour with no box, so it doesn't shout. The dark
+   rules need the extra weight to beat doks-core's dark `code:not(.hljs)`. */
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
+[data-bs-theme="dark"] h1 code:not(.hljs),
+[data-bs-theme="dark"] h2 code:not(.hljs),
+[data-bs-theme="dark"] h3 code:not(.hljs),
+[data-bs-theme="dark"] h4 code:not(.hljs),
+[data-bs-theme="dark"] h5 code:not(.hljs),
+[data-bs-theme="dark"] h6 code:not(.hljs) {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
