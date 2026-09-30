@@ -52,6 +52,9 @@ const purgecss = purgeCSSPlugin({
         'btn-copy',
         // Sprinto shortcodes (layouts/_shortcodes), styled in assets/scss/common/_custom.scss
         'gg',
+        'gg-copy', // assets/js/custom.js
+        'gg-copied', // assets/js/custom.js
+        'gg-has-copy', // assets/js/custom.js
         'gg-icon',
         'gg-icon-outer',
         'gg-options',

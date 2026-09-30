@@ -678,3 +678,51 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
     padding: 0;
     margin: 0;
 }
+
+/* Copy button on example command boxes (added by assets/js/custom.js). Always
+   visible, since phones have no hover; quiet until pointed at or focused. */
+div.gg.gg-has-copy {
+    position: relative;
+    padding-right: 48px;
+}
+
+.gg-copy {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #5c5e66;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.gg-copy:hover,
+.gg-copy:focus-visible {
+    opacity: 1;
+    background: rgb(0 0 0 / 8%);
+}
+
+.gg-copy:focus-visible {
+    outline: 2px solid #5865f2;
+    outline-offset: 1px;
+}
+
+.gg-copy.gg-copied {
+    color: #248046;
+    opacity: 1;
+}
+
+[data-bs-theme="dark"] .gg-copy { color: #b5bac1; }
+
+[data-bs-theme="dark"] .gg-copy:hover,
+[data-bs-theme="dark"] .gg-copy:focus-visible { background: rgb(255 255 255 / 8%); }
+[data-bs-theme="dark"] .gg-copy.gg-copied { color: #3ba55c; }
