@@ -106,7 +106,7 @@ The old Sprinto bot's logs from November 2018 onward were imported into Sprinto'
 If you choose to support the development of Sprinto Bot through Patreon or Ko-Fi, your support is linked to your Discord account. This is used to provide you with the appropriate rewards.
 
 - **Patreon**: Sprinto uses the Discord account connected to your Patreon account.
-- **Ko-fi**: Sprinto matches the email address on your Ko-fi payment to a supporter who is already linked, for example through Patreon. Otherwise, I send you a code to link your account with `/redeem`.
+- **Ko-fi**: Sprinto matches the email address on your Ko-fi payment to a supporter who is already linked, for example through Patreon.
 
 I have also linked Ko-fi supporters by matching their Discord names against the old Sprinto bot's command logs.
 

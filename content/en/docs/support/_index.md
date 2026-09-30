@@ -29,21 +29,7 @@ While your Patreon pledge is active, you keep your companion seat. Every Patreon
 
 ### Ko-fi
 
-Each Ko-fi payment gives you this much seat time:
-
-| Payment | Seat time |
-| --- | --- |
-| $50 or more | 365 days |
-| $20 to $49.99 | 180 days |
-| $10 to $19.99 | 90 days |
-| $5 to $9.99 | 45 days |
-| $3 to $4.99 | 30 days |
-| $1 to $2.99 | 10 days for each whole dollar ($1 = 10 days, $2 = 20 days) |
-| Under $1 | 1 day, only if you don't already have a seat |
-
-- Amounts count as written, in any currency: €5 counts as $5.
-- Tips add up: the days from a new tip are added to the end of your current seat time. A new tip can extend your seat to at most 365 days after the date of that tip.
-- With a Ko-fi monthly membership, your seat lasts until 1 month and 7 days after your last monthly payment, or for the number of days the table gives for that payment amount, whichever is longer. The extra 7 days allow for a card payment that's late or bounced.
+A Ko-fi payment gives you a companion seat for a number of days that depends on the amount. A Ko-fi monthly membership keeps your seat while you're supporting.
 
 ## Check your seat
 
@@ -64,13 +50,12 @@ If you try to rename a pet or change their look without a seat, Sprinto replies:
 Your pets are resting. A companion seat lets one sit with you and appear on the scoreboard. You can still hibernate or revive them.
 {{< /reply >}}
 
-## Link your support with /redeem
+## Gift codes
 
-{{<slash name="redeem" key0="code" val0="L-XXXX">}}
+{{<slash name="redeem" key0="code" val0="G-XXXX">}}
 
-- An `L-` code links your Patreon or Ko-fi support to your Discord account.
-- Use a `G-` code to claim a gift: some months of supporter status, or a gift pet with a seat.
-- Codes come from the developer. Capital letters and spaces in a code don't matter.
+- A `G-` code claims a gift: some months of supporter status, or a gift pet with a seat.
+- Gift codes come from the developer. Capital letters and spaces in a code don't matter.
 - Only you see the reply. {{<slashembed name="redeem">}} also works in a direct message to Sprinto.
 
 ## Other ways to help

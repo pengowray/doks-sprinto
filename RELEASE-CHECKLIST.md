@@ -13,7 +13,7 @@ Keep new working notes in this file rather than in `content/`.
 - [ ] **`delay` wording.** `docs/whats-new.md`, the "Not in this release" list. The item
       now says the join-window behaviour is gone but that `delay 10` still works as
       `in 10`. Sign it off, and decide whether it still belongs under that heading.
-- [ ] **Invite permissions.** `docs/start/invite.md` hardcodes
+- [x] **Invite permissions.** (2026-09-30: Send Messages in Threads added, the link is now `permissions=277297331520`; unused permissions still to review.) Was: `docs/start/invite.md` hardcodes
       `permissions=2419424576`. Only Manage Roles and Send Messages are load-bearing in
       the Rust code. The bitmask lives in the Discord developer portal, not in either
       repo, so confirm it is still what you want.
@@ -101,10 +101,10 @@ These page passages describe behaviour that is on `main` but not in v1.64. Keep 
 ## Owner checks from the 2026-09-29 pass
 
 - [ ] `docs/help/settings.md`: show-patreon controls nothing in the bot now; restore if it is wired up (at "Family-friendly family-friendly On Filter out the occasional crass quote or reply. You'll ")
-- [ ] `docs/help/settings.md`: confirm the theme's emotes are uploaded on the live bot (at "Screen reader friendly Announcements that read better with a screen reader: the same four ")
+- [x] `docs/help/settings.md`: confirm the theme's emotes are uploaded on the live bot (working, 2026-09-30) (at "Screen reader friendly Announcements that read better with a screen reader: the same four ")
 - [ ] `docs/help/troubleshooting.md`: screenshot out of date: shows the old "✓ BOT" badge (Discord now shows "APP"), an old-style "9 minutes 54 seconds remaining" reply, and the typo "a roll called sprinto" (at "![@Sprinto role vs bot](/images/help/troubleshooting/01-role-vs-bot.png)")
 - [ ] `docs/help/troubleshooting.md`: screenshot out of date: shows a separate "Sprint created." reply, which no longer exists (/sprint answers with the join message), and older join text (at "![Slash commands that fail vs succeed](/images/help/troubleshooting/03-sprinto-help-get-sp")
-- [ ] `docs/help/voice.md`: confirm voice status before release (at "## Voice is paused")
+- [x] `docs/help/voice.md`: confirm voice status before release (confirmed paused, 2026-09-30) (at "## Voice is paused")
 - [ ] `docs/sprinting/sprint.md`: nops does nothing in the bot now; restore if fixed (at "no bell Turn off all chimes for this sprint. See chimes. Synonyms: almost any w")
 - [ ] `docs/start/invite.md`: screenshot out of date: shows a "✓ BOT" badge next to Sprinto; Discord now labels apps "APP" (at "![Image](/images/sprinto-invite-dialog.png)")
 
@@ -118,3 +118,10 @@ These page passages describe behaviour that is on `main` but not in v1.64. Keep 
 - [ ] `docs/help/curious.md`: choosing the Sprint MC and Sprint Admin roles in `/settings roles` (1 paragraph(s) removed)
 - [ ] `docs/sprinting/admin-sprint.md`: choosing the Sprint MC and Sprint Admin roles in `/settings roles` (2 paragraph(s) removed)
 - [ ] `docs/whats-new.md`: choosing the Sprint MC and Sprint Admin roles in `/settings roles` (1 paragraph(s) removed)
+
+## Settled 2026-09-30
+
+- [x] Patreon sync is running on the live bot.
+- [x] Ko-fi supporters don't get `/redeem` link codes; the Supporting page and privacy policy no longer mention them. `/redeem` is described for gift codes only.
+- [x] The Ko-fi seat-time table is off the Supporting and Pets pages until Ko-fi's tiers are settled (it's in git history: commit 00970d2 and later).
+- [x] Home page: 56,744 servers, "Up to 30k monthly users".

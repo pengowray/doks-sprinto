@@ -156,23 +156,11 @@ Sprinto posts your companion's thought bubble in the channel. If no pet is in yo
 
 ## How long your seat lasts
 
-**A Ko-fi one-off tip** gives you a companion seat for a number of days, counted from the day you tip:
-
-| Tip | Seat time |
-| --- | --- |
-| Under $1 | 1 day |
-| $1 to $2.99 | 10 days for each whole dollar |
-| $3 to $4.99 | 30 days |
-| $5 to $9.99 | 45 days |
-| $10 to $19.99 | 90 days |
-| $20 to $49.99 | 180 days |
-| $50 or more | 365 days |
-
-Tips add up: each new tip adds its days after the end of the seat time you already have, up to one year past the date of that tip. A tip under $1 always counts from the day of the tip, so it doesn't add to seat time you already have. Amounts are read as written, in whatever currency you paid: a €5 tip counts as $5.
+**A Ko-fi one-off tip** gives you a companion seat for a number of days that depends on the amount, counted from the day you tip. Tips add up, to at most one year past the date of the latest tip.
 
 **A monthly membership**, on Patreon or Ko-fi, keeps your seat while you're supporting.
 
-**If you stop supporting**, your seat stays until 7 days after your last month of support ends. If your last payment would buy more days as a tip (see the table), the seat lasts that long instead, counted from the day of the payment. For example, if you supported with $10 a month, your seat lasts 90 days from your last payment. While the seat lasts, your companion keeps sprinting, but you can't be given a new pet until you're supporting again. After the seat ends, your pets stay in your collection, but they don't join sprints.
+**If you stop supporting**, your seat stays until 7 days after your last month of support ends. After a large last payment, the seat can last longer, counted from the day of that payment. While the seat lasts, your companion keeps sprinting, but you can't be given a new pet until you're supporting again. After the seat ends, your pets stay in your collection, but they don't join sprints.
 
 When your seat has 7 days or fewer left, the `/pets` panel says when the seat ends, for example "Your companion seat lasts until 3 May 2027."
 

@@ -11,7 +11,7 @@ Add Sprinto to your Discord server with the invite link, or from Sprinto's profi
 Open Sprinto's invite link in Discord:
 
 ```text
-https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=2419424576
+https://discord.com/oauth2/authorize?client_id=421646775749967872&scope=bot&permissions=277297331520
 ```
 
 1. Copy the invite link.
@@ -33,7 +33,7 @@ If you can see Sprinto on another server, click Sprinto or "View Profile", then 
 
 ## What permissions does Sprinto need?
 
-In each channel where you want sprints, Sprinto needs **View Channel** and **Send Messages**. In a thread, Sprinto needs **Send Messages in Threads** in place of Send Messages. The invite link doesn't ask for Send Messages in Threads, but servers usually give it to everyone by default.
+In each channel where you want sprints, Sprinto needs **View Channel** and **Send Messages**. In a thread, Sprinto needs **Send Messages in Threads** in place of Send Messages.
 
 The people who sprint need **Use Application Commands** in the channel, or Sprinto's slash commands don't appear for them. `@Sprinto` commands work without it.
 
@@ -42,6 +42,7 @@ The invite link asks for these permissions:
 | Permission | What Sprinto uses it for |
 | --- | --- |
 | View Channel, Send Messages | Announcing sprints and answering commands. Sprinto needs both. |
+| Send Messages in Threads | The same, for sprints in threads. |
 | Manage Roles | Only the {{<role "@Active Sprinters">}} role, set up with `/create-active-role`. See [Active Sprinter role]({{< relref "activesprinter" >}}). |
 | Read Message History | Showing Sprinto's answers to `@Sprinto` messages as Discord replies. Without it, each answer is posted as a plain message. |
 | Connect, Speak, Priority Speaker | Voice chimes, which are paused. See [Voice]({{< relref "voice" >}}). |
