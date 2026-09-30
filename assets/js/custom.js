@@ -4,12 +4,11 @@
  * A copy button on each example command box (the `slash` and `atsprinto`
  * shortcodes, rendered as div.gg). What it copies:
  *   @Sprinto sprint 20 5       ->  @Sprinto#2517 sprint 20 5
- *   /sprint options: 20 in 5   ->  /sprint 20 in 5
+ *   /words count: 1442         ->  /words count:1442
  * Discord turns a pasted "@Sprinto#2517" into a real mention; the #2517 is in
- * the page as a hidden span, so it comes along with textContent. Sprinto also
- * reads a message starting with "/" as a command, but Discord's slash picker
- * may catch pasted "/..." text first, and slash-only commands (/pets,
- * /settings) have no text form, so the @Sprinto form is the dependable one.
+ * the page as a hidden span, so it comes along with textContent. A pasted
+ * "/words count:1442" fills in the slash command's options, so each option
+ * keeps its name.
  */
 (() => {
     'use strict';
@@ -22,8 +21,13 @@
     function commandText(chip) {
         const name = chip.querySelector(':scope > b');
         if (!name) return squash(chip.textContent);
-        const values = [...chip.querySelectorAll('.gg-options-val')].map((v) => v.textContent);
-        return squash([name.textContent, ...values].join(' '));
+        const text = (el) => (el ? squash(el.textContent) : '');
+        const options = [...chip.querySelectorAll('.gg-options')].map((opt) => {
+            const key = text(opt.querySelector('.gg-options-key')).replace(/:$/, '');
+            const value = text(opt.querySelector('.gg-options-val'));
+            return key ? `${key}:${value}` : value;
+        }).filter(Boolean);
+        return squash([name.textContent, ...options].join(' '));
     }
 
     async function copy(text) {
