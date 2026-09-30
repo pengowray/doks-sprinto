@@ -555,6 +555,14 @@
     fill: #c9ced6;
 }
 
+/* The join invitation at the end of a break: striped like the first join
+   window, bordered in the break's own colour to show it is part of the break.
+   The rect is inset by half the stroke so the border stays inside the bar. */
+.tl-diagram .tl-invite {
+    stroke: #5f87c6;
+    stroke-width: 2;
+}
+
 .tl-diagram .tl-text {
     fill: #212529;
     font-family: var(--bs-body-font-family, sans-serif);
@@ -606,6 +614,7 @@
 [data-bs-theme="dark"] .tl-diagram .tl-write   { fill: #4d9c67; }
 [data-bs-theme="dark"] .tl-diagram .tl-collect { fill: #c25e50; }
 [data-bs-theme="dark"] .tl-diagram .tl-break   { fill: #5579b1; }
+[data-bs-theme="dark"] .tl-diagram .tl-invite  { stroke: #5579b1; }
 [data-bs-theme="dark"] .tl-diagram .tl-hatchbase { fill: #d1a943; }
 [data-bs-theme="dark"] .tl-diagram .tl-hatchline { stroke: #8a6d17; }
 [data-bs-theme="dark"] .tl-diagram .tl-wait    { fill: #4a4f57; }

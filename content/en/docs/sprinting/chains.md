@@ -28,9 +28,31 @@ Use `then` to chain sprints of different lengths. You can combine `then` with `x
 
 `x3` on its own runs three rounds of the room's default sprint. A chain can have up to 8 rounds. A command with more rounds is refused: "Sorry, that's too many sprints in a row. I can chain up to 8 at once."
 
-The announcement that starts the chain lists every round. For `for 25 x3` typed at 9:59, it gives each round's start time and writing time: "Rounds: 10:00 ⌛︎ 25m · 10:34 ⌛︎ 25m · 11:08 ⌛︎ 25m". Each reader sees the times in their own time zone.
+The announcement that starts the chain lists every round. For `at 10:00 for 25 x3` typed at 9:59, it gives each round's start time and writing time: "Rounds: 10:00 ⌛︎ 25m · 10:34 ⌛︎ 25m · 11:08 ⌛︎ 25m". Each reader sees the times in their own time zone.
 
 To see a chain's timetable before you start it, use {{<slashembed name="explain" key0="sprint-options" val0="for 20 x3" >}}. For a short summary of chains in Discord, use `/help chain`.
+
+## Start rounds on the hour or half hour
+
+Most people use `gap` to start every round at a set time on the clock, such as on the hour and half hour. `gap` sets the time from the end of one round's writing to the start of the next round's writing. When the writing time and the gap add up to 30 minutes, a new round starts every 30 minutes:
+
+{{<slash name="sprint" key0="options" val0="at 10:00 for 20 gap 10 x3" >}}
+
+This command starts rounds at 10:00, 10:30 and 11:00. Each round has 20 minutes of writing, then a 10-minute gap: 3 minutes 30 seconds for word counts and a 6 minute 30 second break.
+
+For pomodoro timing, use 25 minutes of writing and a 5-minute gap:
+
+{{<slash name="sprint" key0="options" val0="at 10:00 for 25 gap 5 x4" >}}
+
+This command starts rounds at 10:00, 10:30, 11:00 and 11:30. It's the same as `/sprint at 10:00 pomo x4`.
+
+For a new round every hour, use a writing time and a gap that add up to 60 minutes, such as `for 45 gap 15` or `for 50 gap 10`.
+
+Each round's start time is set when the chain starts. If everyone gives their word count early, the break gets longer, and the next round still starts at its set time.
+
+A time of day such as `at 10:00` needs your time zone, set with {{<slashembed name="timezone">}}. See [Time zones]({{< relref "sprint#time-zones" >}}) on the Sprint (all options) page. A minute mark works without a time zone: `at :00` starts the first round at the next :00, and `at :30` at the next :30.
+
+A start time given as a time of day or a minute mark can be at most 50 minutes away, or 90 minutes if the command includes `please`. So to start the first round at 10:00, type the command between 9:10 and 10:00.
 
 ## How long each round is
 
@@ -102,7 +124,7 @@ A room's default break can be at most 60 minutes too. A longer default break is 
 
 ## What a round looks like
 
-One round of `for 25 x3`, starting at 10:00:
+Round 1 of `at 10:00 for 25 x3`:
 
 1. **Writing**, 10:00 to 10:25. During the writing, the only messages Sprinto posts are chimes (time-left messages), if the sprint has any.
 2. **Time's up** at 10:25. The time's-up message is headed **Round 1 of 3**, asks for final word counts, and says when the next round starts: "Please give your final word count with `/words`. You have 4 minutes." and "The next round begins in 9 minutes, and writes for 25 minutes."

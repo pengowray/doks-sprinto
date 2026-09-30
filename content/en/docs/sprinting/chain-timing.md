@@ -8,25 +8,27 @@ keywords: ["chain", "timing", "round", "next", "gap", "focus", "asap", "break", 
 
 Each round of a chain has three parts: writing, a window to give your word count, and a break. The length you give is the writing time, the same as in a single sprint. This page shows in diagrams how long each part is, when the next round starts, and how the options `gap`, `break` and `round` change these times.
 
+The usual way to start every round on the hour and half hour is [`gap`](#set-the-time-between-rounds-with-gap). For example, `/sprint at 10:00 for 20 gap 10 x3` starts rounds at 10:00, 10:30 and 11:00, because 20 minutes of writing and a 10-minute gap add up to 30 minutes.
+
 Every diagram uses the same colours: <span class="tl-chip tl-chip-wait"></span> the join window, striped, <span class="tl-chip tl-chip-write"></span> writing, <span class="tl-chip tl-chip-collect"></span> collecting word counts, <span class="tl-chip tl-chip-break"></span> break. The stripes also mark the break's last minute, when Sprinto invites the room to join the next round.
 
 ## When the next round starts
 
 The three parts of a round come one after the other, and the next round starts when the break ends. `for 25 x3` starts a new round every 34 minutes: 25 minutes of writing, then 4 minutes for word counts, then a 5-minute break.
 
-<svg class="tl-diagram" viewBox="0 0 720 150" role="img" aria-label="One time bar: for 25 x3. A one-minute join window from 9:59, writing from 10:00 to 10:25, word counts until 10:29, then a 5-minute break. The last minute of the break, from 10:33, is the join invitation, and round 2 starts at 10:34.">
+<svg class="tl-diagram" viewBox="0 0 720 150" role="img" aria-label="One time bar: at 10:00 for 25 x3, typed at 9:59. A one-minute join window from 9:59, writing from 10:00 to 10:25, word counts until 10:29, then a 5-minute break. The last minute of the break, from 10:33, is the join invitation, and round 2 starts at 10:34.">
   <defs>
     <pattern id="hatch-default" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
       <rect class="tl-hatchbase" width="7" height="7"/>
       <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
     </pattern>
   </defs>
-  <text class="tl-text" x="20" y="18"><tspan font-weight="600">for 25 x3</tspan>: writing, then word counts, then the break</text>
+  <text class="tl-text" x="20" y="18"><tspan font-weight="600">at 10:00 for 25 x3</tspan>: writing, then word counts, then the break</text>
   <rect fill="url(#hatch-default)" x="20" y="26" width="18" height="32"/>
   <rect class="tl-write" x="38" y="26" width="450" height="32"/>
   <rect class="tl-collect" x="488" y="26" width="72" height="32"/>
   <rect class="tl-break" x="560" y="26" width="72" height="32"/>
-  <rect fill="url(#hatch-default)" x="632" y="26" width="18" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-default)" x="633" y="27" width="16" height="30"/>
   <rect class="tl-bar-outline" x="20" y="26" width="630" height="32"/>
   <path class="tl-write" d="M 650 26 L 677 26 L 684 32 L 676 38 L 684 44 L 676 50 L 684 56 L 677 58 L 650 58 Z"/>
   <text class="tl-text-onbar" x="263" y="47" text-anchor="middle">writing 25</text>
@@ -51,7 +53,7 @@ The three parts of a round come one after the other, and the next round starts w
   <text class="tl-text-sm" x="650" y="138" text-anchor="middle">10:34</text>
 </svg>
 
-*`for 25 x3` opens with a one-minute join window from 9:59. Writing runs from 10:00 to 10:25, word counts from 10:25 to 10:29, and the 5-minute break from 10:29 to 10:34, when round 2 starts. The striped last minute of the break, from 10:33, is when Sprinto invites the room to join round 2.*
+*`at 10:00 for 25 x3`, typed at 9:59, opens with a one-minute join window. Writing runs from 10:00 to 10:25, word counts from 10:25 to 10:29, and the 5-minute break from 10:29 to 10:34, when round 2 starts. The striped last minute of the break, from 10:33, is when Sprinto invites the room to join round 2.*
 
 The word-count window is longer for longer rounds: 3 minutes after 15 minutes of writing, 3 minutes 30 seconds after 20 minutes, and 4 minutes after 25 minutes. [How long the word-count window is](#how-long-the-word-count-window-is) has the full table.
 
@@ -67,21 +69,21 @@ Three options change the parts of a round:
 
 `gap` sets the whole time from the end of one round's writing to the start of the next round's writing. The word counts come out of the gap first, and the break is what's left. `next 10`, `next in 10`, `next round in 10` and `next focus in 10` mean the same as `gap 10`. Sprinto writes a gap back as `next`, for example `next 10` in `/explain`.
 
-This diagram compares the default timing of `for 25 x3` with `for 25 gap 5 x3`, which is the same as `pomo x3`:
+This diagram compares the default timing of `at 10:00 for 25 x3` with `at 10:00 for 25 gap 5 x3`, which is the same as `at 10:00 pomo x3`:
 
-<svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars on the same clock. Both open with a one-minute join window, write from 10:00 to 10:25, and collect word counts until 10:29. A, for 25 x3: a 5-minute break follows, and round 2 starts at 10:34. B, for 25 gap 5 x3, the same as pomo x3: a 1-minute break follows, and round 2 starts at 10:30, 5 minutes after the writing ends.">
+<svg class="tl-diagram" viewBox="0 0 720 270" role="img" aria-label="Two time bars on the same clock, for two commands typed at 9:59. Both chains open with a one-minute join window, write from 10:00 to 10:25, and collect word counts until 10:29. A, at 10:00 for 25 x3: a 5-minute break follows, and round 2 starts at 10:34. B, at 10:00 for 25 gap 5 x3, the same as at 10:00 pomo x3: a 1-minute break follows, and round 2 starts at 10:30, 5 minutes after the writing ends.">
   <defs>
     <pattern id="hatch-one25" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
       <rect class="tl-hatchbase" width="7" height="7"/>
       <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
     </pattern>
   </defs>
-  <text class="tl-text" x="20" y="18">A.&#160;<tspan font-weight="600">for 25 x3</tspan>: the break comes after the word counts</text>
+  <text class="tl-text" x="20" y="18">A.&#160;<tspan font-weight="600">at 10:00 for 25 x3</tspan>: the break comes after the word counts</text>
   <rect fill="url(#hatch-one25)" x="20" y="26" width="18" height="32"/>
   <rect class="tl-write" x="38" y="26" width="450" height="32"/>
   <rect class="tl-collect" x="488" y="26" width="72" height="32"/>
   <rect class="tl-break" x="560" y="26" width="72" height="32"/>
-  <rect fill="url(#hatch-one25)" x="632" y="26" width="18" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-one25)" x="633" y="27" width="16" height="30"/>
   <rect class="tl-bar-outline" x="20" y="26" width="630" height="32"/>
   <path class="tl-write" d="M 650 26 L 677 26 L 684 32 L 676 38 L 684 44 L 676 50 L 684 56 L 677 58 L 650 58 Z"/>
   <text class="tl-text-onbar" x="263" y="47" text-anchor="middle">writing 25</text>
@@ -91,11 +93,11 @@ This diagram compares the default timing of `for 25 x3` with `for 25 gap 5 x3`, 
   <text class="tl-text-sm" x="262" y="88" text-anchor="middle">Writing: 25 minutes</text>
   <path class="tl-dim" d="M 490 66 l 0 7 l 160 0 l 0 -7"/>
   <text class="tl-text-sm" x="570" y="88" text-anchor="middle">9 minutes until round 2</text>
-  <text class="tl-text" x="20" y="120">B.&#160;<tspan font-weight="600">for 25 gap 5 x3</tspan>, the same as&#160;<tspan font-weight="600">pomo x3</tspan></text>
+  <text class="tl-text" x="20" y="120">B.&#160;<tspan font-weight="600">at 10:00 for 25 gap 5 x3</tspan>, the same as&#160;<tspan font-weight="600">at 10:00 pomo x3</tspan></text>
   <rect fill="url(#hatch-one25)" x="20" y="128" width="18" height="32"/>
   <rect class="tl-write" x="38" y="128" width="450" height="32"/>
   <rect class="tl-collect" x="488" y="128" width="72" height="32"/>
-  <rect fill="url(#hatch-one25)" x="560" y="128" width="18" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-one25)" x="561" y="129" width="16" height="30"/>
   <rect class="tl-bar-outline" x="20" y="128" width="558" height="32"/>
   <path class="tl-write" d="M 578 128 L 605 128 L 612 134 L 604 140 L 612 146 L 604 152 L 612 158 L 605 160 L 578 160 Z"/>
   <text class="tl-text-onbar" x="263" y="149" text-anchor="middle">writing 25</text>
@@ -119,7 +121,7 @@ This diagram compares the default timing of `for 25 x3` with `for 25 gap 5 x3`, 
   <text class="tl-text-sm" x="650" y="240" text-anchor="middle">10:34</text>
 </svg>
 
-*Both chains start with a one-minute join window, write from 10:00 to 10:25, then collect word counts for 4 minutes, until 10:29. In A, `for 25 x3`, the 5-minute break comes after the word counts, so round 2 starts at 10:34. In B, `for 25 gap 5 x3`, round 2 starts 5 minutes after the writing ends, at 10:30. Those 5 minutes are the 4 minutes of word counts and a 1-minute break. `pomo x3` is the same as B. The striped last minute of each break is when Sprinto invites the room to join round 2.*
+*Both commands are typed at 9:59. Both chains start with a one-minute join window, write from 10:00 to 10:25, then collect word counts for 4 minutes, until 10:29. In A, `at 10:00 for 25 x3`, the 5-minute break comes after the word counts, so round 2 starts at 10:34. In B, `at 10:00 for 25 gap 5 x3`, round 2 starts 5 minutes after the writing ends, at 10:30. Those 5 minutes are the 4 minutes of word counts and a 1-minute break. `at 10:00 pomo x3` is the same as B. The striped last minute of each break is when Sprinto invites the room to join round 2.*
 
 This table shows how a gap is split between the word-count window and the break in more chains:
 
@@ -154,9 +156,9 @@ After round 4, the break is at least 15 minutes, counted from the end of the wor
 
 ## One round, step by step
 
-One round of `for 25 x3` from its start to the next round's start, with the messages Sprinto posts:
+Round 1 of `at 10:00 for 25 x3`, from 10:00 to the start of round 2 at 10:34, with the messages Sprinto posts:
 
-<svg class="tl-diagram" viewBox="0 0 720 210" role="img" aria-label="One round of for 25 x3 from 10:00 to 10:34. Writing until 10:25, when the time's up message asks for word counts. Word counts until 10:29, when the scoreboard posts and the break countdown starts. At 10:33 the join invitation appears, in the last minute before round 2 starts at 10:34.">
+<svg class="tl-diagram" viewBox="0 0 720 210" role="img" aria-label="Round 1 of /sprint at 10:00 for 25 x3, from 10:00 to 10:34. Writing until 10:25, when the time's up message asks for word counts. Word counts until 10:29, when the scoreboard posts and the break countdown starts. At 10:33 the join invitation appears, in the last minute before round 2 starts at 10:34.">
   <defs>
     <pattern id="hatch-anatomy" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
       <rect class="tl-hatchbase" width="7" height="7"/>
@@ -166,7 +168,7 @@ One round of `for 25 x3` from its start to the next round's start, with the mess
   <rect class="tl-write" x="25" y="30" width="475" height="32"/>
   <rect class="tl-collect" x="500" y="30" width="76" height="32"/>
   <rect class="tl-break" x="576" y="30" width="95" height="32"/>
-  <rect fill="url(#hatch-anatomy)" x="652" y="30" width="19" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-anatomy)" x="653" y="31" width="17" height="30"/>
   <rect class="tl-bar-outline" x="25" y="30" width="646" height="32"/>
   <text class="tl-text-onbar" x="262" y="51" text-anchor="middle">writing (25 min)</text>
   <text class="tl-text-onbar" x="538" y="51" text-anchor="middle">counts</text>
@@ -191,7 +193,7 @@ One round of `for 25 x3` from its start to the next round's start, with the mess
   <text class="tl-text-sm" x="622" y="190" text-anchor="end">join invitation at 10:33, in the break's last minute</text>
 </svg>
 
-*One round of `for 25 x3`: writing ends at 10:25 and Sprinto asks for word counts. The word-count window is open until 10:29, then the scoreboard posts and the ☕ break message counts down. At 10:33, in the break's last minute, Sprinto invites the room to join round 2, which starts at 10:34.*
+*Round 1 of `at 10:00 for 25 x3`: writing ends at 10:25 and Sprinto asks for word counts. The word-count window is open until 10:29, then the scoreboard posts and the ☕ break message counts down. At 10:33, in the break's last minute, Sprinto invites the room to join round 2, which starts at 10:34.*
 
 ## What happens between rounds
 
@@ -208,7 +210,7 @@ The time between one round's writing and the next round's writing has three part
   <text class="tl-text" x="360" y="14" text-anchor="middle">you can join during all three</text>
   <rect class="tl-collect" x="25" y="44" width="200" height="34"/>
   <rect class="tl-break" x="225" y="44" width="280" height="34"/>
-  <rect fill="url(#hatch-phases)" x="505" y="44" width="190" height="34"/>
+  <rect class="tl-invite" fill="url(#hatch-phases)" x="506" y="45" width="188" height="32"/>
   <rect class="tl-bar-outline" x="25" y="44" width="670" height="34"/>
   <text class="tl-text-onbar" x="125" y="66" text-anchor="middle">1. collection</text>
   <text class="tl-text-onbar" x="365" y="66" text-anchor="middle">2. break</text>
@@ -241,19 +243,19 @@ One thing to watch: a plain `/join` during the word-count window joins the round
 
 When everyone in the round has given a final word count (a fast finish), Sprinto posts "All word counts are in! Results shortly." and the scoreboard follows about 12 seconds later, or about 5 seconds with `vff`. The counting time nobody needed is added to the break, and the next round still starts at its announced time. With `noff`, the word-count window always runs its full length.
 
-<svg class="tl-diagram" viewBox="0 0 720 148" role="img" aria-label="One pomo x3 round with a fast finish. Writing runs from 10:00 to 10:25. All word counts are in by 10:27, so the word-count window closes 2 minutes early and the break starts at 10:27. A dashed line marks 10:29, when the window would have closed. The break grows from 1 minute to about 3, and round 2 still starts at 10:30.">
+<svg class="tl-diagram" viewBox="0 0 720 148" role="img" aria-label="Round 1 of /sprint at 10:00 pomo x3, with a fast finish. Writing runs from 10:00 to 10:25. All word counts are in by 10:27, so the word-count window closes 2 minutes early and the break starts at 10:27. A dashed line marks 10:29, when the window would have closed. The break grows from 1 minute to about 3, and round 2 still starts at 10:30.">
   <defs>
     <pattern id="hatch-ff" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
       <rect class="tl-hatchbase" width="7" height="7"/>
       <line class="tl-hatchline" x1="0" y1="0" x2="0" y2="7"/>
     </pattern>
   </defs>
-  <text class="tl-text" x="20" y="18">Fast finish:&#160;<tspan font-weight="600">pomo x3</tspan>, round 1, everyone reports early</text>
+  <text class="tl-text" x="20" y="18">Fast finish:&#160;<tspan font-weight="600">at 10:00 pomo x3</tspan>, round 1, everyone reports early</text>
   <rect fill="url(#hatch-ff)" x="20" y="26" width="21" height="32"/>
   <rect class="tl-write" x="41" y="26" width="525" height="32"/>
   <rect class="tl-collect" x="566" y="26" width="42" height="32"/>
   <rect class="tl-break" x="608" y="26" width="42" height="32"/>
-  <rect fill="url(#hatch-ff)" x="650" y="26" width="21" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-ff)" x="651" y="27" width="19" height="30"/>
   <rect class="tl-bar-outline" x="20" y="26" width="651" height="32"/>
   <path class="tl-write" d="M 671 26 L 698 26 L 705 32 L 697 38 L 705 44 L 697 50 L 705 56 L 698 58 L 671 58 Z"/>
   <text class="tl-text-onbar" x="303" y="47" text-anchor="middle">writing (25 min)</text>
@@ -275,11 +277,11 @@ When everyone in the round has given a final word count (a fast finish), Sprinto
   <text class="tl-text-sm" x="671" y="136" text-anchor="middle">10:30</text>
 </svg>
 
-*A `pomo x3` round with a fast finish: the last word count is in by 10:27, and the scoreboard posts about 12 seconds later. The 2 minutes of counting time nobody needed are added to the break, so the break grows from 1 minute to about 3, and round 2 still starts at 10:30. The dashed line marks 10:29, when the word-count window would have closed.*
+*Round 1 of `at 10:00 pomo x3` with a fast finish: the last word count is in by 10:27, and the scoreboard posts about 12 seconds later. The 2 minutes of counting time nobody needed are added to the break, so the break grows from 1 minute to about 3, and round 2 still starts at 10:30. The dashed line marks 10:29, when the word-count window would have closed.*
 
 ## Round start times are fixed
 
-Every round's start time is set when the chain starts, and the announcement that starts the chain lists them all. For `for 25 x3`, it gives each round's start time and writing time: "Rounds: 10:00 ⌛︎ 25m · 10:34 ⌛︎ 25m · 11:08 ⌛︎ 25m". A chain of `round` lengths gives each round's start and end time instead, for example "Rounds: 10:00 to 10:25 · 10:30 to 10:55 · 11:00 to 11:25" for `round 25 x3`.
+Every round's start time is set when the chain starts, and the announcement that starts the chain lists them all. For `at 10:00 for 25 x3`, it gives each round's start time and writing time: "Rounds: 10:00 ⌛︎ 25m · 10:34 ⌛︎ 25m · 11:08 ⌛︎ 25m". A chain of `round` lengths gives each round's start and end time instead, for example "Rounds: 10:00 to 10:25 · 10:30 to 10:55 · 11:00 to 11:25" for `at 10:00 round 25 x3`.
 
 A fast finish makes the break longer, and the next round still starts at its announced time.
 
@@ -338,7 +340,7 @@ On an `asap` chain:
 ### More about the timetable
 
 - **`/go` keeps later rounds in place.** Starting a round early with {{<slashembed name="go" >}} makes that round longer: it starts now and still reaches time's up at its scheduled time. The round's start message says, for example, "Started 3 minutes early with `/go`, so this round runs 28 minutes and still finishes on schedule." On an `asap` chain, `/go` starts the round sooner. Only the sprinter who started the chain, or a {{<role "@Sprint MC">}}, can use `/go`. It is refused if the longer round, counting its writing, its word-count window and the minutes skipped, would be over the room's longest sprint, which is 120 minutes unless the server or channel set it lower: "Sorry, starting now would make this round 125 minutes, over this room's 120 minutes limit."
-- **Round start times are not rounded.** They fall wherever the lengths and breaks add up to. For neat clock times, ask for them: `gap` (`for 20 gap 10 x3` starts a round every half hour), `until :20`, `done by :30`, or `break until :30`. `break until :30` applies between every pair of rounds: each later round starts at the next :30 after the round before it ends, word counts included. So after the first break, rounds shorter than an hour start an hour apart. For example, `for 25 x3 break until :30` with round 1 at 10:00 starts round 2 at 10:30 and round 3 at 11:30. For a round every half hour, use `gap`.
+- **Round start times are not rounded.** They fall wherever the lengths and breaks add up to. For neat clock times, ask for them: `gap` (`for 20 gap 10 x3` starts a round every half hour), `until :20`, `done by :30`, or `break until :30`. `break until :30` applies between every pair of rounds: each later round starts at the next :30 after the round before it ends, word counts included. So after the first break, rounds shorter than an hour start an hour apart. For example, `at 10:00 for 25 x3 break until :30` starts round 2 at 10:30 and round 3 at 11:30. For a round every half hour, use `gap`.
 - **A start time on a later round.** `then at :30 for 10` sets when that round starts, and the break before it is whatever time is left. A minute mark like `:30` means the next :30 after the previous round ends, word counts included. A time of day that the previous round runs past is refused: "Sorry, round 1 doesn't end until about 15 minutes from now, so the next round can't start at `10:15`. Try a later time." Other start words work on a later round too: `then in 5` (5 minutes after the previous round ends), `then in next 10`, and `then now` (no break). A command with a start time on a later round can't also have `break` or `asap`: it is refused. The wait before that round counts toward the usual limits on how far ahead a sprint can start, so `then in 90 for 5` is refused.
 
 ## Other ways to set the break
@@ -375,7 +377,7 @@ This diagram compares `round 25` with the default, `for 25`:
   <rect class="tl-write" x="25" y="26" width="420" height="32"/>
   <rect class="tl-collect" x="445" y="26" width="80" height="32"/>
   <rect class="tl-break" x="525" y="26" width="100" height="32"/>
-  <rect fill="url(#hatch-rf)" x="605" y="26" width="20" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-rf)" x="606" y="27" width="18" height="30"/>
   <rect class="tl-bar-outline" x="25" y="26" width="600" height="32"/>
   <text class="tl-text-onbar" x="235" y="47" text-anchor="middle">writing (21 min)</text>
   <text class="tl-text-onbar" x="485" y="47" text-anchor="middle">counts</text>
@@ -387,7 +389,7 @@ This diagram compares `round 25` with the default, `for 25`:
   <rect class="tl-write" x="25" y="128" width="500" height="32"/>
   <rect class="tl-collect" x="525" y="128" width="80" height="32"/>
   <rect class="tl-break" x="605" y="128" width="100" height="32"/>
-  <rect fill="url(#hatch-rf)" x="685" y="128" width="20" height="32"/>
+  <rect class="tl-invite" fill="url(#hatch-rf)" x="686" y="129" width="18" height="30"/>
   <rect class="tl-bar-outline" x="25" y="128" width="680" height="32"/>
   <text class="tl-text-onbar" x="275" y="149" text-anchor="middle">writing (25 min)</text>
   <text class="tl-text-onbar" x="565" y="149" text-anchor="middle">counts</text>
