@@ -46,7 +46,7 @@ You can join a sprint at any time: during the join window, while people are writ
 
 ## Is there a way to keep a running scoreboard, set goals, or track progress over multiple sprints?
 
-No, sorry. Keeping track of sprints is high on my to-do list and I'd like to add these sorts of features eventually.
+No, sorry. Keeping track of sprints is high on my to-do list and I'd like to add these sorts of features eventually (soon!).
 
 Each scoreboard can show a total for the room: "Combined word count: 1,234 words over 15 minutes." appears when 3 or more people wrote. A chain's last scoreboard adds a total for the whole chain, for example "Whole chain: 3,250 words over 75 minutes." There's no running total for each person across sprints.
 
@@ -90,13 +90,9 @@ Sprinto was rewritten in 2026. It's now written in Rust, using the twilight Disc
 
 The basic sprint commands (`/sprint`, `/join`, `/words`, `/same`, `/final` and `/late`) work the same as before. Sprinting also gained clock-time starts after you set `/timezone`, chains, `again` to repeat the last sprint, and dice lengths such as `sprint 3d6`. During Discord outages, Sprinto now warns channels. For the full list, see [What's new]({{<relref "whats-new" >}}).
 
-## How'd you make this amazing website?
-
-This website uses the Doks theme for Hugo with a sprinkling of custom shortcodes and CSS. You can view the website's source code at [github.com/pengowray/doks-sprinto](https://github.com/pengowray/doks-sprinto).
-
 ## Is Sprinto's source code available?
 
-I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for the old version of Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually.
+I've released the [TimeSpanParser](https://github.com/pengowray/TimeSpanParser)—a timespan parser library I wrote for the old (C#) version of Sprinto—under a permissive open source license. Sprinto's full source code has not yet been released. I plan to release it eventually.
 
 ## How do I hide Sprinto from my @ mentions list?
 
